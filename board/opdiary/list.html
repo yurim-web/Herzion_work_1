@@ -1,0 +1,43 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Board_ListPackage_11" class="section">
+    <!--@css(/css/module/board/listPackage_11.css)-->
+    <div module="board_title_11">
+        <div class="path">
+            <span>현재 위치</span>
+            <ol>
+                <li><a href="/">홈</a></li>
+                <li><a href="#">게시판</a></li>
+                <li title="현재 위치"><strong>{$board_name}</strong></li>
+            </ol>
+        </div>
+
+        <div class="titleArea">
+            <h2>{$board_title}</h2>
+        </div>
+        <p class="imgArea">{$board_top_image}</p>
+    </div>
+
+    <div module="board_list_11">
+        <!--
+            $login_page_url = /member/login.html
+        -->
+        <iframe name="blog_{$idx}" id="blog_{$idx}" src="/board/opdiary/read_blog.html{$param_read}" title="운영일지 상세" style="width:100%;border:none;overflow: hidden;"></iframe>
+    </div>
+</div>
+
+<div module="board_paging_11" class="section ec-base-paginate typeList">
+    <a href="{$param_prev}">이전 페이지</a>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <a href="{$param_next}">다음 페이지</a>
+</div>
+
+<div module="board_search_11" class="section">
+    <!--@css(/css/module/board/search.css)-->
+    <fieldset class="boardSearch">
+        <legend>게시물 검색</legend>
+        <div class="form">{$form.search_date} {$form.search_key} {$form.search} <a href="#none" onclick="{$action_search}" class="btnNormal">찾기</a></div>
+    </fieldset>
+</div>

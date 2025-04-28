@@ -1,0 +1,16 @@
+.xans-member-findidresult .complete { margin:0 auto; text-align:center; }
+.xans-member-findidresult .complete .headDesc { margin:0 0 20px; }
+.xans-member-findidresult .ec-base-desc { margin:0 0 20px; padding:20px 0 10px; border-top:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; }
+.xans-member-findidresult .ec-base-desc li { margin:0 0 10px; }
+.xans-member-findidresult .description { margin:20px 0 0; text-align:left; }
+.xans-member-findidresult label { display:block; margin:10px 0 0; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+	.xans-member-findidresult .description { margin:20px 7px 0; } 
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+	.xans-member-findidresult .complete { width:474px; }
+}

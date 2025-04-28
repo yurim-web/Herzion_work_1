@@ -1,0 +1,89 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div class="ec-base-layer" module="Myshop_OrderSearchproductForm">
+    <!--@css(/layout/basic/css/ec-base-prdInfo.css)-->
+    <!--@css(/css/module/myshop/searchProduct.css)-->
+    <div class="header">
+        <h1>상품 검색</h1>
+    </div>
+    <div class="content">
+        <div>
+            <div class="ec-base-table">
+                <table border="1" >
+                    <caption>상품 검색</caption>
+                    <colgroup>
+                        <col style="width:185px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">상품분류</th>
+                            <td>{$form.category_no}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{$form.search_type}</th>
+                            <td>{$form.keyword}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btnSearch"><a href="#none" class="btnSubmitFix sizeM" onClick="{$search_product}">검색</a></div>
+            <div class="listCtrl {$ctrl_display|display}">
+                <p class="result">총 <strong>{$total_count}</strong>개</p>
+                <span class="select">{$form.limit}</span>
+            </div>
+
+            <div module="Myshop_OrderSearchproductList">
+                <div class="resultList {$search_display|display}">
+                    <div class="ec-base-prdInfo">
+                    	<div class="prdBox">
+                        	<div class="thumbnail"><img src="{$image_tiny}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></div>
+                            <div class="description">
+                            	<div class="prdName">{$product_name}</div>
+                                <div class="price">{$product_price}</div>
+                                <ul class="info">
+                                    <li class="code">{$product_code}</li>
+                                </ul>
+                            </div>
+                            <div class="buttonGroup">
+                                <a href="#none" class="btnNormal sizeS" onClick="{$selected_item_js}">선택</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ec-base-prdInfo">
+                    	<div class="prdBox">
+                        	<div class="thumbnail"><img src="{$image_tiny}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></div>
+                            <div class="description">
+                            	<div class="prdName">{$product_name}</div>
+                                <div class="price">{$product_price}</div>
+                                <ul class="info">
+                                    <li class="code">{$product_code}</li>
+                                </ul>
+                            </div>
+                            <div class="buttonGroup">
+                                <a href="#none" class="btnNormal sizeS" onClick="{$selected_item_js}">선택</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="ec-base-prdEmpty {$search_fail_display|display}"><!--@import(/svg/icon-empty.html)-->검색 결과가 없습니다.</p>
+        	</div>
+
+            <div module="Myshop_OrderSearchproductPaging" class="ec-base-paginate typeList">
+                <a href="{$param_first}" class="first">첫 페이지</a>
+                <a href="{$param_before}">이전 페이지</a>
+                <ol>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                </ol>
+                <a href="{$param_next}">다음 페이지</a>
+                <a href="{$param_last}" class="last">마지막 페이지</a>
+            </div>
+        </div>
+    </div>
+    <div class="ec-base-button">
+        <a href="#none" class="btnNormalFix sizeM" onClick="{$closeSearchPopup}">닫기</a>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="coupon_productpopup" class="ec-base-layer typeModal">
+    <!--@css(/css/module/coupon/productPopup.css)-->
+    <div class="header">
+        <h1>최대 할인쿠폰 다운받기</h1>
+    </div>
+    <div class="content">
+        <div class="couponSkinArea">
+            <div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+                <div class="detail" {$call_coupon_detail}>
+                    <strong class="title" style="color:#483b1b; font-family:Arial, Verdana, Tahoma, sans-serif; font-size:11px;">{$coupon_name|cut:13,...}</strong>
+                    <p class="discount" style="color:#d07b01;"><span style="font-family:Verdana, Tahoma, sans-serif;">{$coupon_content}</span></p>
+                    <p class="period" style="color:#685219;">{$coupon_period}</p>
+                </div>
+                <div class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a></div>
+            </div>
+        </div>
+    </div>
+     <a href="#none" class="btnClose" onClick="window.close()">닫기</a>
+</div>

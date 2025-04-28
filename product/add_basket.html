@@ -1,0 +1,17 @@
+<div module="Product_BasketAdd" class="ec-base-layer-area">
+    <!--@css(/layout/basic/css/ec-base-layer.css)-->
+    <!--@css(/css/module/product/basketAdd.css)-->
+    <div class="ec-base-layer typeModal gAlert">
+        <div class="header">
+            <h3>장바구니 담기</h3>
+        </div>
+        <div class="content">
+            <p>장바구니에 상품이<br />정상적으로 담겼습니다.</p>
+        </div>
+        <div class="ec-base-button">
+            <a href="#none" class="btnNormal sizeM" onclick="$('#confirmLayer').remove();" complete="complete">계속 쇼핑하기</a>
+            <a href="/order/basket.html?delvtype={$delvtype}" class="btnSubmit sizeM">장바구니 이동</a>
+        </div>
+        <a class="btnClose" onclick="$('#confirmLayer').remove();">닫기</a>
+    </div>    
+</div>

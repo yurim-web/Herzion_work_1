@@ -1,0 +1,8 @@
+/** form_onetouch_style **/
+
+/* 원터치 주문서 셀렉트박스 화살표 삭제 ie11 - 정환 */
+select::-ms-expand {display:none;}
+#userStyle #header .titleArea h1 {background-color:#111;}
+#userStyle #mCafe24Order .txtEm,
+#userStyle #mCafe24Order .txtStrong {color:#111;}
+#userStyle #mCafe24Order .btnSubmit {background-color:#111 !important;border:1px solid #111 !important;}

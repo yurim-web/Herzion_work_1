@@ -1,0 +1,65 @@
+/* reset */
+li { list-style:none; }
+table { width:100%; border:0; border-spacing:0; border-collapse:collapse; }
+caption { display:none; }
+h1, h3 { margin:0; }
+
+.ec-base-layer-area {  position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0,0,0,0.3); z-index: 1000; }
+.ec-base-layer { z-index:1001; border:1px solid #000; background:#fff; box-sizing:border-box; }
+.ec-base-layer .header { margin:0 20px; padding:20px 0; color:#000; border-bottom:1px solid #e5e5e5; }
+.ec-base-layer > .header > h1,
+.ec-base-layer > .header > h3,
+.ec-base-layer > .header > h5 { font-size:16px; font-weight: normal; }
+.ec-base-layer > .content { padding: 20px; font-size:13px; line-height: 22px; min-height: 90px; box-sizing:border-box; }
+.ec-base-layer div.ec-base-help { margin-top:0; }
+.ec-base-layer .btnClose { position:absolute; right:7px; top:7px; padding:10px; cursor:pointer; display:block; overflow:hidden; width:20px; height:20px; font-size:1px; line-height:0; color:transparent; white-space:nowrap; -webkit-transform:rotate(45deg); transform:rotate(45deg); }
+.ec-base-layer .btnClose:before { content:""; position:absolute; top:0; right:10px; width:1px; height:21px; margin:10px 10px 0 0; background:#000; -webkit-transition:.3s ease-out; transition:.3s ease-out; }
+.ec-base-layer .btnClose:after { content:""; position:absolute; top:10px; right:0; width:21px; height:1px; margin:10px 10px 0 0; background:#000; -webkit-transition:.3s ease-out; transition:.3s ease-out; }
+	/* typeModal */
+	.ec-base-layer.typeModal { position:fixed; top:50%; left:0; right:0; margin:0 auto; transform:translateY(calc(-50% + 0.5px)); }
+    /* typeLayer */
+	.ec-base-layer.typeLayer { position:absolute; margin-top:10px; }
+    /* typeSide */
+    .ec-base-layer.typeSide { position:fixed; display: flex; flex-direction: column; height:100%; border: 0; }
+    .ec-base-layer.typeSide .header { padding: 74px 16px 10px; margin: 0; border: 0; }
+	.ec-base-layer.typeSide .header h2 { font-size: 18px; font-weight:normal; }
+	.ec-base-layer.typeSide .content { position: relative; padding: 0; flex: 1; overflow: auto; height:100%; }
+    .ec-base-layer.typeSide .ec-base-button[class*="gColumn"] {margin: 25px 16px; }
+    .ec-base-layer.typeSide .btnClose { top:5px; width:24px; height:24px; padding: 20px 17px; }
+    .ec-base-layer.typeSide .btnClose:before {right:12px; height:25px; }
+    .ec-base-layer.typeSide .btnClose:after {top:12px; width:25px;}
+    /* gAlert */
+    .ec-base-layer.gAlert > .header { display: block; overflow: hidden; position: absolute; font-size: 1px; line-height: 0; color: transparent; text-indent: -150%; white-space: nowrap; padding: 0; color: transparent; border: 0; }
+    .ec-base-layer.gAlert > .content { padding:45px 0 25px; text-align:center; }
+    /* gScroll */
+    .ec-base-layer.gScroll { height:auto; }
+    .ec-base-layer.gScroll > .content { overflow:auto; height:auto; max-height:70vh; }
+
+/* popup */
+#popup { padding:0 0 30px; }
+#popup .ec-base-layer { border:0; }
+#popup .ec-base-layer .btnClose { top:5px; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .ec-base-layer { position:fixed; top:50%; left:0; right:0; min-width:320px; width:calc(100% - 32px); margin:0 auto; transform:translateY(calc(-50% + 0.5px)); }
+    .ec-base-layer.typeSide {top: 0; left: 0; bottom: 0; width: 100%; transform: initial; }
+    #popup .ec-base-layer { position:relative; top:auto; left:auto; width:100%; border:0; transform: initial; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .ec-base-layer { min-width:308px; }
+    .ec-base-layer.typeSide { top: 0; right: 0; left: auto; bottom: 0; width: 458px; }
+  	.ec-base-layer.gAlert { width:360px; }
+}
+
+/********************* Mobile *********************/
+@media all and (max-width:440px) {
+    #popup .xans-myshop-orderreceiverupdate.ec-base-layer,
+    #receiver_update_form .xans-myshop-orderreceiverupdate.ec-base-layer { position:relative; top:0; transform:translateY(0); width:400px; margin:0;}
+    #popup .xans-myshop-orderreceiverupdate.ec-base-layer .ec-base-table tr,
+    #receiver_update_form .xans-myshop-orderreceiverupdate.ec-base-layer .ec-base-table tr { width:370px;}
+    #popup .xans-myshop-orderreceiverupdate.ec-base-layer .ec-base-table td textarea,
+    #receiver_update_form .xans-myshop-orderreceiverupdate.ec-base-layer .ec-base-table td textarea { width:330px;}
+}

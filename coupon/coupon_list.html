@@ -1,0 +1,66 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Coupon_CouponList" class="ec-base-layer">
+    <!--@css(/layout/basic/css/ec-base-prdInfo.css)-->
+    <!--@css(/css/module/coupon/couponList.css)-->
+    <div class="header">
+        <h1>쿠폰 사용내역</h1>
+    </div>
+    <div class="content">
+        <div class="ec-base-prdInfo" module="Coupon_aPrd">
+            <div class="prdBox">
+                <div class="thumbnail"><img src="{$product_image}" alt="" /></div>
+                <div class="description">
+                    <strong class="prdName" title="상품명">{$product_name}</strong>
+                    <div class="price" title="판매가">{$sOrdPrice}</div>
+                    <ul class="info">
+                        <li title="적용된 쿠폰">{$sCoupon}</li>
+                        <li title="상품별 쿠폰 할인액">{$sCouponPrice}</li>
+                        <li class="배송구분">{$sShipType}</li>
+                    </ul>
+                    <div class="optionGroup">{$sOptStr}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ec-base-table gBlank20">
+            <table border="1" >
+            <caption>총 쿠폰 할인금액</caption>
+            <colgroup>
+                <col style="width:33.33%" />
+                <col style="width:33.33%" />
+                <col style="width:33.33%" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">총 상품별 쿠폰 할인금액</th>
+                    <th scope="col">총 주문별 쿠폰 할인금액</th>
+                    <th scope="col">총 배송비 쿠폰 할인금액</th>
+                </tr>
+            </thead>
+            <tfoot class="right">
+                <tr>
+                    <td colspan="3">= 총 쿠폰 할인금액({$mileage_name}) : <span class="total txtEm">{$price_unit_head}<strong class="txt18">{$total_coupon_discount}</strong><strong>{$price_unit_tail}</strong> (<img src="{$mileage_mileage_icon}" alt="" /> {$total_mileage})</span></td>
+                </tr>
+            </tfoot>
+            <tbody class="center">
+                <tr>
+                    <td><div class="box">{$price_unit_head}{$product_coupon_discount}{$price_unit_tail} <span class="txtInfo">(<img src="{$mileage_mileage_icon}" alt="" /> {$product_mileage})</span></div></td>
+                    <td><div class="box">-{$price_unit_head}{$order_coupon_discount}{$price_unit_tail} <span class="txtInfo">(<img src="{$mileage_mileage_icon}" alt="" /> {$order_mileage})</span></div></td>
+                    <td><div class="box">-{$price_unit_head}{$delivery_coupon_discount}{$price_unit_tail}</div></td>
+                </tr>
+            </tbody>
+            <tbody class="center">
+                <tr>
+                    <td class="left txtInfo">{$sProductCouponName}</td>
+                    <td class="left txtInfo">{$sOrderCouponName}</td>
+                    <td class="left txtInfo">{$sDeliveryCouponName}</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="ec-base-button">
+        <a href="#none" class="btnNormalFix sizeM" onclick="window.close();">닫기</a>
+    </div>
+</div>

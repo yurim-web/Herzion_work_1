@@ -1,0 +1,160 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="section" module="Board_ListPackage_8">
+    <!--@css(/css/module/board/listPackage_gallary.css)-->
+    <div module="board_title_8">
+        <div class="path">
+            <span>현재 위치</span>
+            <ol>
+                <li><a href="/">홈</a></li>
+                <li><a href="#">게시판</a></li>
+                <li title="현재 위치"><strong>{$board_name}</strong></li>
+            </ol>
+        </div>
+
+        <div class="titleArea">
+            <h2>{$board_title} {$board_adult_icon}</h2>
+            <p>{$board_info}</p>
+        </div>
+        <p class="imgArea">{$board_top_image}</p>
+    </div>
+
+	<div module="board_listheader_8" class="ec-base-tab gBlank7 {$list_type_display|display}">
+		<ul>
+			<li class="selected"><a href="/board/gallery/list.html{$param_list}"><!--@import(/svg/icon-sort-thumb.html)--> 이미지형</a></li>
+			<li><a href="/board/gallery/list2.html{$param_list}"><!--@import(/svg/icon-sort-list.html)--> 리스트형</a></li>
+		</ul>
+	</div>
+
+	<div class="boardSort">
+        <span module="board_category_8">{$form.board_category}</span>
+    </div>
+	<div class="boardList">
+		<div module="board_notice_8">
+			<!--
+				$login_page_url = /member/login.html
+				$deny_access_url = /index.html
+			-->
+			<ul>
+				<li class="{$block_target_class}" {$block_data_attr}>
+					<a href="{$link_board_detail}">
+						<span class="thumbnail"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></span><span class="summary">
+							<strong class="subject {$block_content_class}">{$checkbox}<em>{$notice_icon}</em>{$subject}{$icon_new}<span class="comment">{$comment_count}</span></strong>
+							<span>{$member_icon}{$writer}</span>
+							<span class="date {$date_display|display}">{$write_date}</span>
+						</span>
+					</a>
+				</li>
+				<li class="{$block_target_class}" {$block_data_attr}>
+					<a href="{$link_board_detail}">
+						<span class="thumbnail"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></span><span class="summary">
+							<strong class="subject {$block_content_class}">{$checkbox}<em>{$notice_icon}</em>{$subject}{$icon_new}<span class="comment">{$comment_count}</span></strong>
+							<span>{$member_icon}{$writer}</span>
+							<span class="date {$date_display|display}">{$write_date}</span>
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div module="board_fixed_8">
+			<!--
+				$login_page_url = /member/login.html
+				$deny_access_url = /index.html
+			-->
+			<ul>
+				<li class="{$block_target_class}" {$block_data_attr}>
+					<a href="{$link_board_detail}">
+						<span class="thumbnail"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></span><span class="summary">
+							<strong class="subject {$block_content_class}">{$checkbox}<em>{$fixed_icon}</em>{$subject}{$icon_new}<span class="comment">{$comment_count}</span></strong>
+							<span>{$member_icon}{$writer}</span>
+							<span class="date {$date_display|display}">{$write_date}</span>
+						</span>
+					</a>
+				</li>
+				<li class="{$block_target_class}" {$block_data_attr}>
+					<a href="{$link_board_detail}">
+						<span class="thumbnail"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></span><span class="summary">
+							<strong class="subject {$block_content_class}">{$checkbox}<em>{$fixed_icon}</em>{$subject}{$icon_new}<span class="comment">{$comment_count}</span></strong>
+							<span>{$member_icon}{$writer}</span>
+							<span class="date {$date_display|display}">{$write_date}</span>
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div module="board_list_8">
+			<!--
+				$count = 12
+				$login_page_url = /member/login.html
+				$deny_access_url = /index.html
+			-->
+			<ul>
+				<li class="{$block_target_class}" {$block_data_attr}>
+					<a href="{$link_board_detail}">
+						<span class="thumbnail"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></span>
+						<span class="summary">
+							<strong class="subject {$block_content_class}">{$subject}<span class="comment">{$comment_count}</span></strong>
+							<span>{$member_icon}{$writer} </span>
+							<span class="date {$date_display|display}">{$write_date}</span>
+						</span>
+					</a>
+					{$checkbox}
+				</li>
+				<li class="{$block_target_class}" {$block_data_attr}>
+					<a href="{$link_board_detail}">
+						<span class="thumbnail"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></span>
+						<span class="summary">
+							<strong class="subject {$block_content_class}">{$subject}<span class="comment">{$comment_count}</span></strong>
+							<span>{$member_icon}{$writer} </span>
+							<span class="date {$date_display|display}">{$write_date}</span>
+						</span>
+					</a>
+					{$checkbox}
+				</li>
+			</ul>
+		</div>
+		<div class="boardListEmpty {$empty_display|display}" module="board_empty_8">
+			<p>{$empty_message}</p>
+		</div>
+	</div>
+
+    <div module="board_ButtonList_8" class="{$write_display|display} ec-base-button gBottom">
+        <span class="gRight">
+            <a href="/board/gallery/write.html{$param_write}" class="btnSubmitFix sizeM {$write_display|display}">글쓰기</a>
+        </span>
+    </div>
+	<div module="board_search_8">
+		<!--@css(/css/module/board/search.css)-->
+		<fieldset class="boardSearch">
+			<legend>게시물 검색</legend>
+			<div class="form">{$form.search_date} {$form.search_key} {$form.search} <a href="#none" class="btnNormal" onclick="{$action_search}">찾기</a></div>
+		</fieldset>
+	</div>
+</div>
+
+<div module="board_paging_8" class="section ec-base-paginate typeList">
+    <a href="{$param_prev}">이전 페이지</a>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <a href="{$param_next}">다음 페이지</a>
+</div>
+
+<!-- Admin only -->
+<div class="section" module="board_catemove_8">
+    <!--@css(/css/module/board/catemove.css)-->
+    <span class="gColumn">{$board_catemove_selectbox}</span>
+    <span class="gColumn"><a href="#none" class="btnNormal sizeS" onclick="{$action_category_move}">{$category_move}</a></span>
+</div>
+
+<div class="section" module="board_function_8">
+    <!--@css(/css/module/board/function.css)-->
+    <span class="gColumn">{$board_function_selectbox}</span>
+    <span class="gColumn">
+        <a href="#none" class="btnNormal sizeS" onclick="{$action_article_move}">{$article_move}</a>
+        <a href="#none" class="btnNormal sizeS" onclick="{$action_article_copy}">{$article_copy}</a>
+    </span>
+    <span class="ec-base-help">{$board_function_help|replace:*,}</span>
+</div>
+<!-- // Admin only -->

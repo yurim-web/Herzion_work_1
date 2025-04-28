@@ -1,0 +1,13 @@
+.xans-member-findpasswdresult .complete { margin:0 auto; text-align:center; }
+.xans-member-findpasswdresult .complete .headDesc { margin:0 0 20px; }
+.xans-member-findpasswdresult .description { margin:20px 0 0; padding:20px 0; line-height:20px; border-top:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+	.xans-member-findpasswdresult .description { margin:20px 7px 0; } 
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+	.xans-member-findpasswdresult .complete { width:474px; }
+}

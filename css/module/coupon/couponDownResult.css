@@ -1,0 +1,10 @@
+.couponDownResult img { border:0; vertical-align:top; }
+.couponDownResult .content { padding:30px 30px 20px; line-height:20px; }
+.couponDownResult .content .ec-base-box { overflow-y:auto; height:120px; margin:10px 0 0; }
+.couponDownResult .content .ec-base-box ul { margin:0 0 10px; padding:0; }
+.couponDownResult .content .ec-base-box ul li { list-style:none; margin:0; padding:0; }
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+	.couponDownResult { width:563px; }
+}

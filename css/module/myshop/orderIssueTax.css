@@ -1,0 +1,6 @@
+#popup { width:700px; }
+.ec-base-layer {z-index:999 !important;}
+
+@media all and (max-width:1024px) {
+    .ec-base-layer {position:static !important;transform:none !important;width:100% !important;}
+}

@@ -1,0 +1,30 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div class="boardReport displaynone ec-base-layer typeModal">
+    <!--@css(/layout/basic/css/ec-base-layer.css)-->
+    <!--@css(/css/module/board/report.css)-->
+    <div class="header">
+        <h3>게시글 신고하기</h3>
+    </div>
+    <div class="content">
+        <h4>신고사유</h4>
+        <div class="box">
+            <div class="selectBox">
+                <ul>
+                    <li><label class="label"><input type="radio" name="report_reason" value="1" class="radio" checked>관련없는 내용</label></li>
+                    <li><label class="label"><input type="radio" name="report_reason" value="2" class="radio">욕설/비방</label></li>
+                    <li><label class="label"><input type="radio" name="report_reason" value="3" class="radio">개인정보유출</label></li>
+                    <li><label class="label"><input type="radio" name="report_reason" value="4" class="radio">광고/홍보글</label></li>
+                    <li><label class="label"><input type="radio" name="report_reason" value="5" class="radio">기타</label></li>
+                </ul>
+            </div>
+        </div>
+        <p class="summary">신고해주신 내용은 쇼핑몰 운영자의 검토 후 내부 운영 정책에 의해 처리가 진행됩니다.</p>
+    </div>
+
+    <div class="ec-base-button report-button">
+        <a href="#none" class="btnSubmit ecReportAction" onclick="{$action_report}">신고</a>
+        <a href="#none" class="btnNormal ecReportCloseLayer" onclick="{$board_report_displaynone}">취소</a>
+    </div>
+    <a href="#none" class="btnClose ecReportCloseLayer" onclick="{$board_report_displaynone}">닫기</a>
+</div>
+

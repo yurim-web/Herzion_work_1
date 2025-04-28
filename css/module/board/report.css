@@ -1,0 +1,23 @@
+.boardReport { position:fixed; top:50%; left:50%; z-index:1000; width:450px; margin:-151px 0 0 -225px; }
+.boardReport .box { margin:17px 0 10px 0; padding:15px 10px; border:1px solid #d9dadc; }
+.boardReport .box .selectBox ul { display:flex; flex-wrap:wrap; }
+.boardReport .box .selectBox ul li { width:100px; margin:0 20px 0 0; }
+.boardReport .box .selectBox ul li:first-child { padding:0 0 15px 0; }
+.boardReport .box .selectBox ul li .radio { margin:0 5px 0 0; }
+.boardReport .btnClose {top:12px;}
+.xans-board-read .ec-base-button.report-button { margin:0 0 20px 0; }
+
+@media screen and (max-width:1024px) {
+	.boardReport.typeModal { top:35%;width:calc(100% - 8%);}
+	.boardReport .header h3 { display:block !important; width: 100%; height:auto; font-size:13px; padding:0; box-sizing: border-box;}
+	.boardReport .content { background-color: #fff; padding: 14px;}
+	.boardReport .content h4 { font-size:12px; }
+	.boardReport .box { margin:10px 0 14px 0; padding: 15px 10px; border: 1px solid #d9dadc;}
+	.boardReport .box .selectBox ul { display: flex; flex-wrap:wrap; }
+	.boardReport .box .selectBox ul li { width: 110px; margin: 0 28px 0 0; list-style:none; padding: 0 0 15px 0; }
+	.boardReport .box .selectBox ul li:last-child { padding: 0; }
+	.boardReport .box .selectBox ul li .radio { margin: 0 5px 0 0; }
+	.boardReport .ec-base-button.report-button,
+	.xans-board-read .ec-base-button.report-button { margin:0 0 20px 0; position: relative; text-align: center;}
+	.xans-board-read .ec-base-button.report-button .btnReport { position: absolute; right:0; bottom: 10px;}
+}

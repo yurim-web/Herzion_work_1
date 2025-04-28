@@ -1,0 +1,26 @@
+.xans-product-listcompare th { width:116px; }
+.xans-product-listcompare td { width:auto; word-wrap:break-word; word-break:break-all; }
+.xans-product-listcompare td em { font-style:normal; }
+.xans-product-listcompare .prdName { color:#2e2e2e; }
+.xans-product-listcompare .optionName { display:block; margin:3px 0 0; }
+
+.xans-product-listcompare .xans-product-productimagetiny img { max-width:129px; border:1px solid #d6d6d6; vertical-align:top; }
+.xans-product-listcompare .xans-product-productimagetiny .thumb { display:block; margin:0 0 6px; }
+
+.xans-product-listcompare .quantity { display:inline-block; position:relative; width:103px !important; padding:0 30px;vertical-align:top; box-sizing:border-box; }
+.xans-product-listcompare .quantity input { width:45px; height:30px; line-height:28px; margin-left:-1px; border:1px solid #e5e5e5; text-align:center; }
+.xans-product-listcompare .quantity input:focus,
+.xans-product-listcompare .quantity input:hover { border:1px solid #e5e5e5; }
+.xans-product-listcompare .quantity img { position: absolute;top: 0;left: 0;opacity: .00001;width: 100%;height: 100%; z-index: 10; }
+.xans-product-listcompare .quantity .up { position:absolute; right:0; top:0; }
+.xans-product-listcompare .quantity .down { position:absolute; left:0; top:0; }
+.xans-product-listcompare .quantity a { width:30px; height:30px; border:1px solid #e5e5e5; box-sizing:border-box; }
+.xans-product-listcompare .quantity a:before { content: ''; position: absolute;left:10px; top: 50%; width: 9px; height: 1px; background: #000; }
+.xans-product-listcompare .quantity .up:after {content: ''; position: absolute;left: 50%; top: 50%;width: 1px;height: 9px; margin: -4px 0 0 0; background: #000;}
+
+.xans-product-listcompare ul.item { margin:3px 0 0; color:#757575; }
+.xans-product-listcompare ul.item li { margin:2px 0 0; line-height:18px; }
+.xans-product-listcompare .mileage { display:block; margin:3px 0;}
+.xans-product-listcompare .description { padding:5px 0 0; color:#008bcc; }
+
+.xans-product-listcompare .ec-base-button { margin:10px 0; }

@@ -1,0 +1,10 @@
+.xans-myshop-boardlisthead { margin:0 0 20px 0; }
+.xans-myshop-boardlisthead #board_sort { width:150px; }
+
+.xans-myshop-boardlist .notice .subject { font-weight:bold; word-break:break-all; word-wrap:break-word; }
+
+.xans-myshop-boardpackage .ec-base-table table td.no { color:#6d6d6d; }
+.xans-myshop-boardpackage .ec-base-table table td.subject a { margin-right:5px; }
+.xans-myshop-boardpackage .ec-base-table table td.subject img { width:auto; height:21px; margin:0px 5px 1px 0; vertical-align:middle; }
+.xans-myshop-boardpackage .ec-base-table table td .comment { margin:0 5px 0 0; color:#ef441f; font-weight:normal; }
+.xans-myshop-boardpackage .ec-base-table table td .comment b { font-weight:normal; }

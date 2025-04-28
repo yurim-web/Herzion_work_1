@@ -1,0 +1,30 @@
+#popup .xans-product-sizeguide { height:667px; margin-top:-700px; border:1px solid #000; }
+#popup .xans-product-sizeguide .content { max-height:580px; }
+.xans-product-sizeguide .ec-base-layer { max-height:720px; }
+.xans-product-sizeguide .content { overflow:auto; position:relative; max-height:600px; }
+
+.xans-product-sizeguide h2 { margin:0 0 10px; font-size:12px; color:#444; }
+.xans-product-sizeguide .guideBoard { overflow-x: auto; margin:0 0 20px; }
+.xans-product-sizeguide .guideBoard table { border-spacing:0; border-collapse:collapse; line-height:1.5; background-color:#fff; }
+.xans-product-sizeguide .guideBoard.pants { margin-top:10px; }
+.xans-product-sizeguide .guideBoard.pants thead { overflow:hidden; position:absolute; width:0; height:0; white-space:nowrap; text-indent:150%; font-size:0; line-height:0; border:0; }
+.xans-product-sizeguide .guideBoard.pants tbody td { border-top-width:1px; }
+
+.xans-product-sizeguide .userGuide img { max-width:100%; height:auto !important; }
+.xans-product-sizeguide .userGuide table th,
+.xans-product-sizeguide .userGuide table td { word-break:break-all; }
+
+.xans-product-sizeguide .info { margin:10px 0 0; line-height:20px; }
+.xans-product-sizeguide .info span { display:block; padding:0 0 0 15px; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-product-sizeguide .ec-base-layer { width:100%; border:0; }
+    .xans-product-sizeguide .ec-base-layer .btnClose { display:none; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-product-sizeguide .ec-base-layer { width:820px; }
+
+}

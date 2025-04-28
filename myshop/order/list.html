@@ -1,0 +1,50 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="section path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li><a href="/myshop/index.html">마이쇼핑</a></li>
+        <li title="현재 위치"><strong>주문조회</strong></li>
+    </ol>
+</div>
+<div class="myshopArea">
+    <div class="titleArea titleArea--myshop">
+        <h2>주문조회</h2>
+    </div>
+    <div module="Myshop_OrderHistoryTab" class="ec-base-tab typeNav">
+        <ul class="menu">
+            <li class="{$tab_class}"><a href="/myshop/order/list.html{$param}">주문내역조회 ({$total_orders})</a></li>
+            <li class="{$tab_class_cs}"><a href="/myshop/order/list.html{$param_cs}">취소/반품/교환 내역 ({$total_orders_cs})</a></li>
+            <li class="{$tab_class_old} {$old_list_display|display} RW"><a href="/myshop/order/list_old.html{$param_old}">이전 주문내역 ({$total_orders_old})</a></li>
+        </ul>
+    </div>
+
+    <div module="Myshop_OrderHistoryHead">
+        <!--@css(/css/module/myshop/orderHistoryHead.css)-->
+        <fieldset class="form">
+            <legend>검색기간설정</legend>
+            <div class="stateSelect {$status_bar_display|display}">
+                {$form.order_status}
+            </div>
+            <span class="period">
+                <a href="#none" class="btnNormal sizeM {$now_style}" days="00">오늘</a>
+                <a href="#none" class="btnNormal sizeM {$month_style}" days="30">1개월</a>
+                <a href="#none" class="btnNormal sizeM {$three_style}" days="90">3개월</a>
+                <a href="#none" class="btnNormal sizeM {$six_style}" days="180">6개월</a>
+            </span>
+            <div class="date">
+                <span class="datepicker">{$form.start_date} ~ {$form.end_date}</span>
+                <span class="btnSubmit sizeM">조회{$form.submit_date}</span>
+            </div>
+        </fieldset>
+        <ul class="txtList">
+            <li class="{$is_past_list_none_display|display}">- 기본적으로 최근 3개월간의 자료가 조회되며, 기간 검색시 지난 주문내역을 조회하실 수 있습니다.</li>
+            <li class="{$is_past_list_display|display}">- 기본적으로 최근 3개월간의 자료가 조회되며, 기간 검색시 주문처리완료 후 36개월 이내의 주문내역을 조회하실 수 있습니다.</li>
+            <li class="{$is_past_list_display|display}">- 완료 후 36개월 이상 경과한 주문은 <a href="javascript:OrderHistory.searchPast(false)">[과거주문내역]</a>에서 확인할 수 있습니다.</li>
+            <li>- 리뉴얼 전에 주문한 내역은 <a href="/myshop/order/list_old.html">[이전 주문내역]</a>에서 확인할 수 있습니다.</li>
+            <li class="{$cs_request_guide_display|display}">- 취소/교환/반품 신청은 {$cs_request_period_day_condition} {$cs_request_period_day}일까지 가능합니다.</li>
+        </ul>
+    </div>
+    <!--@import(/myshop/order/history_list_item.html)-->
+    <!--@import(/myshop/myshop_main.html)-->
+</div>

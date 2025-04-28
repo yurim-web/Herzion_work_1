@@ -1,0 +1,31 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="section path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>비밀번호 찾기</strong></li>
+    </ol>
+</div>
+
+<div class="section titleArea">
+    <h2>비밀번호 찾기</h2>
+</div>
+
+<div module="member_findpasswdresult" class="memberArea">
+    <!--@css(/css/module/member/find_passwd_result.css)-->
+    <div class="ec-base-box typeMember">
+        <div class="complete">
+            <div class="headDesc">
+                <p class="{$display_email_method|display}">임시 비밀번호가 고객님의 <br class="RMB">메일로 전송되었습니다.</p>
+                <p class="{$display_mobile_method|display}">임시 비밀번호가 고객님의 <br class="RMB">휴대폰 번호로 전송되었습니다.</p>
+            </div>
+            <p class="description">
+                <span class="{$display_id_method|display}"><strong class="txtEm">{$id}</strong> 회원님, </span>임시 비밀번호를<br />
+                <strong class="txtEm"><span class="{$display_email_method|display}">{$email}</span><span class="{$display_mobile_method|display}">{$mobile}</span></strong>으로 보내드렸습니다.
+            </p>
+        </div>
+    </div>
+    <div class="ec-base-button gBottom">
+        <a href="/member/login.html" class="btnSubmitFix sizeM gFull">로그인</a>
+    </div>
+</div>

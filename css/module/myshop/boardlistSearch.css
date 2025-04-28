@@ -1,0 +1,24 @@
+.xans-myshop-boardlistsearch .form { display:flex; }
+.xans-myshop-boardlistsearch select, 
+.xans-myshop-boardlistsearch input[type="text"], 
+.xans-myshop-boardlistsearch a { margin-left:10px; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-myshop-boardlistsearch { margin:10px 16px 0px 11px; }
+    .xans-myshop-boardlistsearch .form { flex-wrap:wrap; }
+    .xans-myshop-boardlistsearch select, 
+    .xans-myshop-boardlistsearch input[type="text"],
+    .xans-myshop-boardlistsearch a { flex:1; margin-top:10px; }
+    .xans-myshop-boardlistsearch #search { flex:2; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-myshop-boardlistsearch { margin:20px -5px 0; }
+    .xans-myshop-boardlistsearch select, 
+    .xans-myshop-boardlistsearch input[type="text"], 
+    .xans-myshop-boardlistsearch a { margin:0 5px; }
+    .xans-myshop-boardlistsearch #search_key { width:110px; }
+    .xans-myshop-boardlistsearch #search { width:175px; }
+}

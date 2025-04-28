@@ -1,0 +1,60 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Order_BoardListPackage" class="ec-base-layer">
+    <!--@css(/layout/basic/css/ec-base-prdInfo.css)-->
+    <!--@css(/css/module/order/boardListPackage.css)-->
+    <div class="header">
+        <h1>주문정보 선택</h1>
+    </div>
+
+    <div class="content">
+        <div module="Order_BoardListhead">{$form.limit_select}</div>
+        <div module="Order_BoardList">
+            <div class="ec-base-prdInfo">
+                <div class="prdBox">
+                    <div class="thumbnail"><img src="{$image_medium}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></div>
+                    <div class="description">
+                        <strong class="prdName" title="상품명">{$product_name}</strong>
+                        <div class="price" title="판매가">{$product_price} {$product_tax_type_text}</div>
+                        <ul class="info">
+                            <li>{$order_id}</li>
+                            <li>{$order_date}</li>
+                        </ul>
+                    </div>
+                    <div class="buttonGroup">
+                        <a href="#none" class="btnNormal sizeS" onclick="{$action_product_select}">선택</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ec-base-prdInfo">
+                <div class="prdBox">
+                    <div class="thumbnail"><img src="{$image_medium}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></div>
+                    <div class="description">
+                        <strong class="prdName" title="상품명">{$product_name}</strong>
+                        <div class="price" title="판매가"><span class="gBlank5">{$product_price}</span> {$product_tax_type_text}</div>
+                        <ul class="info">
+                            <li>{$order_id}</li>
+                            <li>{$order_date}</li>
+                        </ul>
+                    </div>
+                    <div class="buttonGroup">
+                        <a href="#none" class="btnNormal sizeS" onclick="{$action_product_select}">선택</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div module="Order_BoardPaging" class="ec-base-paginate typeList">
+            <a href="{$param_first}" class="first">첫 페이지</a>
+            <a href="{$param_before}">이전 페이지</a>
+            <ol>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            </ol>
+            <a href="{$param_next}">다음 페이지</a>
+            <a href="{$param_last}" class="last">마지막 페이지</a>
+        </div>
+    </div>
+</div>

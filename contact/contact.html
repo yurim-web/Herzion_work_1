@@ -1,0 +1,324 @@
+<!-- 문의 페이지 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+    <link rel="stylesheet" href="/contact/contact.css" />
+    <link rel="stylesheet" href="../layout_new/header.css" />
+    <link rel="stylesheet" href="../layout_new/footer.css" />
+    <script src="../layout_new/layout.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="contact.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- 모바일 토글 할때 백그라운드 흰색색 -->
+    <div class="mobile_menu_background"></div>
+    <!-- 헤더 부분 -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="/">
+            <img src="images/logo.svg" alt="HERZION" class="header_logo" />
+            <!-- 모바일 전용 로고 -->
+            <img
+              src="images/m_header_logo.svg"
+              alt="HERZION"
+              class="header_logo_mobile"
+            />
+          </a>
+        </div>
+        <div class="nav_right">
+          <button class="menu_btn">Menu</button>
+          <div class="menu_drop">
+            <ul class="menu_drop_list">
+              <li><a href="/" data-text="Home">Home</a></li>
+              <li><a href="/product/product.html" data-text="Product">Product</a></li>
+              <li><a href="/technology/technology.html" data-text="Technology">Technology</a></li>
+              <li><a href="/business/business.html" data-text="Business">Business</a></li>
+              <li>
+                <a href="/support/support.html" data-text="Support">Support</a>
+              </li>
+              <li><a href="" data-text="FAQ">FAQ</a></li>
+              <li>
+                <a href="/contact/contact.html" data-text="Support">Contact</a>
+              </li>
+            </ul>
+          </div>
+           <!-- 모바일 메뉴 -->
+           <span class="menu_btn_mobile" id="menu_btn_mobile">Menu</span>
+           <button class="menu_btn_mobile_close" id="menu_btn_mobile_close">X</button>
+           <div class="mobile_menu" id="mobile_menu">
+            <div class="mobile_menu_lang">
+              <button class="active">KOR</button>
+              <button>ENG</button>
+              <button>JPN</button>
+            </div>
+            <div class="mobile_menu_shop">
+              <a href="">Shop now</a>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <ul class="mobile_menu_list">
+              <li><a href="/">Home</a></li>
+              <li><a href="">Product</a></li>
+              <li><a href="">Technology</a></li>
+              <li><a href="">Business</a></li>
+              <li><a href="/support/support.html">Support</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="/contact/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <button class="buy_now_btn">Buy Now</button>
+
+        </div>
+
+         
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 메인 베너 부분 -->
+      <section class="banner_section">
+        <div class="hero">
+          <div class="hero_content">
+            <h1>Contact</h1>
+            <p>문의</p>
+          </div>
+        </div>
+      </section>
+      <!-- Swiper 컨테이너 -->
+      <div class="swiper inquiry_swiper">
+        <div class="swiper-wrapper">
+          <!-- 첫 번째 슬라이드 -->
+          <div class="swiper-slide">
+            <section class="inquiry_section">
+              <div class="inquiry_box">
+                <div class="inquiry_contents">
+                  <div class="inquiry_left_container">
+                    <h1>안녕하세요.<br />어떤 문의가 필요하신가요?</h1>
+                    <p>＊ 중복 선택 가능</p>
+                  </div>
+                  <div class="inquiry_right_container">
+                    <button class="inquiry_btn" id="inquiry_btn_1">
+                      대량 구매 문의
+                    </button>
+                    <button class="inquiry_btn" id="inquiry_btn_2">
+                      협력 문의
+                    </button>
+                    <button class="inquiry_btn" id="inquiry_btn_3">
+                      전시 문의
+                    </button>
+                    <button class="inquiry_btn" id="inquiry_btn_4">
+                      기타 문의
+                    </button>
+                  </div>
+                </div>
+              <!-- 제출 버튼 -->
+              <button class="submit_btn" id="first_submit_btn">제출 →</button>
+                <!-- 모바일 전용 버튼  -->
+                <button class="inquiry_btn inquiry_btn_mobile" id="inquiry_btn_mobile">
+                  다음
+                </button>
+              </div>
+            </section>
+          </div>
+          <!-- 두 번째 슬라이드 -->
+          <div class="swiper-slide">
+            <section class="inquiry_section">
+              <div class="inquiry_box inquiry_box_desktop">
+                <div class="inquiry_contents">
+                  <div class="inquiry_left_container">
+                    <h1>문의를 원하시는 분의<br />정보를 남겨주세요.</h1>
+                  </div>
+                  <div class="information_right_container">
+                    <!-- 회사 정보 부분 -->
+                    <div class="infomation_box">
+                      <h3>회사 정보</h3>
+                      <div class="information_btn_box">
+                        <button class="information_btn">
+                          회사/기업명<span class="red_color">*</span>
+                        </button>
+                        <button class="information_btn">
+                          이메일<span class="red_color">*</span>
+                        </button>
+                        <input
+                          class="information_btn information_input"
+                          placeholder="회사/기업명을 입력해 주세요."
+                        />
+                        <input
+                          class="information_btn information_input"
+                          placeholder="이메일을 입력해 주세요."
+                        />
+                      </div>
+                    </div>
+                    <!-- 담당자 정보 부분 -->
+                    <div class="infomation_box">
+                      <h3>담당자 정보</h3>
+                      <div class="information_btn_box">
+                        <button class="information_btn">
+                          이름<span class="red_color">*</span>
+                        </button>
+                        <button class="information_btn">
+                          연락처<span class="red_color">*</span>
+                        </button>
+                        <input
+                          class="information_btn information_input"
+                          placeholder="이름을 입력해 주세요."
+                        />
+                        <input
+                          class="information_btn information_input"
+                          placeholder="연락처를 입력해 주세요."
+                        />
+                      </div>
+                    </div>
+                    <!-- 문의 정보 부분 -->
+                    <div class="infomation_box">
+                      <h3>담당자 정보</h3>
+                      <div class="information_btn_box last_btn_box">
+                        <button class="information_btn">문의 내용</button>
+                        <input
+                          class="information_btn information_input"
+                          placeholder="문의 내용을 작성해 주세요."
+                        ></input>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <!-- 모바일 버전  -->
+              <div class="inquiry_box mobile_section">
+                <div class="inquiry_contents">
+                  <div class="inquiry_left_container">
+                    <h1>문의를 원하시는 분의<br />정보를 남겨주세요.</h1>
+                    <p style="color: #ff3a3a">＊ 전체 항목 필수 입력</p>
+                  </div>
+                  <div class="inquiry_right_container">
+                    <input
+                      class="inquiry_btn input_mobile"
+                      placeholder="회사/기업명"
+                    />
+                    <input
+                      class="inquiry_btn input_mobile"
+                      style="color: #3c3c3c"
+                      placeholder="이메일"
+                    />
+                    <input
+                      class="inquiry_btn input_mobile"
+                      style="color: #3c3c3c"
+                      placeholder="이름"
+                    />
+                    <input
+                      class="inquiry_btn input_mobile"
+                      style="color: #3c3c3c"
+                      placeholder="연락처"
+                    />
+                    <textarea
+                      class="inquiry_btn input_mobile_long"
+                      placeholder="문의 내용"
+                      rows="4"
+                    ></textarea>
+                  </div>
+                </div>
+                <button
+                  class="inquiry_btn inquiry_btn_mobile"
+     
+                  id="next_btn_mobile"
+                >
+                  다음
+                </button>
+              </div>
+              <!-- 제출 버튼 -->
+              <button class="submit_btn" id="second_submit_btn">제출 →</button>
+            </section>
+          </div>
+          <!-- 세 번째 슬라이드 -->
+          <div class="swiper-slide">
+            <section class="inquiry_section">
+              <div class="inquiry_box">
+                <div class="inquiry_contents">
+                  <div class="inquiry_center_container">
+                    <h1>
+                      문의주셔서 감사합니다!<br />확인 후 연락드리겠습니다.
+                    </h1>
+                    <button class="back_btn" id="back_btn">돌아가기 →</button>
+                    <button class="back_btn_mobile" id="back_btn_mobile">
+                      돌아가기
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- 푸터부분 -->
+    <footer>
+      <div class="footer_top_content">
+        <div class="footer_left">
+          <img src="images/footer_logo.svg" alt="HERZION" class="footer_logo" />
+          <div class="contact_info">
+            <div class="contact_info_left">
+              <div class="info_group">
+                <p class="label">Tel</p>
+                <span>02-2637-0009</span>
+              </div>
+              <div class="info_group">
+                <p class="label">E-mail</p>
+                <span>help@herzion.com</span>
+              </div>
+            </div>
+            <div class="contact_info_right">
+              <div class="info_group">
+                <p class="label">Address</p>
+                <span>경기도 성남시 분당구 동판교로 56, (주)아리바이오</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer_right">
+          <ul class="footer_links">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="/contact/contact.html">Contact</a></li>
+            <li><a href="/support/support.html">Support</a></li>
+          </ul>
+          <div class="app_download_box">
+            <a href="https://apps.apple.com/" class="store_btn">
+              <img src="images/apple_logo.svg" alt="" /><span>App Store</span>
+            </a>
+            <a href="https://play.google.com/" class="store_btn">
+              <img src="images/google_logo.svg" alt="" /><span
+                >Google Play</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <p>ⓒ 2024 by Aribio. All Rights Reserved.</p>
+        <img
+          src="images/footer_logo.svg"
+          alt="HERZION"
+          class="footer_logo_bottom"
+        />
+      </div>
+    </footer>
+
+    <!-- 상단이동하는 버튼 -->
+    <button class="top_btn" id="top_btn">
+      <img src="images/top_btn.svg" alt="상단 이동 버튼" />
+      <span>Top</span>
+    </button>
+  </body>
+</html>

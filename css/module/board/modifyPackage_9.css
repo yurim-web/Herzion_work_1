@@ -1,0 +1,32 @@
+.xans-board-title p.imgArea { margin:0 0 20px; }
+
+.xans-board-modify-9 .ec-base-table .view .detail { padding:10px; word-break:break-all; line-height:normal; }
+.xans-board-modify-9 .ec-base-table .view .detail ol,
+.xans-board-modify-9 .ec-base-table .view .detail ul { margin:15px 0; padding:0 0 0 40px; }
+.xans-board-modify-9 .ec-base-table .view .detail ol li { list-style:decimal; }
+.xans-board-modify-9 .ec-base-table .view .detail ul li { list-style:disc; }
+
+.xans-board-modify-9 .file td { color:#7d7d7d; }
+.xans-board-modify-9 .file label { color:#000; }
+.xans-board-modify-9 .file [id^="delfile"] { margin-left:20px; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+	.xans-board-modify-9 .ec-base-table input[type="text"],
+    .xans-board-modify-9 .ec-base-table input[type="password"],
+    .xans-board-modify-9 .ec-base-table select { width:100%; }
+    .xans-board-modify-9 #email1 { width:47%; margin:0 6px 0 0; }
+    .xans-board-modify-9 #email2 { width:47%; flex:1; margin:0 0 0 6px; }
+    .xans-board-modify-9 #email3 { margin:10px 0 0; }
+    .xans-board-modify-9 #captcha { flex:1; margin-left:10px; }
+    .xans-board-modify-9 .file input[type="file"] { display:block; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-board-modify-9 #subject { width:526px; }
+    .xans-board-modify-9 #email1,
+    .xans-board-modify-9 #email2 { width:138px; }
+    .xans-board-modify-9 #email3 { width:138px; margin:0 0 0 10px; }
+    .xans-board-modify-9 #captcha { width:200px; margin:0 20px 0 10px; }
+}

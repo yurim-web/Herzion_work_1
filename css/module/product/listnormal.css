@@ -1,0 +1,72 @@
+.xans-product-normalmenu { border-top:1px solid #e0e0e0; }
+.xans-product-normalmenu .function { overflow:hidden; text-align:right; line-height:38px; }
+.xans-product-normalmenu .function .btnCompare { display:inline-block; padding:0 12px; border-left:1px solid #d7d5d5; }
+.xans-product-normalmenu .function .btnCompare:hover { text-decoration:none; }
+.xans-product-normalmenu .prdCount { float:left; color:#7d7d7d; }
+.xans-product-normalmenu .prdCount strong { margin-left:8px; }
+.xans-product-normalmenu fieldset { margin:20px 0 0; padding:10px 16px; text-align:right; background:#fbf9fa; }
+
+
+/********************* Mobile *********************/
+@media all and (max-width:767px) {
+    .xans-product-normalmenu {padding: 20px 16px 0;}
+    .xans-product-normalpackage .product_area {margin: 0 16px;}
+}
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-product-normalmenu { margin:40px 0 0; }
+}
+
+/********************* Tablet *********************/
+@media all and (min-width:768px) and (max-width: 1024px){
+    .xans-product-normalmenu { padding:20px 24px 0; }
+    .xans-product-normalpackage .product_area { margin:0 24px; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-product-normalmenu { margin:50px 0 0; padding:40px 0 0; }
+}
+
+
+/** 캠퍼타운_style 210820 **/
+
+/* 목록페이지 */
+.normalpackage_box {margin-bottom:120px;}
+.path {max-width:1680px !important;}
+.xans-product-normalmenu {border-top:0;padding:0;margin:0;}
+.xans-product-normalpackage {margin:0 auto;padding:0;}
+.product_top_image {max-width:1680px !important;width:92%;margin:0 auto;padding:20px 0;text-align:center;}
+.listpage_title {margin:0 0 24px 0;font-size:20px;color:#1a1a1a;font-weight:400;}
+.listpage_title.ez-align-left {text-align:left;}
+.listpage_title.ez-align-center {text-align:center;}
+.listpage_title.ez-align-right {text-align:right;}
+.listpage_title span {display:block;font-size:16px;color:#a3a3a3;font-weight:300;}
+#shoppQbtn {margin-top:40px;}
+.maxwidth1680 {max-width:1680px !important;}
+.xans-product-headcategory.titleArea.section {margin:0 auto;padding:40px 0;}
+
+/* 상품분류 추천상품 */
+.xans-product-listrecommend {padding:0;margin:0 auto !important;}
+.xans-product-listrecommend .prdList .thumbnail .likeButton {display:none !important;}
+.xans-product-listrecommend .prdList .thumbnail .badge {display:flex !important;}
+
+/* 상품분류 신상품 */
+.xans-product-listnew {padding:0;margin:0 auto !important;}
+.xans-product-listnew .prdList .thumbnail .likeButton {display:none !important;}
+.xans-product-listnew .prdList .thumbnail .badge {display:flex !important;}
+
+@media all and (max-width:1024px) {
+	/* 목록페이지 */
+	.normalpackage_box {margin-bottom:50px;}
+	.product_top_image {width:92%;padding:10px 0;}
+	.listpage_title {margin-bottom:15px;font-size:16px;}
+	.listpage_title span {font-size:13px;}
+	.xans-product-headcategory.titleArea.section {padding:25px 0;}
+
+	/* 상품분류 추천상품 */
+	.xans-product-listrecommend {padding:0 0 50px;}
+
+	/* 상품분류 신상품 */
+	.xans-product-listnew {padding:0 0 50px;}
+}

@@ -1,0 +1,148 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="section path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li><a href="/myshop/index.html">마이쇼핑</a></li>
+        <li title="현재 위치"><strong>마이쿠폰</strong></li>
+    </ol>
+</div>
+<div class="myshopArea">
+    <div class="titleArea titleArea--myshop">
+        <h2>쿠폰내역</h2>
+    </div>
+
+    <div class="{$serial_coupon_input_display|display}" module="myshop_CouponSerial">
+        <!--@css(/css/module/myshop/couponSerial.css)-->
+
+        <div class="couponSerial">
+            <!--
+                $login_page_url = /member/login.html
+            -->
+            <fieldset><legend>쿠폰번호 등록</legend>
+                {$form.coupon_code}
+                <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_coupon_submit}">쿠폰번호인증</a>
+                <p class="txtInfo">반드시 쇼핑몰에서 발행한 쿠폰번호만 입력해주세요.<br class="display_tablet_only">(10~35자 일련번호 "-" 제외)</p>
+            </fieldset>
+        </div>
+    </div>
+
+    <div module="myshop_CouponList">
+        <!--@css(/css/module/myshop/couponList.css)-->
+        <!--@js(/js/module/myshop/couponList.js)-->
+        <!--
+            $product_list_url = coupon_product_list.html
+        -->
+        <div class="couponList">
+            <div class="ec-base-table {$display_coupon_list|display}">
+                <table border="1">
+                    <caption>마이 쿠폰 목록</caption>
+                    <colgroup>
+                        <col style="width:10%;" class="RW">
+                        <col style="width:50%;">
+                        <col style="width:13%;">
+                        <col style="width:13%;">
+                        <col style="width:14%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="RW">번호</th>
+                            <th scope="col">쿠폰명</th>
+                            <th scope="col">할인</th>
+                            <th scope="col">적립</th>
+                            <th scope="col">상세</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center">
+                        <tr>
+                            <td class="RW">{$coupon_no}</td>
+                            <td class="coupon_name"><span class="display_tablet_only">쿠폰명</span>{$coupon_name}</td>
+                            <td><span class="display_tablet_only">할인</span>{$coupon_discount}<br>{$coupon_discount_max_benefit_price}</td>
+                            <td><span class="display_tablet_only">적립</span>{$coupon_mileage}<br>{$coupon_mileage_max_benefit_price}</td>
+                            <td class="layer"><span class="display_tablet_only">쿠폰 상세보기</span>
+                                <a href="#none">상세</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="contents">
+                                <ul>
+                                    <li><strong>쿠폰번호</strong><span class="content">{$coupon_no}</span></li>
+                                    <li><strong>구매금액</strong><span class="content">{$coupon_use_price}</span></li>
+                                    <li class="{$display_paymethod|display}"><strong>결제수단</strong><span class="content">{$coupon_paymethod}</span></li>
+                                    <li><strong>쿠폰혜택</strong><span class="content">{$coupon_benefit_result} <span>{$coupon_max_benefit_price}</span></span></li>
+                                    <li><strong>할인액(률)</strong><span class="content">{$coupon_discount}</span></li>
+                                    <li><strong>적립액(률)</strong><span class="content">{$coupon_mileage}</span></li>
+                                    <li><strong>예치금</strong><span class="content">{$coupon_deposit}</span></li>
+                                    <li><strong>사용가능 기간</strong><span class="content">{$coupon_use_date}</span></li>
+                                    <li class="gButton"><strong>쿠폰적용상품</strong><span class="content">{$coupon_use_product_icon}</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="center">
+                        <tr>
+                            <td class="RW">{$coupon_no}</td>
+                            <td class="coupon_name"><span class="display_tablet_only">쿠폰명</span>{$coupon_name}</td>
+                            <td><span class="display_tablet_only">할인</span>{$coupon_discount}<br>{$coupon_discount_max_benefit_price}</td>
+                            <td><span class="display_tablet_only">적립</span>{$coupon_mileage}<br>{$coupon_mileage_max_benefit_price}</td>
+                            <td class="layer"><span class="display_tablet_only">쿠폰 상세보기</span>
+                                <a href="#none">상세</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="contents" title="쿠폰정보">
+                                <ul>
+                                    <li><strong>쿠폰번호</strong><span class="content">{$coupon_no}</span></li>
+                                    <li><strong>구매금액</strong><span class="content">{$coupon_use_price}</span></li>
+                                    <li class="{$display_paymethod|display}"><strong>결제수단</strong><span class="content">{$coupon_paymethod}</span></li>
+                                    <li><strong>쿠폰혜택</strong><span class="content">{$coupon_benefit_result}<span>{$coupon_max_benefit_price}</span></span></li>
+                                    <li><strong>할인액(률)</strong><span class="content">{$coupon_discount}</span></li>
+                                    <li><strong>적립액(률)</strong><span class="content">{$coupon_mileage}</span></li>
+                                    <li><strong>예치금</strong><span class="content">{$coupon_deposit}</span></li>
+                                    <li><strong>사용가능 기간</strong><span class="content">{$coupon_use_date}</span></li>
+                                    <li class="gButton"><strong>쿠폰적용상품</strong><span class="content">{$coupon_use_product_icon}</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="ec-base-prdEmpty {$display_no_coupon_list|display}">
+				<!--@import(/svg/icon-empty.html)-->
+                보유하고 계신 쿠폰 내역이 없습니다.
+            </p>
+
+            <div class="ec-base-button gCenter {$coupon_mileage_display|display}">
+                <button type="button" class="btnStrong" onclick="COUPON.useCoupon()">사용하기</button>
+            </div>
+        </div>
+    </div>
+
+    <div module="myshop_CouponListPaging" class="ec-base-paginate typeList">
+        <a href="{$first_url}" class="first">첫 페이지</a>
+        <a href="{$prev_url}">이전 페이지</a>
+        <ol>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        </ol>
+        <a href="{$next_url}">다음 페이지</a>
+        <a href="{$last_url}" class="last">마지막 페이지</a>
+    </div>
+
+    <div class="ec-base-help">
+        <h3>쿠폰 이용 안내</h3>
+        <div class="inner">
+            <ul>
+                <li><strong>쿠폰인증번호 등록하기</strong>에서 쇼핑몰에서 발행한 종이쿠폰/시리얼쿠폰/모바일쿠폰 등의 인증번호를 등록하시면 온라인쿠폰으로 발급되어 사용이 가능합니다.</li>
+                <li>쿠폰은 주문 시 1회에 한해 적용되며, 1회 사용 시 재 사용이 불가능합니다.</li>
+                <li>쿠폰은 적용 가능한 상품이 따로 적용되어 있는 경우 해당 상품 구매 시에만 사용이 가능합니다.</li>
+                <li>특정한 종이쿠폰/시리얼쿠폰/모바일쿠폰의 경우 단 1회만 사용이 가능할 수 있습니다.</li>
+                <li>기본 배송비 할인쿠폰은 배송구분이 '기본배송'인 상품에 부과된 배송비만 할인이 적용됩니다.</li>
+                <li>전체 배송비 할인쿠폰은 배송구분이 '기본배송', '개별배송', '공급사배송'인 상품에 부과된 배송비 할인이 적용됩니다.</li>
+            </ul>
+        </div>
+    </div>
+    <!--@import(/myshop/myshop_main.html)-->
+</div>

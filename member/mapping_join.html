@@ -1,0 +1,84 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="section path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>SNS 계정 연동</strong></li>
+    </ol>
+</div>
+
+<div class="section titleArea">
+    <h2>SNS 계정 연동</h2>
+</div>
+
+<div module="member_joinMapping">
+    <!--@css(/css/module/member/mapping_join.css)-->
+    <div class="boxTitle">
+        이미 <em>{$provider_member_email}</em> 으로 가입한 쇼핑몰 아이디가 있어요.<br />
+        기존 계정에 로그인해서 SNS 계정을 연동하시겠어요?
+    </div>
+    <div class="ec-base-box typeThin">
+        <ul class="accountList">
+            <li class="head">
+                <strong>아이디</strong>
+                <strong>가입일</strong>
+            </li>
+            <li>
+                <span>
+                    <label>
+                       <input type="radio" name="join_mapping_info" value="{$member_id}" provider="{$provider}" title="{$title}"><span class="snsId">{$title_ui}{$masking_member_id}</span>
+                    </label>
+                </span>
+                <span class="center">{$regist_date}</span>
+            </li>
+            <li>
+                <span>
+                    <label>
+                       <input type="radio" name="join_mapping_info" value="{$member_id}" provider="{$provider}" title="{$title}"><span class="snsId">{$title_ui}{$masking_member_id}</span>
+                    </label>
+                </span>
+                <span class="center">{$regist_date}</span>
+            </li>
+            <li>
+                <span>
+                    <label>
+                       <input type="radio" name="join_mapping_info" value="{$member_id}" provider="{$provider}" title="{$title}"><span class="snsId">{$title_ui}{$masking_member_id}</span>
+                    </label>
+                </span>
+                <span class="center">{$regist_date}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="ec-base-button">
+        <a href="#none" class="btnSubmit gFull sizeL" onclick="{$action_func_mapping}">선택한 아이디로 계정 연동</a><a href="#none" onclick="{$action_func_join}" class="btnNormal gFull sizeL {$display_join|disp1lay}">계정 연동하지 않고 신규 가입</a>
+    </div>
+</div>
+
+<div module="Layout_login">
+    <!--@css(/layout/basic/css/ec-base-layer.css)-->
+    <!--@css(/css/module/member/layer_login.css)-->
+    <div class="layer-wrapper sizeM">
+        <div class="layer-inner">
+            <div class="ec-base-layer">
+                <div class="header">
+                    <h3>{$mall_name} 로그인</h3>
+                </div>
+                <div class="content">
+                    <div class="login">
+                        <fieldset>
+                            <legend>로그인</legend>
+                            <label class="id ePlaceholder" title="{$login_id_type_text}">{$form.member_id}</label>
+                            <label class="password ePlaceholder" title="비밀번호">{$form.member_passwd}</label>
+                            <a href="#none" class="btnLogin" onclick="{$action_func_login}">로그인</a>
+                            <p class="info">아이디, 비밀번호를 잊으셨나요?</p>
+                            <ul><li><a href="/member/id/find_id.html">아이디찾기</a></li><li><a href="/member/passwd/find_passwd_info.html">비밀번호찾기</a></li></ul>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="ec-base-button">
+                    <button class="btnNormalFix sizeS" type="button" onclick="$('.xans-layout-login').hide();">취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

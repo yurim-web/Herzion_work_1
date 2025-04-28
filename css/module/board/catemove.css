@@ -1,0 +1,10 @@
+.xans-board-catemove { padding:10px 16px; border-top:1px solid #e5e5e5; }
+.xans-board-catemove .gColumn { display:inline-block; margin:10px; }
+.xans-board-catemove #board_category_move { margin:0 8px; }
+.xans-board-catemove select { width:138px; }
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-board-catemove { padding:10px 0; }
+    .xans-board-catemove .gColumn:first-of-type { margin-left:0; }
+}

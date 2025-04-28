@@ -1,0 +1,52 @@
+.xans-board-title p.imgArea { margin:0 0 20px; }
+
+.xans-board-modify .ec-base-box.typeProduct { margin:0 0 40px; }
+.xans-board-modify .information h3 { margin:0 0 2px; padding:0 120px 0 0; font-size:14px; }
+.xans-board-modify #sPrdCommonImg { position:absolute; top:0; right:0; width:100px; text-align:right; }
+.xans-board-modify .information .button { margin:15px 0 0; }
+
+.xans-board-modify .captcha img { vertical-align:middle; margin-left:4px; }
+.xans-board-modify [class^="point"] em { font-style:normal; }
+.xans-board-modify .file td { color:#7d7d7d; }
+.xans-board-modify .file label { color:#000; }
+.xans-board-modify .file [id^="delfile"] { margin-left:20px; }
+.xans-board-modify .agree textarea { margin:0 0 14px; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+	.xans-board-modify .ec-base-table input[type="text"],
+    .xans-board-modify .ec-base-table input[type="password"],
+    .xans-board-modify .ec-base-table select { width:100%; }
+    .xans-board-modify #email1 { width:47%; margin:0 6px 0 0; }
+    .xans-board-modify #email2 { width:47%; flex:1; margin:0 0 0 6px; }
+    .xans-board-modify #email3 { margin:10px 0 0; }
+    .xans-board-modify #captcha { flex:1; margin-left:10px; }
+    .xans-board-modify .file input[type="file"] { display:block; }
+    .xans-board-modify .agree textarea { width:100%; height:140px; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-board-modify #writer { width:450px; }
+    .xans-board-modify #email1,
+    .xans-board-modify #email2 { width:138px; }
+    .xans-board-modify #email3 { width:138px; margin:0 0 0 10px; }
+    .xans-board-modify #captcha { width:200px; margin:0 20px 0 10px; }
+    .xans-board-modify #ucc { width:328px; }
+    .xans-board-modify #ucc_width, 
+    .xans-board-modify #ucc_height { width:150px; margin-left:4px; }
+    .xans-board-modify #password { width:200px; }
+    .xans-board-modify .agree textarea { width:550px; height:140px; }
+}
+
+/********************* Mobile / Tablet / PC 1340 *********************/
+@media all and (max-width:1340px) {
+    .xans-board-modify #board_category { width:100%; }
+	.xans-board-modify #subject {width:100%; margin:10px 0; }
+}
+
+/********************* PC 1341 *********************/
+@media all and (min-width:1341px) {
+    .xans-board-modify #board_category { width:170px; margin:0 10px 0 0; }
+	.xans-board-modify #subject { width:526px; margin:0 20px 0 0; }
+}

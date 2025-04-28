@@ -1,0 +1,167 @@
+/* Align */
+.ec-base-table th[scope*="row"] { text-align:left; }
+.ec-base-table .left { text-align:left; }
+.ec-base-table .center { text-align:center; }
+.ec-base-table .right { text-align:right; }
+.ec-base-table td.left { text-align:left; }
+.ec-base-table td.center { text-align:center; }
+.ec-base-table td.right { text-align:right; }
+.ec-base-table .top th,
+.ec-base-table .top td,
+.ec-base-table th.top,
+.ec-base-table td.top { vertical-align:top; }
+.ec-base-table .middle th,
+.ec-base-table .middle td,
+.ec-base-table th.middle,
+.ec-base-table td.middle { vertical-align:middle; }
+.ec-base-table .bottom th,
+.ec-base-table .bottom td,
+.ec-base-table th.bottom,
+.ec-base-table td.bottom { vertical-align:bottom; }
+
+/* Table */
+.ec-base-table { border-top:1px solid #000; }
+.ec-base-table th,
+.ec-base-table td { height:29px; padding:14px 20px; line-height:22px; vertical-align:middle; }
+.ec-base-table th { border-bottom:1px solid #e5e5e5; background-color:#f6f6f6; }
+.ec-base-table td { border-bottom:1px solid #e5e5e5; }
+.ec-base-table th img.icon,
+.ec-base-table td img.icon { display:inline-block; max-width:100%; max-height:100%; vertical-align:middle; }
+.ec-base-table td [class^="btn"],
+.ec-base-table td a[class^="btn"]{ vertical-align:baseline; }
+  /* gBorderClear */
+  .ec-base-table.gBorderClear { border-top:0; }
+  .ec-base-table td.gBorderClear { border-bottom:0; }
+
+/* Table - Empty */
+.ec-base-table .message { padding:56px 0; border-bottom:1px solid #e5e5e5; text-align:center; color:#6d6d6d; }
+
+/* Table - typeWrite */
+.ec-base-table.typeWrite th,
+.ec-base-table.typeWrite td { height:auto; }
+.ec-base-table.typeWrite td [class^="btn"],
+.ec-base-table.typeWrite td a[class^="btn"] { vertical-align:middle; }
+  /* formMultiple */
+  .ec-base-table.typeWrite .formMultiple dl,
+  .ec-base-table.typeWrite .formMultiple ul { width:100%; }
+  .ec-base-table.typeWrite .formMultiple dt { margin:0 0 2px 0; }
+  .ec-base-table.typeWrite .formMultiple li,
+  .ec-base-table.typeWrite .formMultiple dd { margin:0 0 10px 0; }
+  .ec-base-table.typeWrite .formMultiple li:last-of-type,
+  .ec-base-table.typeWrite .formMultiple dd:last-of-type { margin-bottom:0; }
+  /* formGroup */
+  .ec-base-table.typeWrite .formGroup input[type="text"],
+  .ec-base-table.typeWrite .formGroup input[type="password"],
+  .ec-base-table.typeWrite .formGroup select,
+  .ec-base-table.typeWrite .formGroup [class^="btn"] { min-width:0; margin:0 5px; }
+  .ec-base-table.typeWrite .formGroup input[type="text"] + [class^="btn"] { margin-left:5px; }
+  .ec-base-table.typeWrite .formGroup:not(td) { width:auto; margin-left:-5px; margin-right:-5px; }
+  .ec-base-table.typeWrite .formGroup.code { font-size:20px; color:#7f7f7f; }
+  /* txtInfo */
+  .ec-base-table.typeWrite td p.txtInfo,
+  .ec-base-table.typeWrite td ul.txtInfo { width:100%; }
+  /* form */
+  .ec-base-table.typeWrite td input[type="text"] + [class^='btn'],
+  .ec-base-table.typeWrite td input[type="password"] + [class^='btn'],
+  .ec-base-table.typeWrite td input[type="text"] + a[class^='btn'],
+  .ec-base-table.typeWrite td input[type="password"] + a[class^='btn'] { margin-left:10px; }
+  .ec-base-table.typeWrite td label { line-height:32px; }
+  /* address */
+  .ec-base-table.typeWrite .ec-address { width:100%; }
+  .ec-base-table.typeWrite .ec-address .btnBasic { display:inline-block; padding:12px 20px; height:40px; font-size:13px; box-sizing:border-box; border:1px solid #bcbcbc; line-height:1; font-weight:normal; text-decoration:none; vertical-align:middle; word-spacing:-0.5px; letter-spacing:0; text-align:center; white-space:nowrap; color:#000; background-color:#fff; }
+  .ec-base-table.typeWrite .ec-address-area select { display:block; margin:10px 0 0; }
+  .ec-base-table.typeWrite .ec-address-area select:first-of-type { margin-top:0; }
+
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+  /* gFlow */
+  .ec-base-table .gFlow { display:inline-block; width:100%; margin-top:5px; }
+    
+   /* gBorderClear */
+  .ec-base-table tr.gBorderClear td { border-bottom:0; }
+  .ec-base-table.typeList tr.gBorderClear { border-bottom:0; }
+    
+  /* Table - typeWrite */
+  .ec-base-table.typeWrite { padding:10px 0; }
+  .ec-base-table.typeWrite tr { display:block; }
+  .ec-base-table.typeWrite th { display:block; padding:6px 15px 0; border-bottom:0; text-align:left; background-color:transparent; }
+  .ec-base-table.typeWrite td { display:block; padding:2px 15px 10px; border-bottom:0; align-items:center; }
+    /* formMultiple */
+    .ec-base-table.typeWrite .formMultiple { padding-top:10px; }
+    /* formGroup */
+    .ec-base-table.typeWrite td.formGroup { padding-left:10px; padding-right:10px; }
+    .ec-base-table.typeWrite td.formGroup.date { padding-left:10px; padding-right:15px; }
+    .ec-base-table.typeWrite .formGroup { display:flex; flex-flow:wrap; box-sizing:border-box; align-items:center; }
+    .ec-base-table.typeWrite .formGroup input[type="text"],
+    .ec-base-table.typeWrite .formGroup input[type="password"],
+    .ec-base-table.typeWrite .formGroup select { flex:1; }
+    /* txtInfo */
+    .ec-base-table.typeWrite span.txtInfo { display:block; width:100%; margin:10px 0 0; }
+    /* form */
+    .ec-base-table.typeWrite td input[type="text"],
+    .ec-base-table.typeWrite td input[type="password"],
+    .ec-base-table.typeWrite td select { width:100%; }
+    /* address */
+    .ec-address .ec-address-zipcode { display:flex; flex-flow:wrap;  }
+    .ec-base-table.typeWrite .ec-address .ec-address-zipcode input[type="text"] { flex:1; }
+    .ec-base-table.typeWrite .ec-address .ec-address-zipcode .ec-base-label { display:block; width:100%; margin:5px 0 0; }
+  
+  /* Table - typeList */
+  .ec-base-table.typeList thead { display:none; }
+  .ec-base-table.typeList table,
+  .ec-base-table.typeList tbody { display:block; }.ec-base-table.typeList tr { display:block; position:relative; padding:20px 8px 19px; border-bottom:1px solid #e5e5e5; text-align:left; }
+  .ec-base-table.typeList tr:after { content:""; display:block; clear:both; }
+  .ec-base-table.typeList td { height:auto; display:block; float:left; padding:3px 8px; border-bottom:0; text-align:left; color:#6d6d6d; }.ec-base-table.typeList td a { color:#6d6d6d; }
+  .ec-base-table.typeList td.chk { box-sizing:border-box; padding:0; }
+  .ec-base-table.typeList td.chk .boardChk { margin:5px 8px 0 8px; }
+  .ec-base-table.typeList td.chk:not(.no) .boardChk { margin:5px 8px 0px 8px }
+  .ec-base-table.typeList td.subject { float:none; box-sizing:border-box; }
+  .ec-base-table.typeList td.subject a { color:#000; }
+  .ec-base-table.typeList.gThumb td.thumb { overflow:hidden; position:absolute; top:24px; left:16px; width:65px; height:calc(100% - 45px); padding:0; }
+  .ec-base-table.typeList.gThumb td.thumb a { display:block; height:100%; text-align:center; }
+  .ec-base-table.typeList.gThumb td.thumb img { max-width:100%; max-height:100%; }
+  .ec-base-table.typeList.gThumb tr { padding-left:90px; padding-right:20px; }
+  .ec-base-table.typeList.gThumb td.chk { z-index:1; position:absolute; top:16px; right:16px; padding:0; }
+  .ec-base-table.typeList.gThumb td.chk .boardChk { margin:0; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+  /* gFlow */
+  .ec-base-table .gFlow { width:100%; margin-left:20px; }
+  
+  /* gBorderClear */
+  .ec-base-table tr.gBorderClear td { border-bottom:0; }
+
+  /* Table */
+  .ec-base-table th { padding:14px 30px; }
+  
+  /* Table - typeWrite */
+  .ec-base-table.typeWrite th { padding:10px 30px; }
+  .ec-base-table.typeWrite th[scope*="row"] { padding-right:15px; }
+  .ec-base-table.typeWrite td { padding:10px 20px; }
+    /* formMultiple */
+    .ec-base-table.typeWrite .formMultiple { padding-top:22px; padding-bottom:22px; }
+    /* formGroup */
+    .ec-base-table.typeWrite td.formGroup { padding-left:15px; padding-right:15px; }
+    .ec-base-table.typeWrite .formGroup input[type="text"],
+    .ec-base-table.typeWrite .formGroup select { width:190px; }
+    /* form */
+    .ec-base-table.typeWrite td input[type="text"],
+    .ec-base-table.typeWrite td input[type="password"],
+    .ec-base-table.typeWrite td select { width:290px; }
+    .ec-base-table.typeWrite td .ec-base-qty input[type="text"] { width:45px; }
+    /* address */
+    .ec-base-table.typeWrite .ec-address input[type="text"],
+    .ec-base-table.typeWrite .ec-address select { width:450px; }
+    .ec-base-table.typeWrite .ec-address .ec-address-zipcode input[type="text"] { width:200px; }
+    .ec-base-table.typeWrite .ec-address .ec-address-zipcode .ec-base-label { margin:0 0 0 15px; line-height:40px; }
+  
+  /* Table - typeList */
+  .ec-base-table.typeList { border-top:0; }
+  .ec-base-table.typeList th,
+  .ec-base-table.typeList td { padding:15px 10px 16px; }
+  .ec-base-table.typeList th { border-bottom:0; }
+  .ec-base-table.typeList td.subject { padding-left:20px; padding-right:20px; }    
+}

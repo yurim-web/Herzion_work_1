@@ -1,0 +1,248 @@
+<!--  고객지원페이지  -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>support</title>
+    <link rel="stylesheet" href="support.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css"
+      rel="stylesheet"
+    />
+    <!-- header css -->
+    <link rel="stylesheet" href="../layout_new/header.css" />
+    <!-- footer css -->
+    <link rel="stylesheet" href="../layout_new/footer.css" />
+    <!-- layout js -->
+    <script src="../layout_new/layout.js" defer></script>
+  </head>
+  <body>
+    <!-- 모바일 토글 할때 백그라운드 흰색색 -->
+    <div class="mobile_menu_background"></div>
+    <!-- 헤더 부분 -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="/">
+            <img src="images/logo.svg" alt="HERZION" class="header_logo" />
+            <!-- 모바일 전용 로고 -->
+            <img
+              src="images/m_header_logo.svg"
+              alt="HERZION"
+              class="header_logo_mobile"
+            />
+          </a>
+        </div>
+        <div class="nav_right">
+          <button class="menu_btn">Menu</button>
+          <div class="menu_drop">
+            <ul class="menu_drop_list">
+              <li><a href="/" data-text="Home">Home</a></li>
+              <li><a href="/product/product.html" data-text="Product">Product</a></li>
+              <li><a href="/technology/technology.html" data-text="Technology">Technology</a></li>
+              <li><a href="/business/business.html" data-text="Business">Business</a></li>
+              <li>
+                <a href="/support/support.html" data-text="Support">Support</a>
+              </li>
+              <li><a href="" data-text="FAQ">FAQ</a></li>
+              <li>
+                <a href="/contact/contact.html" data-text="Support">Contact</a>
+              </li>
+            </ul>
+          </div>
+           <!-- 모바일 메뉴 -->
+           <span class="menu_btn_mobile" id="menu_btn_mobile">Menu</span>
+           <button class="menu_btn_mobile_close" id="menu_btn_mobile_close">X</button>
+           <div class="mobile_menu" id="mobile_menu">
+            <div class="mobile_menu_lang">
+              <button class="active">KOR</button>
+              <button>ENG</button>
+              <button>JPN</button>
+            </div>
+            <div class="mobile_menu_shop">
+              <a href="">Shop now</a>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <ul class="mobile_menu_list">
+              <li><a href="/">Home</a></li>
+              <li><a href="">Product</a></li>
+              <li><a href="">Technology</a></li>
+              <li><a href="">Business</a></li>
+              <li><a href="/support/support.html">Support</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="/contact/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <button class="buy_now_btn">Buy Now</button>
+
+        </div>
+
+         
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 메인 베너 부분 -->
+      <section class="banner_section">
+        <div class="hero">
+          <div class="hero_content">
+            <h1>Support</h1>
+            <p>고객지원</p>
+          </div>
+        </div>
+      </section>
+      <!-- 가이드 섹션 -->
+      <section class="use_guide_wrap">
+        <h2>Use Guide</h2>
+        <div class="guide_content">
+          <div class="guide_card">
+            <div class="card_content">
+              <span class="card_category">사용 설명 영상</span>
+              <h3>헤르지온 사용 방법<br />동영상 시청으로 알아보기</h3>
+              <a href="#" class="watch_btn">
+                <img src="images/menu_arrow.svg" class="btn_arrow" alt="버튼" />
+                <span class="btn_text">시청하기</span>
+              </a>
+            </div>
+            <div class="card_img">
+              <img src="images/menu_img_1.png" alt="사용 설명 영상" />
+            </div>
+          </div>
+
+          <div class="guide_card">
+            <div class="card_content">
+              <span class="card_category">사용 설명서</span>
+              <h3>헤르지온 사용 설명서<br />다운로드</h3>
+              <a href="#" class="download_btn">
+                <img
+                  src="images/menu_arrow_2.svg"
+                  class="btn_arrow"
+                  alt="버튼"
+                />
+                <span class="btn_text">다운로드</span>
+              </a>
+            </div>
+            <div class="card_img">
+              <img src="images/menu_img_2.png" alt="사용 설명서" />
+            </div>
+          </div>
+
+          <div class="guide_card">
+            <div class="card_content">
+              <span class="card_category">고객 지원</span>
+              <h3>더 자세한 내용은<br />1:1 상담하기</h3>
+              <div class="btn_box">
+                <a href="#" class="watch_btn">
+                  <img
+                    src="images/menu_arrow.svg"
+                    class="btn_arrow"
+                    alt="버튼"
+                  />
+                  <span class="btn_text">채팅상담</span>
+                </a>
+                <a href="#" class="watch_btn">
+                  <img
+                    src="images/menu_arrow.svg"
+                    class="btn_arrow"
+                    alt="버튼"
+                  />
+                  <span class="btn_text">전화 상담</span>
+                </a>
+              </div>
+            </div>
+            <div class="card_img">
+              <img src="images/menu_img_3.png" alt="고객 지원" />
+            </div>
+          </div>
+
+          <div class="guide_card">
+            <div class="card_content">
+              <span class="card_category">기기와 앱 연동</span>
+              <h3>헤르지온 앱<br />다운로드</h3>
+              <a href="https://apps.apple.com/" class="download_btn">
+                <img
+                  src="images/menu_arrow_2.svg"
+                  class="btn_arrow"
+                  alt="버튼"
+                />
+                <span class="btn_text">다운로드</span>
+              </a>
+            </div>
+            <div class="card_img">
+              <img src="images/menu_img_4.png" alt="앱 다운로드" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 푸터부분 -->
+    <footer>
+      <div class="footer_top_content">
+        <div class="footer_left">
+          <img src="images/footer_logo.svg" alt="HERZION" class="footer_logo" />
+          <div class="contact_info">
+            <div class="contact_info_left">
+              <div class="info_group">
+                <p class="label">Tel</p>
+                <span>02-2637-0009</span>
+              </div>
+              <div class="info_group">
+                <p class="label">E-mail</p>
+                <span>help@herzion.com</span>
+              </div>
+            </div>
+            <div class="contact_info_right">
+              <div class="info_group">
+                <p class="label">Address</p>
+                <span>경기도 성남시 분당구 동판교로 56, (주)아리바이오</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer_right">
+          <ul class="footer_links">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="/contact/contact.html">Contact</a></li>
+            <li><a href="/support/support.html">Support</a></li>
+          </ul>
+          <div class="app_download_box">
+            <a href="https://apps.apple.com/" class="store_btn">
+              <img src="images/apple_logo.svg" alt="" /><span>App Store</span>
+            </a>
+            <a href="https://play.google.com/" class="store_btn">
+              <img src="images/google_logo.svg" alt="" /><span
+                >Google Play</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <p>ⓒ 2024 by Aribio. All Rights Reserved.</p>
+        <img
+          src="images/footer_logo.svg"
+          alt="HERZION"
+          class="footer_logo_bottom"
+        />
+      </div>
+    </footer>
+
+    <!-- 상단이동하는 버튼 -->
+    <button class="top_btn" id="top_btn">
+      <img src="images/top_btn.svg" alt="상단 이동 버튼" />
+      <span>Top</span>
+    </button>
+  </body>
+</html>

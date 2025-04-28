@@ -1,0 +1,32 @@
+.xans-member-joincomplete { line-height:150%; text-align:center;}
+.xans-member-joincomplete .joinComplete { border:1px solid #e5e5e5; padding:50px 24px; }
+.xans-member-joincomplete .joinComplete .desc { font-size:16px; color:#000000; }
+
+.xans-member-joincomplete .joinComplete .ec-base-box { border:0;border-top:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; padding: 20px 0 20px; }
+.xans-member-joincomplete .joinComplete .ec-base-box .information { padding:0; }
+.xans-member-joincomplete .joinComplete .ec-base-box .information .description { border:none; }
+.xans-member-joincomplete .joinComplete .ec-base-box .ec-base-desc dt,
+.xans-member-joincomplete .joinComplete .ec-base-box .ec-base-desc dd { padding:5px 0; margin:0; line-height:1.5; min-height:20px; }
+.xans-member-joincomplete .joinComplete .ec-base-box .ec-base-desc dt { width:70px; }
+.xans-member-joincomplete .joinComplete .ec-base-box .ec-base-desc dd { overflow: hidden; }
+.xans-member-joincomplete .joinComplete .ec-base-box .ec-base-desc span { display:inline-block; }
+
+.xans-member-joincomplete .joinComplete .memberSpecial { line-height:1.5; color:#6d6d6d; padding: 20px 0;}
+.xans-member-joincomplete .joinComplete .memberSpecial ul { margin: 15px 0 0; }
+.xans-member-joincomplete .joinComplete .memberSpecial ul li { margin: 5px 0 0;text-align:left; }
+.xans-member-joincomplete .joinComplete .memberSpecial strong{ color:#000000 }
+.xans-member-joincomplete .joinComplete .memberSpecial strong.price{ color:#6d6d6d }
+
+.xans-member-joincomplete .joinComplete .memberAge { margin:20px 0 0; line-height:1.5; }
+.xans-member-joincomplete .joinComplete .memberAge strong { color:#f26323; }
+
+.xans-member-joincomplete .joinComplete .memberEmail { margin-top:20px; color: #000000; line-height:1.5; }
+.xans-member-joincomplete .joinComplete .memberAge { margin-top:20px; color:#6d6d6d; line-height:1.5; }
+.xans-member-joincomplete .joinComplete .memberAge strong{ color:#000000; }
+
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-member-joincomplete .joinComplete { width:472px; padding:75px 212px 70px; }
+    .xans-member-joincomplete .joinComplete .memberSpecial ul li { text-align:center; }
+}

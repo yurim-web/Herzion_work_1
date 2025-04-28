@@ -1,0 +1,56 @@
+/** subpage_theme03 (button_color - indigo),(Webfont - Gothic A1) **/
+.theme03,
+.theme03 input,
+.theme03 select,
+.theme03 textarea,
+.theme03 code,
+.theme03 button {font-family:"Poppins", "Gothic A1", Arial, sans-serif !important;}
+
+/* 버튼 */
+.theme03 .xans-product-action .action_button .sub_sold,
+.theme03 [class^='btnSubmit'],
+.theme03 a[class^='btnSubmit'] {background:#0e4c75;color:#fff;}
+.theme03 [class^='btnNormal']:not(.disabled):hover,
+.theme03 [class^='btnNormal']:not(.disabled).selected {border-color:#0e4c75;}
+
+/* 최상단 배너 */
+.theme03 .main_top_banner {background-color:#0e4c75;color:#fff;}
+
+/* 상단 메뉴 */
+.theme03 #header .inner .top_nav_box .top_category > ul > li > a:after {background-color:#0e4c75;}
+.theme03 #header .inner .top_nav_box .top_mypage a.xans-layout-orderbasketcount span {background-color:#0e4c75;}
+
+/* 슬라이드바 */
+.theme03 .swiper-container .swiper-scrollbar .swiper-scrollbar-drag {background:#0e4c75;}
+
+/* 상품더보기 */
+.theme03 .more .btnMore:hover {color:#0e4c75;background-color:#fff;border:1px solid #0e4c75;}
+.theme03 .more .btnMore:hover > div {color:#0e4c75;}
+.theme03 .more .btnMore:hover:after {background-color:#0e4c75;}
+
+/* 메인 탭상품 상품진열 */
+.theme03 .main_product_category .main_product_inner .main_product_tab li .button.active {color:#0e4c75;}
+.theme03 .main_product_category .main_product_inner .main_product_tab li .button:after {background-color:#0e4c75;}
+
+/* 메인 지도 */
+.theme03 .main_map .main_map_banner {background-color:#e6edf1;}
+.theme03 .main_map .main_map_banner .main_map_banner_txt_box .main_long_banner_link a {color:#fff;background-color:#0e4c75;border:1px solid #0e4c75;}
+.theme03 .main_map .main_map_banner .main_map_banner_txt_box .main_long_banner_link a:hover {color:#1a1a1a;background-color:#fff;border:1px solid #fff;}
+
+/* 하단 */
+.theme03 #footer {background:#e6edf1;}
+.theme03 #footer .inner .bt_sns .bt_title {font-family:"Gothic A1", Arial, sans-serif !important;}
+
+/* 목록페이지 중분류 */
+.theme03 .ec-base-tab.typeMenu li.selected a.button {color:#0e4c75;border:1px solid #0e4c75;}
+
+/* 상세페이지 탭 */
+.theme03 .detail_tab li.tab_open {border:1px solid #0e4c75; border-bottom:2px solid #fff;}
+.theme03 .detail_tab li.tab_open span {background-color:#0e4c75;}
+
+/* 모바일 슬라이드 쇼핑정보 */
+.theme03 #aside .navigation_state2 {background-color:#0e4c75;}
+.theme03 #aside .navigation_state2 ul li a {color:#fff;}
+
+/* 상품 추천신상품 뱃지 */
+.theme03 .ec-base-product .prdList .thumbnail .badge {background-color:#0e4c75;color:#fff;}

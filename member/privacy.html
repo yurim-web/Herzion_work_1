@@ -1,0 +1,25 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="section path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>개인정보처리방침</strong></li>
+    </ol>
+</div>
+<div class="section titleArea">
+    <h2>개인정보처리방침</h2>
+</div>
+<div module="mall_privacy" class="section gInnerMargin">
+    <!--@css(/css/module/mall/privacy.css)-->
+    <p class="date {$displayEnforce|display}">{$enforce_date}</p>
+    <div class="ec-base-box typeThin">
+        <div class="agree">
+            {$privacy_agreement}
+        </div>
+    </div>
+    <div class="ec-base-button {$displayBeforeEnforce|display}">
+        <span class="gLeft">
+        	<a href="{$before_enforce_link}" class="btnDate" target="_blank">{$before_enforce_date}</a>
+        </span>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.xans-product-listnew { margin:0; padding:0; }
+.xans-product-listnew:first-child h2 { border-top:0; }
+.xans-product-listnew h2 { margin:0; padding:14px 14px 0; font-size:14px; line-height:15px; color:#4a5164; }
+.xans-product-listnew img { max-width:100%; }
+.xans-product-listnew li { vertical-align:top; margin:0 0 14px; }
+.xans-product-listnew .prdList > li { position:relative; }
+.xans-product-listnew > ul > li > ul > li {  display:inline-block; padding:0; vertical-align:top; font-size:12px; line-height:1.4; }
+
+/********************* Mobile *********************/
+@media all and (max-width:767px) {
+    .xans-product-listnew.ec-base-product {margin-right: 16px; margin-left: 16px;}
+}
+
+/********************* Tablet *********************/
+@media all and (min-width:768px) and (max-width:1024px) {
+    .xans-product-listnew.ec-base-product {margin-right: 24px; margin-left: 24px;}
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-product-listnew{margin: 0 -10px 0 0;}
+}

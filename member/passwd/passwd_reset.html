@@ -1,0 +1,36 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="section path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>비밀번호 찾기</strong></li>
+    </ol>
+</div>
+<div class="section titleArea">
+    <h2>비밀번호 찾기</h2>
+</div>
+<div module="member_passwordreset" class="memberArea">
+    <!--@css(/css/module/member/passwd_reset.css)-->
+    <div class="ec-base-box typeMember">
+        <fieldset class="content">
+            <legend>비밀번호 재설정</legend>
+            <ul class="ec-base-desc gVer">
+                <li><strong class="term">아이디</strong><div class="desc"><strong class="txtEm">{$member_id}</strong></div></li>
+                <li>
+                    <strong class="term">새 비밀번호</strong>
+                    <div class="desc">
+                        {$form.new_passwd}
+                        <div class="txtInfo">
+                            {$passwd_type_desc}
+                        </div>
+                    </div>
+                </li>
+                <li><strong class="term">새 비밀번호 확인</strong><div class="desc">{$form.new_passwd_confirm}</div></li>
+            </ul>
+        </fieldset>
+    </div>
+    <div class="ec-base-button gBottom">
+        <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_func_password_reset_submit}">비밀번호 변경</a>
+        <a href="#none" class="btnNormalFix sizeM" onclick="{$action_func_password_reset_cancel}">취소</a>
+    </div>
+</div>

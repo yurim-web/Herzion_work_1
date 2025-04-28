@@ -1,0 +1,80 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="section path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>로그인</strong></li>
+    </ol>
+</div>
+<div class="section titleArea">
+    <h2>로그인</h2>
+</div>
+<div module="member_login" id="{$member_login_module_id}">
+    <!--@css(/css/module/member/login.css)-->
+    <!--@js(/js/module/member/login.js)-->
+    <!--
+        $defaultReturnUrl = /index.html
+        $forbidIpUrl = member/adminFail.html
+    -->
+	<fieldset class="form">
+		<legend>회원로그인</legend>
+		<div class="login">
+			<label class="id ePlaceholder" title="{$login_id_type_text}">{$form.member_id}</label>
+			<label class="password ePlaceholder" title="비밀번호">{$form.member_passwd}</label>
+		</div>
+		<div class="wrap_security">
+			<p class="login__security">
+				{$form.member_check_save_id}
+				<span class="secret">
+					<input type="checkbox" id="secur_check" checked disabled>
+				</span>
+				<label for="secur_check">보안접속</label>
+			</p>
+		</div>
+		<div class="login__button">
+			<a href="#none" class="btnSubmit gFull sizeL" onclick="{$action_func_login}">로그인</a>
+			<a href="{$returnUrl}" onclick="{$action_nomember_order}" class="btnNormal gFull sizeL {$display_nomember|display}">비회원 구매</a>
+			<div class="{$display_nomember|display}">비회원의 경우, 해당버튼을 통해 주문이 가능합니다.</div>
+		</div>
+		<div class="wrap_find">
+			<div><a href="/member/id/find_id.html">아이디 찾기</a></div>
+			<div><a href="/member/passwd/find_passwd_info.html">비밀번호 찾기</a></div>
+		</div>
+		<div class="login__util">
+			<div>아직 회원이 아니신가요?</div>
+			<div>지금 회원가입을 하시면<br>다양하고 특별한 혜택이 준비되어 있습니다.</div>
+			<div><a href="/member/agreement.html">회원가입</a></div>
+		</div>
+		<div class="login__sns">
+			<div class="sns_h">SNS 로그인</div>
+			<div class="wrap_sns_log">
+				<a href="#none" class="btnKakao {$display_kakao|display}" onclick="{$kakao_func_login}">카카오 로그인</a>
+				<a href="#none" class="btnNaver {$display_naver|display}" onclick="{$naver_func_login}">네이버 로그인</a>
+				<a href="#none" class="btnFacebook {$display_facebook|display}" onclick="{$facebook_func_login}">페이스북 로그인</a>
+				<a href="#none" class="btnLine {$display_line|display}" onclick="{$line_func_login}">라인 로그인</a>
+				<a href="#none" class="btnGoogle {$display_google|display}" onclick="{$google_func_login}">구글 로그인</a>
+				<a href="#none" class="btnApple {$display_apple|display}" onclick="{$apple_func_login}">Apple로 로그인</a>
+				<a href="#none" class="yahoojp {$display_yahoojp|display}" onclick="{$yahoojp_func_login}">Yahoo! JAPAN<br>ID로 로그인</a>
+			</div>
+		</div>
+	</fieldset>
+</div>
+
+<div module="MyShop_OrderHistoryNologin" id="order_history_nologin_id">
+    <!--@css(/css/module/myshop/orderHistoryNologin.css)-->
+    <!--
+        $orderDetailUrl = /myshop/order/list.html
+    -->
+    <div class="login">
+		<div class="txt_nonmem_check">비회원 주문조회</div>
+        <div class="txtInfo typeDot">비회원의 경우, 주문시의 주문번호로 주문조회가 가능합니다.</div>
+        <div class="form">
+        	{$form.order_name}
+            {$form.order_id}
+            {$form.order_password}
+            <div class="login__button">
+            	<button type="submit" class="btnSubmit gFull sizeL">확인</button>
+            </div>
+        </div>
+    </div>
+</div>

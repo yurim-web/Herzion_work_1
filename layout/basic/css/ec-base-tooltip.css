@@ -1,0 +1,82 @@
+.ec-base-tooltip { display:none; z-index:999; position:absolute; top:inherit !important; left:0 !important; right:0 !important; padding:14px 28px 14px 14px; text-align:left; border:1px solid #ccc; border-radius:2px; letter-spacing:normal; box-sizing:border-box; background-color:#fff;
+    -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.15);
+    box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.15);
+}
+.ec-base-tooltip .title { display:block; padding:0 20px 0 0; font-size:15px; color:#000; line-height:43px; background:#fff; }
+.ec-base-tooltip ul { color:#757575; }
+.ec-base-tooltip ul li { font-size:13px; }
+.ec-base-tooltip .content table + .title { margin-top:14px; }
+.ec-base-tooltip p { float:none; font-size:12px; text-align:left; }
+.ec-base-tooltip p strong { font-weight:normal; font-size:13px; }
+.ec-base-tooltip h3 { margin:0 0 8px; font-size:13px; border-bottom:0; }
+.ec-base-tooltip h3 + p { margin:0 5px 10px; }
+.ec-base-tooltip h4 { margin:15px 10px 8px 5px; font-size:12px; }
+.ec-base-tooltip h4:before { display:inline-block; content:""; margin:0 5px 0 0; width:3px; height:3px; background:#666; vertical-align:middle; }
+.ec-base-tooltip table th,
+.ec-base-tooltip table td { padding:8px 10px 7px 10px; border:1px solid #e8e8e8; line-height:1.5em; }
+.ec-base-tooltip table th { padding-right:0; background:#fbf9fa; }
+.ec-base-tooltip table thead th { text-align:center; }
+.ec-base-tooltip table tbody th { text-align:left; }
+.ec-base-tooltip table .left { text-align:left; }
+.ec-base-tooltip table .center { text-align:center; }
+.ec-base-tooltip table .right { text-align:right; }
+.ec-base-tooltip table .info { padding:0; color:#757575; }
+.ec-base-tooltip table p.info:before,
+.ec-base-tooltip table ul.info li:before { display:inline-block; content:""; margin:0 3px 0 0; width:4px; height:1px; background:#757575; vertical-align:middle; }
+.ec-base-tooltip .info { padding:10px 10px 0; margin:5px 0 0; }
+.ec-base-tooltip p.bullet,
+.ec-base-tooltip ul.bullet { margin:8px 10px; }
+.ec-base-tooltip p.bullet:before,
+.ec-base-tooltip ul.bullet li:before { display:inline-block; content:""; margin:-3px 3px 0 0; width:0; height:0; border:solid transparent; border-left-color:#333; border-width:2px 0 2px 2px; vertical-align:middle; }
+.ec-base-tooltip ul.bullet li { line-height:1.5em; }
+.ec-base-tooltip .btnClose { position:absolute; right:14px; top:14px; padding:10px; cursor:pointer; display:block; overflow:hidden; width:17px; height:17px; box-sizing:border-box; font-size:1px; line-height:0; text-indent:150%; color:transparent; white-space:nowrap; -webkit-transform:rotate(45deg); transform:rotate(45deg); }
+.ec-base-tooltip .btnClose:before { content:""; position:absolute; top:0; right:8px; width:1px; height:17px; background:#000; -webkit-transition:.3s ease-out; transition:.3s ease-out; }
+.ec-base-tooltip .btnClose:after { content:""; position:absolute; top:8px; right:0; width:17px; height:1px; background:#000; -webkit-transition:.3s ease-out; transition:.3s ease-out; }
+.ec-base-tooltip .btnClose img { opacity:0; }
+.ec-base-tooltip .edge { z-index:20; position:absolute; left:50%; top:-6px; display:block; margin:0 0 0 -5px; width:10px; height:6px; }
+.ec-base-tooltip .edge:before,
+.ec-base-tooltip .edge:after { display:inline-block; content:""; position:absolute; top:0; width:0; height:0; border:solid transparent; }
+.ec-base-tooltip .edge:before { margin:1px 0 0; border-bottom-color:#565960; border-width:0 5px 5px 5px; }
+.ec-base-tooltip .edge:after { left:1px; margin:2px 0 0; border-bottom-color:#fff; border-width:0 4px 4px 4px; }
+	/* typeUpper */
+    .ec-base-tooltip.typeUpper { position:absolute; left:-90px !important; bottom:33px !important; width:200px; margin:0; padding:14px 28px 14px 14px; border:1px solid #ccc; border-radius:2px;
+        -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.15);
+        -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.15);
+        box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.15);
+    }
+    .ec-base-tooltip.typeUpper:before { content:""; position:absolute; left:40%; bottom:-5px; display:inline-block; width:0; height:0; margin:-3px 0 0; border-left:5px solid transparent; border-top:5px solid #ccc; border-right:5px solid transparent; }
+    .ec-base-tooltip.typeUpper:after { content:""; position:absolute; left:40%; bottom:-4px; display:inline-block; width:0; height:0; margin:-3px 0 0; border-left:5px solid transparent; border-top:5px solid #fff; border-right:5px solid transparent; }
+    .ec-base-tooltip.typeUpper .edge { top:auto; bottom:-6px; }
+    .ec-base-tooltip.typeUpper .edge:before { margin:0 0 -5px; border-top-color:#ccc; border-width:5px 5px 0 5px; }
+    .ec-base-tooltip.typeUpper .edge:after { left:1px; margin:0 0 -4px; border-top-color:#fff; border-width:4px 4px 0 4px; }
+
+/* shippingFee */
+  .shippingFee { display:inline-block; vertical-align:middle; color:#000; margin-left:10px; }
+  .shippingFee > a.btnNormal { margin:-3px 0 0 5px; }
+  .shippingFee .wrap h3 { line-height:36px; }
+  .shippingFee .wrap h4 { position:relative; margin:0 7px 7px; }
+  .shippingFee .wrap h4:before { display:inline-block; content:""; margin:0 5px 0 0; width:3px; height:3px; background:#666; vertical-align:middle; }
+  .shippingFee .wrap table + h4 { margin-top:14px; }
+  .shippingFee .wrap p strong { font-weight:normal; font-size:13px; }
+  .shippingFee .wrap table { background:#fff; }
+  .shippingFee .wrap th,
+  .shippingFee .wrap td { padding:7px; border:1px solid #d5d5d5; }
+  .shippingFee .wrap th { width:80px; border-right-width:0; }
+  .shippingFee .wrap td { white-space:normal; }
+  .shippingFee .wrap .info { margin:0; color:#7d7d7d; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .ec-base-tooltip { width:88%; margin:5px auto 0; }
+    .ec-base-tooltip .edge { display:none; }
+    .shippingFee { position:static; }
+    .shippingFee .ec-base-button { text-align:center; }
+    .shippingFee .btnStrong { display:inline-block; padding:12px 20px; height:40px; font-size:13px; box-sizing:border-box; border:1px solid transparent; line-height:1; font-weight:normal; text-decoration:none; vertical-align:middle; word-spacing:-0.5px; letter-spacing:0; text-align:center; white-space:nowrap; color:#fff; background-color:#000; }  
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+	.shippingFee { position:relative; }
+    .shippingFee .ec-base-tooltip { margin:10px 0 0 -150px; width:360px; }
+}
