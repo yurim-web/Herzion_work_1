@@ -1,0 +1,108 @@
+/* hero section */
+.banner_section {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 110px 80px 50px 80px;
+}
+
+.hero {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 400px;
+  background-image: url("images/tech_banner.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.hero_content {
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #fff;
+}
+
+.hero h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 72px; /* 100% */
+}
+
+.hero p {
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+
+/* 카테고리 버튼 스타일 */
+.boardSort {
+  padding: 0 80px;
+  margin-bottom: 40px;
+}
+
+.category_list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* 카테고리 버튼 스타일 */
+
+.category_btn {
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  border-radius: 60px;
+  border: 2px solid #23295b;
+
+  padding: 12px 24px;
+  align-items: center;
+  gap: 10px;
+
+  /* 버튼속 글씨 */
+  color: #23295b;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 100% */
+  letter-spacing: -0.36px;
+}
+
+.category_btn.active {
+  background: #23295b;
+  color: #fff;
+}
