@@ -413,6 +413,31 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   color: #ffffff;
+  font-style: normal;
+}
+.card_img_1 {
+  background-image: url("images/use_card1.png");
+}
+.card_img_2 {
+  background-image: url("images/use_card2.png");
+}
+.card_img_3 {
+  background-image: url("images/use_card3.png");
+}
+.use_card h1 {
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 32px; /* 88.889% */
+  margin-bottom: 20px;
+}
+.use_card p {
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 166.667% */
+  letter-spacing: -0.48px;
 }
 
 /* 앱 다운로드 섹션 */
