@@ -442,48 +442,94 @@ main {
 
 /* 앱 다운로드 섹션 */
 .app_download {
-  padding: 120px 0;
-  background-color: #f7f7f7;
-  text-align: center;
-}
+  padding: 148px 0px 120px 0px;
+  background-image: url("images/last_section_back.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
+}
+.app_download_container{
+  display: flex;
+  justify-content: space-between;
+}
+/*  앱 다운로드 왼쪽 컨테이너 */
+.app_download_left_container{
+  width: 370px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 .app_download h2 {
+  color: #FFF;
+  font-family: Pretendard;
   font-size: 56px;
+  font-style: normal;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 40px;
-  line-height: 1.4;
+  line-height: 80px; /* 142.857% */
+  letter-spacing: -1.12px;
 }
 
 .app_download p {
+  color: #FFF;
+  font-family: Pretendard;
   font-size: 24px;
-  line-height: 1.5;
-  margin-bottom: 60px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 150% */
+  letter-spacing: -0.48px;
 }
 
-.download_buttons {
+.download_button_box {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 20px;
+  margin-top: 16px;
 }
 
 .store_btn {
+  padding: 12px 20px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 32px;
+  gap: 8px;
   background-color: #3c3c3c;
-  color: #fff;
-  text-decoration: none;
   border-radius: 8px;
-  font-family: "Poppins", sans-serif;
+  /* 버튼 속 글자 스타일 */
+  color: #FFF;
+  font-family: Poppins;
   font-size: 20px;
+  font-style: normal;
   font-weight: 500;
-  transition: background-color 0.3s;
+  line-height: 20px; /* 100% */
+  text-decoration: none;
 }
 
-.store_btn:hover {
-  background-color: #23295b;
+.apple_btn{
+  width: 175px;
+}
+.google_btn{
+  width: 196px;
+}
+/* 앱다운로드 오른쪽 컨테이너 */
+.app_download_right_container{
+  display: flex;
+  gap: 106px;
+}
+.phone_text_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  /* 글씨 스타일 */
+  color: #FFF;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: -0.48px;
 }
 
 /* 반응형 디자인 */

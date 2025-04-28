@@ -220,7 +220,7 @@ main {
 .tech_feature_image_card img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /* 글있는 부분 */
@@ -242,16 +242,7 @@ main {
   font-weight: 500;
   line-height: 24px; /* 120% */
 }
-/* 모바일버전 부제목 */
-.tech_feature_subtitle_mo {
-  display: none;
-  color: #3c3c3c;
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 14px; /* 100% */
-}
+
 
 .tech_feature_title {
   color: #3c3c3c;
@@ -272,6 +263,9 @@ main {
   font-weight: 500;
   line-height: 38px;
   letter-spacing: -0.48px;
+}
+.tect_feature_text_mo{
+  display:none ;
 }
 
 .tech_feature_text_blue {
@@ -478,9 +472,14 @@ main {
     padding: 80px 0px 80px 0px;
   }
   .tech_feature_subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px; /* 100% */
+  }
+  .tech_feature_text{
     display: none;
   }
-  .section_subtitle_mo {
+  .tect_feature_text_mo{
     display: block;
   }
 
@@ -492,11 +491,17 @@ main {
   }
 
   /* 이미지부분 */
+  .tech_feature_image_card img {
+    width: 350px;
+    height: 350px;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
 
   /* 글있는 부분 */
   .tech_feature_content_card {
     gap: 20px;
-    padding: 40px;
+    padding: 40px 40px;
   }
 
   .tech_feature_subtitle_mo {
@@ -512,12 +517,13 @@ main {
 
   .tech_feature_text {
     font-size: 16px;
-    line-height: 26px;
+    line-height: 28px;
     letter-spacing: -0.32px;
   }
 
   .tech_feature_text_blue {
     color: #23295b;
+    font-size: 16px;
     font-weight: 700;
   }
 
