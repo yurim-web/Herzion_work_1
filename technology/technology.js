@@ -1,6 +1,6 @@
 // Scientific Basis Swiper 초기화
 const researchSwiper = new Swiper(".researchSwiper", {
-  slidesPerView: 3,
+  slidesPerView: 4,
   spaceBetween: 40,
   centeredSlides: false,
   pagination: {
@@ -21,5 +21,15 @@ const researchSwiper = new Swiper(".researchSwiper", {
       slidesPerView: 3,
       spaceBetween: 40,
     },
+  },
+});
+
+// 모바일 Thesis 스와이퍼 초기화
+const mobileThesisSwiper = new Swiper(".mobileThesisSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
   },
 });

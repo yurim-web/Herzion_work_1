@@ -208,11 +208,13 @@ main {
   /* Main Content */
   /* hero section */
   .banner_section {
-    padding: 82px 20px 10px 20px;
+    padding: 80px 20px 40px 20px;
   }
 
   .hero {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
+    height: 300px;
+    background-image: url("images/mo/m_support_banner.png");
   }
 
   .hero_content {
@@ -244,6 +246,24 @@ main {
     line-height: 20px; /* 100% */
     letter-spacing: -0.4px;
   }
+
+  /* 모바일에서 이미지 변경 */
+  .card_img img {
+    content: url("images/mo/m_menu_img_1.png");
+  }
+
+  .guide_card:nth-child(2) .card_img img {
+    content: url("images/mo/m_menu_img_2.png");
+  }
+
+  .guide_card:nth-child(3) .card_img img {
+    content: url("images/mo/m_menu_img_3.png");
+  }
+
+  .guide_card:nth-child(4) .card_img img {
+    content: url("images/mo/m_menu_img_4.png");
+  }
+
   /* Use Guide */
   .use_guide_wrap {
     padding: 80px 20px;
@@ -470,5 +490,21 @@ main {
 
   .top_btn {
     display: none;
+  }
+  /* 모바일에서 이미지 변경 */
+  .card_img img {
+    content: url("images/menu_img_1.png");
+  }
+
+  .guide_card:nth-child(2) .card_img img {
+    content: url("images/menu_img_2.png");
+  }
+
+  .guide_card:nth-child(3) .card_img img {
+    content: url("images/menu_img_3.png");
+  }
+
+  .guide_card:nth-child(4) .card_img img {
+    content: url("images/menu_img_4.png");
   }
 }

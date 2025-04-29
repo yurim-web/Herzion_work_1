@@ -190,9 +190,13 @@ main {
 }
 /* 비디오 섹션 */
 .main_video_section {
-  background-image: url("images/viedo_img.png");
   width: 100%;
-  background-color: #ffffff;
+  height: 100vh;
+}
+.main_video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .main_video_section video {
@@ -266,11 +270,16 @@ main {
   padding: 150px 0px;
 }
 .video_box {
-  background-color: black;
   width: 1400px;
   height: 779px;
   flex-shrink: 0;
   aspect-ratio: 1400/779;
+}
+
+.video_box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* 임상 결과 섹션 */
@@ -286,12 +295,12 @@ main {
 .section_box {
   width: 100%;
   height: 772px;
-  background-image: url("images/product_box_back.png");
+  background-image: url("images/product_box_back_1.png");
   border-radius: 24px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 80px 80px 80px 205px;
+  padding: 80px;
   display: flex;
   justify-content: space-between;
   gap: 56px;
@@ -299,6 +308,13 @@ main {
   margin-bottom: 40px;
   position: relative;
 }
+.section_box_img_2 {
+  background-image: url("images/product_box_back_2.png");
+}
+.section_box_img_3 {
+  background-image: url("images/product_box_back_3.png");
+}
+
 
 .section_box img {
   width: 958px;
@@ -399,12 +415,13 @@ main {
 }
 .use_card_container {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 .use_card {
-  width: 560px;
-  height: 772px;
+  width: 100%;
+  height: 900px;
   flex-shrink: 0;
   border-radius: 24px;
   padding: 64px 56px;
@@ -447,14 +464,13 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
 }
-.app_download_container{
+.app_download_container {
   display: flex;
   justify-content: space-between;
 }
 /*  앱 다운로드 왼쪽 컨테이너 */
-.app_download_left_container{
+.app_download_left_container {
   width: 370px;
   margin-left: 40px;
   display: flex;
@@ -462,7 +478,7 @@ main {
   gap: 24px;
 }
 .app_download h2 {
-  color: #FFF;
+  color: #fff;
   font-family: Pretendard;
   font-size: 56px;
   font-style: normal;
@@ -472,7 +488,7 @@ main {
 }
 
 .app_download p {
-  color: #FFF;
+  color: #fff;
   font-family: Pretendard;
   font-size: 24px;
   font-style: normal;
@@ -496,33 +512,43 @@ main {
   background-color: #3c3c3c;
   border-radius: 8px;
   /* 버튼 속 글자 스타일 */
-  color: #FFF;
+  color: #fff;
   font-family: Poppins;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px; /* 100% */
-  text-decoration: none;
 }
 
-.apple_btn{
-  width: 175px;
+.store_btn > img {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
 }
-.google_btn{
-  width: 196px;
+
+.apple_btn {
+  width: 158px;
+  height: 52px;
+  flex-shrink: 0;
+}
+.google_btn {
+  width: 175px;
+  height: 52px;
+  flex-shrink: 0;
 }
 /* 앱다운로드 오른쪽 컨테이너 */
-.app_download_right_container{
+.app_download_right_container {
   display: flex;
   gap: 106px;
 }
-.phone_text_box{
+.phone_text_box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 24px;
   /* 글씨 스타일 */
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: Pretendard;
   font-size: 24px;
@@ -567,11 +593,13 @@ main {
   /* Main Content */
   /* hero section */
   .banner_section {
-    padding: 82px 20px 10px 20px;
+    padding: 80px 20px 40px 20px;
   }
 
   .hero {
-    margin-bottom: 40px;
+    background-image: url("images/mo/mo_product_banner.png");
+    height: 300px;
+    margin-bottom: 0px;
   }
 
   .hero_content {

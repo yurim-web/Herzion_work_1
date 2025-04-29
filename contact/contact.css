@@ -38,7 +38,7 @@ main {
   margin: 0 auto;
   position: relative;
   height: 400px;
-  background-image: url("/contact/images/contact_banner.png");
+  background-image: url("images/contact_banner.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -125,13 +125,24 @@ main {
   line-height: 24px; /* 100% */
   letter-spacing: -0.48px;
 }
+.submit_btn_location{
+  right: 160px;
+  bottom: 120px;
+
+}
+.submit_btn_location_back{
+  width: 100px;
+  left: 1200px;
+  bottom: 120px;
+  color: #3C3C3C;
+}
 
 .inquiry_contents {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 204px;
+
 }
 
 .inquiry_left_container {
@@ -139,6 +150,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-left: 120px;
 }
 
 .inquiry_left_container h1 {
@@ -149,6 +161,7 @@ main {
   font-weight: 700;
   line-height: 64px; /* 133.333% */
   letter-spacing: -0.96px;
+  
 }
 
 .inquiry_left_container p {
@@ -166,6 +179,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+  padding-right:80px;
 }
 
 .inquiry_btn {
@@ -221,7 +235,7 @@ main {
 }
 
 .infomation_box {
-  width: 100%;
+  width: 820px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -399,7 +413,7 @@ main {
   .inquiry_box {
     height: 764px;
     border-radius: 4px;
-    padding: 60px 20px 46px 20px;
+    padding: 60px 20px 40px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -419,6 +433,7 @@ main {
 
   .inquiry_left_container {
     gap: 12px;
+    padding-left: 0px;
   }
 
   .inquiry_left_container h1 {
@@ -429,7 +444,6 @@ main {
     line-height: 34px; /* 141.667% */
     letter-spacing: -0.48px;
     display: flex;
-    ju
   }
 
   .inquiry_left_container p {
@@ -446,6 +460,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding-right: 0px;
   }
 
   .inquiry_btn {
