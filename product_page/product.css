@@ -284,14 +284,19 @@ main {
 
 /* 임상 결과 섹션 */
 .clinical_results {
-  padding: 148px 0px 80px 0px;
-}
-.card_animation_box {
-  width: 100%;
-  min-height: 772px;
-  border-radius: 24px;
+  padding: 148px 0px 0px 0px;
+  position: relative;
+  height: 100vh;
   overflow: hidden;
 }
+
+.card_animation_box {
+  width: 100%;
+  height: 772px; /* 첫 번째 카드의 높이와 동일하게 설정 */
+  position: relative;
+  overflow: hidden; /* 영역을 벗어나는 부분 숨김 */
+}
+
 .section_box {
   width: 100%;
   height: 772px;
@@ -305,20 +310,27 @@ main {
   justify-content: space-between;
   gap: 56px;
   align-items: center;
-  margin-bottom: 40px;
-  position: relative;
-}
-.section_box_img_2 {
-  background-image: url("images/product_box_back_2.png");
-}
-.section_box_img_3 {
-  background-image: url("images/product_box_back_3.png");
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
+.section_box:first-child {
+  z-index: 1;
+}
+
+.section_box_img_2 {
+  background-image: url("images/product_box_back_2.png");
+  top: 772px; /* 첫 번째 카드 높이만큼 아래에 위치 */
+}
+
+.section_box_img_3 {
+  background-image: url("images/product_box_back_3.png");
+  top: 772px; /* 첫 번째 카드 높이만큼 아래에 위치 */
+}
 
 .section_box img {
   width: 958px;
-
   flex-shrink: 0;
 }
 .clinical_text_box {
@@ -374,6 +386,7 @@ main {
   gap: 40px;
 }
 
+/* 웹 환경 스타일 */
 .feature_card {
   background: #f7f7f7;
   border-radius: 24px;
@@ -407,6 +420,7 @@ main {
   color: #23295b;
   font-weight: 700;
 }
+
 /* By Use Case 섹션  */
 .use_section {
   width: 100%;
@@ -457,12 +471,13 @@ main {
   letter-spacing: -0.48px;
 }
 
-/* 앱 다운로드 섹션 */
+/* 앱 다운로드 섹션 웹 스타일*/
 .app_download {
+  width: 100%;
   padding: 148px 0px 120px 0px;
   background-image: url("images/last_section_back.png");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
 }
 .app_download_container {
@@ -528,12 +543,12 @@ main {
 }
 
 .apple_btn {
-  width: 158px;
+  width: 168px;
   height: 52px;
   flex-shrink: 0;
 }
 .google_btn {
-  width: 175px;
+  width: 184px;
   height: 52px;
   flex-shrink: 0;
 }
@@ -556,135 +571,4 @@ main {
   font-weight: 500;
   line-height: 36px;
   letter-spacing: -0.48px;
-}
-
-/* 반응형 디자인 */
-@media (max-width: 1024px) {
-  .product_features,
-  .use_case_items,
-  .result_items {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .hero_content h1 {
-    font-size: 48px;
-  }
-
-  .product_intro h2,
-  .use_cases h2 {
-    font-size: 48px;
-  }
-
-  .product_features,
-  .use_case_items,
-  .result_items {
-    grid-template-columns: 1fr;
-  }
-
-  .download_buttons {
-    flex-direction: column;
-  }
-}
-
-/********************* Mobile ******************************************/
-@media all and (max-width: 767px) {
-  /* Main Content */
-  /* hero section */
-  .banner_section {
-    padding: 80px 20px 40px 20px;
-  }
-
-  .hero {
-    background-image: url("images/mo/mo_product_banner.png");
-    height: 300px;
-    margin-bottom: 0px;
-  }
-
-  .hero_content {
-    z-index: 1;
-    text-align: center;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .hero h1 {
-    color: #fff;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 36px; /* 100% */
-  }
-
-  .hero p {
-    color: #fff;
-    text-align: center;
-    font-family: Pretendard;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px; /* 100% */
-    letter-spacing: -0.4px;
-  }
-}
-
-/********************* Tablet ***************************************************************/
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  /* Main Content */
-
-  /* hero section */
-  .banner_section {
-    padding: 120px 60px 50px 60px;
-  }
-
-  .hero {
-    margin-bottom: 30px;
-  }
-
-  .hero_content {
-    z-index: 1;
-    text-align: center;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .hero h1 {
-    color: #fff;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 36px; /* 100% */
-  }
-
-  .hero p {
-    color: #fff;
-    text-align: center;
-    font-family: Pretendard;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px; /* 100% */
-    letter-spacing: -0.4px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .feature_grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    gap: 24px;
-  }
-  .feature_card {
-    flex-direction: row;
-    padding: 32px 20px;
-  }
 }
