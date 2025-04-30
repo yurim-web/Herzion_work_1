@@ -1,0 +1,55 @@
+/** subpage_theme01 (button_color - black) **/
+
+/* 공통 타이틀 */
+.titleArea h2 {font-weight:500;font-size:32px;color:#1a1a1a;}
+.titleArea h3 {font-weight:500;}
+.titleArea .desc {font-weight:400;}
+.xans-project-package .title {margin:40px 0 0;}
+.xans-project-package .title h2 {font-weight:500;font-size:32px;color:#1a1a1a;}
+
+/* checkbox */
+input[type="checkbox"] {width:24px; height:24px; border:1px solid #d9d9d9;background:url('/SkinImg/img/checkbox_off.svg') no-repeat center;transition:none;}
+input[type="checkbox"]:checked {background:url('/SkinImg/img/checkbox_on.svg') no-repeat center;transition:none;border:1px solid #d9d9d9;}
+
+/* ie support */
+input[type="checkbox"]::-ms-check {border:1px solid #d9d9d9;background:url('/SkinImg/img/checkbox_off.svg') no-repeat center;transition:none;}
+input[type="checkbox"]:checked::-ms-check {background:url('/SkinImg/img/checkbox_on.svg') no-repeat center;transition:none;border:1px solid #d9d9d9;}
+
+/* ec-base-step */
+.ec-base-step li {color:#8A8A8A;}
+.ec-base-step .selected {color:#1a1a1a;}
+
+/* button */
+[class^='btnNormal'], a[class^='btnNormal'] {border:1px solid #D6D6D6;}
+[class^='btnSubmit'], a[class^='btnSubmit'] {background:#1a1a1a;color:#fff;}
+
+/* Table */
+.ec-base-table {border-top:2px solid #1a1a1a;}
+.ec-base-table th {font-weight:400;}
+.ec-base-paginate.typeList li a {font-size:14px;}
+
+/* tab */
+.ec-base-tab.typeNav .menu {border-bottom:1px solid #1a1a1a;}
+.ec-base-tab.typeNav .menu li a {background:#fff;border:0;color:#8a8a8a;min-width:170px;}
+.ec-base-tab.typeNav .menu li.selected a {border:1px solid #1a1a1a;font-weight:400;}
+.ec-base-tab.typeNav .menu li.selected a:after {bottom:-2px;height:2px;}
+
+@media screen and (max-width:1024px) {
+	/* 공통 타이틀 */
+	.titleArea {margin:25px 0;}
+	.titleArea h2 {font-size:22px;}
+	.xans-project-package .title {margin:25px 0;}
+	.xans-project-package .title h2 {font-size:22px;margin:0;}
+
+	/* 모바일 뒤로가기 아이콘 */
+	.xans-layout-mobileaction {top:30px;left:4%;z-index:20;}
+
+	/* Table */
+	.ec-base-table.typeList tr {padding:20px 0 19px;}
+	.xans-board-search,
+	.xans-myshop-boardlistsearch {margin:10px 0 0px -10px;}
+	.xans-board-listpackage .ec-base-button.gBottom {margin:20px 0 0;}
+
+	/* tab */
+	.ec-base-tab.typeNav .menu li a {min-width:auto;}
+}

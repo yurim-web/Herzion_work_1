@@ -1,0 +1,5 @@
+.productDetailPopup { display:none; overflow-y:auto; position:fixed; top:0; left:0; height:100%; background:#fff; z-index:120; }
+.productDetailPopup h2 { height:38px; line-height:38px; text-align:center; font-size:15px; color:#fff; background:#4b5165; }
+
+.productDetailInfo h2.title { padding: 0 20px; line-height: 43px; font-size: 15px; color: #2e2e2e; background:#fff; }
+.productDetailInfo img { max-width:100%; }

@@ -1,0 +1,27 @@
+.xans-product-zoompackage { overflow:auto; height:693px; }
+.xans-product-zoompackage.ec-base-layer .content { padding-bottom:64px; }
+.xans-product-zoompackage.ec-base-layer .ec-base-button { position:fixed; bottom:0; left:0; right:0; width:100%; margin:20px auto; }
+.xans-product-zoom .imgArea { width:346px; margin:0 auto; }
+.xans-product-zoom .imgArea .keyImg { position:relative; width:346px; min-height:43px; cursor:pointer; text-align:center; }
+.xans-product-zoom .imgArea .keyImg img { max-width:344px; border:1px solid #ececec; }
+.xans-product-zoom .imgArea .keyImg > .prev { position:absolute; left:0; top:50%; margin:-22px 0 0; }
+.xans-product-zoom .imgArea .keyImg > .next { position:absolute; right:0; top:50%; margin:-22px 0 0; }
+.xans-product-zoom .imgArea .keyImg > .prev img,
+.xans-product-zoom .imgArea .keyImg > .next img { border:0; }
+.xans-product-zoom .imgArea .keyImg .thumbnail { display:inline-block; position:relative; max-width:100%; }
+.xans-product-zoom .imgArea .keyImg .prdIcon { position:absolute; top:0; left:0; width:100%; height:100%; background-repeat:no-repeat; }
+
+.xans-product-zoom .imgArea .topLogo { overflow: hidden; padding: 0 0 15px; }
+.xans-product-zoom .imgArea .topLogo span { font-weight: bold; font-size: 24px; line-height: 24px; }
+
+.xans-product-zoom .imgArea .listImg { position:relative; overflow:hidden; width:100%; height:94px; margin:24px 0 0; padding:0 40px; box-sizing:border-box; }
+.xans-product-zoom .imgArea .listImg .inner { position:relative; overflow:hidden; width:100%; height:94px; }
+.xans-product-zoom .imgArea .listImg ul { margin:0 -6px; }
+.xans-product-zoom .imgArea .listImg li { display:inline-block; width:80px; margin:0 6px; font-size:12px; line-height:14px; vertical-align:top; }
+.xans-product-zoom .imgArea .listImg li img { max-width:100%; cursor:pointer; }
+.xans-product-zoom .imgArea .listImg button { position:absolute; top:0; width:30px; height:94px; font-size:0; line-height:0; color:transparent; border:1px solid #e3e3e3; box-sizing:border-box; }
+.xans-product-zoom .imgArea .listImg .icon { border-color:#6d6d6d; }
+.xans-product-zoom .imgArea .listImg .prev { left:0; background-position:0 0; }
+.xans-product-zoom .imgArea .listImg .prev .icon { margin-left:3px; }
+.xans-product-zoom .imgArea .listImg .next { right:0; background-position:-31px 0; }
+.xans-product-zoom .imgArea .listImg .next .icon { margin-left:-3px; }

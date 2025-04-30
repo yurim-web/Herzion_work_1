@@ -1,0 +1,29 @@
+.xans-member-join .title h3 { font-size:16px; font-weight:normal; }
+.xans-member-join label { display:none; }
+.xans-member-join label.check { display:inline-block; }
+.xans-member-join .contents { overflow:hidden; overflow-y:auto; height:152px; margin:20px 0 0; padding:20px; color:#6d6d6d; font-size:12px; line-height:20px; border:1px solid #e5e5e5; box-sizing:border-box; }
+.xans-member-join .contents p { margin:0 0 20px; }
+.xans-member-join .ec-base-chk { margin-top:3px; }
+.xans-member-join .agreeAll { margin:0 0 30px; font-size:16px;  }
+.xans-member-join .agreeAll h3 { margin:0 0 20px; font-size:16px; }
+.xans-member-join .agreeAll label { display:inline-block; width: calc(100% - 41px); }
+.xans-member-join .additional li { display:inline-block; margin-right:40px; }
+.xans-member-join label + label { margin-left:0; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+	.xans-member-join .agreeArea { margin:0 0 30px; }
+    .xans-member-join .additional { margin:20px 0 0; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-member-join .agreeInner { display:flex; }
+	.xans-member-join .left { display:flex; flex:1; margin-right:40px; }
+    .xans-member-join .right { flex:1; }
+    .xans-member-join .agreeArea.terms .contents { min-height:100%; }
+    .xans-member-join .agreeArea.terms { margin:0 0 40px; }
+    .xans-member-join .agreeArea + .agreeArea { margin:40px 0 0; }
+    .xans-member-join .additional { margin:15px 0 0; }
+}
+

@@ -1,0 +1,14 @@
+.xans-myshop-orderhistorylistpast .order { position:relative; }
+.xans-myshop-orderhistorylistpast .order h3 { overflow:hidden; padding:20px 0 20px 15px; font-size:13px; background-color:#f6f6f6; border-top:1px solid #000; }
+.xans-myshop-orderhistorylistpast .order .date { font-weight:bold; }
+.xans-myshop-orderhistorylistpast .btnDetail { position:absolute; top:19px; right:19px; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-myshop-orderhistorylistpast .order h3 { margin:50px 0 0; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-myshop-orderhistorylistpast .order h3 { margin:60px 0 0; }
+}

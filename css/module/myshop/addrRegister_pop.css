@@ -1,0 +1,4 @@
+#popup { width:800px; }
+.xans-myshop-addrregister #ma_rcv_title, .xans-myshop-addrregister #ma_rcv_name { width:180px; }
+.xans-myshop-addrregister #address_zip1, .xans-myshop-addrregister #address_zip2 { width:60px; text-align:center; }
+.xans-myshop-addrregister #address_addr1, .xans-myshop-addrregister #address_addr2 { width:420px; margin:5px 0 0; }

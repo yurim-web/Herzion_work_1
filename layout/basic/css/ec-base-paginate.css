@@ -1,0 +1,24 @@
+/* typeList */
+.ec-base-paginate.typeList { margin:60px 0; text-align:center; font-size:0; line-height:0; }
+.ec-base-paginate.typeList > a {display: inline-block; width:40px; line-height: 40px;  text-align: center; background:#fff; box-sizing:border-box;}
+.ec-base-paginate.typeList > a::after,
+.ec-base-paginate.typeList > a:first-child::before,
+.ec-base-paginate.typeList > a:last-child::before {content: ''; display: inline-block; width: 7px; height: 7px; border-width: 1px 1px 0 0; border-style: solid; border-color: #000; vertical-align: middle; transform: rotate(45deg); }
+.ec-base-paginate.typeList > a:first-child::before,
+.ec-base-paginate.typeList > a:last-child::before {margin: 0 -3px;}
+.ec-base-paginate.typeList > a:first-child::after,
+.ec-base-paginate.typeList > a:first-child::before,
+.ec-base-paginate.typeList > a:first-child + a::after {transform: rotate(-135deg);}
+.ec-base-paginate.typeList ol { display:inline-block; font-size:0; line-height:0; vertical-align:middle; }
+.ec-base-paginate.typeList li { display:inline-block; margin:0 0 0 -1px; vertical-align:top; }
+.ec-base-paginate.typeList li:first-child { margin-left:0; }
+.ec-base-paginate.typeList img { vertical-align:top; }
+.ec-base-paginate.typeList li a { display:block; width:40px; padding:12px 0; font-size:12px; color:#6d6d6d; border:1px solid #e5e5e5; line-height:14px; background:#fff; box-sizing:border-box; }
+.ec-base-paginate.typeList a:hover { text-decoration:none; }
+.ec-base-paginate.typeList a.this { position:relative; z-index:1; color:#000; border-color:#000; }
+.ec-base-paginate.typeList a.nolink { cursor:default; }
+/* typeSwipe */
+.ec-base-paginate.typeSwipe { text-align: center; }
+.ec-base-paginate.typeSwipe .prev, .ec-base-paginate.typeSwipe .next{ display: none; }
+.ec-base-paginate.typeSwipe [id*='swipe-button'] button { display: inline-block; margin: 0 7px; width: 8px; height: 8px; overflow: hidden; font-size: 1px; line-height: 0; text-indent: -9999px; border-radius: 100%; background: #000; opacity: .2; }
+.ec-base-paginate.typeSwipe [id*='swipe-button'] button.selected { opacity: 1; }

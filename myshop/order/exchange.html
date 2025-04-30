@@ -1,0 +1,354 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="section path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li><a href="/myshop/index.html">마이쇼핑</a></li>
+        <li title="현재 위치"><strong>교환신청</strong></li>
+    </ol>
+</div>
+
+<div class="myshopArea">
+    <div class="titleArea titleArea--myshop">
+        <h2>교환신청</h2>
+    </div>
+
+    <div module="Myshop_OrderHistoryApplyExchange">
+        <!--@css(/layout/basic/css/ec-base-layer.css)-->
+        <!--@css(/css/module/myshop/orderHistoryApplyExchange.css)-->
+        <!--
+            $isRuleBasedAddrForm = T
+        -->
+        <div class="order">
+            <div class="order__number">
+                <span class="date" title="주문일자">{$order_date_ymd}</span>
+                <span class="number" title="주문번호">({$order_id})</span>
+            </div>
+            <div class="{$product_no_receiver_display|display}">
+                <div module="Myshop_products">
+                    <div class="ec-base-prdInfo gCheck">
+                        <div class="prdBox">
+                            <span class="check">{$form.checkbox}</span>
+                            <div class="thumbnail"><a href="/product/detail.html{$param_product}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></div>
+                            <div class="description">
+                                <strong class="name">{$product_name_link}</strong>
+                                <div class="price">
+                                    <span title="판매가">{$item_price_raw_front_head}<strong>{$item_price_raw_front}</strong>{$item_price_raw_front_tail}<span class="{$item_price_ref_display|display}"> {$item_price_raw_back_head}{$item_price_raw_back}{$item_price_raw_back_tail}</span></span>
+                                    <span class="qty" title="수량">({$quantity}개)</span>
+                                </div>
+                                <ul class="info">
+                                    <li class="free {$card_installment_display|display}">무이자할부 상품</li>
+                                </ul>
+                                <div class="optionGroup {$option_display|display}">
+                                    <div>{$option_str}</div>
+                                    <ul module="Myshop_optionSet">
+                                        <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                                        <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                                    </ul>
+                                    <p class="free {$card_installment_display|display}">무이자할부 상품</p>
+                                </div>
+                            </div>
+                            <div class="quantity">
+                                <span class="ec-base-qty">
+                                    <a href="javascript:;" class="down" onclick="{$out_shortcut}">수량감소</a>
+                                    {$form.quantity}
+                                    <a href="javascript:;" class="up" onclick="{$add_shortcut}">수량증가</a>
+                                </span>
+                                <a class="btnNormal sizeQty" href="javascript:;" onclick="{$action_modify}">변경</a>
+                            </div>
+                        </div>
+                        <div class="prdFoot" title="주문처리상태">
+                            <div class="gLeft">
+                                <span class="txtStatus">{$cur_state}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ec-base-prdInfo gCheck">
+                        <div class="prdBox">
+                            <span class="check">{$form.checkbox}</span>
+                            <div class="thumbnail"><a href="/product/detail.html{$param_product}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></div>
+                            <div class="description">
+                                <strong class="name">{$product_name_link}</strong>
+                                <div class="price">
+                                    <span title="판매가">{$item_price_raw_front_head}<strong>{$item_price_raw_front}</strong>{$item_price_raw_front_tail}<span class="{$item_price_ref_display|display}"> {$item_price_raw_back_head}{$item_price_raw_back}{$item_price_raw_back_tail}</span></span>
+                                    <span class="qty" title="수량">({$quantity}개)</span>
+                                </div>
+                                <ul class="info">
+                                    <li class="free {$card_installment_display|display}">무이자할부 상품</li>
+                                </ul>
+                                <div class="optionGroup {$option_display|display}">
+                                    <div>{$option_str}</div>
+                                    <ul module="Myshop_optionSet">
+                                        <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                                        <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                                    </ul>
+                                    <p class="free {$card_installment_display|display}">무이자할부 상품</p>
+                                </div>
+                            </div>
+                            <div class="quantity">
+                                <span class="ec-base-qty">
+                                    <a href="javascript:;" class="down" onclick="{$out_shortcut}">수량감소</a>
+                                    {$form.quantity}
+                                    <a href="javascript:;" class="up" onclick="{$add_shortcut}">수량증가</a>
+                                </span>
+                                <a class="btnNormal sizeQty" href="javascript:;" onclick="{$action_modify}">변경</a>
+                            </div>
+                        </div>
+                        <div class="prdFoot" title="주문처리상태">
+                            <div class="gLeft">
+                                <span class="txtStatus">{$cur_state}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gBlank10">
+            <p class="ec-base-help"><span class="txtWarn">주문상품 전체 교환인 경우, 사은품은 자동적으로 교환 신청됩니다.</span></p>
+        </div>
+        <div class="ec-base-button {$select_button_display|display}">
+            <span class="gRight">
+                <a href="#none" class="btnNormal sizeS" id="{$same_product_button_id}">동일상품 교환</a>
+                <a href="#none" class="btnNormal sizeS" onclick="{$open_search_layer}">다른상품 교환</a>
+            </span>
+        </div>
+
+        <!-- 화면을 처음 로딩 할 때 보이는 모듈입니다. 상품을 선택한 이후엔 "exchange_product.html"의 코드를 로딩합니다. -->
+        <div id="{$exchange_product_list_id}">
+            <div class="{$exchange_product_list_display|display}">
+                <div class="titleArea titleArea--middle">
+                    <h3>교환 상품</h3>
+                </div>
+                <p class="ec-base-prdEmpty"><!--@import(/svg/icon-empty.html)-->선택된 교환상품이 없습니다.<br /> 교환상품 선택없이 교환신청은 가능합니다.</p>
+            </div>
+        </div>
+
+        <div class="titleArea titleArea--middle">
+            <h3>교환사유</h3>
+        </div>
+        <div class="ec-base-table typeWrite">
+            <table border="1" >
+                <caption>교환사유</caption>
+                <colgroup>
+                    <col style="width:200px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">사유선택</th>
+                        <td>
+                            {$form.reason_select}
+                            <span id="{$cs_shipfee_paid_by_id}" class="{$cs_shipfee_paid_by_display|display}">[교환배송비 <span id="{$cs_shipfee_paid_by_who_id}" class="txtEm"></span> 부담]</span>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">상세사유</th>
+                        <td>{$form.reason_detail}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="{$cs_add_item_display|display}">
+            <div class="titleArea titleArea--middle">
+                <h3>추가 정보</h3>
+            </div>
+            <div class="ec-base-table typeWrite">
+                <table border="1" >
+                    <caption>추가 정보</caption>
+                    <colgroup>
+                        <col style="width:200px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody module="Myshop_Csadd">
+                        <tr>
+                            <th scope="row">{$item_title}</th>
+                            <td>
+                                {$item_value}
+                                <p class="gBlank5">{$guide_content}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{$item_title}</th>
+                            <td>
+                                {$item_value}
+                                <p class="gBlank5">{$guide_content}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="{$check_is_pickup_id}" class="{$pickuplist_display|display}">
+            <div class="titleArea titleArea--middle">
+                <h3>수거신청</h3>
+            </div>
+            <div class="ec-base-table typeWrite">
+                <table border="1" >
+                    <caption>수거신청</caption>
+                    <colgroup>
+                        <col style="width:200px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">수거신청 여부</th>
+                            <td>
+                                {$form.ispickup}
+                                <div id="{$pickup_direct_id}" class="gBlank5 direct {$display_direct_pickup|display}">
+                                    <span class="input">
+                                        {$form.pickup_csname}
+                                        {$form.pickup_invoiceno}
+                                    </span>
+                                    {$form.pickup_check}
+                                </div>
+                                <p class="txtInfo gBlank5">- 교환할 상품에 대해 "수거 신청"하시면 택배사에 직접 연락하지 않아도 되며, 수거 전 택배기사님이 연락 후 방문합니다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="{$pickup_detail_id}" class="{$pickup_detail_display|display}">
+            <div class="titleArea titleArea--middle">
+                <h3>수거지 정보</h3>
+            </div>
+            <div class="ec-base-table typeWrite">
+                <table border="1" >
+                    <caption>수거지 정보</caption>
+                    <colgroup>
+                        <col style="width:200px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">수거지 선택</th>
+                            <td>{$form.sameaddr}</td>
+                        </tr>
+                        <tr id="{$pickup_sameaddr_id}" class="{$pickup_order_address_display|display}">
+                            <th scope="row">수거지 주소 </th>
+                            <td>
+                                {$r_name}<br />
+                                ({$r_zipcode}) {$r_addr1} {$r_addr2}<br />
+                                {$r_phone1} | {$r_phone2}<br />
+                            </td>
+                        </tr>
+                        <tr id="{$pickup_name_id}" class="{$pickup_name_display|display}">
+                            <th scope="row">이름 <img src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg" class="icon icoRequired" alt="필수" /></th>
+                            <td>{$form.pickup_name}</td>
+                        </tr>
+                        <tr id="{$pickup_address_id}" class="{$pickup_address_display|display}">
+                            <th scope="row">수거지 주소 <img src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg" class="icon icoRequired" alt="필수" /></th>
+                            <td>{$form.address}</td>
+                        </tr>
+                        <tr id="{$pickup_phone1_id}" class="{$pickup_phone1_display|display}">
+                            <th scope="row">일반전화 <img src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg" class="icon icoRequired {$is_pickup_phone1_required_display|display}" alt="필수" /></th>
+                            <td class="formGroup code">{$form.pickup_phone1_}</td>
+                        </tr>
+                        <tr id="{$pickup_phone2_id}" class="{$pickup_phone2_display|display}">
+                            <th scope="row">휴대전화 <img src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg" class="icon icoRequired {$is_pickup_phone2_required_display|display}" alt="필수" /></th>
+                            <td class="formGroup code">{$form.pickup_phone2_}</td>
+                        </tr>
+                        <tr id="{$pickup_delivery_info_id}" class="{$delivery_info_offer_display|display}">
+                            <th scope="row">배송정보제공방침</th>
+                            <td>
+                                {$form.delivery_info_offer_content}
+                                <p class="grid"><span class="question">배송정보제공방침에 대하여 동의하십니까?</span>{$form.delivery_info_offer_check}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="{$cs_shipfee_payment_id}" class="{$cs_shipfee_payment_display|display}">
+            <div class="titleArea titleArea--middle">
+                <h3>교환배송비 결제</h3>
+            </div>
+            <div class="ec-base-table typeWrite">
+                <table border="1" >
+                    <caption>교환배송비 결제 정보</caption>
+                    <colgroup>
+                        <col style="width:200px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">교환배송비</th>
+                        <td >
+                        <span id="{$cs_shipfee_paid_by_select_id}">교환 사유를 선택하세요.</span>
+                        <span id="{$cs_shipfee_paid_by_customer_id}" class="displaynone"><span class="txtEm">구매자 책임사유</span>에 의한 교환이므로 교환배송비 <span class="txtEm">{$price_front_head}<span id="{$cs_shipfee_price_slot_id}">{$shipfee_exchange}</span>{$price_front_tail}</span>을 구매자가 부담합니다.</span>
+                        <span id="{$cs_shipfee_paid_by_store_id}" class="displaynone"><span class="txtEm">판매자 책임사유</span>에 의한 교환이므로 교환배송비는 판매자가 부담합니다.</span>
+                        </td>
+                    </tr>
+                    <tr id="{$cs_shipfee_paymethod_id}" class="displaynone">
+                        <th scope="row">교환배송비 결제방법</th>
+                        <td>
+                            <div class="ec-base-radio typeDelivery">
+                            {$form.shipfee_paymethod}
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        {$form.is_new_cs_form}
+        <div class="{$refund_info_display|display}">
+            <div class="titleArea titleArea--middle">
+                <h3>환불 정보</h3>
+            </div>
+            <div class="ec-base-table typeWrite">
+                <table border="1" >
+                    <caption>환불 계좌 정보</caption>
+                    <colgroup>
+                        <col style="width:200px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody class="{$refund_notice_display|display}">
+                        <tr>
+                            <th scope="row">환불예정금액</th>
+                            <td>환불예정금액은 판매자가 접수처리 완료 후 '주문상세조회'에서 확인할 수 있습니다.<br />교환상품에 따라 추가결제금액이 발생할 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">배송비 안내</th>
+                            <td>{$cs_info_desc}</td>
+                        </tr>
+                    </tbody>
+                    <tbody class="{$refund_account_display|display}">
+                        <tr>
+                            <th scope="row">환불계좌</th>
+                            <td>
+                                <span id="{$id_acc_full_str}" class="{$acc_full_str_display|display} gSpace10">{$acc_full_str}</span>
+                                <span id="{$id_acc_reg_disp}" class="{$acc_reg_display|display}"><a href="#none" class="btnNormal sizeS" onclick="OrderApply.popupAccount('./account.html');">환불계좌등록</a></span>
+                                <span id="{$id_acc_mod_disp}" class="{$acc_mod_display|display}"><a href="#none" class="btnNormal sizeS" onclick="OrderApply.popupAccount('./account.html');">환불계좌변경</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="ec-base-help {$refund_account_display|display}"><span class="txtWarn">현금환불 발생시 등록된 환불계좌로 환불 처리 됩니다.</span></p>
+        </div>
+        <div class="ec-base-button gBottom">
+            <a href="/myshop/order/list.html{$back_page_param}" class="btnNormalFix sizeM">이전페이지</a>
+            <a href="#none" class="btnSubmitFix sizeM" onclick="OrderApply.apply(); return false;">교환신청</a>
+        </div>
+    </div>
+
+    <div class="ec-base-help">
+        <h3>이용안내</h3>
+        <div class="inner">
+            <h4>가상계좌, 에스크로(가상계좌) 이용안내</h4>
+            <ul>
+                <li>결제수단이 '가상계좌' 일 경우 입금전 교환신청시 가상계좌가 취소되며, 무통장입금으로 결제수단이 변경됩니다.</li>
+                <li>결제수단이 '에스크로(가상계좌)' 일 경우 입금전 교환신청시 가상계좌 및 매매보호서비스가 취소되며, 무통장입금으로 결제수단이 변경됩니다.<br />단, [동일상품으로 교환] 처리될 경우 가상계좌 및 매매보호서비스는 취소되지 않습니다.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--@import(/myshop/myshop_main.html)-->
+</div>

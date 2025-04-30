@@ -1,0 +1,5 @@
+.xans-myshop-layerwish { padding: 20px 25px 0; }
+.xans-myshop-layerwish .content { text-align:center; display: flex; flex-direction: column; justify-content: center;}
+.xans-myshop-layerwish .content p { color:#000; font-size: 13px; line-height: 20px; }
+.xans-myshop-layerwish .content p strong { color:#000; }
+

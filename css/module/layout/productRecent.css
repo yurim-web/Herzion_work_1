@@ -1,0 +1,8 @@
+.xans-layout-productrecent { padding:14px 12px 0;  text-align:center; border-bottom:1px solid #d9d9d9; }
+.xans-layout-productrecent .title a { display:block; padding:3px 0; font-size:12px; line-height:17px; font-weight:normal; color:#2e2e2e;  text-transform:uppercase; }
+.xans-layout-productrecent ul { width:69px; }
+.xans-layout-productrecent li { margin:10px 0 0; }
+.xans-layout-productrecent li img { max-width:69px; }
+.xans-layout-productrecent .player { display:flex; margin:0 -12px; }
+.xans-layout-productrecent .player button { height:40px; flex:1; overflow:hidden; white-space:nowrap; font-size:1px; line-height:1px; color:transparent; background:none; text-indent:150%; }
+.xans-layout-productrecent .player .icon { display:block; margin:0 auto; border-color:#7d7d7d; }

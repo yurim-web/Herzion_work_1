@@ -1,0 +1,38 @@
+.xans-myshop-asyncbenefit .benefit { overflow:hidden; border-top:1px solid #000; border-bottom:1px solid #e5e5e5; align-items:center; }
+.xans-myshop-asyncbenefit .benefit .user, 
+.xans-myshop-asyncbenefit .benefit .description { font-size:14px; color:#6d6d6d; }
+.xans-myshop-asyncbenefit .benefit .description p + p { margin:5px 0 0; }
+.xans-myshop-asyncbenefit .benefit .description p + p:first-of-type { margin-top:0; }
+.xans-myshop-asyncbenefit .benefit .user .user__thumbnail { display:inline-block; overflow:hidden; width:42px; border-radius:50%; vertical-align: middle; }
+.xans-myshop-asyncbenefit .benefit .user .user__thumbnail img { max-width:100%; }
+.xans-myshop-asyncbenefit .benefit .user .user__info { display:inline-block; vertical-align: middle; margin:0 0 0 15px; }
+.xans-myshop-asyncbenefit .benefit .user .user__info .title { display:inline-block; margin:0 0 5px 0; font-size:15px; font-weight:bold; color:var(--font-color-primary); }
+
+
+.xans-myshop-asyncbenefit .thumbnail img { max-width:70px; max-height:70px; }
+.xans-myshop-asyncbenefit .invite > strong { display:block; }
+.xans-myshop-asyncbenefit .invite .copy { margin:8px 0 0; }
+.xans-myshop-asyncbenefit .invite #reco_url { width:439px; }
+.xans-myshop-asyncbenefit .invite ul { margin:8px 0 0; font-size:11px; line-height:1.25; color:#757575; }
+.xans-myshop-asyncbenefit .invite ul li { margin:3px 0 0; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-myshop-asyncbenefit .benefit { padding:15px; }
+    .xans-myshop-asyncbenefit .benefit .user,
+    .xans-myshop-asyncbenefit .benefit .description { padding:15px 0; }
+
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-myshop-asyncbenefit { margin:0 0 20px; }
+    .xans-myshop-asyncbenefit .benefit { display:flex; }
+    .xans-myshop-asyncbenefit .benefit .user, 
+    .xans-myshop-asyncbenefit .benefit .description { display:inline-block; flex:1; padding:30px; }
+    .xans-myshop-asyncbenefit .benefit .description p { position:relative; }
+    .xans-myshop-asyncbenefit .benefit .description p:before { content:""; display:inline-block; position:absolute; left:-30px; top:-10%; width:1px; height:130%; background:#e5e5e5; }
+    
+    .xans-member-login .login { width:421px; margin:0 auto; }
+    
+}

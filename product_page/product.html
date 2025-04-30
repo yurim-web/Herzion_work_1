@@ -1,0 +1,461 @@
+<!--  제품페이지  -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="product.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css"
+      rel="stylesheet"
+    />
+    <!-- header css -->
+    <link rel="stylesheet" href="../layout_new/header.css" />
+    <!-- footer css -->
+    <link rel="stylesheet" href="../layout_new/footer.css" />
+    <!-- layout js -->
+    <script src="../layout_new/layout.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // 텍스트 박스 애니메이션
+        const txtBoxes = document.querySelectorAll('.txt_box');
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".banner_section",
+            start: "top",
+            end: "150%",
+            scrub: 1,
+            toggleActions: "play none none reverse",
+          }
+        });
+        
+        txtBoxes.forEach((box, index) => {
+          const fillText = box.querySelector('.text-fill');
+          
+          tl.to(fillText, {
+            backgroundSize: '100% 100%',
+            duration: 0.8,
+            ease: 'none'
+          }, index);
+        });
+
+        // 카드 스크롤 애니메이션 제거
+       
+      });
+    </script>
+  </head>
+  <body>
+    <!-- 모바일 토글 할때 백그라운드 흰색색 -->
+    <div class="mobile_menu_background"></div>
+    <!-- 헤더 부분 -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="/">
+            <img src="images/logo.svg" alt="HERZION" class="header_logo" />
+            <!-- 모바일 전용 로고 -->
+            <img
+              src="images/m_header_logo.svg"
+              alt="HERZION"
+              class="header_logo_mobile"
+            />
+          </a>
+        </div>
+        <div class="nav_right">
+          <button class="menu_btn">Menu</button>
+          <div class="menu_drop">
+            <ul class="menu_drop_list">
+              <li><a href="/" data-text="Home">Home</a></li>
+              <li><a href="/product/product.html" data-text="Product">Product</a></li>
+              <li><a href="/technology/technology.html" data-text="Technology">Technology</a></li>
+              <li><a href="/business/business.html" data-text="Business">Business</a></li>
+              <li>
+                <a href="/support/support.html" data-text="Support">Support</a>
+              </li>
+              <li><a href="" data-text="FAQ">FAQ</a></li>
+              <li>
+                <a href="/contact/contact.html" data-text="Support">Contact</a>
+              </li>
+            </ul>
+          </div>
+           <!-- 모바일 메뉴 -->
+           <span class="menu_btn_mobile" id="menu_btn_mobile">Menu</span>
+           <button class="menu_btn_mobile_close" id="menu_btn_mobile_close">X</button>
+           <div class="mobile_menu" id="mobile_menu">
+            <div class="mobile_menu_lang">
+              <button class="active">KOR</button>
+              <button>ENG</button>
+              <button>JPN</button>
+            </div>
+            <div class="mobile_menu_shop">
+              <a href="">Shop now</a>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <ul class="mobile_menu_list">
+              <li><a href="/">Home</a></li>
+              <li><a href="">Product</a></li>
+              <li><a href="">Technology</a></li>
+              <li><a href="">Business</a></li>
+              <li><a href="/support/support.html">Support</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="/contact/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <button class="buy_now_btn">Buy Now</button>
+
+        </div>
+
+         
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 메인 베너 부분 -->
+      <section class="banner_section">
+        <div class="hero">
+          <div class="hero_content">
+            <h1>Product</h1>
+            <p>제품 소개</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 제품 소개 섹션 -->
+      <section class="product_intro">
+        <div class="container">
+          <h2>
+            <div class="txt_box">
+              <div class="txt">
+                <span class="text-fill">하루를 기억하는 깊은 울림,</span>
+                <span class="text-fill-bg">하루를 기억하는 깊은 울림,</span>
+              </div>
+            </div>
+            <div class="txt_box">
+              <div class="txt">
+                <span class="text-fill">음향진동으로 기억을 지키는</span>
+                <span class="text-fill-bg">음향진동으로 기억을 지키는</span>
+              </div>
+            </div>
+            <div class="txt_box">
+              <div class="txt">
+                <span class="text-fill">헤르지온.</span>
+                <span class="text-fill-bg">헤르지온.</span>
+              </div>
+            </div>
+          </h2>
+        </div>
+      </section>
+      <!-- 메인영상부분 -->
+      <section class="main_video_section">
+        <iframe class="main_video"
+          src="https://www.youtube.com/embed/JiHWagpoTV8?autoplay=1&mute=1&loop=1&playlist=JiHWagpoTV8" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </section>
+
+      <!-- 사용 시나리오 섹션 -->
+      <section class="use_cases">
+        <div class="container">
+          <h3 class="section_title">Effortlessly Available</h3>
+          <div class="use_case_container">
+            <h2>언제,<br>어디서나,<br>편안하게</h2>
+            <div class="use_case_items">
+              <div class="use_case_item">
+                <h3>일상속에서</h3>
+                <p>몸 건강과 뇌 건강을 함께 챙기는 시간</p>
+              </div>
+              <div class="use_case_item">
+                <h3>휴식하면서</h3>
+                <p>머리까지 편안해지는 풀타임 충전의 순간</p>
+              </div>
+              <div class="use_case_item">
+                <h3>사무실에서</h3>
+                <p>과도한 업무 스트레스에 나를 위한 짧은 휴식 선물</p>
+              </div>
+              <div class="use_case_item">
+                <h3>잠들기 전에</h3>
+                <p>하루의 피로를 씻어내는 가장 포근한 시간</p>
+              </div>
+              <div class="use_case_item" style="border-bottom: none;">
+                <h3>명상하면서</h3>
+                <p>몸과 마음을 릴렉스하는 깊은 몰입의 순간</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 서브 영상 섹션 -->
+      <section class="sub_video_section">
+        <div class="container">
+          <div class="video_box">
+            <iframe 
+              src="https://www.youtube.com/embed/Fa1--BQXVbk" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- 임상 결과 섹션 -->
+      <section class="clinical_results">
+        <div class="container">
+          <h3 class="section_title">Summary of Clinical Findings</h3>
+          <div class="card_animation_box">
+          <!-- 첫번째 카드-->
+          <div class="section_box">
+            <div class="clinical_text_box">
+              <h1>01</h1>
+              <h2>인지 기능 향상에 도움</h2>
+              <h3>알파파 활동의 유의미한 증가 확인</h3>
+              <p>건강한 시니어를 대상으로 8주간 헤르지온을 사용한 결과,<br>
+                뇌파 측정에서 알파파 활동이 유의미하게 증가한 것으로 나타났습니다.<br>
+                이러한 변화는 스트레스 완화, 집중력 향상,<br>
+                <span class="text_bold">전반적인 정신적 명료성 증진에 긍정적인 영향을 줄 수 있음을 시사합니다.</span>
+                </p>
+            </div>
+            <img src="images/box1_graph.png" class="clinical_img"/>
+          </div>
+            <!-- 두번째 카드-->
+            <div class="section_box section_box_img_2">
+              <div class="clinical_text_box">
+                <h1>02</h1>
+                <h2>주의집중력 향상</h2>
+                <p>
+                CERAD-K 주의력 점수의 유의미한 향상은<br>
+                집중력, 처리 속도, 작업 기억 등 인지 능력의 전반적인 개선을 시사합니다.<br>
+                이러한 변화는 정신적 피로 감소와 함께 일상, 학습, 작업 수행에서의<br>
+                효율성 증가로 이어져,<span class="text_bold">삶의 질과 웰빙 향상에<br> 긍정적인 영향을 줄 수 있음을 시사합니다.</span>
+                </p>
+              </div>
+              <img src="images/box2_graph.png" class="clinical_img"/>
+            </div>
+            <!-- 세번째 카드-->
+            <div class="section_box section_box_img_3">
+              <div class="clinical_text_box">
+                <h1>03</h1>
+                <h2>우울 척도 개선</h2>
+                <p>
+                  CES-D는 미국 국립정신건강연구소(NIMH)에서 개발된 우울증 자가진단 검사로,<br>
+                  지역사회 주민을 대상으로 한 우울증 역학 연구에 활용되어 왔습니다.<br>
+                  건강한 노인을 대상으로 헤르지온 기기를 사용한 결과,<br>
+                  CES-D 점수가 <span class="text_bold">약 33% 감소하는 경향을 보여<br>
+                    노년층의 정서 안정과 우울감 완화에 긍정적인 영향을 줄 수 있음을 시사합니다.</span>
+                </p>
+              </div>
+              <img src="images/box3_graph.png" class="clinical_img"/>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features 섹션 -->
+      <section class="feature_section">
+        <div class="container">
+          <h3 class="section_title">Features</h3>
+          <div class="feature_grid">
+            <div class="feature_card">
+              <div class="feature_text">
+                신약 개발과 디지털 헬스 기술을 접목한 <b>아리바이오의<br> 뇌 건강 솔루션</b>, 치매 예방과 인지 회복을 아우르는<br><b>차세대 브레인케어 제품입니다.</b>
+              </div>
+              <div class="feature_icon"><img src="images/feat_icon1.svg" alt=""></div>
+            </div>
+            <div class="feature_card">
+              <div class="feature_text">
+                대형스피커 기반 <b>특수 소형 음향 진동 모듈로 개발</b>로<br>구현하여, 두뇌에 직접적인 진동과 음향 자극을 전달합니다.
+              </div>
+              <div class="feature_icon"><img src="images/feat_icon2.svg" alt=""></div>
+            </div>
+            <div class="feature_card">
+              <div class="feature_text">
+                전류 자극이 아닌 <b>음향과 진동으로 자극하는<br>더 안전하고 간편한 웰니스 브레인 케어 솔루션 —<br>1회 15분, 하루 30</b>이면 충분합니다.
+              </div>
+              <div class="feature_icon"><img src="images/feat_icon3.svg" alt=""></div>
+            </div>
+            <div class="feature_card">
+              <div class="feature_text">
+                <b>임상시험을 통해 확인된 긍정적 변화</b><br>(알파파 활성도, 주의집중력, 우울감 지표 등)
+              </div>
+              <div class="feature_icon"><img src="images/feat_icon4.svg" alt=""></div>
+            </div>
+            <div class="feature_card">
+              <div class="feature_text">
+                뇌 건강이 걱정되는 분들을 위한 <b>새로운 기술 기반 제품</b>
+              </div>
+              <div class="feature_icon"><img src="images/feat_icon5.svg" alt=""></div>
+            </div>
+            <div class="feature_card">
+              <div class="feature_text">
+                <b>신경세포 손상 자극에 대한 보호 효과</b>가 입증된<br>특허 기술을 바탕으로 개발된 브레인케어 제품입니다.
+              </div>
+              <div class="feature_icon"><img src="images/feat_icon6.svg" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- By Use Case 섹션 -->
+      <section class="use_section">
+        <div class="container">
+          <h3 class="section_title">By Use Case</h3>
+          <div class="use_card_container">
+            <div class="use_card card_img_1">
+              <h1>Brain Care</h1>
+              <p>
+                불안한 순간, 지치고 무기력한 날,<br>
+                잠들기 어려운 밤.<br>
+                상황에 맞게 조율된 음향 진동이<br>
+                당신의 하루에<br>
+                필요한 균형을 찾아드립니다.<br>
+                헤르지온이 있는 곳이라면, 언제 어디서든<br>
+                마음의 평온이 시작됩니다.
+              </p>
+            </div>
+            <div class="use_card card_img_2">
+              <h1>Music Care</h1>
+              <p>
+                음악과 함께 울리는 진동,<br>
+                지금, 당신의 하루에 필요한 케어를 선택하세요.<br>
+                힐링부터 활력까지 —<br>
+                헤르지온은 매일의 감정과 리듬에<br>
+                조용히, 깊이, 응답합니다.
+              </p>
+            </div>
+            <div class="use_card card_img_3">
+              <h1>Mind Care</h1>
+              <p>
+                몸과 마음을 내려놓는 시간,<br>
+                헤르지온과 함께 명상에 깊이 빠져보세요.<br>
+                두뇌에 직접 전달되는 섬세한 진동이<br>
+                당신의 내면에 고요한 파동을 일으킵니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- 앱 다운로드 섹션 -->
+      <section class="app_download">
+        <div class="container">
+          <h3 class="section_title" style="color: #fff;">Meet the Hertzion App</h3>
+          <div class="app_download_container">
+            <div class="app_download_left_container">          <h2>울림이 되는 하루,<br>헤르지온이<br>함께 합니다.</h2>
+              <p>앱과 함께 즐기는<br>브레인 케어, 뮤직 케어, 마인드 케어.<br>당신의 일상 속 깊은 케어를 시작하세요.</p>
+              <div class="download_button_box">
+                <a href="https://apps.apple.com/br/app/%ED%97%A4%EB%A5%B4%EC%A7%80%EC%98%A8/id6463604810" class="store_btn apple_btn">
+                  <img src="images/apple_logo.svg" alt="App Store">
+                  <span>App Store</span>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.aribio.app.herzion&hl=ko" class="store_btn google_btn">
+                  <img src="images/google_logo.svg" alt="Google Play">
+                  <span>Google Play</span>
+                </a>
+              </div>
+            </div>
+            <div class="app_download_right_container">
+              <div class="phone_text_box" style="margin-top: 14px;">
+                <img src="images/phone_1.png" alt="">
+                <p><span style="font-weight:700;">브레인 케어<br></span>
+                  다양한 패턴으로 구성된<br>
+                  맞춤형 음향진동 자극</p>
+              </div>
+              <div class="phone_text_box" style="margin-top: 228px;">
+                <p><span style="font-weight:700;">뮤직 케어<br></span>
+                  다채로운 음악과 함께 즐기는<br>
+                  리듬감 있는 음향진동 자극<br>
+                </p>
+                <img src="images/phone_2.png" alt="">
+              </div>
+              <div class="phone_text_box" style="margin-top: 121px;">
+                <img src="images/phone_3.png" alt="">
+                <p><span style="font-weight:700;">마인드 케어<br></span>
+                  깊은 안정을 위한 명상과 함께하는<br>
+                  섬세한 음향진동 자극</p>
+              </div>
+            </div>
+          </div>
+ 
+
+        </div>
+      </section>
+      
+    </main>
+
+<!-- 푸터부분 -->
+<footer>
+  <div class="footer_top_content">
+    <div class="footer_left">
+      <img src="images/footer_logo.svg" alt="HERZION" class="footer_logo" />
+      <div class="contact_info">
+        <div class="contact_info_left">
+          <div class="info_group">
+            <p class="label">Tel</p>
+            <span>02-2637-0009</span>
+          </div>
+          <div class="info_group">
+            <p class="label">E-mail</p>
+            <span>help@herzion.com</span>
+          </div>
+        </div>
+        <div class="contact_info_right">
+          <div class="info_group">
+            <p class="label">Address</p>
+            <span>경기도 성남시 분당구 동판교로 56, (주)아리바이오</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_right">
+      <ul class="footer_links">
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+        <li><a href="/support/support.html">Support</a></li>
+      </ul>
+      <div class="app_download_box">
+        <a href="https://apps.apple.com/br/app/%ED%97%A4%EB%A5%B4%EC%A7%80%EC%98%A8/id6463604810" class="store_btn">
+          <img src="images/apple_logo.svg" alt="" /><span>App Store</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.aribio.app.herzion&hl=ko" class="store_btn">
+          <img src="images/google_logo.svg" alt="" /><span
+            >Google Play</span
+          >
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer_bottom">
+    <p>ⓒ 2024 by Aribio. All Rights Reserved.</p>
+    <img
+      src="images/footer_logo.svg"
+      alt="HERZION"
+      class="footer_logo_bottom"
+    />
+  </div>
+</footer>
+
+    <!-- 상단이동하는 버튼 -->
+    <button class="top_btn" id="top_btn">
+      <img src="images/top_btn.svg" alt="상단 이동 버튼" />
+      <span>Top</span>
+    </button>
+  </body>
+</html>

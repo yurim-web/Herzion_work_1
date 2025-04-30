@@ -1,0 +1,166 @@
+.grade-box input[type="radio"] { border-radius: 100px; background-color: #fff; }
+
+.xans-board-commentlist { margin: 100px 0 0; border-top:1px solid #000; border-bottom:1px solid #e5e5e5; }
+.xans-board-commentlist .ec-base-button.typeBG.spam { border-left:0; border-right:0; border-bottom:0; margin:10px 0 0; }
+
+/* 댓글 리스트 */
+.xans-board-commentlist .boardComment li { position:relative; padding: 25px 0; color:#353535; line-height:140%; }
+.xans-board-commentlist .boardComment li + li {border-top: 1px solid #e5e5e5; }
+.xans-board-commentlist .boardComment li:first-child { margin:0 }
+.xans-board-commentlist .boardComment li div.commentTop { overflow:hidden; padding:0 25px 20px 0; }
+.xans-board-commentlist .boardComment li .name { float:left; color: #000; }
+.xans-board-commentlist .boardComment li .date { margin:0 20px; font-size: 13px; color: #6d6d6d;}
+.xans-board-commentlist .boardComment li .formGroup { display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: space-between; -ms-justify-content: space-between; justify-content: space-between; margin: 20px 0 0; }
+.xans-board-commentlist .boardComment li .btnNormal.typeReplyList {padding: 10px 15px; }
+.xans-board-commentlist .boardComment li .btnNormal.typeReplyList .number { margin: 0 19px 0 5px; }
+.xans-board-commentlist .boardComment li .btnNormal.typeReplyList .icoArrowBottom {position: relative; top: -3px; }
+.xans-board-commentlist .boardComment li .comment { clear:both; word-break:break-all; color: #545454; }
+
+/* 댓글의 댓글 */
+.xans-board-commentlist .boardComment li.replyArea { position: relative; overflow:hidden; padding:25px 25px 25px 50px; background:#f6f6f6; }
+.xans-board-commentlist .boardComment li.replyArea::before {content: ''; position: absolute; left: 20px; top: 25px; width: 10px; height: 12px; border-width: 0 0 1px 1px; border-style: solid; border-color: #a7a7a7;}
+.xans-board-commentlist .boardComment li.replyArea + li.replyArea { margin: 0; }
+.xans-board-commentlist .boardComment li.replyArea div.commentTop { border:none; padding-left:5px; }
+.xans-board-commentlist .boardComment li.replyArea .formGroup .button { margin: 0 0 0 auto; }
+.xans-board-commentlist .boardComment li.replyArea .xans-board-commentformsecret { margin:10px 35px 10px 0; }
+
+/* 댓글 쓰기 */
+.xans-board-commentwrite { margin: 50px 0; color:#353535; }
+.xans-board-commentwrite legend { visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0; }
+.xans-board-commentwrite textarea { width:100%; height:148px; padding:20px; border-width: 1px 1px 0 1px; border-style: solid; border-color: #a7a7a7; outline: none; background: #fff; }
+.xans-board-commentwrite .input { position: relative; border-width: 0 1px 1px 1px; border-style: solid; border-color: #a7a7a7; background: #fff; border-top: 1px solid #e0e0e0;  }
+.xans-board-commentwrite .input .ec-base-help { margin:10px 0 0; }
+.xans-board-commentwrite .input .btnSubmit { position: absolute; right: 20px; top: 13px; }
+.xans-board-commentwrite span { display: inline-block; }
+.xans-board-commentwrite div.captcha { border-top:1px solid #e9e9e9; padding:15px 0 0 0; color:#757575; }
+.xans-board-commentwrite div.captcha img { vertical-align:middle; }
+.xans-board-commentwrite h4 { margin: 0 0 20px 0; font-size: 16px; color: #000; }
+.xans-board-commentwrite .inside { display: inline-block; padding: 13px 20px; }
+.xans-board-commentwrite input[type=text],
+.xans-board-commentwrite input[type=password] { width:200px; margin:0 10px 0 9px; }
+.xans-board-commentwrite .secret { margin:0 20px 0 10px; }
+.xans-board-commentwrite .view { position:relative; margin:10px 0 0; padding:0 95px 0 0; }
+.xans-board-commentwrite .view [class^="btn"] { position:absolute; top:0; right:0; }
+.xans-board-commentwrite .grade-box {position: relative; }
+.xans-board-commentwrite .grade-box span {margin: 10px 0; color: #6d6d6d;}
+.xans-board-commentwrite .byte {position: absolute; right: 0; }
+.xans-board-commentwrite span.grade label { padding:0 10px 0 0; }
+.xans-board-commentwrite span.grade em { font-style:normal; }
+
+/* 댓글의 댓글 쓰기 */
+.xans-board-commentwrite.commentwrite-all {margin:50px 0;padding:0;border:0;background-color:#fff;color:#353535;}
+.xans-board-commentwrite.commentwrite-all .view { position:relative; margin:10px 0 19px; padding:0 120px 0 0; }
+.xans-board-commentwrite.commentwrite-all .view [class^="btn"] {  position:absolute; top:0; right:0; }
+.xans-board-commentwrite.commentwrite-all textarea {border:1px solid #a7a7a7;}
+.xans-board-commentlist .boardComment li .formGroup #commentReplyWriteForm {  flex-basis: 100%; }
+.xans-board-commentreply { position: relative; margin: 25px 0 -25px; padding: 25px 25px 25px 50px; background-color:#f6f6f6; }
+.xans-board-commentreply::before { content: ''; position: absolute; left: 20px; top: 25px; width: 10px; height: 12px; border-width: 0 0 1px 1px; border-style: solid; border-color: #a7a7a7; }
+.xans-board-commentreply legend { visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0; }
+.xans-board-commentreply .input { position: relative; border-width: 0 1px 1px 1px; border-style: solid; border-color: #a7a7a7; background: #fff; border-top: 1px solid #e0e0e0; }
+.xans-board-commentreply .input .ec-base-help { margin:10px 0 0; }
+.xans-board-commentreply .input .btnSubmit { position: absolute; right: 20px; top: 13px; }
+.xans-board-commentreply .inside { display: inline-block; padding: 13px 20px; }
+.xans-board-commentreply .comment-col { display: inline-block; }
+.xans-board-commentreply strong { display:block; margin:0 0 10px 0;}
+.xans-board-commentreply input[type=text],
+.xans-board-commentreply input[type=password] { width:200px; margin:0 10px 0 9px; }
+.xans-board-commentreply .secret { margin:0 20px 0 10px; }
+.xans-board-commentreply textarea { width:100%; height:148px; padding:20px 45px; border-width: 1px 1px 0 1px; border-style: solid; border-color: #a7a7a7; outline: none; background: #fff; }
+.xans-board-commentreply .view { position:relative; margin:10px 0 0; padding:0 95px 0 0; }
+.xans-board-commentreply .view [class^="btn"] { position:absolute; top:0; right:0; }
+.xans-board-commentreply .grade-box {position: relative; margin: 20px 0; }
+.xans-board-commentreply .grade-box .byte {position: absolute; right: 0; }
+.xans-board-commentreply .grade label { padding:0 10px 0 0; }
+.xans-board-commentreply .grade em { font-style:normal; }
+.xans-board-commentreply .captcha { border-top:1px solid #e9e9e9; margin:10px 0 0;  padding:20px 0 0; color:#757575; }
+.xans-board-commentreply .captcha img { vertical-align:middle; }
+
+/* 댓글 수정 */
+#commentForm {flex-basis: 100%; }
+.xans-board-commentform { margin: 25px 0 -25px; padding: 30px 26px; background-color:#f6f6f6; }
+    .replyArea .xans-board-commentform { padding: 0; margin-bottom: 0; }
+.xans-board-commentform legend { visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0; }
+.xans-board-commentform p { margin:10px 0 0; }
+.xans-board-commentform input[type=text],
+.xans-board-commentform input[type=password] { width:135px; margin:0 10px 0 9px; }
+.xans-board-commentform input#captcha { width:160px; }
+.xans-board-commentform .secret { margin:0 20px 0 10px; }
+.xans-board-commentform textarea { width:100%; height:148px; padding: 20px 45px; border-width: 1px 1px 0 1px; border-style: solid;border-color: #a7a7a7; outline: none;   background: #fff;}
+.xans-board-commentform .view { position:relative; }
+.xans-board-commentform .input { position: relative; border-width: 0 1px 1px 1px; border-style: solid; border-color: #a7a7a7; background: #fff; border-top: 1px solid #e0e0e0; }
+.xans-board-commentform .inside { display: inline-block; padding: 13px 20px; }
+.xans-board-commentform .submit { position: absolute; right: 20px; top: 13px; }
+
+/* 비밀글 관련 */
+.xans-board-commentformsecret { margin:10px 0 0; padding:10px 0; color:#353535; }
+.xans-board-commentformsecret input[type="password"] {margin: 0 6px 0 0;}
+
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-board-commentlist {margin-top: 50px; }
+    .xans-board-commentreply,
+    .xans-board-commentlist .boardComment li.replyArea { padding: 25px 16px; }
+    .xans-board-commentlist .boardComment li.replyArea div.commentTop {margin-left: 20px; }
+    .xans-board-commentlist .boardComment li .formGroup button,
+    .xans-board-commentlist .boardComment li .formGroup .button {margin: 0 16px 5px; }
+    span.ec-base-help { display: block; }
+    .xans-board-commentreply textarea { width: calc(100% - 36px); margin-left: 36px; }
+    .xans-board-commentlist .boardComment li div.commentTop {margin: 0 16px; }
+    .xans-board-commentlist .boardComment li .comment {margin: 0 16px; }
+    .xans-board-commentreply .input { position: relative; border: 0; background: none; }
+    .xans-board-commentreply .inside { display: flex; margin-left: 36px; border-width: 0 1px 1px 1px; border-style: solid; border-color: #a7a7a7; border-top: 1px solid #e0e0e0; background: #fff; }
+    .xans-board-commentreply .inside span { flex: 1; display: inline-block; }
+    .xans-board-commentreply .inside span:first-child {margin-right: 10px; }
+    .xans-board-commentreply .inside label { display: block; margin-bottom: 8px; color: #868686; }
+    .xans-board-commentreply .inside input { width: 100%; }
+    .xans-board-commentreply .inside input[type=text],
+    .xans-board-commentreply .inside input[type=password] { margin-left: 0; }
+
+    .xans-board-commentreply .outside,
+    .xans-board-commentwrite .outside {display: flex; align-items: center; margin: 10px 0; height: 45px;}
+    .xans-board-commentreply .input .btnSubmit { right: 0; top: auto; }
+    .xans-board-commentreply .grade label {padding: 0; }
+    .xans-board-commentreply .byte {color: #6d6d6d; }
+    .xans-board-commentreply .secret {margin-left: 0; }
+
+    .xans-board-commentformsecret p { position: relative; padding: 0 156px 0 0; }
+    .xans-board-commentformsecret input[type="password"] {width: 100%;}
+    .xans-board-commentformsecret span { position: absolute; right: 0; top: 0; }
+
+    .xans-board-commentwrite { padding: 26px 16px; background: #f6f6f6;}
+    .xans-board-commentwrite textarea {padding: 20px 16px; }
+    .xans-board-commentwrite .inside { display: flex; border-width: 0 1px 1px 1px; border-style: solid; border-color: #a7a7a7; border-top: 1px solid #e0e0e0; background: #fff; }
+    .xans-board-commentwrite .inside span { flex: 1; display: inline-block; }
+    .xans-board-commentwrite .inside span:first-child {margin-right: 10px; }
+    .xans-board-commentwrite .inside label { display: block; margin-bottom: 8px; color: #868686; }
+    .xans-board-commentwrite .inside input { width: 100%; }
+    .xans-board-commentwrite .inside input[type=text],
+    .xans-board-commentwrite .inside input[type=password] { margin-left: 0; }
+
+    .xans-board-commentwrite .outside {display: flex; align-items: center; margin: 10px 0; height: 45px;}
+    .xans-board-commentwrite .input { border: 0; background: none;}
+    .xans-board-commentwrite .input .btnSubmit { right: 0; top: auto; }
+    .xans-board-commentwrite span.grade label {padding: 0; }
+    .xans-board-commentwrite .byte {color: #6d6d6d; }
+    .xans-board-commentwrite .secret {margin-left: 0; }
+
+    .xans-board-commentform { padding: 25px 16px; }
+    .xans-board-commentform .input { border: 0; background: none; }
+
+    .xans-board-commentform .inside { display: flex; border-width: 0 1px 1px 1px; border-style: solid; border-color: #a7a7a7; border-top: 1px solid #e0e0e0;  background: #fff; }
+    .xans-board-commentform .inside span {flex: 1; }
+    .xans-board-commentform .inside label { display: block;  margin-bottom: 8px; color: #868686; }
+    .xans-board-commentform .inside input[type=password] { margin-left: 0; width: 100%; }
+    .xans-board-commentform .outside { display: flex; align-items: center; margin: 10px 0; height: 45px;}
+    .xans-board-commentform .submit {top: auto; right: 0; }
+	.xans-board-commentwrite.commentwrite-all .inputTypeText {width:100px;}
+	.xans-board-commentwrite.commentwrite-all .view {padding:0;text-align:right;}
+	.xans-board-commentwrite.commentwrite-all .view [class^="btn"] {position:relative;margin-top:10px;}
+
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-board-commentreply .inside {background: #fff; }
+}

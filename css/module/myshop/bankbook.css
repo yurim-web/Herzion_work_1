@@ -1,0 +1,33 @@
+.xans-myshop-asyncbankbook ul { display:flex; flex-wrap:wrap; justify-content:space-around; }
+.xans-myshop-asyncbankbook li { position:relative; text-align:center; vertical-align:top; box-sizing:border-box; }
+.xans-myshop-asyncbankbook a:hover { text-decoration:none; }
+.xans-myshop-asyncbankbook li:not(:last-child):after { content:""; display:inline-block; position:absolute; right:0; width:1px; background:#e5e5e5; vertical-align:middle; }
+.xans-myshop-asyncbankbook .thumb { display:block; }
+.xans-myshop-asyncbankbook .title { display:block; font-weight:normal; color:#6d6d6d; box-sizing:border-box; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-myshop-asyncbankbook { border-top:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; }
+    .xans-myshop-asyncbankbook li { width:33%; padding:20px 0; }
+    .xans-myshop-asyncbankbook .xans-myshop-asyncbenefit { flex:auto; width:100%; border-bottom:1px solid #e5e5e5; }
+    .xans-myshop-asyncbankbook .xans-myshop-asyncbenefit .group { display:none; }
+    .xans-myshop-asyncbankbook li:not(:last-child):after { top:0; height:100%; }
+    .xans-myshop-asyncbankbook .user { display:flex; text-align:left; padding:5px 16px; }
+    .xans-myshop-asyncbankbook .user__thumb { width:42px; height:42px; margin:0 16px 0 0; overflow:hidden; border-radius:50%; }
+    .xans-myshop-asyncbankbook .user__info { font-size:15px; font-weight:bold; }
+    .xans-myshop-asyncbankbook .user__data { display:block; margin:8px 0 0; font-size:14px; color:#6d6d6d; font-weight:normal; }
+    .xans-myshop-asyncbankbook .thumb { width:30px; height:30px; margin:0 auto 10px; }
+    .xans-myshop-asyncbankbook .data { display:block; font-size:14px; line-height:1; font-weight:bold; }
+    .xans-myshop-asyncbankbook .title { margin:7px 0 0; font-size:12px; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-myshop-asyncbankbook { border-top:1px solid #000; border-bottom:1px solid #e5e5e5;}
+    .xans-myshop-asyncbankbook li { flex:1; padding:28px 0 27px; }
+    .xans-myshop-asyncbankbook li:not(:last-child):after { top:50%; height:48px; margin-top:-24px; }
+    .xans-myshop-asyncbankbook .xans-myshop-asyncbenefit .user { display:none; }
+    .xans-myshop-asyncbankbook .thumb { width:30px; height:30px; margin:0 auto 5px; }
+    .xans-myshop-asyncbankbook .data {  font-size:15px; line-height:30px; font-weight:bold; }
+    .xans-myshop-asyncbankbook .title { margin:2px 0 0; font-size:13px; }
+}

@@ -1,0 +1,20 @@
+.xans-product-mobileimage { position:relative; margin:0; }
+.xans-product-mobileimage li { position:relative; vertical-align:middle; }
+.xans-product-mobileimage .thumbnail { width:100%; display:inline-block; position:relative; }
+.xans-product-mobileimage img { width:100%; max-width:100%; max-height:100%; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+  /* typeSwipe */
+  .ec-base-paginate.typeSwipe { font-size:0; line-height:0; }
+  .ec-base-paginate.typeSwipe button.circle { overflow:hidden; margin:0 3px 0 4px; width:7px; height:7px; border:0; border-radius:13px; cursor:pointer; background-color:#fff; opacity:0.5; }
+  .ec-base-paginate.typeSwipe button.circle.selected { opacity:1; }
+  .ec-base-paginate.typeSwipe span { overflow:hidden; font-size:1px; line-height:0; color:transparent; text-indent:-150%; }
+  .ec-base-paginate.typeSwipe button.prev,
+  .ec-base-paginate.typeSwipe button.next { width:31px; font-size:15px; line-height:1.2em; border:0; cursor:pointer; background:url("//img.echosting.cafe24.com/skin/mobile/layout/btn_prev.png") no-repeat 50% 50%; background-size:7px auto; }
+  .ec-base-paginate.typeSwipe button.next { background:url("//img.echosting.cafe24.com/skin/mobile/layout/btn_next.png") no-repeat 50% 50%; background-size:7px auto; }
+  .ec-base-paginate.typeSwipe .prev,
+  .ec-base-paginate.typeSwipe .next { display:none; }
+
+  .xans-product-mobileimage .ec-base-paginate.typeSwipe { position:absolute; bottom:20px; left:0; right:0; text-align:center; }
+}

@@ -1,0 +1,28 @@
+span.ec-base-help,
+p.ec-base-help,
+ul.ec-base-help li { margin:2px 0; padding:1px 0 1px 22px; font-size:12px; line-height:19px; color:#6d6d6d; text-align:left; background:url('//img.echosting.cafe24.com/skin/skin/common/ico_info.svg') no-repeat 0 0; }
+
+div.ec-base-help { margin:50px 0 20px; line-height:18px; }
+div.ec-base-help > h2,
+div.ec-base-help > h3 { display:block; margin:0 0 20px; font-size:16px; color:#000;}
+div.ec-base-help .inner { padding:20px; border:1px solid #e5e5e5; border-top:1px solid #000; }
+div.ec-base-help h4 { margin:22px 0 -4px; color:#000; font-size:12px; font-weight:normal; }
+div.ec-base-help h4:first-child { margin-top:0; }
+div.ec-base-help p,
+div.ec-base-help ul,
+div.ec-base-help ol { margin:15px 0 0 0; }
+div.ec-base-help p,
+div.ec-base-help li { color:#6d6d6d; font-size:12px; line-height:21px; }
+div.ec-base-help p,
+div.ec-base-help ul li { padding:0 0 0 12px; }
+div.ec-base-help p:before,
+div.ec-base-help ul li:before { content:""; display:inline-block; width:3px; height:3px; margin:7px 9px 0 -12px; vertical-align:top; border-radius:50%; background:#6d6d6d; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    span.ec-base-help,
+    p.ec-base-help,
+    ul.ec-base-help li { margin:10px 0; }
+    div.ec-base-help > h2,
+    div.ec-base-help > h3 { padding:0 15px; }
+}

@@ -1,0 +1,15 @@
+.xans-mall-company .info { border-top:1px solid #000; }
+.xans-mall-company .map { border-top:1px solid #000; }
+.xans-mall-company .xans-layout-footer { padding:0; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-mall-company .info { padding:30px 16px 50px; line-height:22px; }
+    .xans-mall-company .map { padding:30px 0; }
+    
+}
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-mall-company .info { padding:30px 0 0; line-height:22px; }
+    .xans-mall-company .map { margin:0 0 50px; padding:30px 0 0; }
+}

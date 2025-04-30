@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin
+Disallow: /api
+Allow: /
+User-agent: bingbot
+Crawl-delay: 10

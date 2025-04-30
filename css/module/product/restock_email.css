@@ -1,0 +1,36 @@
+#popup { width:500px; overflow-y:scroll; }
+.xans-product-restockemail .information h2 { font-size:14px; color:#2e2e2e; }
+.xans-product-restockemail .information p { margin:5px 0 0; color:#757575; }
+.xans-product-restockemail .information .optionWrap { margin:10px 0 0; }
+/* option */
+.xans-product-restockemail .xans-product-addoption .txtByte { margin:0 0 0 20px; vertical-align:middle; letter-spacing:-1px; }
+.xans-product-restockemail .xans-product-addoption .txtByte strong { color:#000; }
+.xans-product-restockemail .value { margin:10px 0 0; color:#868686; word-break:break-all; }
+.xans-product-restockemail .value .ec-product-value { color:#868686; }
+.xans-product-restockemail .ec-product-button li { position:relative; overflow:hidden; display:inline-block; margin:0 5px 3px 0; vertical-align:top; border:1px solid #e0e0e0; background:#fff; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+.xans-product-restockemail .ec-product-button li:last-child { margin-right:0; }
+.xans-product-restockemail .ec-product-button li a { display:block; min-width:50px; height:50px; text-align:center; text-decoration:none; word-break:break-all; }
+.xans-product-restockemail .ec-product-button li a span { display:inline-block; padding:9px 5px; line-height: 32px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+.xans-product-restockemail .ec-product-button.ec-product-preview li { padding:3px; }
+.xans-product-restockemail .ec-product-button.ec-product-preview li a { min-width:30px; width:50px; height:50px; }
+.xans-product-restockemail .ec-product-button.ec-product-preview li a img { max-width:100%; max-height:100%; }
+.xans-product-restockemail .ec-product-button.ec-product-preview li a span { overflow:hidden; line-height:0; font-size:0; padding:0; text-indent:120%; white-space:nowrap; }
+.xans-product-restockemail .ec-product-button.ec-product-preview .ec-product-soldout span,
+.xans-product-restockemail .ec-product-button.ec-product-preview .ec-product-disabled span { position:absolute; left:0; top:0; z-index:1; }
+.xans-product-restockemail .ec-product-button .ec-product-soldout a span { display:inline-block; width:100%; height:100%; cursor:not-allowed; color:#a9a9a9; }
+.xans-product-restockemail .ec-product-button .ec-product-soldout a span:before { content:""; display:block; position:absolute; top:0; left:50%; width:100px; height:1px; margin:25px 0px 0 -50px; background:#e0e0e0; -webkit-transform: rotate(-45deg); -transform: rotate(-45deg-); }
+.xans-product-restockemail .ec-product-button .ec-product-disabled a { cursor:default; }
+.xans-product-restockemail .ec-product-button .ec-product-disabled a span { display:inline-block; width:100%; height:100%; color:#a9a9a9; }
+.xans-product-restockemail .ec-product-button .ec-product-disabled a span:before { content:""; display:block; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.25); }
+.xans-product-restockemail .ec-product-button .ec-product-selected { border:1px solid #000; }
+.xans-product-restockemail .ec-product-radio > li { display:inline-block; margin:0 0 3px; }
+.xans-product-restockemail .ec-product-radio label { margin:0 7px 0 0; }
+.xans-product-restockemail .ec-product-radio label input { margin:0 2px 0 0; }
+.xans-product-restockemail .ec-product-radio .ec-product-disabled,
+.xans-product-restockemail .ec-product-radio .ec-product-soldout { color:#d7d7d7; }
+
+.xans-product-restockemail .information .optionWrap ul li select { max-width:235px; }
+
+.xans-product-restockemail .emailArea { margin:10px 0 0; line-height:18px; }
+.xans-product-restockemail .emailArea .contact { margin:10px 0 0; padding:15px; background:#f6f6f6; }
+.xans-product-restockemail .emailArea input[type=text] { width:100%; margin:10px 0 0; }

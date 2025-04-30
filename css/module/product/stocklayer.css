@@ -1,0 +1,12 @@
+.xans-product-stocklayer .layer { width:410px; }
+.xans-product-stocklayer .layer .content .ec-base-table {  border-top:1px solid #000; }
+.xans-product-stocklayer .layer .content table { margin-top:0; border-top:0; }
+.xans-product-stocklayer .layer .content thead th { padding:14px 30px; text-align:center; font-weight:bold; }
+.xans-product-stocklayer .layer .content thead th,
+.xans-product-stocklayer .layer .content tbody td {height: 29px; padding: 14px 20px; line-height: 22px; vertical-align: middle; }
+.xans-product-stocklayer .layer .content p { line-height:1.4; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+  .xans-product-stocklayer .layer { width: calc(100% - 32px); }
+}

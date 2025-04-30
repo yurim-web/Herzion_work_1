@@ -1,0 +1,29 @@
+.xans-board-search .form { display:flex; }
+.xans-board-search select, 
+.xans-board-search input[type="text"],
+.xans-board-search a { margin-left:10px; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-board-search { margin:10px 16px 0px 6px; }
+    .xans-board-search .form { flex-wrap:wrap; }
+    .xans-board-search select, 
+    .xans-board-search input[type="text"],
+    .xans-board-search a { flex:1; margin-top:10px; }
+    .xans-board-search #search { flex:2; }
+    
+    .xans-board-search .category { display:flex; flex-wrap:wrap; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-board-search { margin:20px -5px 0; }
+    .xans-board-search select, 
+    .xans-board-search input[type="text"], 
+    .xans-board-search a { margin:0 5px; }
+    .xans-board-search #search_key { width:110px; }
+    .xans-board-search #search { width:175px; }
+    .ec-base-button.gBottom:not(.displaynone) + #boardSearchForm { margin:-60px 0 0; }
+    
+    .xans-board-search .category { margin:0 0 10px 0; }
+}

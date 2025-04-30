@@ -1,0 +1,44 @@
+.xans-myshop-orderstate .state { overflow:hidden; border-top:1px solid #000; border-bottom:1px solid #e5e5e5; }
+.xans-myshop-orderstate .state__order { display:flex; }
+.xans-myshop-orderstate a:hover { text-decoration:none; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-myshop-orderstate .state__order li { width:25%; padding:26px 7px 25px; text-align:center; }
+    .xans-myshop-orderstate .state__order .label { position:relative; display:block; margin:11px 0 0; font-size:13px; }
+    .xans-myshop-orderstate .state__order li:not(:last-child) .label:after { content:""; display:block; position:absolute; top:4px; right:-7px; width:7px; height:7px; border-left: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf; -webkit-transform: rotate(-135deg); transform: rotate(-135deg); }
+    .xans-myshop-orderstate .state__order .count { font-size:20px; }
+    .xans-myshop-orderstate .state__cs { display:flex; margin-left:-1px; }
+    .xans-myshop-orderstate .state__cs li { flex:1; padding:21px 16px; border-top:1px solid #e5e5e5; border-left:1px solid #e5e5e5; letter-spacing:0.04em; word-spacing:4px;display: flex; justify-content: space-between; }
+    .xans-myshop-orderstate .state__cs strong { font-weight:normal; font-size:12px; color:#353535; }
+    .xans-myshop-orderstate .state__cs .count { padding:0 0 0 4px; font-weight:bold; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-myshop-orderstate .state__order li { position:relative; width:25%; padding:35px 0 33px; text-align:center; }
+    .xans-myshop-orderstate .state__order li:not(:last-child):after { content:""; display:block; position:absolute; top:50%; right:0; width:13px; height:13px; margin:-10px auto 0; border-left: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf; -webkit-transform: rotate(-135deg); transform: rotate(-135deg); }
+    .xans-myshop-orderstate .state__order .label { display:block; margin:10px 0 7px; font-size:13px; }
+    .xans-myshop-orderstate .state__order .count { font-size:30px; }
+    .xans-myshop-orderstate .state__cs { display:none; }
+}
+
+
+/** 기본_style 210813 **/
+.xans-myshop-orderstate .state__cs {display:block;}
+.xans-myshop-orderstate .state {border:none;border-top:2px solid #1a1a1a;}
+.xans-myshop-orderstate .state__order .count {font-size:20px;font-weight:700;color:#1a1a1a;}
+.xans-myshop-orderstate .state__order .label {font-size:14px;color:#6a6a6a;letter-spacing:-0.02em;margin:4px 0 0;}
+.xans-myshop-orderstate .state__order li {padding-bottom:40px;}
+.xans-myshop-orderstate .state__cs {display:flex;justify-content:space-around;border:1px solid #e3e3e3;}
+.xans-myshop-orderstate .state__cs li {width:calc(100% / 3);height:56px;text-align:center;line-height:56px;border-left:1px solid #e3e3e3;}
+.xans-myshop-orderstate .state__cs li:nth-child(1) {border-left:none;}
+.xans-myshop-orderstate .state__cs li span {font-size:14px;font-weight:700;color:#1a1a1a;}
+
+@media screen and (max-width:1024px) {
+	.xans-myshop-orderstate .state__order li {padding:40px 0;position:relative;}
+	.xans-myshop-orderstate .state__order li:not(:last-child):after {content:"";width:0px;height:40px;position:absolute;border:none;border-left:1px dotted #c4c4c4;transform:translateY(-50%);top:50%;right:1px;background:#e5e5e5;}
+	.xans-myshop-orderstate .state__order li:not(:last-child) .label:after {display:none;}
+	.xans-myshop-orderstate .state__cs li {justify-content:center;padding:0;border:none;border-left:1px solid #e3e3e3;}
+	.xans-myshop-orderstate .state__cs li:nth-child(1) {border-left:1px solid #e3e3e3;}
+}

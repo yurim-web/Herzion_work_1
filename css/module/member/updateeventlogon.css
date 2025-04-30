@@ -1,0 +1,13 @@
+.xans-member-updateeventlogon .title { display:block; margin:0 0 15px; }
+.xans-member-updateeventlogon ul > li { position:relative; padding:0 0 0 12px; line-height:1.75; }
+.xans-member-updateeventlogon ul > li:before { content:""; display:inline-block; position:absolute; top:8px; left:0; width:3px; height:3px; border-radius:50%; background-color:#000; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-member-updateeventlogon { padding:20px 15px 50px; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-member-updateeventlogon { padding:30px; background-color:#f6f6f6; }
+}

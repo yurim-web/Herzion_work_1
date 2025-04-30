@@ -1,0 +1,56 @@
+<!--@layout(/layout/basic/intro.html)-->
+<div module="Intro_memberPackage" class="intro membership">
+    <!--@css(/css/module/intro/intro.css)-->
+    <div class="alert">
+        <div class="inner">
+            <h2><strong class="txtEm">회원전용</strong> 쇼핑몰입니다.</h2>
+            <p class="info">회원 로그인 후 상품구매가 가능합니다. <br />회원가입 후 사용 해 주십시요.</p>
+        </div>
+    </div>
+	<div module="member_login">
+		<!--@css(/css/module/member/login.css)-->
+		<!--
+			$defaultReturnUrl = /index.html
+			$forbidIpUrl = member/adminFail.html
+		-->
+		<fieldset class="form">
+			<legend>회원로그인</legend>
+			<div class="login">
+				<label class="id ePlaceholder" title="{$login_id_type_text}">{$form.member_id}</label>
+				<label class="password ePlaceholder" title="비밀번호">{$form.member_passwd}</label>
+			</div>
+			<div class="wrap_security">
+				<p class="login__security">
+					{$form.member_check_save_id}
+					<span class="secret">
+						<input type="checkbox" id="secur_check" checked disabled>
+					</span>
+					<label for="secur_check">보안접속</label>
+				</p>
+			</div>
+			<div class="login__button">
+				<a href="#none" class="btnSubmit gFull sizeL" onclick="{$action_func_login}">로그인</a>
+			</div>
+			<div class="wrap_find">
+				<div><a href="/member/id/find_id.html{$skip_intro}">아이디 찾기</a></div>
+				<div><a href="/member/passwd/find_passwd_info.html{$skip_intro}">비밀번호 찾기</a></div>
+			</div>
+			<div class="login__util">
+				<div>아직 회원이 아니신가요?</div>
+				<div>지금 회원가입을 하시면<br>다양하고 특별한 혜택이 준비되어 있습니다.</div>
+				<div><a href="/member/join.html{$skip_intro}">회원가입</a></div>
+			</div>
+			<div class="login__sns">
+				<div class="sns_h">SNS 로그인</div>
+				<div class="wrap_sns_log">
+					<a href="#none" class="btnKakao {$display_kakao|display}" onclick="{$kakao_func_login}">카카오 로그인</a>
+					<a href="#none" class="btnNaver {$display_naver|display}" onclick="{$naver_func_login}">네이버 로그인</a>
+					<a href="#none" class="btnFacebook {$display_facebook|display}" onclick="{$facebook_func_login}">페이스북 로그인</a>
+					<a href="#none" class="btnLine {$display_line|display}" onclick="{$line_func_login}">라인 로그인</a>
+					<a href="#none" class="btnGoogle {$display_google|display}" onclick="{$google_func_login}">구글 로그인</a>
+					<a href="#none" class="btnApple {$display_apple|display}" onclick="{$apple_func_login}">애플 로그인</a>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+</div>

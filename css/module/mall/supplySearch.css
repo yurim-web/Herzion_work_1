@@ -1,0 +1,17 @@
+/** 캠퍼타운_style 220915 **/
+
+/* 공급사 */
+.xans-layout-categorysupplylist.titleArea {max-width:1680px !important;}
+.xans-layout-categorysupplylist.titleArea .xans-mall-supplysearch {width:300px;text-align:right;margin:-40px 0 0 auto;position:relative;}
+.xans-layout-categorysupplylist.titleArea .xans-mall-supplysearch fieldset {border:1px solid #d9d9d9;font-size:0;}
+.xans-layout-categorysupplylist.titleArea .xans-mall-supplysearch fieldset .title {display:inline-block;left:0;top:0;width:auto;padding:0 10px;height:34px;line-height:34px;font-size:13px;visibility:visible;color:#6a6a6a;border-right:1px solid #d9d9d9;}
+.xans-layout-categorysupplylist.titleArea .xans-mall-supplysearch #searchSupply {width:165px;height:32px;padding:0;border:0;line-height:32px;font-size:13px;color:#111;background:#fff; }
+.ec-base-tab.typeMenu ul > li > ul > li ul.xans-layout-fourth li {padding-right:15px !important;}
+
+@media all and (max-width:1024px) {
+	/* 공급사 */
+	.xans-layout-categorysupplylist.titleArea {margin:0 auto 20px;padding:20px 0;position:relative;border-bottom:1px solid #e8e8e8;}
+	.xans-layout-categorysupplylist.titleArea .xans-mall-supplysearch {width:100%;margin:25px 0 0 0;}
+	.xans-layout-categorysupplylist.titleArea .xans-mall-supplysearch #searchSupply {width:calc(100% - 130px);}
+	.xans-layout-categorysupplylist.titleArea .xans-mall-supplysearch [type='image'] {text-align:right;}
+}

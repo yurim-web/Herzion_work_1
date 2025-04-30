@@ -1,0 +1,63 @@
+.xans-layout-footer { position:relative;  }
+.xans-layout-footer .util { overflow:hidden; }
+.xans-layout-footer .util li { display:inline-block;  }
+.xans-layout-footer .util li a { color:#000; text-transform:uppercase; }
+.xans-layout-footer .info__address { color:#757575; line-height:24px; }
+.xans-layout-footer .info__address span { display:inline-block; padding:0 25px 0 0; color:#6d6d6d; }
+.xans-layout-footer .info__address span a { color:#6d6d6d; }
+.xans-layout-footer .sns a { overflow:hidden; display:inline-block; width:20px; height:20px; margin-right:18px; white-space:nowrap; font-size:1px; line-height:1px; color:transparent; text-indent:150%; vertical-align:top; }
+.xans-layout-footer .copyright { color:#6d6d6d; }
+.xans-layout-footer .hosting { color:#000; }
+
+/********************* Mobile *********************/
+@media all and (max-width:767px) {
+    .xans-layout-footer { padding:0 16px; }
+    .xans-layout-footer .util { overflow:hidden; margin:30px 0 20px; }
+    .xans-layout-footer .util li { margin:0 17px 0 0; }
+    .xans-layout-footer .util li a { display:block;  font-size:14px; line-height:34px; }
+	.xans-layout-footer .info__address span { display:inline-block; font-size:12px; line-height:19px; word-break: keep-all; }
+    .xans-layout-footer .info__customer .tel { font-size:20px; }
+    .xans-layout-footer .info__customer .runtime { margin:10px 0 0; font-size:12px; line-height:20px; color:#6d6d6d; }
+    .xans-layout-footer .copyright { margin:10px 0 0; font-size:11px; }
+}
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-layout-footer .sns { margin:20px 0 30px; }
+    .xans-layout-footer .info { display:flex; flex-direction:column-reverse; }
+    .xans-layout-footer .info__customer { margin:0 -24px; padding:30px 24px; border-top:1px solid #e0e0e0; }
+    .xans-layout-footer .info__customer .heading { position:relative; }
+    .xans-layout-footer .info__customer .toggle { position:absolute; top:0; width:100%; height:100%; overflow:hidden; white-space:nowrap; text-indent:150%; font-size:1px; color:transparent; line-height:1px; }
+    .xans-layout-footer .info__customer .toggle .icon { position:absolute; top:5px; right:5px; }
+    .xans-layout-footer .info__customer .content { overflow:hidden; visibility:hidden; height:0; box-sizing:border-box; transition:.5s; }
+    .xans-layout-footer .info__customer.selected .toggle .icon { margin-top:3px; transform: rotate(135deg); }
+    .xans-layout-footer .info__customer.selected .content {  visibility:visible; height:auto; margin:20px 0 0; }
+}
+
+/********************* Tablet *********************/
+@media all and (min-width:768px) and (max-width:1024px) {
+    .xans-layout-footer { padding:0 24px; }
+    .xans-layout-footer .util { overflow:hidden; margin:30px 0; }
+    .xans-layout-footer .util li { margin:0 20px 0 0; }
+    .xans-layout-footer .util li a { font-size:15px; line-height:30px; }
+	.xans-layout-footer .info__address span { display:inline-block; font-size:14px; line-height:25px; word-break: keep-all; }
+    .xans-layout-footer .info__customer .tel { font-size:20px; }
+    .xans-layout-footer .info__customer .runtime { margin:14px 0 0; font-size:15px; line-height:30px; color:#6d6d6d; }
+    .xans-layout-footer .copyright { margin:20px 0 0; font-size:13px; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-layout-footer .util li a { display:block; margin-right:30px; font-size:15px; line-height:30px; }
+    .xans-layout-footer .info { display:flex; margin:30px 0 0; }
+	.xans-layout-footer .info .title { display:block; color:#000; margin:0 0 24px; font-size:16px; }
+    .xans-layout-footer .info__address { flex:1; padding:0 20px 0 0; }
+    .xans-layout-footer .info__address span { padding:0 25px 0 0; font-size:14px; line-height:30px; }
+    .xans-layout-footer .info__customer { width:308px; padding:0 20px 0 0; box-sizing:border-box; }
+    .xans-layout-footer .info__customer .toggle { display:none; }
+    .xans-layout-footer .info__customer .tel { font-size:20px; }
+    .xans-layout-footer .info__customer .runtime { margin:14px 0 0; font-size:14px; line-height:30px; color:#6d6d6d; }
+    .xans-layout-footer .info__community a { display:block; margin:2px 0; padding:6px 0; font-size:14px; color:#6d6d6d; }
+    .xans-layout-footer .sns { position:absolute; right:0; bottom:0; }
+    .xans-layout-footer .copyright { margin:84px 0 0; font-size:13px; }
+}

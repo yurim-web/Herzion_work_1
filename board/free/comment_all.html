@@ -1,0 +1,86 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="section" module="board_ReadPackage_4">
+    <!--@css(/css/module/board/replyPackage.css)-->
+    <div module="board_title_4">
+        <div class="path">
+            <span>현재 위치</span>
+            <ol>
+                <li><a href="/">홈</a></li>
+                <li><a href="#none">게시판</a></li>
+                <li title="현재 위치"><strong>일괄 댓글달기</strong></li>
+            </ol>
+        </div>
+
+        <div class="titleArea">
+            <h2>일괄 댓글달기</h2>
+        </div>
+    </div>
+
+    <div module="board_CommentPackage_4">
+        <!--
+            $login_page_url = /member/login.html
+            $deny_access_url = /index.html
+        -->
+        <div class="ec-base-table typeWrite">
+            <table border="1" summary="">
+                <caption>일괄 댓글쓰기</caption>
+                <colgroup>
+                    <col style="width:200px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th scope="row">대상 게시물 총 <span class="ecActionReplyCount"></span>건</th>
+                    <td>
+                        <ul module="board_replyList_4">
+                            <li><a href="{$link_url}"><span>{$title}</span> / <span class="txtInfo">{$writer}({$writer_id})</span><img src="//img.echosting.cafe24.com/skin/mobile/board/review/btn_close_write.png" width="8" height="8" /></a></li>
+                            <li><a href="{$link_url}"><span>{$title}</span> / <span class="txtInfo">{$writer}({$writer_id})</span><img src="//img.echosting.cafe24.com/skin/mobile/board/review/btn_close_write.png" width="8" height="8" /></a></li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+
+                <tbody class="{$config.use_attach|display}">
+                <tr>
+                    <th scope="row">첨부파일1</th>
+                    <td>{$form.attach_file}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일2</th>
+                    <td>{$form.attach_file}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일3</th>
+                    <td>{$form.attach_file}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일4</th>
+                    <td>{$form.attach_file}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일5</th>
+                    <td>{$form.attach_file}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div module="board_CommentPackage_4">
+            <!--@css(/css/module/board/commentPackage.css)-->
+            <div module="board_commentwrite_4" class="commentwrite-all">
+                <!-- 댓글권한 있음 -->
+                <div class="{$comment_write_display|display}">
+                    <fieldset>
+                        <legend>댓글 입력</legend>
+                        <div>
+                            <span class="{$comment_input_name|display}">이름 : {$form.comment_name}</span><a href="#none" onclick="{$action_comment_admin}" class="btnNormal">관리자답변보기</a>
+                        </div>
+                        <div class="view">
+                            {$form.comment}
+                            <a href="#none" onclick="{$action_comment_insert}" class="btnSubmit sizeL {$comment_button|display}">확인</a>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

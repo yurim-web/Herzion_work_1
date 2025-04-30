@@ -1,0 +1,13 @@
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+.xans-layout-logotop { text-align:center; }
+.xans-layout-logotop a { font-size:27px; line-height:1; color:#000; font-weight:bold; text-decoration:none; font-style:normal; }
+.xans-layout-logotop img { max-width:800px; max-height:21px; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+.xans-layout-logotop { width:800px; margin:0 auto; padding:53px 0 31px; text-align:center; }
+.xans-layout-logotop a { font-size:35px; color:#000; font-weight:bold; text-decoration:none; font-style:normal; }
+.xans-layout-logotop img { max-width:800px; max-height:27px; }
+}

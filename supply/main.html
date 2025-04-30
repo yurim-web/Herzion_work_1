@@ -1,0 +1,118 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@js(/js/module/product/menucategory.js)-->
+<!--@css(/css/module/product/listnormal.css)-->
+
+<div class="section titleArea" module="Layout_CategorySupplyList">
+    <h2 class="{$main_title_display|display}"><a href="{$main_url}">{$main_title}</a></h2>
+
+	<div module="Mall_SupplySearch">
+		<!--@css(/css/module/mall/supplySearch.css)-->
+		<fieldset>
+			<legend class="title">샵 상품 검색</legend>
+			{$form.searchSupply}<input type="image" src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/btn_search.gif" alt="검색" onclick="{$action_search_submit}" />
+		</fieldset>
+	</div>
+</div>
+
+<div class="section ec-base-tab typeMenu" module="Layout_CategorySupplyList">
+    <ul class="menuCategory menu" id="{$category_list}">
+        <li module="Layout_Second" id='{$category_no}' style="display:{$display};" class="{$selected}">
+            <a href="{$category_url}" class="button">{$category_name}</a><a href="#none" class="iconWrap"></a>
+            <ul module="Layout_Third">
+                <li class="{$selected}" id='{$category_no}'>
+                    <a href="{$category_url}">{$category_name}</a><a href="#none" class="iconWrap"></a>
+                    <div class="button">
+                        <ul module="Layout_Fourth" class="subCategory">
+                            <li id='{$category_no}' class="{$selected}">
+								<a href="{$category_url}">{$category_name}</a><a href="#none" class="iconWrap"></a>
+								<ul module="Layout_Fifth">
+									<li id='{$category_no}'><a href='{$category_url}'>{$category_name}</a></li>
+								</ul>
+							</li>
+                            <li id='{$category_no}' class="{$selected}">
+								<a href="{$category_url}">{$category_name}</a><a href="#none" class="iconWrap"></a>
+								<ul module="Layout_Fifth">
+									<li id='{$category_no}'><a href='{$category_url}'>{$category_name}</a></li>
+								</ul>
+							</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="{$selected}" id='{$category_no}'>
+                    <a href="{$category_url}">{$category_name}</a><a href="#none" class="iconWrap"></a>
+                    <div class="button">
+                        <ul module="Layout_Fourth" class="subCategory">
+                            <li id='{$category_no}' class="{$selected}">
+								<a href="{$category_url}">{$category_name}</a><a href="#none" class="iconWrap"></a>
+								<ul module="Layout_Fifth">
+									<li id='{$category_no}'><a href='{$category_url}'>{$category_name}</a></li>
+								</ul>
+							</li>
+                            <li id='{$category_no}' class="{$selected}">
+								<a href="{$category_url}">{$category_name}</a><a href="#none" class="iconWrap"></a>
+								<ul module="Layout_Fifth">
+									<li id='{$category_no}'><a href='{$category_url}'>{$category_name}</a></li>
+								</ul>
+							</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div module="Mall_SupplyMainimage" class="section product_top_image">{$supply_main_image}</div>
+
+<div class="section normalpackage_box maxwidth1680" data-ez-module="product-list/1" data-ez-layout="grid4">
+	<ez-prop data-version="1.0.0">
+		<ez-var data-prop="layout" data-namespace="ez.module.product-list.layout" data-type="array">
+			<ez-item data-id="grid3" data-name="일반3단형(PC 3열/MOBILE 1열)"></ez-item>
+			<ez-item data-id="grid4" data-name="일반4단형(PC 4열/MOBILE 2열)"></ez-item>
+			<ez-item data-id="grid5" data-name="일반5단형(PC 5열/MOBILE 2열)"></ez-item>
+			<ez-item data-id="grid3 list_gallery" data-name="이미지강조3단형(PC 3열/MOBILE 1열)"></ez-item>
+			<ez-item data-id="grid4 list_gallery" data-name="이미지강조4단형(PC 4열/MOBILE 2열)"></ez-item>
+			<ez-item data-id="grid5 list_gallery" data-name="이미지강조5단형(PC 5열/MOBILE 2열)"></ez-item>
+		</ez-var>
+	</ez-prop>
+
+	<div data-ez-holder="product_listmain">
+		<div module="product_listmain_1" class="ec-base-product">
+			<!--
+				$count = 8
+				$basket_result = /product/add_basket.html
+				$basket_option = /product/basket_option.html
+				$moreview = yes
+				$cache = yes
+			-->
+			<ul class="prdList grid4" data-ez-role="layout">
+			<!--@import(/product/list_product.html)-->
+			</ul>
+		</div>
+		<div module="product_listmore_1" class="more">
+			<a href="#none" onclick="{$more_action}" class="btnMore">
+				MORE
+			</a>
+		</div>
+
+		<div module="product_supplymainpaging" class="ec-base-paginate typeList">
+			<a href="{$param_first}" class="first">첫 페이지</a>
+			<a href="{$param_before}">이전 페이지</a>
+			<ol>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+				<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+			</ol>
+			<a href="{$param_next}">다음 페이지</a>
+			<a href="{$param_last}" class="last">마지막 페이지</a>
+		</div>
+	</div>
+
+	<!-- 공급사:판매사정보 -->
+	<div module="Mall_SupplyInfo" class="supplyInfo {$supply_info_display|display}">
+		{$supply_info}
+	</div>
+</div><!-- //normalpackage_box -->
+<!--@define(cmc_log)-->

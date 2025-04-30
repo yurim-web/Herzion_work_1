@@ -1,0 +1,771 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+  line-height: 1.5;
+  color: #3c3c3c;
+  background-color: #f7f7f7;
+}
+
+/* Main Content */
+main {
+  width: 100%;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 80px;
+  width: 100%;
+}
+
+/* hero section */
+.banner_section {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 110px 80px 50px 80px;
+}
+
+.hero {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 400px;
+  background-image: url("images/tech_banner.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.hero_content {
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #fff;
+}
+
+.hero h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 72px; /* 100% */
+}
+
+.hero p {
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+
+/* How It Was Developed 섹션 */
+.tech_intro_section {
+  padding: 148px 0px 120px 0px;
+  background-color: #f7f7f7;
+}
+
+.section_title {
+  color: #3c3c3c;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 149.985%; /* 35.996px */
+  margin-bottom: 44px;
+}
+.section_title_mo {
+  display: none;
+  color: #3c3c3c;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
+  margin-bottom: 40px;
+}
+
+/* 모바일에만 있는 부제목 */
+.section_subtitle_mo {
+  display: none;
+  color: #3c3c3c;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 100% */
+  margin-bottom: 24px;
+}
+
+.tech_intro_content {
+  width: 100%;
+  margin-left: 40px;
+}
+
+.tech_intro_text {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px; /* 158.333% */
+  letter-spacing: -0.48px;
+}
+.tech_intro_text_blue_web {
+  color: #23295b;
+
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: -0.48px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+.tech_intro_text_blue_mo {
+  color: #23295b;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.4px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+/* 모바일 text 따로 있음 */
+.tech_intro_text_mo {
+  display: none;
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 180% */
+  letter-spacing: -0.4px;
+}
+
+.section1_img {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 72px;
+}
+
+/* Core Technology 섹션 */
+.tech_features_section {
+  padding: 148px 0px 120px 0px;
+  background-color: #f7f7f7;
+}
+
+.tech_features_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  width: 100%;
+}
+
+/* 이미지부분 */
+.tech_feature_image_card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech_feature_image_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 글있는 부분 */
+.tech_feature_content_card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0px 72px;
+}
+
+.tech_feature_subtitle {
+  color: #3c3c3c;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+}
+
+.tech_feature_title {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 61px;
+  letter-spacing: -0.96px;
+  margin-bottom: 16px;
+}
+
+.web_four {
+  display: block;
+}
+
+.mobile_four {
+  display: none;
+}
+
+.tech_feature_text {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: -0.48px;
+}
+.tect_feature_text_mo {
+  display: none;
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 175% */
+  letter-spacing: -0.32px;
+}
+
+.tech_feature_text_blue {
+  color: #23295b;
+  font-weight: 700;
+}
+
+/* Scientific Basis 섹션 */
+.scientific_basis_section {
+  padding: 120px 0;
+  background-color: #ffffff;
+}
+
+.scientific_basis_scroll {
+  margin-top: 120px;
+  padding: 0;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.researchSwiper {
+  padding: 20px 0;
+  overflow: visible;
+}
+
+.researchSwiper .swiper-slide {
+  width: calc((100% - 80px) / 3);
+  height: auto;
+}
+
+.research_card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.research_card_image_rounded {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 100px;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.2) 100%
+    ),
+    #23295b;
+}
+
+.research_card_image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background-color: #23295b;
+}
+
+.research_card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.view_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.research_card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.research_card_content h3 {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.research_date {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.32px;
+}
+
+/* Swiper Pagination 스타일 */
+.scientific_basis_section .swiper-horizontal > .swiper-pagination-progressbar,
+.scientific_basis_section
+  .swiper-pagination-progressbar.swiper-pagination-horizontal {
+  width: 100%;
+  height: 4px;
+  background: #e8e8e8 !important;
+  top: auto !important;
+  bottom: 0;
+  height: 8px;
+  border-radius: 30px;
+}
+
+.scientific_basis_section
+  .swiper-pagination-progressbar
+  .swiper-pagination-progressbar-fill {
+  background: #23295b !important;
+  height: 8px;
+  border-radius: 30px;
+}
+
+.web_break {
+  display: block;
+}
+
+/* 모바일 전용 Thesis 섹션 */
+.thesis_mobile_section {
+  display: none;
+  padding: 80px 0;
+  background-color: #f7f7f7;
+}
+
+/* 모바일 스와이퍼 스타일 */
+.mobileThesisSwiper {
+  width: 100%;
+  height: auto;
+  padding-bottom: 40px;
+  margin-bottom: -8px;
+}
+
+.mobileThesisSwiper .swiper-pagination {
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.mobileThesisSwiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #1a1a1a;
+  background: transparent;
+  opacity: 1;
+  margin: 0 !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.mobileThesisSwiper .swiper-pagination-bullet-active {
+  width: 65px;
+  border-radius: 16px;
+  background: #1a1a1a;
+}
+
+/* 카드 컨테이너 */
+.thesis_mobile_card_container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 카드 부분 */
+.thesis_mobile_card {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+/* 카드 이미지 부분 */
+.thesis_mobile_card_image {
+  width: 88px;
+  height: 88px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #ececec;
+}
+
+/* 카드의 오른쪽 */
+.thesis_mobile_card_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* 카드 글자 */
+.thesis_mobile_card_content h3 {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
+}
+/* 카드 날짜,버튼 부분 */
+.card_botteom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 날짜 글씨 스타일 */
+.thesis_mobile_date {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 13px; /* 100% */
+  letter-spacing: -0.26px;
+}
+
+@media all and (max-width: 767px) {
+  /* Main Content */
+  /* hero section */
+  .banner_section {
+    padding: 80px 20px 40px 20px;
+  }
+  /* 양옆 */
+  .container {
+    padding: 0px 20px;
+  }
+
+  .hero {
+    border-radius: 16px;
+    height: 300px;
+    margin-bottom: 0px;
+    background-image: url("images/mo/m_tech_banner.png");
+  }
+
+  .hero_content {
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero h1 {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 100% */
+  }
+
+  .hero p {
+    color: #fff;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
+    letter-spacing: -0.4px;
+  }
+  /* Development Background 섹션 */
+  .tech_intro_section {
+    padding: 80px 0px 80px 0px;
+  }
+
+  .section_title {
+    display: none;
+  }
+  .section_title_mo {
+    display: block;
+  }
+
+  .tech_intro_content {
+    width: 100%;
+    margin-left: 12px;
+  }
+
+  .tech_intro_text {
+    display: none;
+  }
+  .tech_intro_text_mo {
+    display: block;
+  }
+  .tech_intro_text_blue {
+    color: #23295b;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.4px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
+  .section1_img {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  /* Technology 섹션 */
+  .tech_features_section {
+    padding: 80px 0px 80px 0px;
+  }
+  .tech_feature_subtitle {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px; /* 100% */
+  }
+  .section_subtitle_mo {
+    display: block;
+  }
+  .tech_feature_text {
+    display: none;
+  }
+  .tech_feature_text_mo {
+    display: block;
+  }
+
+  .tech_features_grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  /* 이미지부분 */
+  .tech_feature_image_card {
+    width: 350px;
+    height: 350px;
+    flex-shrink: 0;
+    border-radius: 16px;
+  }
+  .tech_feature_image_card_img1 {
+    content: url("images/mo/mo_section3_1.png");
+    width: 100%;
+    object-fit: contain;
+  }
+  .tech_feature_image_card_img2 {
+    content: url("images/mo/mo_section3_2.png");
+    width: 100%;
+  }
+  .tech_feature_image_card_img3 {
+    content: url("images/mo/mo_section3_3.png");
+    width: 100%;
+    object-fit: contain;
+  }
+  .tech_feature_image_card_img4 {
+    content: url("images/mo/mo_section3_4.png");
+    width: 100%;
+    object-fit: contain;
+  }
+
+  /* 글있는 부분 */
+  .tech_feature_content_card {
+    gap: 20px;
+    padding: 40px 40px;
+  }
+
+  .tech_feature_subtitle_mo {
+    display: block;
+  }
+  .web_four {
+    display: none;
+  }
+
+  .mobile_four {
+    display: block;
+  }
+
+  .tech_feature_title {
+    font-size: 32px;
+    line-height: 44px; /* 137.5% */
+    letter-spacing: -0.64px;
+    margin-bottom: 0px;
+  }
+
+  .tech_feature_text {
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.32px;
+  }
+
+  .tech_feature_text_blue {
+    color: #23295b;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .tect_feature_text_mo {
+    display: block;
+  }
+
+  /* Scientific Basis(Thesis) 섹션 */
+  .scientific_basis_section {
+    display: none;
+  }
+
+  .thesis_mobile_section {
+    display: block;
+  }
+
+  .mobile_break {
+    display: block;
+  }
+
+  .web_break {
+    display: none;
+  }
+}
+
+/********************* Tablet ***************************************************************/
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  /* Main Content */
+
+  /* hero section */
+  .banner_section {
+    padding: 120px 60px 50px 60px;
+  }
+
+  .hero {
+    margin-bottom: 30px;
+  }
+
+  .hero_content {
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hero h1 {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 100% */
+  }
+
+  .hero p {
+    color: #fff;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
+    letter-spacing: -0.4px;
+  }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+  .researchSwiper .swiper-slide {
+    display: none;
+    width: calc((100% - 40px) / 2);
+  }
+}
+
+@media (max-width: 768px) {
+  .researchSwiper .swiper-slide {
+    width: 100%;
+  }
+}

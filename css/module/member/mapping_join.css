@@ -1,0 +1,24 @@
+.xans-member-joinmapping {max-width:400px;margin-left:auto;margin-right:auto;text-align:center;}
+.xans-member-joinmapping .accountList {margin:0 auto;}
+.xans-member-joinmapping .accountList li { display: flex; border-bottom:1px solid #E8E8E8; }
+.xans-member-joinmapping .accountList li.head { padding-left:52px; }
+.xans-member-joinmapping .accountList li.head strong { display:block; flex:1; padding: 15px; font-size: 12px; line-height: 16px; font-weight: 700; text-align: center; box-sizing: border-box; }
+.xans-member-joinmapping .accountList li span { display: block; flex:1; min-width:0; position:relative; padding: 15px 5px; box-sizing: border-box; }
+.xans-member-joinmapping .accountList li .snsId { padding:0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;display: block; max-width:100%; flex:none; }
+.xans-member-joinmapping .accountList li span label { display:block; white-space: nowrap; }
+.xans-member-joinmapping .accountList li span:first-child{ padding-left:55px; }
+.xans-member-joinmapping .accountList li span label input { position:absolute; left:20px; top:15px; }
+.xans-member-joinmapping .accountList li .center { text-align: center; }
+.xans-member-joinmapping .accountList li.head strong:nth-child(2),
+.xans-member-joinmapping .accountList li > span:nth-child(2) { width: 100px; flex:none; }
+.xans-member-joinmapping .ec-base-button .btnNormal {font-weight:400;}
+.xans-member-joinmapping .ec-base-box.typeThin { margin:0 0 20px; padding:0; border-color: #d5d5d5; }
+.xans-member-joinmapping .boxTitle { margin:6px 0 20px; font-size:14px; line-height: 1.5;  font-weight:400; }
+.xans-member-joinmapping .boxTitle em{ font-style: normal; color:#000; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-member-joinmapping {max-width:100%;}
+	.xans-member-joinmapping .ec-base-button {margin:20px 0;}
+}
+

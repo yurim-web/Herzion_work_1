@@ -1,0 +1,27 @@
+<div id="quick" class="RW">
+    <div class="inner">
+    <div module="Layout_orderBasketcount">
+        <!--@css(/css/module/layout/orderBasketcount.css)-->
+        <a href="/order/basket.html">Cart <span class="count">{$basket_count}</span></a>
+    </div>
+
+    <div module="Layout_productRecent">
+        <!--@css(/css/module/layout/productRecent.css)-->
+        <div class="title"><a href="/product/recent_view_product.html">RECENTLY VIEWED</a></div>
+        <ul>
+            <li class="{$disp_recent|display}">
+                <a href="/product/detail.html{$param}"><img src="{$recent_img}" alt="" /></a>
+            </li>
+            <li class="{$disp_recent|display}">
+                <a href="/product/detail.html{$param}"><img src="{$recent_img}" alt="" /></a>
+            </li>
+        </ul>
+        <div class="player">
+            <button type="button" class="prev"><i aria-hidden="true" class="icon icoArrowLeft"></i>이전</button>
+            <button type="button" class="next"><i aria-hidden="true" class="icon icoArrowRight"></i>다음</button>
+        </div>
+    </div>
+
+    <p class="pageTop"><a href="#wrap" title="화면 최상단으로 이동하기"><i aria-hidden="true" class="icon icoArrowTop"></i> Top</a></p>
+    </div>
+</div>

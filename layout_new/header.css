@@ -1,0 +1,349 @@
+/* Header 스타일일 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 60px;
+  margin: 0 auto;
+}
+
+.header_logo {
+  height: 24px;
+  cursor: pointer;
+}
+
+.header_logo_mobile {
+  display: none;
+}
+
+.nav_right {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.menu_btn_mobile {
+  display: none;
+  color: #3c3c3c;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 100% */
+  cursor: pointer;
+}
+
+.buy_now_btn {
+  background-color: transparent;
+  border-radius: 34px !important;
+  border: 2px solid #b0b0b0;
+  color: #b0b0b0;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
+  padding: 18px 28px;
+  cursor: pointer;
+}
+.menu_btn {
+  color: #b0b0b0;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+/* 메뉴 드롭다운 */
+.menu_drop {
+  position: absolute;
+  top: 100%;
+  right: 60px;
+  width: 280px;
+  border-radius: 20px;
+  background: #3c3c3c;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-4px, 70px);
+  transition: opacity 0.2s ease-out, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.2s ease-out;
+}
+
+.nav_right:hover .menu_drop {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+}
+
+.menu_drop.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+}
+
+.menu_drop_list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 56px;
+  list-style: none;
+}
+.menu_drop_list li {
+  color: #707070;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 100% */
+}
+.menu_drop_list li:hover {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.menu_drop_list li a {
+  text-decoration: none;
+  color: inherit;
+}
+/* 모바일 메뉴 */
+/* 모바일 메뉴 스타일 */
+
+.mobile_menu_background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 1000;
+}
+
+.mobile_menu_background.active {
+  display: block;
+}
+
+.mobile_menu {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3c3c3c;
+  border-radius: 18px;
+  padding: 30px;
+  min-width: 220px;
+  width: calc(100% - 50px);
+  z-index: 1001;
+}
+
+.mobile_menu.active {
+  display: block;
+}
+
+.menu_btn_mobile_close {
+  display: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #3c3c3c;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile_menu_lang {
+  display: flex;
+  gap: 28px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.mobile_menu_lang button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #707070;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mobile_menu_lang button.active {
+  color: #ffffff;
+}
+
+.mobile_menu_shop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 32px;
+}
+
+.mobile_menu_shop a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 100% */
+}
+
+.mobile_menu_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile_menu_list li {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 100% */
+  margin-bottom: 32px;
+}
+
+.mobile_menu_list li:last-child {
+  margin-bottom: 0;
+}
+
+.mobile_menu_list a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/********************* Mobile ******************************************/
+@media all and (max-width: 767px) {
+  /* Header Styles */
+  header {
+    height: 80px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 30px;
+    margin: 0 auto;
+  }
+  /* 웹용 로고 */
+  .header_logo {
+    display: none;
+  }
+  /* 모바일전용로고고 */
+  .header_logo_mobile {
+    display: block;
+    width: 99.998px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  .nav_right {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  .menu_btn_mobile {
+    display: block;
+  }
+  .menu_btn_mobile_close {
+    display: none;
+  }
+  .buy_now_btn {
+    display: none;
+  }
+  .menu_btn {
+    display: none;
+  }
+  .menu_drop {
+    display: none;
+  }
+  .mobile_menu {
+    top: calc(100% + -3px);
+  }
+}
+
+/********************* Tablet ***************************************************************/
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  /* Header Styles */
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 30px;
+    margin: 0 auto;
+  }
+  /* 웹용 로고 */
+  .header_logo {
+    display: none;
+  }
+  /* 테블릿 */
+  .header_logo_mobile {
+    width: 151.257px;
+    height: 23px;
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .nav_right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .menu_btn_mobile {
+    display: block;
+    font-size: 20px;
+  }
+  .menu_btn_mobile_close {
+    font-size: 20px;
+    display: none;
+  }
+  .buy_now_btn {
+    display: none;
+  }
+  .menu_btn {
+    display: none;
+  }
+  .menu_drop {
+    display: none;
+  }
+  .mobile_menu {
+    display: none;
+    margin: 0px 30px;
+    width: calc(100% - 60px);
+  }
+  .mobile_menu.active {
+    display: block;
+  }
+  .mobile_menu {
+    top: calc(100% + 18px);
+    margin: 0px 30px;
+    width: calc(100% - 50px);
+    margin: 0px 0px;
+    z-index: 1002;
+  }
+}

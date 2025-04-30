@@ -1,0 +1,20 @@
+.navigation__category { margin:0 150px; text-align:center; }
+.navigation__category li { display:inline-block; margin:0 19px; padding:23px 0 20px; }
+.navigation__category li a { display:inline-block; font-size:13px; line-height:20px; }
+.navigation__category li a:hover { text-decoration:none; }
+.navigation__category li a:after { content: ""; position: relative; display: block; bottom: 0; width: 100%; height: 1px; background-color: #000;
+    -webkit-transform: scaleX(0); -ms-transform: scaleX(0); transform: scaleX(0);
+    -webkit-transform-origin: 100% 0; -ms-transform-origin: 100% 0; transform-origin: 100% 0;
+    -webkit-transition: -webkit-transform .3s cubic-bezier(.45,.46,.05,.96);
+    -o-transition: transform .3s cubic-bezier(.45,.46,.05,.96);
+    transition: transform .3s cubic-bezier(.45,.46,.05,.96);
+    transition: transform .3s cubic-bezier(.45,.46,.05,.96),-webkit-transform .3s cubic-bezier(.45,.46,.05,.96);
+}
+.navigation__category li a:hover:after {
+    -webkit-transform: scaleX(1); -ms-transform: scaleX(1); transform: scaleX(1);
+    -webkit-transform-origin: 0 0; -ms-transform-origin: 0 0; transform-origin: 0 0;
+    -webkit-transition: -webkit-transform .5s cubic-bezier(.45,.46,.05,.96);
+    -o-transition: transform .5s cubic-bezier(.45,.46,.05,.96);
+    transition: transform .5s cubic-bezier(.45,.46,.05,.96);
+    transition: transform .5s cubic-bezier(.45,.46,.05,.96),-webkit-transform .5s cubic-bezier(.45,.46,.05,.96);
+}

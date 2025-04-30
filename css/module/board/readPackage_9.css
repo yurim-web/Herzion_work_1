@@ -1,0 +1,12 @@
+.xans-board-title p.imgArea { margin:0 0 20px; }
+
+/* read */
+.xans-board-read-9 .ec-base-table .view .detail { padding:10px; word-break:break-all; line-height:normal; }
+.xans-board-read-9 .ec-base-table .view .detail ol,
+.xans-board-read-9 .ec-base-table .view .detail ul { margin:15px 0; padding:0 0 0 40px; }
+.xans-board-read-9 .ec-base-table .view .detail ol li { list-style:decimal; }
+.xans-board-read-9 .ec-base-table .view .detail ul li { list-style:disc; }
+.xans-board-read-9 .ec-base-table .attach a { color:#8f8f8f; }
+.xans-board-read-9 .ec-base-table .attach a:hover { text-decoration:underline; }
+
+.xans-board-read-9 .ec-base-button { margin:10px 0 40px; }

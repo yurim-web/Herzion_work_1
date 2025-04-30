@@ -1,0 +1,100 @@
+<header id="header" data-ez="module-1c8hq8u-1">
+  <div class="header_inner">
+    <div class="logo">
+      <a href="/"
+        ><img src="/saeroun/img/logo.svg" loading="lazy" ez-prevent="img"
+      /></a>
+    </div>
+    <div class="right">
+      <a href="javascript:;" class="menu" data-text="Menu">Menu</a>
+      <a
+        href="/product/detail.html?product_no=10"
+        class="support"
+        data-text="Buy Now"
+        >Buy Now</a
+      >
+      <div class="menu_hover">
+        <ul>
+          <div class="mo">
+            <ul>
+              <li class="on">KOR</li>
+              <li><a href="en.herzion.com">ENG</a></li>
+              <li><a href="jp.herzion.com">JPN</a></li>
+            </ul>
+            <a href="/product/detail.html?product_no=10" class="shop"
+              >Shop now<img
+                src="//ecimg.cafe24img.com/pg1696b69622489044/herzionshop/img/shopNow.svg"
+            /></a>
+          </div>
+          <li><a href="/" data-text="Home">Home</a></li>
+          <li><a href="" data-text="Product">Product</a></li>
+          <li><a href="" data-text="Technology">Technology</a></li>
+          <li><a href="" data-text="Business">Business</a></li>
+          <li>
+            <a href="/support/support.html" data-text="Support">Support</a>
+          </li>
+          <li><a href="" data-text="FAQ">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="lang">
+        <p>
+          KOR<span><img src="/saeroun/img/lang.svg" /></span>
+        </p>
+        <ul>
+          <li><a href="https://herzionshop.cafe24.com/shop2">ENG</a></li>
+          <li><a href="https://herzionshop.cafe24.com/shop3">JPN</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+<div id="floating" data-ez="module-0vkw0zp-1">
+  <a href="javascript:;" class="search_btn"
+    ><img src="/saeroun/img/search.svg" loading="lazy" ez-prevent="img" /><span
+      >Search</span
+    ></a
+  >
+  <a href="javascript:;" class="top_btn"
+    ><img src="/saeroun/img/top.svg" loading="lazy" ez-prevent="img" /><span
+      >Top</span
+    ></a
+  >
+</div>
+<div id="search_wrap">
+  <div module="Layout_SearchHeader">
+    <!--
+$product_page=/product/detail.html
+$category_page=/product/list.html
+-->
+    <fieldset>
+      <legend>검색</legend>
+      <div class="search_top">
+        <h2>
+          SEARCH
+          <span>통합검색</span>
+        </h2>
+        <a href="javascript:;" class="close"
+          ><img src="/saeroun/img/close.svg" loading="lazy" ez-prevent="img"
+        /></a>
+      </div>
+      <div class="search_con">
+        <div class="con_top">
+          {$form.keyword}<input
+            type="image"
+            src="/saeroun/img/search.svg"
+            alt="검색"
+            onclick="{$action_search_submit}"
+          />
+        </div>
+        <div module="search_hotkeyword" id="hot_key">
+          <ul>
+            <li>#<a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+            <li>#<a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+          </ul>
+        </div>
+      </div>
+      <ul class="autoDrop disn" id="{$search_auto_id}"></ul>
+    </fieldset>
+  </div>
+</div>
+<!--#ez="1/1"-->

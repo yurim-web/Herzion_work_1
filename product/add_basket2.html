@@ -1,0 +1,65 @@
+<div module="Order_LayerBasketPackage" class="ec-base-layer-area">
+    <!--@css(/layout/basic/css/ec-base-paginate.css)-->
+    <!--@css(/css/module/product/basketAdd2.css)-->
+    <div class="ec-base-layer typeSide">
+        <div class="header">
+            <h2>장바구니 담기</h2>
+        </div>
+        <div class="content" module="Order_LayerBasket">
+            <ul class="prdList" module="Order_list">
+                <li class="item">
+                    <div class="box">
+                        <div class="thumbnail">
+                            <a href="/product/detail.html{$param}"><img src="{$img}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="{$name_alt}" class="thumb" /></a>
+                        </div>
+                        <div class="info">
+                            <p class="name">{$product_name_link}{$icon}</p>
+                            <p class="option">{$option_str}</p>
+                            <ul>
+                                <li>수량 : {$quantity}</li>
+                                <li class="price">{$purchase_price}</li>
+                                <li class="{$purchase_price_ref_display|display}"><strong>{$purchase_price_ref}</strong></li>
+                                <li class="{$discount_price_display|display}"><strong class="txtWarn">-{$discount_price}</strong></li>
+                                <li class="{$discount_price_ref_display|display}"><strong class="txtWarn">{$discount_price_ref}</strong></li>
+                            </ul>
+                            <p class="option {$subscription_show_display|display}"><strong>배송주기</strong> <span class="txtEm">{$subscription_option_str}</span></p>
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <div class="thumbnail">
+                            <a href="/product/detail.html{$param}"><img src="{$img}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="{$name_alt}" class="thumb" /></a>
+                        </div>
+                        <div class="info">
+                            <p class="name">{$product_name_link}{$icon}</p>
+                            <p class="option">{$option_str}</p>
+                            <ul>
+                                <li>수량 : {$quantity}</li>
+                                <li class="price">{$purchase_price}</li>
+                                <li class="{$purchase_price_ref_display|display}"><strong>{$purchase_price_ref}</strong></li>
+                                <li class="{$discount_price_display|display}"><strong class="txtWarn">-{$discount_price}</strong></li>
+                                <li class="{$discount_price_ref_display|display}"><strong class="txtWarn">{$discount_price_ref}</strong></li>
+                            </ul>
+                            <p class="option {$subscription_show_display|display}"><strong>배송주기</strong> <span class="txtEm">{$subscription_option_str}</span></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div module="Order_LayerBasketPaging" class="ec-base-paginate typeList">
+                <a href="#none" {$param_before}>이전 페이지</a>
+                <ol>
+                    <li><a href="#none" {$param} class="{$param_class}">{$no}</a></li>
+                    <li><a href="#none" {$param} class="{$param_class}">{$no}</a></li>
+                </ol>
+                <a href="#none" {$param_next}>다음 페이지</a>
+            </div>
+        </div>
+        <div class="ec-base-button gColumn">
+            <a href="/order/basket.html{$basket_param}" class="btnNormal sizeM">장바구니 이동</a>
+            <a href="#none" class="btnSubmit sizeM" onclick="Basket.orderLayerAll(this)" link-order="/order/orderform.html?basket_type=all_buy" link-login="/member/login.html">바로 구매</a>
+        </div>
+        <a class="btnClose" onclick="$('#confirmLayer').remove();">닫기</a>
+    </div>    
+</div>

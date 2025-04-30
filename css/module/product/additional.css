@@ -1,0 +1,101 @@
+.productDetail { margin:0 0 100px; }
+.productDetail img { max-width:100% !important; height:auto !important; }
+
+.ec-base-fold .info { color:#6d6d6d; line-height:22px; }
+.ec-base-fold .content { padding:0 0 60px; }
+
+/* board */
+.xans-product-additional .subject img { width: auto;margin: 0px 5px 1px 0;vertical-align:middle; }
+.xans-product-additional .comment { display:inline-block; margin:0 5px 0 0; vertical-align:middle; color:#ef441f; }
+.xans-product-additional .noAccess,
+.xans-product-additional .nodata { padding:56px 0; color:#6d6d6d; text-align:center; }
+.xans-product-additional .minor { padding:56px 0; color:#6d6d6d; line-height:14px; text-align:center; }
+.xans-product-additional .minor p:first-child img { margin:-11px 8px 0 0; vertical-align:top; }
+.xans-product-additional .minor .button { margin:-7px 0 0; }
+.xans-product-additional .view { position:relative; z-index:1; overflow:hidden; margin-top:-1px; line-height:22px; text-align:left; color:#000; background:#f9f9f9; }
+.xans-product-additional .view .alert { margin:0 0 10px; }
+
+#product-review-read .btnNormal,
+#product-qna-read .btnNormal { vertical-align:middle; }
+#product-review-read,
+#product-qna-read,
+#product-review-read td,
+#product-qna-read td { padding:0; }
+
+.xans-product-additional .btnNormal em { font-style:normal; }
+.xans-product-additional .btnNormal .icon.icoArrowBottom { vertical-align:top; margin:0 0 0 15px; }
+.xans-product-additional .boardComment {  background:#f6f6f6; }
+.xans-product-additional .boardComment li { position:relative; overflow:hidden; border-top:1px solid #e0e0e0; text-align:left; line-height:14px; }
+.xans-product-additional .boardComment li:before { content:""; position:absolute; display:inline-block; overflow:hidden; width:9px; height:11px; border-left:1px solid #a7a7a7; border-bottom:1px solid #a7a7a7; }
+.xans-product-additional .boardComment .commentInfo .name { color:#000; }
+.xans-product-additional .boardComment .commentInfo .date { margin:0 20px; line-height:17px; vertical-align:top; color:#6d6d6d; }
+.xans-product-additional .boardComment .comment { margin:17px 0 0; line-height:18px; color:#545454; word-break:break-all; }
+.xans-product-additional .boardComment .replyArea { margin:-1px 0 0; border-top:1px solid #e0e0e0; background:#f6f6f6; }
+.xans-product-additional .boardComment .replyArea .commentSecret { margin-right:30px; }
+.xans-product-additional .memoCont { text-align:left; border-top:1px solid #e5e5e5; background:#f6f6f6; }
+    .xans-product-additional .writeForm { position:relative; border:1px solid #a7a7a7; background:#fff; }
+    .xans-product-additional .writeForm:before { content:""; position:absolute; display:inline-block; overflow:hidden; width:9px; height:11px; border-left:1px solid #a7a7a7; border-bottom:1px solid #a7a7a7; }
+    .xans-product-additional .writeForm textarea { width:100%; height:148px; border-bottom:1px solid #e0e0e0; }
+    .xans-product-additional .writeForm .name { display:inline-block; }
+    .xans-product-additional .writeForm .password { display:inline-block; }
+    .xans-product-additional .writeForm .ctrl:after { content:""; display:block; clear:both; }
+    .xans-product-additional .writeForm .ctrl .button { float:right; }
+    .xans-product-additional .writeForm .ctrl .secret label { margin:0; }
+.xans-product-additional .memoCont .byteRating { display:flex; justify-content:space-between; margin:20px 0 0; }
+.xans-product-additional .memoCont .byteRating em { font-style:normal; }
+.xans-product-additional .memoCont .captcha { border-top:1px solid #e0e0e0; }
+.xans-product-additional .memoCont .captcha img { vertical-align:middle; }
+.xans-product-additional .memoCont .captcha input { margin:0 10px 0 20px; font-size:12px; }
+
+.xans-product-additional .commentSecret { margin:20px 0 0; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-product-additional { margin:60px 0 0; }
+    .ec-base-fold .info { margin:0 16px; }
+    #product-review-read td,
+	#product-qna-read td { width:100%; }
+    .xans-product-additional .view { padding:25px 16px 0; }
+    .xans-product-additional .view.secret { padding-bottom:25px; }
+    .xans-product-additional .view .ec-base-button { margin:20px 0;  }
+    .xans-product-additional .boardComment li { padding:25px 25px 0 36px; }
+    .xans-product-additional .boardComment li:before { top:24px; left:17px; }
+    .xans-product-additional .boardComment .ec-base-button { margin:20px 0;  }
+    .xans-product-additional .boardComment .replyArea { padding:26px 26px 30px 58px; }
+    .xans-product-additional .boardComment .replyArea:before { left:36px; }
+    .xans-product-additional .memoCont { margin:20px -16px 0;  padding:25px 0 0; }
+        .xans-product-additional .writeForm { position:relative; margin:0 16px 55px 36px; }
+        .xans-product-additional .writeForm:before { top:-2px; left:-20px; }
+        .xans-product-additional .writeForm .infoForm { display:flex; padding:10px 5px; }
+        .xans-product-additional .writeForm .infoForm p { flex:1; margin:0 5px; }
+        .xans-product-additional .writeForm .infoForm .label { display:block; margin:0 0 7px; color:#a7a7a7; }
+        .xans-product-additional .writeForm .infoForm input { width:100%; }
+        .xans-product-additional .writeForm .ctrl { position:absolute; bottom:-55px; left:-20px; right:0; line-height:45px; }
+        .xans-product-additional .writeForm .ctrl a { color:#fff; }
+    .xans-product-additional .memoCont .byteRating {padding:16px;}
+    .xans-product-additional .memoCont .captcha { padding:16px; }
+    .xans-product-additional .memoCont.reply { margin-left:-36px; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-product-additional { margin:100px 0 0; }
+    .ec-base-fold .info { padding-right:45px; }
+    .xans-product-additional .view { padding:25px 25px 0; }
+    .xans-product-additional .view.secret { padding-bottom:25px; }
+    .xans-product-additional .boardComment li { padding:25px 25px 25px 50px; }
+    .xans-product-additional .boardComment li:before { top:24px; left:25px; }
+    .xans-product-additional .boardComment .ec-base-button { margin:20px 0 0; }
+    .xans-product-additional .boardComment .replyArea { padding:26px 26px 30px 75px; }
+    .xans-product-additional .boardComment .replyArea:before { left:50px; }
+    .xans-product-additional .memoCont { margin:20px -25px 0;  padding:25px 25px 25px 50px; }
+    .xans-product-additional .memoCont.reply { margin-left:-50px; padding-bottom:0; }
+        .xans-product-additional .writeForm { display:flex; flex-wrap:wrap; }
+        .xans-product-additional .writeForm:before { top:-2px; left:-26px; }
+        .xans-product-additional .writeForm .commentForm { width:100%; }
+        .xans-product-additional .writeForm .infoForm { padding:13px 0 13px 19px; }
+        .xans-product-additional .writeForm .infoForm input { width:200px; margin:0 20px 0 10px; }
+        .xans-product-additional .writeForm .ctrl { flex:1; padding:14px 20px 0 0; line-height:40px; }
+    .xans-product-additional .memoCont .captcha { margin:20px 0 0; padding:20px 0 0; }
+    .xans-product-additional .memoCont .captcha .ec-base-help { display:inline; }
+}

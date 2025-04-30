@@ -1,0 +1,71 @@
+#contents { position:relative; }
+
+.xans-myshop-orderhistorydetail .summary { padding:20px; border-bottom:1px solid #e5e5e5; background:#f9f9f9; }
+.xans-myshop-orderhistorydetail .summary .title { margin:0 0 10px; }
+.xans-myshop-orderhistorydetail .summary .title h4 { font-size:13px; font-weight:normal; }
+.xans-myshop-orderhistorydetail .summary .contents { line-height:20px; }
+.xans-myshop-orderhistorydetail .summary .total { display:block; margin:5px 0 0; }
+.xans-myshop-orderhistorydetail .ec-base-fold > .title .order { font-weight:normal; }
+
+.xans-myshop-orderhistorydetail .ec-base-table .list { padding:10px 0; line-height:1.5; }
+.xans-myshop-orderhistorydetail .ec-base-table .map { margin:0 10px 0 0; max-width:100%; }
+.xans-myshop-orderhistorydetail .ec-base-table .map img { margin-top:5px; max-width:100%; border:1px solid #e8e8e8; vertical-align:middle; }
+.xans-myshop-orderhistorydetail .ec-base-table td.state [class^="btn"] { margin:1px 0; }
+.xans-myshop-orderhistorydetail .ec-base-table tbody + tbody tr:first-child th,
+.xans-myshop-orderhistorydetail .ec-base-table tbody + tbody tr:first-child td { border-top:1px solid #e9e9e9; }
+.xans-myshop-orderhistorydetail .ec-base-table thead + tbody tr:first-child th,
+.xans-myshop-orderhistorydetail .ec-base-table thead + tbody tr:first-child td { border-top:0; }
+.xans-myshop-orderhistorydetail .productList .subTitle { padding:20px 16px; font-size:13px; background:#f6f6f6; }
+.xans-myshop-orderhistorydetail .productList { padding:0; }
+.xans-myshop-orderhistorydetail .productList > ul > li { display:table; table-layout:fixed; width:100%; border-top:1px solid #e9e9e9; }
+.xans-myshop-orderhistorydetail .productList > ul > li:first-child { border-top:0; }
+.xans-myshop-orderhistorydetail .productList > ul > li p,
+.xans-myshop-orderhistorydetail .productList > ul > li ul { display:table-cell; }
+.xans-myshop-orderhistorydetail .productList > ul > li .product { padding:21px 20px; width:auto; }
+.xans-myshop-orderhistorydetail .productList > ul > li .quantity { padding:21px 20px; width:80px; text-align:center; vertical-align:middle; }
+.xans-myshop-orderhistorydetail .productList > ul > li .price { padding:21px 20px; width:110px; text-align:center; vertical-align:middle;}
+.xans-myshop-orderhistorydetail .productList .option { display:block; margin:10px 0 0; color:#7d7d7d; }
+.xans-myshop-orderhistorydetail .productList .productName { display:block; color:#000; font-weight:normal; }
+
+.xans-myshop-orderhistorydetail .ec-base-table tfoot .gLeft { float:left; margin:6px 0 0; }
+.xans-myshop-orderhistorydetail .total .amount { display:block; color:#7d7d7d; line-height:20px; }
+.xans-myshop-orderhistorydetail .coupon li { line-height:20px; }
+.xans-myshop-orderhistorydetail .coupon li:before { content:""; display:inline-block; width:4px; height:4px; margin:-5px 5px 0 0; vertical-align:middle; border-radius:50%; background:#000; }
+.xans-myshop-orderhistorydetail .customer { border-bottom:1px solid #e5e5e5; line-height:20px; }
+
+.xans-myshop-orderhistorydetailrefundnew .ec-base-table.total {position:relative; z-index:1;border:1px solid #777; }
+.xans-myshop-orderhistorydetailrefundnew .ec-base-table.total table {  margin:0; border:0; }
+
+/* multiDelivery */
+.xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody tr:first-child,
+.xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody tr:first-child th,
+.xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody tr:first-child td{border-top:0;}
+.xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody th{vertical-align:middle;padding-left:0;}
+.xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody td{border-left:1px solid #dfdfdf}
+.xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody td.left{border-left:0}
+.xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody + tbody{border-top:1px solid #dfdfdf}
+
+/* layer */
+.xans-myshop-orderhistorydetail .totalDetail { display:none;}
+.xans-myshop-orderhistorydetail .totalDetail .content p { margin:5px 0 20px; font-size:16px; font-weight:bold; text-align:right; }
+.csDetail .content { overflow:auto; overflow-x:hidden; max-height:400px; }
+.csDetail .prdInfo { padding:10px 10px 5px; border:1px solid #e8e5e4; background:#fff8f5; }
+.csDetail .prdInfo h2 { color:#353535; font-size:12px; }
+.csDetail .prdInfo p,
+.csDetail .prdInfo ul > li { margin:9px 0 5px; color:#757575; line-height:16px; }
+.csDetail .prdInfo ul > li > strong { display:block; color:#353535; }
+.csDetail .csArea { margin:0 0 20px; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .colOrder { width:140px; }
+	.xans-myshop-orderhistorydetail .customer { padding:24px 16px; }
+    .xans-myshop-orderhistorydetail .totalDetail { top:50% !important; left:0 !important; }
+}
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .colOrder { width:190px; }
+    .xans-myshop-orderhistorydetail .customer { padding:24px 0; }
+    .xans-myshop-orderhistorydetail .totalDetail { position:absolute !important; top:auto !important; left:auto !important; width:360px; }
+    .csDetail .ec-base-layer { width:500px; }
+}

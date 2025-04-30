@@ -1,0 +1,19 @@
+<div module="Coupon_Downlayer">
+    <!--@css(/css/module/coupon/couponDownResult.css)-->
+    <div class="couponDownResult ec-base-layer typeModal" id="couponDownLayer">
+        <div class="header">
+            <h3>쿠폰 다운로드 완료</h3>
+        </div>
+        <div class="content">
+            <p class="total">총 {$total}건 [성공 {$success_cnt}건 / 실패 {$fail_cnt}건]</p>
+            <p class="txtInfo">상세내역을 확인해주세요.</p>
+            <div class="ec-base-box typeThin">
+                {$content}
+            </div>
+        </div>
+        <div class="ec-base-button">
+            <a href="/myshop/coupon/coupon.html" class="btnSubmitFix sizeM">마이쿠폰 확인</a>
+        </div>
+        <a href="#none" class="btnClose" onclick="location.reload();">닫기</a>
+    </div>
+</div>

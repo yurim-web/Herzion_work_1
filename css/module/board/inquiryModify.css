@@ -1,0 +1,31 @@
+.xans-board-inquirymodify .title h3 { margin:50px 0 7px; color:#000; font-size:12px; }
+.xans-board-inquirymodify .required { margin:0 0 10px; text-align:right; }
+
+.xans-board-inquiryhead .ec-base-box.typeProduct { margin:0 0 40px; }
+.xans-board-inquiryhead .information h3 { margin:0 0 2px; padding:0 120px 0 0; font-size:14px; }
+.xans-board-inquiryhead .icon { position:absolute; top:0; right:0; width:100px; text-align:right; }
+.xans-board-inquiryhead .information .button { margin:15px 0 0; }
+.xans-board-inquiryhead .information > img { vertical-align:middle; margin:0 0 0 1px; }
+
+.xans-board-inquirymodify .file td { color:#7d7d7d; }
+.xans-board-inquirymodify .file label { color:#000; }
+.xans-board-inquirymodify .file [id^="delfile"] { margin-left:20px; }
+.xans-board-inquirymodify .agree textarea { margin:0 0 10px; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+	.xans-board-inquirymodify .ec-base-table input[type="text"],
+    .xans-board-inquirymodify .ec-base-table input[type="password"],
+    .xans-board-inquirymodify .ec-base-table select { width:100%; }
+    .xans-board-inquirymodify .file input[type="file"] { display:block; }
+    .xans-board-inquirymodify .agree textarea { width:100%; height:140px; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-board-inquirymodify #bi_inquire_subject { width:526px; }
+    .xans-board-inquirymodify #bi_inquirer_phone1,
+    .xans-board-inquirymodify #bi_inquirer_phone2 { margin:0 4px 0 0; }
+    .xans-board-inquirymodify #bi_inquirer_phone2 { width:90px; margin:0 0 0 4px; }
+    .xans-board-inquirymodify .agree textarea { width:550px; height:140px; }
+}

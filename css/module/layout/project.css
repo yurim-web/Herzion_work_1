@@ -1,0 +1,26 @@
+.projectItem.xans-layout-project h2 { display:block; color:#2e2e2e; }
+.projectItem.xans-layout-project li a {display: block; }
+.projectItem.xans-layout-project li img { width: 100%; }
+
+/********************* Mobile *********************/
+@media all and (max-width:767px) {
+    .projectItem.xans-layout-project ul { overflow-x: auto; display:flex; padding:0 16px 0 0; }
+    .projectItem.xans-layout-project li{ flex:1; min-width: 80%; margin: 0 0 0 16px; }
+}
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .projectItem.xans-layout-project {margin: 40px 0; padding: 0 0 20px;}
+}
+
+/********************* Tablet *********************/
+@media all and (min-width:768px) and (max-width:1024px) {
+    .projectItem {margin: 0 24px;}
+}
+
+/********************* PC / Tablet *********************/
+@media all and (min-width:768px) {
+    .projectItem { max-width: 1240px; margin:95px auto 0; }
+    .projectItem.xans-layout-project ul { overflow:hidden; white-space:nowrap; text-align:center; font-size:0; margin-right:-20px; }
+    .projectItem.xans-layout-project li { display:inline-block; width:calc(33.33% - 19px); max-width:400px; margin-right:20px; vertical-align:top; }
+}

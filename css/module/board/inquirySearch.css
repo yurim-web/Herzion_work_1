@@ -1,0 +1,24 @@
+.xans-board-inquirysearch .form { display:flex; }
+.xans-board-inquirysearch select, 
+.xans-board-inquirysearch input[type="text"], 
+.xans-board-inquirysearch a { margin-left:10px; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    .xans-board-inquirysearch { margin:10px 16px 0px 6px; }
+    .xans-board-inquirysearch .form { flex-wrap:wrap; }
+    .xans-board-inquirysearch select, 
+    .xans-board-inquirysearch input[type="text"],
+    .xans-board-inquirysearch a { flex:1; margin-top:10px; }
+    .xans-board-inquirysearch #search { flex:2; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    .xans-board-inquirysearch { margin:20px -5px 0; }
+    .xans-board-inquirysearch select, 
+    .xans-board-inquirysearch input[type="text"], 
+    .xans-board-inquirysearch a { margin:0 5px; }
+    .xans-board-inquirysearch #search_key { width:110px; }
+    .xans-board-inquirysearch #search { width:175px; }
+}
