@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
 
-  // 텍스트 박스 애니메이션
   const txtBoxes = document.querySelectorAll(".txt_box");
+
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".banner_section",
-      start: "top",
-      end: "150%",
-      scrub: 1,
+      start: isMobile ? "top" : "top",
+      end: isMobile ? "150%" : "150%",
+      scrub: isMobile ? 1 : 1,
       toggleActions: "play none none reverse",
     },
   });
@@ -20,10 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
       fillText,
       {
         backgroundSize: "100% 100%",
-        duration: 0.8,
+        duration: isMobile ? 0.3 : 1.7,
         ease: "none",
       },
-      index
+      isMobile ? index * 0.4 : index
     );
   });
 
@@ -67,10 +69,10 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTrigger: {
       trigger: ".clinical_results_mobile",
       start: "top top",
-      end: "+=200%",
+      end: "+=300%",
       pin: true,
       pinSpacing: true,
-      scrub: 0.3,
+      scrub: 1,
     },
   });
 
@@ -86,15 +88,29 @@ document.addEventListener("DOMContentLoaded", function () {
   motimeline
     .fromTo(
       ".mo_back_2",
-      { y: "1167", zIndex: 2 },
-      { y: "0", duration: 0.3, ease: "power1.inOut" }
+      {
+        y: "100vh",
+        zIndex: 2,
+      },
+      {
+        y: "0",
+        duration: 1,
+        ease: "power2.inOut",
+      }
     )
 
     // 세 번째 카드 애니메이션
     .fromTo(
       ".mo_back_3",
-      { y: "1340", zIndex: 3 },
-      { y: "0", duration: 0.3, ease: "power1.inOut" }
+      {
+        y: "100vh",
+        zIndex: 3,
+      },
+      {
+        y: "0",
+        duration: 1,
+        ease: "power2.inOut",
+      }
     );
 });
 
@@ -126,24 +142,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // 모바일 Thesis 스와이퍼 초기화
 const mobileThesisSwiper = new Swiper(".mobileThesisSwiper", {
-  slidesPerView: "auto",
-  spaceBetween: 90,
-  loop: true,
+  slidesPerView: 1.2,
+  spaceBetween: 40,
   direction: "horizontal",
-  centeredSlides: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  loop: false,
   breakpoints: {
     320: {
+      slidesPerView: 1.2,
       spaceBetween: 40,
     },
     768: {
-      spaceBetween: 60,
+      slidesPerView: 1.2,
+      spaceBetween: 40,
     },
     1024: {
+      slidesPerView: 1.2,
       spaceBetween: 40,
     },
   },
@@ -151,11 +167,20 @@ const mobileThesisSwiper = new Swiper(".mobileThesisSwiper", {
 
 // 앱 다운로드 모바일 스와이퍼 초기화
 const appDownloadSwiper = new Swiper(".appDownloadSwiper", {
-  slidesPerView: 1.1,
-  spaceBetween: 18,
+  slidesPerView: 1.2,
+  spaceBetween: 35,
   centeredSlides: true,
+  loop: true,
   pagination: {
     el: ".appDownloadSwiper .swiper-pagination",
     clickable: true,
+  },
+  effect: "coverflow",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
   },
 });

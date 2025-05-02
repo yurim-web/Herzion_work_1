@@ -216,16 +216,15 @@
   height: auto;
   padding-bottom: 40px;
   position: relative;
-  padding-right: 60px;
+  overflow: hidden;
 }
 
 .mobileThesisSwiper .swiper-wrapper {
   display: flex;
-  flex-direction: row;
 }
 
 .mobileThesisSwiper .swiper-slide {
-  width: 85%;
+  width: 100%;
   flex-shrink: 0;
 }
 
@@ -258,19 +257,19 @@
   background: #1a1a1a;
 }
 .use_mobile_card_container {
-  display: flex;
   width: 100%;
-  padding-right: 20px;
+  padding: 0;
 }
 
 /* 앱 다운로드 섹션 모바일스타일*/
 .app_download_mo {
   display: none;
-  padding: 80px 0px;
+  padding: 80px 20px;
   background-image: url("images/mo/mo_last_section_back.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .app_download_container_mo {
@@ -354,13 +353,10 @@
   height: auto;
   padding-bottom: 40px;
   position: relative;
-  overflow: visible;
 }
 
 .appDownloadSwiper .swiper-wrapper {
   display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 .appDownloadSwiper .swiper-slide {
@@ -369,7 +365,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 9px;
+  padding: 0;
 }
 
 .appDownloadSwiper .swiper-pagination {
@@ -481,8 +477,13 @@
     letter-spacing: -0.4px;
   }
   .container {
-    margin: 0 auto;
+    width: 100%;
     padding: 0 20px;
+    margin: 0;
+    overflow: hidden;
+  }
+  .feature_container {
+    padding: 80px 20px;
   }
   .section_title {
     margin-bottom: 32px;
@@ -626,6 +627,7 @@
   }
   .use_mobile_section {
     display: block;
+    overflow: hidden;
   }
   .use_card_container {
     width: 100%;
@@ -683,6 +685,25 @@
   .app_download_mo {
     display: block;
   }
+
+  nav {
+    width: 100% !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 20px;
+    margin: 0;
+    max-width: 100%;
+    box-sizing: border-box !important;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  main {
+    overflow-x: hidden;
+  }
 }
 
 /********************* Tablet ***************************************************************/
@@ -731,6 +752,10 @@
     margin: 0 auto;
     padding: 0 60px;
   }
+  .feature_container {
+    padding: 100px 60px;
+  }
+
   .section_title {
     margin-bottom: 32px;
     font-size: 20px;
@@ -785,7 +810,7 @@
   /* clinicl 섹션 */
 
   .section_box_mo {
-    margin-top: 0px;
+    margin-top: 100px;
     padding: 80px 60px;
   }
 
@@ -953,5 +978,6 @@
   }
   .app_download_mo {
     display: block;
+    padding: 80px 60px;
   }
 }
