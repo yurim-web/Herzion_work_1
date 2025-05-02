@@ -1,0 +1,458 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/moa/css/lib/swiper.min.css)-->
+<!--@js(/moa/js/lib/swiper.min.js)-->
+<!--@css(/css/module/board/listPackage.css)-->
+<!--@css(/moa/css/lib/faq.css)-->
+<!--@js(/moa/js/lib/faq.js)-->
+<!--@js(/moa/js/lib/board_category_selected.js)-->
+<!-- <link rel="stylesheet" href="faq.css" /> -->
+<script src="faq.js" defer></script>
+<!-- 내가 만든 -->
+<link rel="stylesheet" href="new_faq.css" />
+    <!-- header css -->
+    <link rel="stylesheet" href="../layout_new/header.css" />
+    <!-- footer css -->
+    <link rel="stylesheet" href="../layout_new/footer.css" />
+    <!-- layout js -->
+    <script src="../layout_new/layout.js" defer></script>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css"
+    rel="stylesheet"
+  />
+
+<div module="Board_ListPackage_1002">
+  <!-- 카페 24 전용 표시 ? 부분 -->
+  <!-- <div module="board_title_1002">
+    <div class="path">
+      <span>현재 위치</span>
+      <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>{$board_name}</strong></li>
+      </ol>
+    </div>
+    <div class="titleArea">
+      <h2>{$board_title} {$board_adult_icon}</h2>
+    </div>
+    <p class="imgArea">{$board_top_image}</p>
+  </div> -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="/">
+          <img src="images/logo.svg" alt="HERZION" class="header_logo"></img>
+          <!-- 모바일 전용 로고 -->
+          <img
+            src="images/m_header_logo.svg"
+            alt="HERZION"
+            class="header_logo_mobile"
+          ></img>
+        </a>
+      </div>
+      <div class="nav_right">
+        <button class="menu_btn">Menu</button>
+        <div class="menu_drop">
+          <ul class="menu_drop_list">
+            <li><a href="/" data-text="Home">Home</a></li>
+            <li><a href="/product_page/product.html" data-text="Product">Product</a></li>
+            <li><a href="/technology/technology.html" data-text="Technology">Technology</a></li>
+            <li><a href="/business/business.html" data-text="Business">Business</a></li>
+            <li>
+              <a href="/support/support.html" data-text="Support">Support</a>
+            </li>
+            <li><a href="" data-text="FAQ">FAQ</a></li>
+            <li>
+              <a href="/contact/contact.html" data-text="Support">Contact</a>
+            </li>
+          </ul>
+        </div>
+         <!-- 모바일 메뉴 -->
+         <span class="menu_btn_mobile" id="menu_btn_mobile">Menu</span>
+         <button class="menu_btn_mobile_close" id="menu_btn_mobile_close">X</button>
+         <div class="mobile_menu" id="mobile_menu">
+          <div class="mobile_menu_lang">
+            <button class="active">KOR</button>
+            <button>ENG</button>
+            <button>JPN</button>
+          </div>
+          <div class="mobile_menu_shop">
+            <a href="">Shop now</a>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <ul class="mobile_menu_list">
+            <li><a href="/">Home</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Technology</a></li>
+            <li><a href="">Business</a></li>
+            <li><a href="/support/support.html">Support</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="/contact/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <button class="buy_now_btn">Buy Now</button>
+
+      </div>
+
+       
+      </div>
+    </nav>
+  </header>
+  <!-- 메인 베너 부분 -->
+  <section class="banner_section">
+    <div class="hero">
+      <div class="hero_content">
+        <h1 style="margin: 0">FAQ</h1>
+        <p style="margin: 0">자주 묻는 질문</p>
+      </div>
+    </div>
+  </section>
+<section class="faq_section">
+      <!-- 검색창 부분 -->
+  <div module="board_search_1002">
+    <fieldset class="boardSearch faq_search_wrapper">
+      <div class="form">
+        <a href="#none" class="btnNormal btn_search" onclick="{$action_search}"
+          ><img src="images/search_icon.svg" alt=""
+        /></a>
+        <input class="search_input" type="text" placeholder="궁금한 내용을 검색해 보세요.">{$form.search}</input>
+      </div>
+    </fieldset>
+  </div>
+
+  <!-- 카테고리 선택 부분 -->
+  <div module="Layout_BoardInfo" class="board-tab">
+    <ul class="board-tab__wrapper cartegory_btn_wrapper">
+      <li class="board-tab__item">
+        <a class="cartegory_btn btn_active" href="{$board_list_url}"
+          >{$board_name}</a
+        >
+      </li>
+      <li class="board-tab__item">
+        <a class="cartegory_btn" href="{$board_list_url}">{$board_name}</a>
+      </li>
+      <li class="board-tab__item">
+        <a class="cartegory_btn" href="{$board_list_url}">{$reply_sort}</a>
+      </li>
+      <li class="board-tab__item">
+        <a class="cartegory_btn" href="{$board_list_url}">{$reply_sort}</a>
+      </li>
+      <li class="board-tab__item">
+        <a class="cartegory_btn" href="{$board_list_url}">{$reply_sort}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="faq">
+    <div class="boardSort displaynone">
+      <!-- <span id="category-dummy" module="board_category_1002"
+        >{$form.board_category}</span
+      > -->
+    </div>
+
+    <div class="faq__header flex flex--v-center jsCateSlide">
+      <div class="faq-category flex flex--v-center"></div>
+    </div>
+
+    <!-- <div class="list-header flex flex--v-center displaynone">
+      <div class="list-header__item list-header__item--category">구분</div>
+      <div class="list-header__item">제목</div>
+    </div> -->
+
+    <!-- faq 리스트 부분 -->
+    <div module="board_list_1002" class="faq__list faq_list_container">
+        <article class="faq_item_container">
+            <div class="faq__item faq_item_box">
+                <div class="faq__q relative faq_inner_content">
+                <img src="images/q_icon.svg" alt="">
+                <!-- 카테고리 이름 -->
+                  <div class="faq__category category_name_box">{$category_name}</div>
+                <!-- 들어가는 글 부분 -->
+                <div class="faq__a category_content_text">{$subject}</div>
+                </div>
+                <!-- 토글버튼 -->
+                 <img class="toggle_arrow" src="images/toggle_arrow_down.svg" id="toggle_arrow" alt="">
+              </div>
+              <!-- 토글되는 답변 콘텐츠 -->
+              <div class="faq_answer_box">
+                <div class="faq_answer_text_box">
+                    <img src="images/a_icon.svg" alt="">
+                    <p style="margin: 0" class="faq_answer_text">{$content}<br>{$content}</p>
+                </div>
+              </div>
+        </article>
+        <article class="faq_item_container">
+            <div class="faq__item faq_item_box">
+                <div class="faq__q relative faq_inner_content">
+                <img src="images/q_icon.svg" alt="">
+                <!-- 카테고리 이름 -->
+                  <div class="faq__category category_name_box">{$category_name}</div>
+                <!-- 들어가는 글 부분 -->
+                <div class="faq__a category_content_text">{$subject}</div>
+                </div>
+                <!-- 토글버튼 -->
+                 <img class="toggle_arrow" src="images/toggle_arrow_down.svg" id="toggle_arrow" alt="">
+              </div>
+              <!-- 토글되는 답변 콘텐츠 -->
+              <div class="faq_answer_box">
+                <div class="faq_answer_text_box">
+                    <img src="images/a_icon.svg" alt="">
+                    <p style="margin: 0" class="faq_answer_text">{$content}<br>{$content}</p>
+                </div>
+              </div>
+        </article>
+        <article class="faq_item_container">
+            <div class="faq__item faq_item_box">
+                <div class="faq__q relative faq_inner_content">
+                <img src="images/q_icon.svg" alt="">
+                <!-- 카테고리 이름 -->
+                  <div class="faq__category category_name_box">{$category_name}</div>
+                <!-- 들어가는 글 부분 -->
+                <div class="faq__a category_content_text">{$subject}</div>
+                </div>
+                <!-- 토글버튼 -->
+                 <img class="toggle_arrow" src="images/toggle_arrow_down.svg" id="toggle_arrow" alt="">
+              </div>
+              <!-- 토글되는 답변 콘텐츠 -->
+              <div class="faq_answer_box">
+                <div class="faq_answer_text_box">
+                    <img src="images/a_icon.svg" alt="">
+                    <p style="margin: 0" class="faq_answer_text">{$content}<br>{$content}</p>
+                </div>
+              </div>
+        </article>
+        <article class="faq_item_container">
+            <div class="faq__item faq_item_box">
+                <div class="faq__q relative faq_inner_content">
+                <img src="images/q_icon.svg" alt="">
+                <!-- 카테고리 이름 -->
+                  <div class="faq__category category_name_box">{$category_name}</div>
+                <!-- 들어가는 글 부분 -->
+                <div class="faq__a category_content_text">{$subject}</div>
+                </div>
+                <!-- 토글버튼 -->
+                 <img class="toggle_arrow" src="images/toggle_arrow_down.svg" id="toggle_arrow" alt="">
+              </div>
+              <!-- 토글되는 답변 콘텐츠 -->
+              <div class="faq_answer_box">
+                <div class="faq_answer_text_box">
+                    <img src="images/a_icon.svg" alt="">
+                    <p style="margin: 0" class="faq_answer_text">{$content}<br>{$content}</p>
+                </div>
+              </div>
+        </article>
+        <article class="faq_item_container">
+            <div class="faq__item faq_item_box">
+                <div class="faq__q relative faq_inner_content">
+                <img src="images/q_icon.svg" alt="">
+                <!-- 카테고리 이름 -->
+                  <div class="faq__category category_name_box">{$category_name}</div>
+                <!-- 들어가는 글 부분 -->
+                <div class="faq__a category_content_text">{$subject}</div>
+                </div>
+                <!-- 토글버튼 -->
+                 <img class="toggle_arrow" src="images/toggle_arrow_down.svg" id="toggle_arrow" alt="">
+              </div>
+              <!-- 토글되는 답변 콘텐츠 -->
+              <div class="faq_answer_box">
+                <div class="faq_answer_text_box">
+                    <img src="images/a_icon.svg" alt="">
+                    <p style="margin: 0" class="faq_answer_text">{$content}<br>{$content}</p>
+                </div>
+              </div>
+        </article>
+        <article class="faq_item_container">
+            <div class="faq__item faq_item_box">
+                <div class="faq__q relative faq_inner_content">
+                <img src="images/q_icon.svg" alt="">
+                <!-- 카테고리 이름 -->
+                  <div class="faq__category category_name_box">{$category_name}</div>
+                <!-- 들어가는 글 부분 -->
+                <div class="faq__a category_content_text">{$subject}</div>
+                </div>
+                <!-- 토글버튼 -->
+                 <img class="toggle_arrow" src="images/toggle_arrow_down.svg" id="toggle_arrow" alt="">
+              </div>
+              <!-- 토글되는 답변 콘텐츠 -->
+              <div class="faq_answer_box">
+                <div class="faq_answer_text_box">
+                    <img src="images/a_icon.svg" alt="">
+                    <p style="margin: 0" class="faq_answer_text">{$content}<br>{$content}</p>
+                </div>
+              </div>
+        </article>
+        <article class="faq_item_container">
+            <div class="faq__item faq_item_box">
+                <div class="faq__q relative faq_inner_content">
+                <img src="images/q_icon.svg" alt="">
+                <!-- 카테고리 이름 -->
+                  <div class="faq__category category_name_box">{$category_name}</div>
+                <!-- 들어가는 글 부분 -->
+                <div class="faq__a category_content_text">{$subject}</div>
+                </div>
+                <!-- 토글버튼 -->
+                 <img class="toggle_arrow" src="images/toggle_arrow_down.svg" id="toggle_arrow" alt="">
+              </div>
+              <!-- 토글되는 답변 콘텐츠 -->
+              <div class="faq_answer_box">
+                <div class="faq_answer_text_box">
+                    <img src="images/a_icon.svg" alt="">
+                    <p style="margin: 0" class="faq_answer_text">{$content}<br>{$content}</p>
+                </div>
+              </div>
+        </article>
+        <article class="faq_item_container">
+            <div class="faq__item faq_item_box">
+                <div class="faq__q relative faq_inner_content">
+                <img src="images/q_icon.svg" alt="">
+                <!-- 카테고리 이름 -->
+                  <div class="faq__category category_name_box">{$category_name}</div>
+                <!-- 들어가는 글 부분 -->
+                <div class="faq__a category_content_text">{$subject}</div>
+                </div>
+                <!-- 토글버튼 -->
+                 <img class="toggle_arrow" src="images/toggle_arrow_down.svg" id="toggle_arrow" alt="">
+              </div>
+              <!-- 토글되는 답변 콘텐츠 -->
+              <div class="faq_answer_box">
+                <div class="faq_answer_text_box">
+                    <img src="images/a_icon.svg" alt="">
+                    <p style="margin: 0" class="faq_answer_text">{$content}<br>{$content}</p>
+                </div>
+              </div>
+        </article>
+
+        <!-- 더보기 버튼 -->
+        <button class="faq_more_btn">
+            <img src="images/+_icon.svg" alt="">
+            <span>more</span>
+        </button>
+
+          
+        
+    </div>
+
+    </div>
+    <!-- <p class="message {$empty_display|display}" module="board_empty_1002">
+      {$empty_message}
+    </p> -->
+  </div>
+
+  <div
+    module="board_ButtonList_1002"
+    class="ec-base-button gBottom {$write_display|display}"
+  >
+    <span class="gRight">
+      <a
+        href="/board/free/write.html{$param_write}"
+        class="btnSubmitFix sizeM {$write_display|display}"
+        >글쓰기</a
+      >
+    </span>
+  </div>
+</div>
+
+<div module="board_paging_1002" class="ec-base-paginate typeList">
+  <a href="{$param_prev}">이전 페이지</a>
+  <ol>
+    <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+  </ol>
+  <a href="{$param_next}">다음 페이지</a>
+</div>
+</section>
+<!-- 푸터부분 -->
+<footer>
+    <div class="footer_top_content">
+      <div class="footer_left">
+        <img src="images/footer_logo.svg" alt="HERZION" class="footer_logo"></img>
+        <div class="contact_info">
+          <div class="contact_info_left">
+            <div class="info_group">
+              <p class="label">Tel</p>
+              <span>02-2637-0009</span>
+            </div>
+            <div class="info_group">
+              <p class="label">E-mail</p>
+              <span>help@herzion.com</span>
+            </div>
+          </div>
+          <div class="contact_info_right">
+            <div class="info_group">
+              <p class="label">Address</p>
+              <span>경기도 성남시 분당구 동판교로 56, (주)아리바이오</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_right">
+        <ul class="footer_links">
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Technology</a></li>
+          <li><a href="/contact/contact.html">Contact</a></li>
+          <li><a href="/support/support.html">Support</a></li>
+        </ul>
+        <div class="app_download_box">
+          <a href="https://apps.apple.com/br/app/%ED%97%A4%EB%A5%B4%EC%A7%80%EC%98%A8/id6463604810" class="store_btn">
+            <img src="images/apple_logo.svg" alt="" /><span>App Store</span>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.aribio.app.herzion&hl=ko" class="store_btn">
+            <img src="images/google_logo.svg" alt="" /><span
+              >Google Play</span
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <p>ⓒ 2024 by Aribio. All Rights Reserved.</p>
+      <img
+        src="images/footer_logo.svg"
+        alt="HERZION"
+        class="footer_logo_bottom"
+      ></img>
+    </div>
+  </footer>
+  
+      <!-- 상단이동하는 버튼 -->
+      <button class="top_btn" id="top_btn">
+        <img src="images/top_btn.svg" alt="상단 이동 버튼" />
+        <span>Top</span>
+      </button>
+
+
+
+
+
+
+
+<!-- Admin only -->
+<div module="board_catemove_1002">
+  <!--@css(/css/module/board/catemove.css)-->
+  <span class="gColumn">{$board_catemove_selectbox}</span>
+  <span class="gColumn"
+    ><a href="#none" class="btnNormal sizeS" onclick="{$action_category_move}"
+      >{$category_move}</a
+    ></span
+  >
+</div>
+
+<div module="board_function_1002">
+  <!--@css(/css/module/board/function.css)-->
+  <span class="gColumn">{$board_function_selectbox}</span>
+  <span class="gColumn">
+    <a href="#none" class="btnNormal sizeS" onclick="{$action_article_move}"
+      >{$article_move}</a
+    >
+    <a href="#none" class="btnNormal sizeS" onclick="{$action_article_copy}"
+      >{$article_copy}</a
+    >
+  </span>
+  <span class="ec-base-help">{$board_function_help|replace:*,}</span>
+</div>
+<!-- // Admin only -->

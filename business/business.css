@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+  line-height: 1.5;
+  color: #3c3c3c;
+  background-color: #f7f7f7;
+}
+
+/* Main Content */
+main {
+  width: 100%;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* hero section */
+.banner_section {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 110px 80px 50px 80px;
+}
+
+.hero {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 400px;
+  background-image: url("images/business_banner.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.hero_content {
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #fff;
+}
+
+.hero h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 72px; /* 100% */
+}
+
+.hero p {
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+
+/* Business 섹션 공통 스타일 */
+.business_section {
+  padding: 120px 0;
+  width: 100%;
+}
+
+.business_content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.business_text {
+  flex: 1;
+}
+
+.section_title {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+}
+
+.section_desc {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #666666;
+  margin-bottom: 40px;
+}
+
+.business_list {
+  list-style: none;
+  padding: 0;
+}
+
+.business_list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.business_list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  background-color: #0066ff;
+  border-radius: 50%;
+}
+
+.business_image {
+  flex: 1;
+}
+
+.business_image img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+}
+
+/* Vibroacoustic 섹션 특별 스타일 */
+.vibroacoustic_section {
+  background-color: #ffffff;
+  padding: 120px 80px;
+}
+
+.feature_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.feature_item {
+  padding: 32px;
+  background: #f8f8f8;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.feature_item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.feature_item h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.feature_item p {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.5;
+}
+
+.business_image_group {
+  flex: 1;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.product_image {
+  width: calc(50% - 12px);
+  height: auto;
+  border-radius: 24px;
+  transition: all 0.3s ease;
+}
+
+.product_image:hover {
+  transform: scale(1.05);
+}
