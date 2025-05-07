@@ -318,3 +318,19 @@ main {
   height: 80px;
   object-fit: cover;
 }
+
+/* sports_fitness_section 섹션 */
+.sports_fitness_section {
+  background-color: #ffffff;
+  padding: 148px 0px 150px 0px;
+}
+
+.section4_content_img_1 {
+  background-image: url("images/section4_img_1.png");
+}
+.section4_content_img_2 {
+  background-image: url("images/section4_img_2.png");
+}
+.section4_content_img_3 {
+  background-image: url("images/section4_img_3.png");
+}
