@@ -292,20 +292,21 @@ main {
 }
 
 .scientific_basis_scroll {
-  margin-top: 120px;
+  margin-top: 76px;
   padding: 0;
   position: relative;
   padding-bottom: 100px;
 }
 
 .researchSwiper {
-  padding: 20px 0;
-  overflow: visible;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .researchSwiper .swiper-slide {
-  width: calc((100% - 80px) / 3);
-  height: auto;
+  width: auto;
+  box-sizing: border-box;
 }
 
 .research_card {
@@ -322,12 +323,10 @@ main {
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: 100px;
-  background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0.2) 100%
-    ),
-    #23295b;
+  background-color: #23295b;
+}
+.card_hover_effect:hover {
+  opacity: 0.8;
 }
 
 .research_card_image {
@@ -357,7 +356,8 @@ main {
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
-  opacity: 1;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .research_card_content {
@@ -408,4 +408,10 @@ main {
 
 .web_break {
   display: block;
+}
+
+/* 카드에 호버 시 버튼 보이기 */
+.card_hover_effect:hover .view_btn {
+  opacity: 1;
+  pointer-events: auto;
 }

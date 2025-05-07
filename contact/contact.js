@@ -170,20 +170,7 @@ function checkMobileFormValidity() {
     (input) => input.value.trim() !== ""
   );
 
-  // 모든 input이 채워졌는지 확인
-  const allInputsFilled = Array.from(mobileInputs).every(
-    (input) => input.value.trim() !== ""
-  );
-
-  console.log("입력 필드 상태:", {
-    mobileSubmitInputs: Array.from(mobileSubmitInputs).map((input) => ({
-      value: input.value,
-      class: input.className,
-    })),
-    allFilled,
-  });
-
-  // 위의 4개 input이 채워졌을 때 버튼 활성화
+  // 모든 input이 채워졌을 때만 배경색 변경
   if (allFilled) {
     console.log("모두 채워짐");
     nextBtnMobile.disabled = false;
@@ -196,16 +183,14 @@ function checkMobileFormValidity() {
     nextBtnMobile.style.color = "#999999";
   }
 
-  // 모든 input이 채워졌을 때만 배경색 변경
-  if (allInputsFilled) {
-    mobileInputs.forEach((input) => {
+  // 수정 코드: 각 input이 비어있지 않으면 배경색 변경
+  mobileInputs.forEach((input) => {
+    if (input.value.trim() !== "") {
       input.style.backgroundColor = "rgba(0, 0, 0, 0.04)";
-    });
-  } else {
-    mobileInputs.forEach((input) => {
+    } else {
       input.style.backgroundColor = "";
-    });
-  }
+    }
+  });
 }
 
 // 모바일 다음 버튼 클릭 이벤트

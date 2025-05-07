@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* hero section */
 .banner_section {
   position: relative;
@@ -107,6 +112,10 @@
   line-height: 18px; /* 100% */
   letter-spacing: -0.36px;
   text-decoration: none;
+}
+.cartegory_btn a {
+  text-decoration: none;
+  color: inherit;
 }
 .btn_active {
   background-color: #23295b;
@@ -218,6 +227,12 @@
   align-items: center;
   gap: 32px; */
 }
+.pc_answer_icon {
+  display: block;
+}
+.mo_answer_icon {
+  display: none;
+}
 
 .faq_item_box_toggle {
   border: 2px solid #23295b;
@@ -260,7 +275,7 @@
 /* 더보기 버튼 */
 .faq_more_btn {
   margin: 0 auto;
-  margin-top: 24px;
+  margin-top: 40px;
   width: 209px;
   height: 58px;
   flex-shrink: 0;

@@ -10,15 +10,15 @@ const researchSwiper = new Swiper(".researchSwiper", {
   },
   breakpoints: {
     320: {
-      slidesPerView: 1,
+      slidesPerView: 4,
       spaceBetween: 40,
     },
     768: {
-      slidesPerView: 2,
+      slidesPerView: 4,
       spaceBetween: 40,
     },
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 40,
     },
   },

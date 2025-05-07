@@ -2,32 +2,66 @@ document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
 
   const txtBoxes = document.querySelectorAll(".txt_box");
+  let animationTimeline = null;
 
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  // 모바일 여부 판별 함수
+  function isMobileDevice() {
+    return window.innerWidth <= 768;
+  }
 
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".banner_section",
-      start: isMobile ? "top" : "top",
-      end: isMobile ? "150%" : "150%",
-      scrub: isMobile ? 1 : 1,
-      toggleActions: "play none none reverse",
-    },
-  });
+  // 기존 애니메이션 제거
+  function killAnimation() {
+    if (animationTimeline) {
+      animationTimeline.kill();
+      animationTimeline = null;
+    }
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  }
 
-  txtBoxes.forEach((box, index) => {
-    const fillText = box.querySelector(".text-fill");
+  // 애니메이션 초기화 함수
+  function initAnimation() {
+    if (isMobileDevice()) {
+      killAnimation();
+      return;
+    }
 
-    tl.to(
-      fillText,
-      {
-        backgroundSize: "100% 100%",
-        duration: isMobile ? 0.3 : 1.7,
-        ease: "none",
+    killAnimation(); // 혹시 있을 기존 타임라인 제거
+
+    animationTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".banner_section",
+        start: "top",
+        end: "150%",
+        scrub: 1,
+        toggleActions: "play none none reverse",
       },
-      isMobile ? index * 0.4 : index
-    );
+    });
+
+    txtBoxes.forEach((box, index) => {
+      const fillText = box.querySelector(".text-fill");
+      animationTimeline.to(
+        fillText,
+        {
+          backgroundSize: "100% 100%",
+          duration: 1.7,
+          ease: "none",
+        },
+        index
+      );
+    });
+  }
+
+  // 리사이즈 디바운싱 처리
+  let resizeTimeout;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      initAnimation();
+    }, 300);
   });
+
+  // 첫 실행
+  initAnimation();
 
   // 카드 스크롤 애니메이션
   const timeline = gsap.timeline({
@@ -64,86 +98,53 @@ document.addEventListener("DOMContentLoaded", function () {
       { y: -772, duration: 0.3, ease: "power1.inOut" }
     );
 
-  // 모바일 카드 스크롤 애니메이션
-  const motimeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".clinical_results_mobile",
-      start: "top top",
-      end: "+=300%",
-      pin: true,
-      pinSpacing: true,
-      scrub: 1,
-    },
-  });
+  // // 모바일 카드 스크롤 애니메이션
+  // const motimeline = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".clinical_results_mobile",
+  //     start: "top top",
+  //     end: "+=300%",
+  //     pin: true,
+  //     pinSpacing: true,
+  //     scrub: true,
+  //   },
+  // });
 
-  // 첫 번째 카드는 고정
-  gsap.set(".section_box_mo:first-child", {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    zIndex: 1,
-  });
-
-  // 두 번째 카드 애니메이션
-  motimeline
-    .fromTo(
-      ".mo_back_2",
-      {
-        y: "100vh",
-        zIndex: 2,
-      },
-      {
-        y: "0",
-        duration: 1,
-        ease: "power2.inOut",
-      }
-    )
-
-    // 세 번째 카드 애니메이션
-    .fromTo(
-      ".mo_back_3",
-      {
-        y: "100vh",
-        zIndex: 3,
-      },
-      {
-        y: "0",
-        duration: 1,
-        ease: "power2.inOut",
-      }
-    );
+  // // 첫 번째 카드는 고정
+  // gsap.set(".section_box_mo:first-child", {
+  //   position: "absolute",
+  //   top: 0,
+  //   left: 0,
+  //   zIndex: 1,
+  // });
+  // motimeline
+  //   // 두 번째 카드 올라옴 (0% ~ 50%)
+  //   .fromTo(
+  //     ".mo_back_2",
+  //     { y: "1340px", zIndex: 2 },
+  //     {
+  //       y: "0vh",
+  //       ease: "power2.inOut",
+  //     },
+  //     0 // 타임라인 시작점
+  //   )
+  //   // 세 번째 카드 올라옴 (50% ~ 100%)
+  //   .fromTo(
+  //     ".mo_back_3",
+  //     { y: "100vh", zIndex: 3 },
+  //     {
+  //       y: "0vh",
+  //       ease: "power2.inOut",
+  //     },
+  //     0.5 // 타임라인 중간부터
+  //   );
 });
-
-// 스와이퍼
-// Scientific Basis Swiper 초기화
-// const researchSwiper = new Swiper(".researchSwiper", {
-//   spaceBetween: 60,
-//   centeredSlides: false,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//     type: "progressbar",
-//   },
-//   breakpoints: {
-//     320: {
-//       slidesPerView: 1,
-//       spaceBetween: 40,
-//     },
-//     768: {
-//       slidesPerView: 2,
-//       spaceBetween: 40,
-//     },
-//     1024: {
-//       slidesPerView: 3,
-//       spaceBetween: 40,
-//     },
-//   },
-// });
 
 // 모바일 Thesis 스와이퍼 초기화
 const mobileThesisSwiper = new Swiper(".mobileThesisSwiper", {
-  slidesPerView: 1.2,
+  slidesPerView: 1,
   spaceBetween: 40,
+  loop: true,
   direction: "horizontal",
   pagination: {
     el: ".swiper-pagination",

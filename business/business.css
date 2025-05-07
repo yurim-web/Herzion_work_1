@@ -91,127 +91,230 @@ main {
 }
 
 /* Business 섹션 공통 스타일 */
-.business_section {
-  padding: 120px 0;
-  width: 100%;
+.container {
+  padding: 0px 80px;
+  margin: 0 auto;
+}
+.section_title {
+  color: #3c3c3c;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 149.985%; /* 35.996px */
+  margin-bottom: 44px;
 }
 
-.business_content {
-  max-width: 1200px;
-  margin: 0 auto;
+/* Vibroacoustic 섹션  스타일 */
+.vibroacoustic_section {
+  background-color: #f7f7f7;
+  padding: 148px 0px 120px 0px;
+}
+/* 서브타이틀 */
+.section_sub_title {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 150% */
+  letter-spacing: -0.48px;
+}
+/* 이미지박스 */
+.section1_img_group {
+  display: flex;
+  gap: 400px;
+  justify-content: center;
+}
+/* 컨텐츠 박스 밑에 글 4개 부분 */
+.section1_content_container {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+}
+/* 컨텐츠 박스 밑에 글 4개 부분 */
+.section1_content_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 40px;
+  border-top: 1px solid #cdcdcd;
+}
+
+.section1_content_box > h3 {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px; /* 100% */
+  letter-spacing: -0.72px;
+}
+.section1_content_box > p {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 100% */
+  letter-spacing: -0.48px;
+}
+
+/* Cognitive Health Solutions 섹션 */
+.cognitive_health_section {
+  background-color: #ffffff;
+  padding: 148px 0px 150px 0px;
+}
+/* 제목 부분 */
+.section2_title_box {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 80px;
 }
-
-.business_text {
-  flex: 1;
+.section2_title_box > p {
+  color: #3c3c3c;
+  text-align: right;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 150% */
+  letter-spacing: -0.48px;
 }
-
-.section_title {
-  font-family: "Poppins", sans-serif;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 1.2;
-  color: #1a1a1a;
-  margin-bottom: 24px;
-}
-
-.section_desc {
-  font-size: 20px;
-  line-height: 1.5;
-  color: #666666;
-  margin-bottom: 40px;
-}
-
-.business_list {
-  list-style: none;
-  padding: 0;
-}
-
-.business_list li {
-  position: relative;
-  padding-left: 24px;
-  font-size: 18px;
-  line-height: 1.5;
-  color: #1a1a1a;
-  margin-bottom: 16px;
-}
-
-.business_list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 8px;
-  height: 8px;
-  background-color: #0066ff;
-  border-radius: 50%;
-}
-
-.business_image {
-  flex: 1;
-}
-
-.business_image img {
-  width: 100%;
-  height: auto;
-  border-radius: 24px;
-}
-
-/* Vibroacoustic 섹션 특별 스타일 */
-.vibroacoustic_section {
-  background-color: #ffffff;
-  padding: 120px 80px;
-}
-
-.feature_grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* 컨텐츠 부분 */
+.section2_content_continer {
+  margin-top: 150px;
+  display: flex;
   gap: 40px;
-  margin-top: 60px;
 }
-
-.feature_item {
-  padding: 32px;
-  background: #f8f8f8;
+/* 컨텐츠 박스 */
+.section2_content_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 이미지부분 */
+.section2_content_img_box {
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
   border-radius: 16px;
-  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+.section2_content_img_1 {
+  background-image: url("images/section2_img_1.png");
+}
+.section2_content_img_2 {
+  background-image: url("images/section2_img_2.png");
+}
+.section2_content_img_3 {
+  background-image: url("images/section2_img_3.png");
 }
 
-.feature_item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+.section2_content_box > h3 {
+  color: #000;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 100% */
+  letter-spacing: -0.64px;
+}
+.section2_content_box > p {
+  width: 388px;
+  color: #3c3c3c;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px; /* 170% */
+  letter-spacing: -0.4px;
 }
 
-.feature_item h3 {
+/* Lifestyle Wellness 섹션 */
+.lifestyle_wellness_section {
+  background-color: #f7f7f7;
+  padding: 148px 0px 140px 0px;
+}
+.section3_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 131px;
+}
+
+.section3_container_left > p {
+  width: 557px;
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 150% */
+  letter-spacing: -0.48px;
+}
+/* 섹션 오른쪽 부분  */
+.section3_container_right {
+  display: flex;
+  gap: 72px;
+}
+.content_left_box {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+.content_right_box {
+  margin-top: 266px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+/* 이미지막스 */
+.section3_img_box {
+  padding: 56px 42px;
+  width: 500px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 12px;
+
+  font-family: Pretendard;
+  font-style: normal;
+}
+.section3_img_box > h1 {
+  color: #3c3c3c;
   font-size: 24px;
   font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 12px;
+  line-height: 24px; /* 100% */
+  letter-spacing: -0.48px;
 }
-
-.feature_item p {
-  font-size: 16px;
-  color: #666666;
-  line-height: 1.5;
+.section3_img_box > h2 {
+  color: #3c3c3c;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 36px; /* 100% */
+  letter-spacing: -0.72px;
 }
-
-.business_image_group {
-  flex: 1;
-  display: flex;
-  gap: 24px;
-  align-items: center;
+.section3_img_box > p {
+  color: #3c3c3c;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 38px; /* 158.333% */
+  letter-spacing: -0.48px;
+  width: 312px;
 }
-
-.product_image {
-  width: calc(50% - 12px);
-  height: auto;
-  border-radius: 24px;
-  transition: all 0.3s ease;
-}
-
-.product_image:hover {
-  transform: scale(1.05);
+.section3_img_box > img {
+  margin-top: 40px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
 }
