@@ -415,3 +415,23 @@ main {
   opacity: 1;
   pointer-events: auto;
 }
+
+/* 커스텀 프로그래스 바 */
+.custom-progressbar {
+  width: 100%;
+  height: 8px;
+  background: #e8e8e8;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.custom-progressbar-bar {
+  width: 20%; /* JS에서 동적으로 변경 */
+  height: 100%;
+  background: #23295b;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+  transition: left 0.3s;
+}

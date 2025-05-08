@@ -17,6 +17,131 @@
     href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css"
     rel="stylesheet"
   />
+<style>
+    html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.faq, .wrapper, .container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+  .category-buttons {
+  display: flex;
+  margin: 0 auto;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 0px;
+}
+
+.category-buttons .category-button {
+  padding: 12px 24px;
+  display: flex;
+
+  padding: 12px 24px;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  border-radius: 30px;
+  border: 2px solid #23295b;
+
+  /* 버튼 글자 css */
+  color: #23295b;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 100% */
+  letter-spacing: -0.36px;
+  
+  cursor: pointer;
+}
+
+.category-buttons .category-button.active {
+  background-color: #23295b;
+  color: #ffff;
+}
+.faq_search_wrapper .form {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+input[name="search[query]"] {
+  width: 300px;
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+input[name="search[query]"]:focus {
+  border-color: #1D2A66;
+}
+
+.btn_search {
+  
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+ 
+  /* 검색창 부분 커스텀 css */
+    .custom-select-wrapper {
+  width:100%;
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 12px 40px 12px 16px; /* 오른쪽 패딩 줘야 아이콘 안 겹침 */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  min-width: 160px;
+  background-color: #fff;
+  font-family: inherit;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  pointer-events: none;
+}
+
+
+
+@media all and (max-width: 768px) {
+  .category-buttons {
+display: none;
+}
+.faq_search_wrapper .form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+}
+
+</style>
 
 <div module="Board_ListPackage_1002">
   <!-- 카페 24 전용 표시 ? 부분 -->
@@ -33,6 +158,8 @@
     </div>
     <p class="imgArea">{$board_top_image}</p>
   </div> -->
+         <!-- 모바일 토글 할때 백그라운드 흰색색 -->
+     <div class="mobile_menu_background"></div>
   <header>
     <nav>
       <div class="logo">
@@ -89,13 +216,10 @@
           </ul>
         </div>
         <button class="buy_now_btn">Buy Now</button>
-
       </div>
-
-       
       </div>
     </nav>
-  </header>
+ </header>
   <!-- 메인 베너 부분 -->
   <section class="banner_section">
     <div class="hero">
@@ -106,52 +230,44 @@
     </div>
   </section>
 <section class="faq_section">
-      <!-- 검색창 부분 -->
-  <div module="board_search_1002">
-    <fieldset class="boardSearch faq_search_wrapper">
-      <div class="form">
-        <a href="#none" class="btnNormal btn_search" onclick="{$action_search}"
-          ><img class="search_icon" src="images/search_icon.svg" alt=""
-        /></a>
-        <input class="search_input" type="text" placeholder="궁금한 내용을 검색해 보세요.">{$form.search}</input>
-      </div>
-    </fieldset>
+    
+<!-- 검색 영역 모듈 -->
+<div class="faq_search_wrapper">
+  <div class="form">
+    <button class="btn_search" id="faqSearchBtn">
+      <img class="search_icon" src="images/search_icon.svg" alt="검색" ></img>
+    </button>
+    <input
+      type="text"
+      id="faqSearchInput"
+      placeholder="궁금한 내용을 검색해 보세요."
+      class="search_input"
+    ></input>
   </div>
-
-<div module="board_list_1002" class="cartegory_btn_wrapper">
-     <div class="cartegory_btn  btn_active">  <a href="{$board_list_url}">
-    전체
-  </a></div>
-     <div class="cartegory_btn">
-     <a href="{$category_url}">
-      {$category_name}
-    </a></div>
-         <div class="cartegory_btn">
-     <a href="{$category_url}">
-      {$category_name}
-    </a></div>
-         <div class="cartegory_btn">
-     <a href="{$category_url}">
-      {$category_name}
-    </a></div>
-  
 </div>
+
 
 <div class="board_filter_wrap mo_category">
-  <span module="board_category_1002">
-    {$form.board_category}
-  </span>
+  <div class="custom-select-wrapper">
+    <span module="board_category_1002">
+      {$form.board_category}
+    </span>
+    <img src="images/mo_btn_arrow_down.svg" alt="화살표" class="select-arrow"></img>
+  </div>
 </div>
 
 
 
+<!-- 카테고리 버튼  -->
+<!-- 원래 select는 숨김 처리 -->
+<span module="board_category_1002" style="display: none;">
+  {$form.board_category}
+</span>
 
+<!-- 버튼이 생성될 곳 -->
+<div class="category-buttons"></div>
 
-
-
-
-
-
+<!-- 메인 faq 영역 -->
   <div class="faq">
     <div class="boardSort displaynone">
       <!-- <span id="category-dummy" module="board_category_1002"
@@ -174,7 +290,7 @@
       <article class="faq_item_container">
         <div class="faq__item faq_item_box">
             <div class="faq__q relative faq_inner_content">
-            <img src="images/q_icon.svg" alt="">
+            <img src="images/q_icon.svg" alt=""></img>
             <!-- 카테고리 이름 -->
               <div class="faq__category category_name_box">{$category_name}</div>
             <!-- 들어가는 글 부분 -->
@@ -194,13 +310,10 @@
     </article>
 
 
-
-
-
         <article class="faq_item_container">
             <div class="faq__item faq_item_box">
                 <div class="faq__q relative faq_inner_content">
-                <img src="images/q_icon.svg" alt="">
+                <img src="images/q_icon.svg" alt=""></img>
                 <!-- 카테고리 이름 -->
                   <div class="faq__category category_name_box">{$category_name}</div>
                 <!-- 들어가는 글 부분 -->
@@ -222,7 +335,7 @@
         <article class="faq_item_container">
           <div class="faq__item faq_item_box">
               <div class="faq__q relative faq_inner_content">
-              <img src="images/q_icon.svg" alt="">
+              <img src="images/q_icon.svg" alt=""></img>
               <!-- 카테고리 이름 -->
                 <div class="faq__category category_name_box">{$category_name}</div>
               <!-- 들어가는 글 부분 -->
@@ -243,7 +356,7 @@
       <article class="faq_item_container">
         <div class="faq__item faq_item_box">
             <div class="faq__q relative faq_inner_content">
-            <img src="images/q_icon.svg" alt="">
+            <img src="images/q_icon.svg" alt=""></img>
             <!-- 카테고리 이름 -->
               <div class="faq__category category_name_box">{$category_name}</div>
             <!-- 들어가는 글 부분 -->
@@ -264,7 +377,7 @@
     <article class="faq_item_container">
       <div class="faq__item faq_item_box">
           <div class="faq__q relative faq_inner_content">
-          <img src="images/q_icon.svg" alt="">
+          <img src="images/q_icon.svg" alt=""></img>
           <!-- 카테고리 이름 -->
             <div class="faq__category category_name_box">{$category_name}</div>
           <!-- 들어가는 글 부분 -->
@@ -285,7 +398,7 @@
   <article class="faq_item_container">
     <div class="faq__item faq_item_box">
         <div class="faq__q relative faq_inner_content">
-        <img src="images/q_icon.svg" alt="">
+        <img src="images/q_icon.svg" alt=""></img>
         <!-- 카테고리 이름 -->
           <div class="faq__category category_name_box">{$category_name}</div>
         <!-- 들어가는 글 부분 -->
@@ -306,7 +419,7 @@
 <article class="faq_item_container">
   <div class="faq__item faq_item_box">
       <div class="faq__q relative faq_inner_content">
-      <img src="images/q_icon.svg" alt="">
+      <img src="images/q_icon.svg" alt=""></img>
       <!-- 카테고리 이름 -->
         <div class="faq__category category_name_box">{$category_name}</div>
       <!-- 들어가는 글 부분 -->
@@ -323,11 +436,11 @@
           <p style="margin: 0" class="faq_answer_text">{$content|raw}</p>
       </div>
     </div>
-    </article>
+</article>
     <article class="faq_item_container">
       <div class="faq__item faq_item_box">
           <div class="faq__q relative faq_inner_content">
-          <img src="images/q_icon.svg" alt="">
+          <img src="images/q_icon.svg" alt=""></img>
           <!-- 카테고리 이름 -->
             <div class="faq__category category_name_box">{$category_name}</div>
           <!-- 들어가는 글 부분 -->
@@ -349,7 +462,7 @@
     </div>
     <!-- 더보기 버튼 -->
      <button class="faq_more_btn">
-      <img src="images/+_icon.svg" alt="">
+      <img src="images/+_icon.svg" alt=""></img>
           <span>more</span>
      </button>
 
@@ -449,22 +562,24 @@
 
 
 
-
+<!-- 카페 24에 원래 있던 부분 -->
 
 <!-- Admin only -->
-<div module="board_catemove_1002">
+<!--<div module="board_catemove_1002">-->
   <!--@css(/css/module/board/catemove.css)-->
-  <span class="gColumn">{$board_catemove_selectbox}</span>
+
+
+  <!-- <span class="gColumn">{$board_catemove_selectbox}</span>
   <span class="gColumn"
     ><a href="#none" class="btnNormal sizeS" onclick="{$action_category_move}"
       >{$category_move}</a
     ></span
   >
-</div>
+</div> -->
 
-<div module="board_function_1002">
+<!--<div module="board_function_1002">-->
   <!--@css(/css/module/board/function.css)-->
-  <span class="gColumn">{$board_function_selectbox}</span>
+  <!-- <span class="gColumn">{$board_function_selectbox}</span>
   <span class="gColumn">
     <a href="#none" class="btnNormal sizeS" onclick="{$action_article_move}"
       >{$article_move}</a
@@ -474,7 +589,86 @@
     >
   </span>
   <span class="ec-base-help">{$board_function_help|replace:*,}</span>
-</div>
+</div> -->
 <!-- // Admin only -->
 
+
+
+<!-- 카테고리 버튼 생성 스크립트 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+      const select = document.querySelector("select[name='board_category']");
+      const buttonWrap = document.querySelector(".category-buttons");
+
+      if (!select || !buttonWrap) return;
+
+      const currentValue = select.value;
+
+      Array.from(select.options).forEach((option) => {
+        const btn = document.createElement("button");
+        btn.textContent = option.text;
+        btn.dataset.value = option.value;
+
+        // 기본 버튼 클래스 적용
+        btn.classList.add("category-button");
+
+        // 현재 선택된 카테고리 버튼이면 active 클래스 부여
+        if (option.value === currentValue) {
+          btn.classList.add("active");
+        }
+
+        btn.addEventListener("click", function () {
+          // 모든 버튼에서 active 제거
+          buttonWrap.querySelectorAll("button").forEach(b => b.classList.remove("active"));
+
+          // 현재 버튼에 active 추가
+          btn.classList.add("active");
+
+          // select 값 변경
+          select.value = btn.dataset.value;
+
+          // 카페24 Ajax 필터링을 위한 change 이벤트 트리거
+          select.dispatchEvent(new Event("change"));
+        });
+
+        buttonWrap.appendChild(btn);
+      });
+    }, 300);
+  });
+    
+    
+ document.addEventListener("DOMContentLoaded", function () {
+    const input = document.getElementById("faqSearchInput");
+    const button = document.getElementById("faqSearchBtn");
+
+    function searchFAQ() {
+      const keyword = input.value.trim().toLowerCase();
+      const items = document.querySelectorAll(".faq_item_container");
+
+      items.forEach(item => {
+        const title = item.querySelector(".faq__a")?.textContent.toLowerCase() || "";
+        const answer = item.querySelector(".faq_answer_text")?.textContent.toLowerCase() || "";
+
+        if (title.includes(keyword) || answer.includes(keyword)) {
+          item.style.display = "";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    }
+
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      searchFAQ();
+    });
+
+    input.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        searchFAQ();
+      }
+    });
+  });
+</script>
 
