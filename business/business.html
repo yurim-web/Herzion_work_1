@@ -1,4 +1,4 @@
-<!--  제품페이지  -->
+<!--  사업 분야 페이지  -->
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -25,6 +25,7 @@
     <script src="business.js" defer></script>
   </head>
   <body>
+    <!-- 헤더의 시작 -->
     <!-- 모바일 토글 할때 백그라운드 흰색색 -->
     <div class="mobile_menu_background"></div>
     <!-- 헤더 부분 -->
@@ -32,31 +33,33 @@
       <nav>
         <div class="logo">
           <a href="/">
-            <img src="images/logo.svg" alt="HERZION" class="header_logo"></img>
+            <img src="/layout_new/layout_images/logo.svg" alt="HERZION" class="header_logo"></img>
             <!-- 모바일 전용 로고 -->
             <img
-              src="images/m_header_logo.svg"
+              src="/layout_new/layout_images/m_header_logo.svg"
               alt="HERZION"
               class="header_logo_mobile"
             ></img>
           </a>
         </div>
         <div class="nav_right">
-          <button class="menu_btn">Menu</button>
-          <div class="menu_drop">
-            <ul class="menu_drop_list">
-              <li><a href="/" data-text="Home">Home</a></li>
-              <li><a href="/product_page/product.html" data-text="Product">Product</a></li>
-              <li><a href="/technology/technology.html" data-text="Technology">Technology</a></li>
-              <li><a href="/business/business.html" data-text="Business">Business</a></li>
-              <li>
-                <a href="/support/support.html" data-text="Support">Support</a>
-              </li>
-              <li><a href="" data-text="FAQ">FAQ</a></li>
-              <li>
-                <a href="/contact/contact.html" data-text="Support">Contact</a>
-              </li>
-            </ul>
+          <div class="menu_wrapper">
+            <button class="menu_btn">Menu</button>
+            <div class="menu_drop">
+              <ul class="menu_drop_list">
+                <li><a href="/" data-text="Home">Home</a></li>
+                <li><a href="/product_page/product.html" data-text="Product">Product</a></li>
+                <li><a href="/technology/technology.html" data-text="Technology">Technology</a></li>
+                <li><a href="/business/business.html" data-text="Business">Business</a></li>
+                <li>
+                  <a href="/support/support.html" data-text="Support">Support</a>
+                </li>
+                <li><a href="/faq/faq.html" data-text="FAQ">FAQ</a></li>
+                <li>
+                  <a href="/contact/contact.html" data-text="Support">Contact</a>
+                </li>
+              </ul>
+            </div>
           </div>
            <!-- 모바일 메뉴 -->
            <span class="menu_btn_mobile" id="menu_btn_mobile">Menu</span>
@@ -75,26 +78,24 @@
             </div>
             <ul class="mobile_menu_list">
               <li><a href="/">Home</a></li>
-              <li><a href="">Product</a></li>
-              <li><a href="">Technology</a></li>
-              <li><a href="">Business</a></li>
+              <li><a href="/product_page/product.html">Product</a></li>
+              <li><a href="/technology/technology.html">Technology</a></li>
+              <li><a href="/business/business.html">Business</a></li>
               <li><a href="/support/support.html">Support</a></li>
-              <li><a href="">FAQ</a></li>
+              <li><a href="/faq/faq.html">FAQ</a></li>
               <li><a href="/contact/contact.html">Contact</a></li>
             </ul>
           </div>
-          <button class="buy_now_btn">Buy Now</button>
-
+         <button class="buy_now_btn">
+          <a href="https://herzion.com/product/detail.html?product_no=10"><span class="buy_now_btn_text">Buy Now</span></a>
+         </button>
         </div>
-
-         
         </div>
       </nav>
     </header>
+    <!-- 헤더 끝 -->
 
     <main>
-
-
       <!-- 메인 베너 부분 -->
       <section class="banner_section">
         <div class="hero">

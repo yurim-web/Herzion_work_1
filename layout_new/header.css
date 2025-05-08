@@ -18,7 +18,7 @@ nav {
 }
 
 .header_logo {
-  height: 24px;
+  width: 150px;
   cursor: pointer;
 }
 
@@ -31,34 +31,48 @@ nav {
   gap: 40px;
   align-items: center;
 }
+
+/* 메뉴버튼 모바일 버전 */
 .menu_btn_mobile {
   display: none;
-  color: #3c3c3c;
+  color: #000;
   text-align: right;
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 16px; /* 100% */
+  line-height: 17px;
   cursor: pointer;
 }
-
+/* buy now 버튼 */
 .buy_now_btn {
+  width: 152px;
+  height: 56px;
   background-color: transparent;
   border-radius: 34px !important;
-  border: 2px solid #b0b0b0;
-  color: #b0b0b0;
-  text-align: right;
+  border: 2px solid #000;
+  color: #000;
+  /* text-align: right; */
   font-family: Poppins;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px; /* 100% */
-  padding: 18px 28px;
+  /* padding: 18px 28px; */
   cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
 }
+
+.buy_now_btn:hover {
+  background-color: #000;
+  border: 2px solid #000;
+  color: #ffffff;
+  font-weight: 600;
+}
+/* 메뉴버튼 pc 버전 */
 .menu_btn {
-  color: #b0b0b0;
+  color: #000;
   text-align: right;
   font-family: Poppins;
   font-size: 20px;
@@ -69,6 +83,19 @@ nav {
   border: none;
   cursor: pointer;
 }
+.menu_btn:hover {
+  font-weight: 600;
+}
+
+.menu_wrapper:hover .menu_btn {
+  font-weight: 600;
+}
+.menu_wrapper:hover .menu_drop {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+}
+
 /* 메뉴 드롭다운 */
 .menu_drop {
   position: absolute;
@@ -82,12 +109,6 @@ nav {
   transform: translate(-4px, 70px);
   transition: opacity 0.2s ease-out, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     visibility 0.2s ease-out;
-}
-
-.nav_right:hover .menu_drop {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(0, 0);
 }
 
 .menu_drop.active {
@@ -347,4 +368,9 @@ nav {
     margin: 0px 0px;
     z-index: 1002;
   }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
