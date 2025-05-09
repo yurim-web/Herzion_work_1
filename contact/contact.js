@@ -91,30 +91,22 @@ function checkFormValidity() {
   const allFilled = Array.from(submitRequiredInputs).every(
     (input) => input.value.trim() !== ""
   );
-  const allInputsFilled = Array.from(requiredInputs).every(
-    (input) => input.value.trim() !== ""
-  );
-
   if (allFilled) {
-    console.log("제출가능");
     secondsubmitBtn.disabled = false;
     secondsubmitBtn.style.color = "#3C3C3C";
   } else {
-    console.log("제출불가능");
     secondsubmitBtn.disabled = true;
     secondsubmitBtn.style.color = "#999";
   }
 
-  // 모든 입력 필드가 채워졌을 때만 배경색 변경
-  if (allInputsFilled) {
-    requiredInputs.forEach((input) => {
+  // 각 input에 입력이 있으면 배경색 변경
+  requiredInputs.forEach((input) => {
+    if (input.value.trim() !== "") {
       input.style.backgroundColor = "rgba(0, 0, 0, 0.04)";
-    });
-  } else {
-    requiredInputs.forEach((input) => {
+    } else {
       input.style.backgroundColor = "";
-    });
-  }
+    }
+  });
 }
 
 // 제출 버튼 클릭 이벤트

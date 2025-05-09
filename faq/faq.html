@@ -158,68 +158,76 @@ display: none;
     </div>
     <p class="imgArea">{$board_top_image}</p>
   </div> -->
-         <!-- 모바일 토글 할때 백그라운드 흰색색 -->
-     <div class="mobile_menu_background"></div>
-  <header>
-    <nav>
-      <div class="logo">
-        <a href="/">
-          <img src="images/logo.svg" alt="HERZION" class="header_logo"></img>
-          <!-- 모바일 전용 로고 -->
-          <img
-            src="images/m_header_logo.svg"
-            alt="HERZION"
-            class="header_logo_mobile"
-          ></img>
-        </a>
-      </div>
-      <div class="nav_right">
-        <button class="menu_btn">Menu</button>
-        <div class="menu_drop">
-          <ul class="menu_drop_list">
-            <li><a href="/" data-text="Home">Home</a></li>
-            <li><a href="/product_page/product.html" data-text="Product">Product</a></li>
-            <li><a href="/technology/technology.html" data-text="Technology">Technology</a></li>
-            <li><a href="/business/business.html" data-text="Business">Business</a></li>
-            <li>
-              <a href="/support/support.html" data-text="Support">Support</a>
-            </li>
-            <li><a href="/faq/faq.html" data-text="FAQ">FAQ</a></li>
-            <li>
-              <a href="/contact/contact.html" data-text="Support">Contact</a>
-            </li>
-          </ul>
+    <!-- 헤더의 시작 -->
+    <!-- 모바일 토글 할때 백그라운드 흰색색 -->
+    <div class="mobile_menu_background"></div>
+    <!-- 헤더 부분 -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="/">
+            <img src="/layout_new/layout_images/logo.svg" alt="HERZION" class="header_logo"></img>
+            <!-- 모바일 전용 로고 -->
+            <img
+              src="/layout_new/layout_images/m_header_logo.svg"
+              alt="HERZION"
+              class="header_logo_mobile"
+            ></img>
+          </a>
         </div>
-         <!-- 모바일 메뉴 -->
-         <span class="menu_btn_mobile" id="menu_btn_mobile">Menu</span>
-         <button class="menu_btn_mobile_close" id="menu_btn_mobile_close">X</button>
-         <div class="mobile_menu" id="mobile_menu">
-          <div class="mobile_menu_lang">
-            <button class="active">KOR</button>
-            <button>ENG</button>
-            <button>JPN</button>
+        <div class="nav_right">
+          <div class="menu_wrapper">
+            <button class="menu_btn">Menu</button>
+            <div class="menu_drop">
+              <ul class="menu_drop_list">
+                <li><a href="/" data-text="Home">Home</a></li>
+                <li><a href="/product_page/product.html" data-text="Product">Product</a></li>
+                <li><a href="/technology/technology.html" data-text="Technology">Technology</a></li>
+                <li><a href="/business/business.html" data-text="Business">Business</a></li>
+                <li>
+                  <a href="/support/support.html" data-text="Support">Support</a>
+                </li>
+                <li><a href="/faq/faq.html" data-text="FAQ">FAQ</a></li>
+                <li>
+                  <a href="/contact/contact.html" data-text="Support">Contact</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="mobile_menu_shop">
-            <a href="">Shop now</a>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+           <!-- 모바일 메뉴 -->
+           <span class="menu_btn_mobile" id="menu_btn_mobile">Menu</span>
+           <button class="menu_btn_mobile_close" id="menu_btn_mobile_close">X</button>
+           <div class="mobile_menu" id="mobile_menu">
+            <div class="mobile_menu_lang">
+              <button class="active">KOR</button>
+              <button>ENG</button>
+              <button>JPN</button>
+            </div>
+            <div class="mobile_menu_shop">
+              <a href="">Shop now</a>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <ul class="mobile_menu_list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/product_page/product.html">Product</a></li>
+              <li><a href="/technology/technology.html">Technology</a></li>
+              <li><a href="/business/business.html">Business</a></li>
+              <li><a href="/support/support.html">Support</a></li>
+              <li><a href="/faq/faq.html">FAQ</a></li>
+              <li><a href="/contact/contact.html">Contact</a></li>
+            </ul>
           </div>
-          <ul class="mobile_menu_list">
-            <li><a href="/">Home</a></li>
-            <li><a href="/product_page/product.html">Product</a></li>
-            <li><a href="/technology/technology.html">Technology</a></li>
-            <li><a href="/business/business.html">Business</a></li>
-            <li><a href="/support/support.html">Support</a></li>
-            <li><a href="/faq/faq.html">FAQ</a></li>
-            <li><a href="/contact/contact.html">Contact</a></li>
-          </ul>
+         <button class="buy_now_btn">
+          <a href="https://herzion.com/product/detail.html?product_no=10"><span class="buy_now_btn_text">Buy Now</span></a>
+         </button>
         </div>
-        <button class="buy_now_btn">Buy Now</button>
-      </div>
-      </div>
-    </nav>
- </header>
+        </div>
+      </nav>
+    </header>
+    <!-- 헤더 끝 -->
+
   <!-- 메인 베너 부분 -->
   <section class="banner_section">
     <div class="hero">
@@ -500,57 +508,59 @@ display: none;
 
 <!-- 푸터부분 -->
 <footer>
-    <div class="footer_top_content">
-      <div class="footer_left">
-        <img src="images/footer_logo.svg" alt="HERZION" class="footer_logo"></img>
-        <div class="contact_info">
-          <div class="contact_info_left">
-            <div class="info_group">
-              <p class="label">Tel</p>
-              <span>02-2637-0009</span>
-            </div>
-            <div class="info_group">
-              <p class="label">E-mail</p>
-              <span>help@herzion.com</span>
-            </div>
+  <div class="footer_top_content">
+    <div class="footer_left">
+      <img src="images/footer_logo.svg" alt="HERZION" class="footer_logo"></img>
+      <div class="contact_info">
+        <div class="contact_info_left">
+          <div class="info_group">
+            <p class="label">Tel</p>
+            <span>02-2637-0009</span>
           </div>
-          <div class="contact_info_right">
-            <div class="info_group">
-              <p class="label">Address</p>
-              <span>경기도 성남시 분당구 동판교로 56, (주)아리바이오</span>
-            </div>
+          <div class="info_group">
+            <p class="label">E-mail</p>
+            <span>help@herzion.com</span>
+          </div>
+        </div>
+        <div class="contact_info_right">
+          <div class="info_group">
+            <p class="label">Address</p>
+            <span>경기도 성남시 분당구 동판교로 56, (주)아리바이오</span>
           </div>
         </div>
       </div>
-      <div class="footer_right">
-        <ul class="footer_links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/product_page/product.html">Product</a></li>
-          <li><a href="/technology/technology.html">Technology</a></li>
-          <li><a href="/contact/contact.html">Contact</a></li>
-          <li><a href="/support/support.html">Support</a></li>
-        </ul>
-        <div class="app_download_box">
-          <a href="https://apps.apple.com/br/app/%ED%97%A4%EB%A5%B4%EC%A7%80%EC%98%A8/id6463604810" target="_blank" class="store_btn">
-            <img src="images/apple_logo.svg" alt="" /><span>App Store</span>
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=com.aribio.app.herzion&hl=ko" target="_blank" class="store_btn">
-            <img src="images/google_logo.svg" alt="" /><span
-              >Google Play</span
-            >
-          </a>
-        </div>
+    </div>
+    <div class="footer_right">
+      <ul class="footer_links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/product_page/product.html">Product</a></li>
+        <li><a href="/technology/technology.html">Technology</a></li>
+        <li><a href="/business/business.html">Business</a></li>
+        <li><a href="/support/support.html">Support</a></li>
+        <li><a href="/faq/faq.html">FAQ</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+      </ul>
+      <div class="app_download_box">
+        <a href="https://apps.apple.com/br/app/%ED%97%A4%EB%A5%B4%EC%A7%80%EC%98%A8/id6463604810" target="_blank" class="store_btn">
+          <img src="images/apple_logo.svg" alt="" ></img><span>App Store</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.aribio.app.herzion&hl=ko" target="_blank" class="store_btn">
+          <img src="images/google_logo.svg" alt="" ></img><span
+            >Google Play</span
+          >
+        </a>
       </div>
     </div>
-    <div class="footer_bottom">
-      <p>ⓒ 2024 by Aribio. All Rights Reserved.</p>
-      <img
-        src="images/footer_logo.svg"
-        alt="HERZION"
-        class="footer_logo_bottom"
-      ></img>
-    </div>
-  </footer>
+  </div>
+  <div class="footer_bottom">
+    <p>ⓒ 2024 by Aribio. All Rights Reserved.</p>
+    <img
+      src="images/footer_logo.svg"
+      alt="HERZION"
+      class="footer_logo_bottom"
+    ></img>
+  </div>
+</footer>
   
       <!-- 상단이동하는 버튼 -->
       <button class="top_btn" id="top_btn">

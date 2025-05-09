@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>contact</title>
-    <link rel="stylesheet" href="/contact/contact.css"/>
+    <link rel="stylesheet" href="/contact/contact.css" />
     <link rel="stylesheet" href="../layout_new/header.css" />
     <link rel="stylesheet" href="../layout_new/footer.css" />
     <script src="../layout_new/layout.js" defer></script>
@@ -14,10 +14,11 @@
     <script src="contact.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css" rel="stylesheet" />
-    <link rel="stylesheet" href="contact.css">
-  
+
+     
   </head>
   <body>
+     <!-- 헤더의 시작 -->
     <!-- 모바일 토글 할때 백그라운드 흰색색 -->
     <div class="mobile_menu_background"></div>
     <!-- 헤더 부분 -->
@@ -25,31 +26,33 @@
       <nav>
         <div class="logo">
           <a href="/">
-            <img src="images/logo.svg" alt="HERZION" class="header_logo"/>
+            <img src="/layout_new/layout_images/logo.svg" alt="HERZION" class="header_logo"></img>
             <!-- 모바일 전용 로고 -->
             <img
-              src="images/m_header_logo.svg"
+              src="/layout_new/layout_images/m_header_logo.svg"
               alt="HERZION"
               class="header_logo_mobile"
-            />
+            ></img>
           </a>
         </div>
         <div class="nav_right">
-          <button class="menu_btn">Menu</button>
-          <div class="menu_drop">
-            <ul class="menu_drop_list">
-              <li><a href="/" data-text="Home">Home</a></li>
-              <li><a href="/product/product.html" data-text="Product">Product</a></li>
-              <li><a href="/technology/technology.html" data-text="Technology">Technology</a></li>
-              <li><a href="/business/business.html" data-text="Business">Business</a></li>
-              <li>
-                <a href="/support/support.html" data-text="Support">Support</a>
-              </li>
-              <li><a href="" data-text="FAQ">FAQ</a></li>
-              <li>
-                <a href="/contact/contact.html" data-text="Support">Contact</a>
-              </li>
-            </ul>
+          <div class="menu_wrapper">
+            <button class="menu_btn">Menu</button>
+            <div class="menu_drop">
+              <ul class="menu_drop_list">
+                <li><a href="/" data-text="Home">Home</a></li>
+                <li><a href="/product_page/product.html" data-text="Product">Product</a></li>
+                <li><a href="/technology/technology.html" data-text="Technology">Technology</a></li>
+                <li><a href="/business/business.html" data-text="Business">Business</a></li>
+                <li>
+                  <a href="/support/support.html" data-text="Support">Support</a>
+                </li>
+                <li><a href="/faq/faq.html" data-text="FAQ">FAQ</a></li>
+                <li>
+                  <a href="/contact/contact.html" data-text="Support">Contact</a>
+                </li>
+              </ul>
+            </div>
           </div>
            <!-- 모바일 메뉴 -->
            <span class="menu_btn_mobile" id="menu_btn_mobile">Menu</span>
@@ -68,22 +71,22 @@
             </div>
             <ul class="mobile_menu_list">
               <li><a href="/">Home</a></li>
-              <li><a href="">Product</a></li>
-              <li><a href="">Technology</a></li>
-              <li><a href="">Business</a></li>
+              <li><a href="/product_page/product.html">Product</a></li>
+              <li><a href="/technology/technology.html">Technology</a></li>
+              <li><a href="/business/business.html">Business</a></li>
               <li><a href="/support/support.html">Support</a></li>
-              <li><a href="">FAQ</a></li>
+              <li><a href="/faq/faq.html">FAQ</a></li>
               <li><a href="/contact/contact.html">Contact</a></li>
             </ul>
           </div>
-          <button class="buy_now_btn">Buy Now</button>
-
+         <button class="buy_now_btn">
+          <a href="https://herzion.com/product/detail.html?product_no=10"><span class="buy_now_btn_text">Buy Now</span></a>
+         </button>
         </div>
-
-         
         </div>
       </nav>
     </header>
+    <!-- 헤더 끝 -->
 
     <main>
       <!-- 메인 베너 부분 -->
@@ -137,7 +140,7 @@
               <div class="inquiry_box inquiry_box_desktop">
                 <div class="inquiry_contents">
                   <div class="inquiry_left_container">
-                    <h1>문의를 원하시는 분의<br />정보를 남겨주세요.</h1>
+                    <h1>문의를 원하시는 분의<br/>정보를 남겨주세요.</h1>
                   </div>
                   <div class="information_right_container">
                     <!-- 회사 정보 부분 -->
@@ -153,11 +156,10 @@
                         <input
                           class="information_btn information_input"
                           placeholder="회사/기업명을 입력해 주세요."
-                        />
-                        <input
+                        ></ingput><input
                           class="information_btn information_input"
                           placeholder="이메일을 입력해 주세요."
-                        />
+                        ></input>
                       </div>
                     </div>
                     <!-- 담당자 정보 부분 -->
@@ -170,12 +172,8 @@
                         <button class="information_btn">
                           연락처<span class="red_color">*</span>
                         </button>
-                        <input
-                          class="information_btn information_input"
-                          placeholder="이름을 입력해 주세요."/><input
-                          class="information_btn information_input"
-                          placeholder="연락처를 입력해 주세요."
-                        />
+                        <input class="information_btn information_input" placeholder="이름을 입력해 주세요."></input>
+                        <input class="information_btn information_input" placeholder="연락처를 입력해 주세요."></input>
                       </div>
                     </div>
                     <!-- 문의 정보 부분 -->
@@ -183,10 +181,7 @@
                       <h3>담당자 정보</h3>
                       <div class="information_btn_box last_btn_box">
                         <button class="information_btn">문의 내용</button>
-                        <input
-                          class="information_btn information_input"
-                          placeholder="문의 내용을 작성해 주세요."
-                        ></input>
+                        <input class="information_btn information_input" placeholder="문의 내용을 작성해 주세요."></input>
                       </div>
                     </div>
                   </div>
@@ -201,35 +196,11 @@
                     <p style="color: #ff3a3a">＊ 전체 항목 필수 입력</p>
                   </div>
                   <div class="inquiry_right_container">
-                    <input
-                      class="inquiry_btn input_mobile"
-                      placeholder="회사/기업명"
-                    />
-                    <input
-                      class="inquiry_btn input_mobile"
-                      style="color: #3c3c3c"
-                      placeholder="이메일"
-                    />
-                    <input
-                      class="inquiry_btn input_mobile"
-                      style="color: #3c3c3c"
-                      placeholder="이름"
-                    />
-                    <input
-                      class="inquiry_btn input_mobile"
-                      style="color: #3c3c3c"
-                      placeholder="연락처"
-                    />
-                    <textarea
-                      class="inquiry_btn input_mobile_long"
-                      placeholder="문의 내용"
-                      rows="4"
-                    ></textarea>
+                    <input class="inquiry_btn input_mobile" placeholder="회사/기업명"/><input class="inquiry_btn input_mobile"style="color: #3c3c3c" placeholder="이메일"/><input class="inquiry_btn input_mobile" style="color: #3c3c3c"placeholder="이름"/><input class="inquiry_btn input_mobile" style="color: #3c3c3c" placeholder="연락처"/><textarea class="inquiry_btn input_mobile_long" placeholder="문의 내용" rows="4"></textarea>
                   </div>
                 </div>
                 <button
                   class="inquiry_btn inquiry_btn_mobile"
-     
                   id="next_btn_mobile"
                 >
                   다음
@@ -237,7 +208,7 @@
               </div>
               <!-- 제출 버튼 -->
               <button class="submit_btn submit_btn_location" id="second_submit_btn">제출 →</button>
-              <!-- 이전 버튼 -->
+               <!-- 이전 버튼 -->
               <button class="submit_btn submit_btn_location_back" id="second_back_btn">← 이전</button>
             </section>
           </div>
@@ -262,60 +233,62 @@
         </div>
       </div>
     </main>
-    <!-- 푸터부분 -->
-    <footer>
-      <div class="footer_top_content">
-        <div class="footer_left">
-          <img src="images/footer_logo.svg" alt="HERZION" class="footer_logo" />
-          <div class="contact_info">
-            <div class="contact_info_left">
-              <div class="info_group">
-                <p class="label">Tel</p>
-                <span>02-2637-0009</span>
-              </div>
-              <div class="info_group">
-                <p class="label">E-mail</p>
-                <span>help@herzion.com</span>
-              </div>
-            </div>
-            <div class="contact_info_right">
-              <div class="info_group">
-                <p class="label">Address</p>
-                <span>경기도 성남시 분당구 동판교로 56, (주)아리바이오</span>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="footer_right">
-          <ul class="footer_links">
-            <li><a href="/">Home</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Technology</a></li>
-            <li><a href="/contact/contact.html">Contact</a></li>
-            <li><a href="/support/support.html">Support</a></li>
-          </ul>
-          <div class="app_download_box">
-            <a href="https://apps.apple.com/" target="_blank" class="store_btn">
-              <img src="images/apple_logo.svg" alt="" /><span>App Store</span>
-            </a>
-            <a href="https://play.google.com/" target="_blank" class="store_btn">
-              <img src="images/google_logo.svg" alt="" /><span
-                >Google Play</span
-              >
-            </a>
+<!-- 푸터부분 -->
+<footer>
+  <div class="footer_top_content">
+    <div class="footer_left">
+      <img src="images/footer_logo.svg" alt="HERZION" class="footer_logo"></img>
+      <div class="contact_info">
+        <div class="contact_info_left">
+          <div class="info_group">
+            <p class="label">Tel</p>
+            <span>02-2637-0009</span>
+          </div>
+          <div class="info_group">
+            <p class="label">E-mail</p>
+            <span>help@herzion.com</span>
+          </div>
+        </div>
+        <div class="contact_info_right">
+          <div class="info_group">
+            <p class="label">Address</p>
+            <span>경기도 성남시 분당구 동판교로 56, (주)아리바이오</span>
           </div>
         </div>
       </div>
-      <div class="footer_bottom">
-        <p>ⓒ 2024 by Aribio. All Rights Reserved.</p>
-        <img
-          src="images/footer_logo.svg"
-          alt="HERZION"
-          class="footer_logo_bottom"
-        />
+    </div>
+    <div class="footer_right">
+      <ul class="footer_links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/product_page/product.html">Product</a></li>
+        <li><a href="/technology/technology.html">Technology</a></li>
+        <li><a href="/business/business.html">Business</a></li>
+        <li><a href="/support/support.html">Support</a></li>
+        <li><a href="/faq/faq.html">FAQ</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+      </ul>
+      <div class="app_download_box">
+        <a href="https://apps.apple.com/br/app/%ED%97%A4%EB%A5%B4%EC%A7%80%EC%98%A8/id6463604810" target="_blank" class="store_btn">
+          <img src="images/apple_logo.svg" alt="" ></img><span>App Store</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.aribio.app.herzion&hl=ko" target="_blank" class="store_btn">
+          <img src="images/google_logo.svg" alt="" ></img><span
+            >Google Play</span
+          >
+        </a>
       </div>
-    </footer>
+    </div>
+  </div>
+  <div class="footer_bottom">
+    <p>ⓒ 2024 by Aribio. All Rights Reserved.</p>
+    <img
+      src="images/footer_logo.svg"
+      alt="HERZION"
+      class="footer_logo_bottom"
+    ></img>
+  </div>
+</footer>
 
     <!-- 상단이동하는 버튼 -->
     <button class="top_btn" id="top_btn">

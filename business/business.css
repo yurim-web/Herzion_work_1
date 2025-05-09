@@ -19,6 +19,19 @@ main {
   flex-direction: column;
   justify-content: center;
 }
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+.container,
+.banner_section,
+.hero,
+main,
+section {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
 
 /* hero section */
 .banner_section {
@@ -444,8 +457,10 @@ main {
   padding: 104px 0px;
 }
 .global_container {
-  display: flex;
-  gap: 152px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* gap: 152px; */
 }
 .global_text_4box {
   width: 100%;

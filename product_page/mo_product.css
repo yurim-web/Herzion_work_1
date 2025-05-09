@@ -10,7 +10,7 @@
 }
 .section_box_mo {
   width: 100%;
-  height: 1167px;
+  height: auto;
   background-image: url("images/mo/m_card_back_1.png");
   background-size: cover;
   background-position: center;
@@ -23,12 +23,12 @@
 }
 .mo_back_2 {
   background-image: url("images/mo/m_card_back_2.png");
-  height: 1340px;
+  height: auto;
   z-index: 8000;
 }
 .mo_back_3 {
   background-image: url("images/mo/m_card_back_3.png");
-  height: 842px;
+  height: auto;
 }
 .section_title_mo {
   color: #fff;
@@ -503,6 +503,24 @@
     line-height: 30px; /* 146.667% */
     letter-spacing: -0.6px;
   }
+  /* 모바일 버전에서는 애니메이션 없이 텍스트 흰색 */
+  .product_intro .text-fill {
+    display: block;
+    position: relative;
+    background: linear-gradient(
+      to right,
+      #ffffff 0%,
+      #ffffff 50%,
+      #ffffff 50%,
+      #ffffff 100%
+    );
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
 
   /* 비디오 섹션 */
   .main_video_section {
@@ -774,6 +792,24 @@
     line-height: 48px; /* 146.667% */
     letter-spacing: -0.6px;
   }
+  /* 모바일 버전에서는 애니메이션 없이 텍스트 흰색 */
+  .product_intro .text-fill {
+    display: block;
+    position: relative;
+    background: linear-gradient(
+      to right,
+      #ffffff 0%,
+      #ffffff 50%,
+      #ffffff 50%,
+      #ffffff 100%
+    );
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
 
   /* 비디오 섹션 */
   .main_video_section {
@@ -801,7 +837,7 @@
   /* clinicl 섹션 */
 
   .section_box_mo {
-    margin-top: 100px;
+    margin-top: 0px;
     padding: 80px 60px;
   }
 
