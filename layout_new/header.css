@@ -255,6 +255,79 @@ nav {
   color: #ffffff;
   text-decoration: none;
 }
+/* 언어 선택 부분 */
+
+/* 커스텀 언어 드롭다운 */
+.custom-lang-dropdown {
+  position: relative;
+  display: inline-block;
+  min-width: 65px;
+}
+.selected-lang {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+  transition: all 0.3s;
+}
+.select-arrow {
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.3s;
+  transform-origin: 50% 50%;
+  margin-left: 4px;
+  flex-shrink: 0;
+  align-self: center;
+}
+.lang-options {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: rgba(255, 255, 255, 0); /* 완전 투명 */
+  z-index: 100;
+}
+.lang-options li {
+  font-size: 14px;
+  font-weight: 600;
+  color: #414141 !important;
+  padding: 4px 0px 0px 0px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.custom-lang-dropdown.open .lang-options {
+  display: block;
+}
+
+/* 화살표 회전 애니메이션 */
+.select-arrow {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  transition: transform 0.3s;
+  transform-origin: 50% 50%;
+}
+.select-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.lang-options.open {
+  display: block;
+}
 
 /********************* Mobile ******************************************/
 @media all and (max-width: 767px) {

@@ -119,14 +119,14 @@ input[name="search[query]"]:focus {
   font-family: inherit;
 }
 
-.select-arrow {
+/* .select-arrow {
   position: absolute;
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
   width: 16px;
   pointer-events: none;
-}
+} */
 
 
 
@@ -140,6 +140,8 @@ display: none;
   gap: 8px;
 }
 }
+
+
 
 </style>
 
@@ -193,7 +195,9 @@ display: none;
                 </li>
               </ul>
             </div>
+            
           </div>
+          
            <!-- 모바일 메뉴 -->
            <span class="menu_btn_mobile" id="menu_btn_mobile">Menu</span>
            <button class="menu_btn_mobile_close" id="menu_btn_mobile_close">X</button>
@@ -222,6 +226,20 @@ display: none;
          <button class="buy_now_btn">
           <a href="https://herzion.com/product/detail.html?product_no=10"><span class="buy_now_btn_text">Buy Now</span></a>
          </button>
+         <!-- 언어 선택 부분! -->
+         <div class="header_lang_select custom-lang-dropdown" id>
+           <div class="selected-lang" tabindex="0">
+             KOR
+             <img src="/layout_new/layout_images/lang_arrow_icon.svg" alt="화살표" class="select-arrow" />
+           </div>
+           <ul class="lang-options">
+             <li data-value="kor" class="active">KOR</li>
+             <li data-value="eng">ENG</li>
+             <li data-value="jpn">JPN</li>
+           </ul>
+         </div>
+        <!-- 언어 선택 부분! -->
+
         </div>
         </div>
       </nav>
@@ -680,5 +698,8 @@ display: none;
       }
     });
   });
+
 </script>
+
+
 

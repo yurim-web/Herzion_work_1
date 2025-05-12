@@ -1,8 +1,11 @@
 // 스크롤 이벤트에 따른 헤더 스타일 변경
+const headerLangSelect = document.getElementById("header_lang_select");
 const header = document.querySelector("header");
 if (header) {
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
+      console.log("스크롤 내림 이벤트 발생");
+      headerLangSelect.style = "display: none";
       header.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
     }
   });
@@ -52,4 +55,43 @@ menuCloseBtn.addEventListener("click", () => {
   menuBtn.style.display = "block";
   menuCloseBtn.style.display = "none";
   document.body.style.overflow = ""; // 스크롤 복구
+});
+
+// 언어 선택 기능
+document.addEventListener("DOMContentLoaded", function () {
+  const customDropdown = document.querySelector(".custom-lang-dropdown");
+  const selectedLang = document.querySelector(".selected-lang");
+  const selectArrow = document.querySelector(".select-arrow");
+  const langOptions = document.querySelector(".lang-options");
+  const langItems = langOptions.querySelectorAll("li");
+
+  // 드롭다운 열기/닫기
+  selectedLang.addEventListener("click", function (e) {
+    customDropdown.classList.toggle("open");
+    selectArrow.classList.toggle("rotated");
+  });
+
+  // 언어 옵션 클릭 시
+  langItems.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      // 모든 옵션에서 active 제거
+      langItems.forEach((i) => i.classList.remove("active"));
+      // 선택한 옵션에 active 추가
+      item.classList.add("active");
+      // 선택한 언어로 텍스트 변경
+      selectedLang.childNodes[0].nodeValue = item.textContent + " ";
+      // 드롭다운 닫기 (arrow는 그대로)
+      customDropdown.classList.remove("open");
+      selectArrow.classList.remove("rotated");
+      e.stopPropagation(); // 드롭다운 외부 클릭 이벤트 방지
+    });
+  });
+
+  // 드롭다운 외부 클릭 시 닫기
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".custom-lang-dropdown")) {
+      customDropdown.classList.remove("open");
+      selectArrow.classList.remove("rotated");
+    }
+  });
 });
