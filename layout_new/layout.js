@@ -1,12 +1,14 @@
 // 스크롤 이벤트에 따른 헤더 스타일 변경
 const headerLangSelect = document.getElementById("header_lang_select");
 const header = document.querySelector("header");
-if (header) {
+if (header && headerLangSelect) {
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
-      console.log("스크롤 내림 이벤트 발생");
-      headerLangSelect.style = "display: none";
+      headerLangSelect.style.display = "none";
       header.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+    } else {
+      headerLangSelect.style.display = "";
+      header.style.backgroundColor = "";
     }
   });
 }

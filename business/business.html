@@ -24,8 +24,9 @@
     <script src="../layout_new/layout.js" defer></script>
     <script src="business.js" defer></script>
   </head>
+
   <body>
-    <!-- 헤더의 시작 -->
+     <!-- 헤더의 시작 -->
     <!-- 모바일 토글 할때 백그라운드 흰색색 -->
     <div class="mobile_menu_background"></div>
     <!-- 헤더 부분 -->
@@ -33,10 +34,10 @@
       <nav>
         <div class="logo">
           <a href="/">
-            <img src="/layout_new/layout_images/logo.svg" alt="HERZION" class="header_logo"></img>
+            <img src="/layout_new/layout_images/mo_header_logo.svg" alt="HERZION" class="header_logo"></img>
             <!-- 모바일 전용 로고 -->
             <img
-              src="/layout_new/layout_images/m_header_logo.svg"
+              src="/layout_new/layout_images/mo_header_logo.svg"
               alt="HERZION"
               class="header_logo_mobile"
             ></img>
@@ -60,10 +61,13 @@
                 </li>
               </ul>
             </div>
+            
           </div>
+          
            <!-- 모바일 메뉴 -->
            <span class="menu_btn_mobile" id="menu_btn_mobile">Menu</span>
            <button class="menu_btn_mobile_close" id="menu_btn_mobile_close">X</button>
+           
            <div class="mobile_menu" id="mobile_menu">
             <div class="mobile_menu_lang">
               <button class="active">KOR</button>
@@ -76,6 +80,7 @@
                 <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
+            
             <ul class="mobile_menu_list">
               <li><a href="/">Home</a></li>
               <li><a href="/product_page/product.html">Product</a></li>
@@ -89,11 +94,26 @@
          <button class="buy_now_btn">
           <a href="https://herzion.com/product/detail.html?product_no=10"><span class="buy_now_btn_text">Buy Now</span></a>
          </button>
+         <!-- 언어 선택 부분! -->
+         <div class="header_lang_select custom-lang-dropdown" id="header_lang_select">
+           <div class="selected-lang" tabindex="0">
+             KOR
+             <img src="/layout_new/layout_images/lang_arrow_icon.svg" alt="화살표" class="select-arrow" ></img>
+           </div>
+           <ul class="lang-options">
+             <li data-value="kor" class="active">KOR</li>
+             <li data-value="eng">ENG</li>
+             <li data-value="jpn">JPN</li>
+           </ul>
+         </div>
+        <!-- 언어 선택 부분! -->
+
         </div>
         </div>
       </nav>
     </header>
     <!-- 헤더 끝 -->
+
 
     <main>
       <!-- 메인 베너 부분 -->
@@ -110,14 +130,15 @@
         <article class="container">
             <h2 class="section_title">Vibroacoustic Technology Innovation</h2>
             <p class="section_sub_title pc_text">진동과 음향을 결합한 혁신 기술을 통해 뇌 기능을 활성화하고,<br>비침습적이고 안전한 방식으로 뇌 건강을 손쉽게 관리할 수 있습니다.</p>
-            <p class="section_sub_title mo_text">진동과 음향을 결합한 혁신 기술을 통해<br>뇌 기능을 활성화하고,<br>비침습적이고 안전한 방식으로 뇌 건강을<br>손쉽게 관리할 수 있습니다.</p>
+            <p class="section_sub_title mo_text  tab_text">진동과 음향을 결합한 혁신 기술을 통해 뇌 기능을 활성화하고,<br>비침습적이고 안전한 방식으로 뇌 건강을 손쉽게 관리할 수 있습니다.</p>
+            <p class="section_sub_title mo_text momo_text">진동과 음향을 결합한 혁신 기술을 통해<br>뇌 기능을 활성화하고,<br>비침습적이고 안전한 방식으로 뇌 건강을<br>손쉽게 관리할 수 있습니다.</p>
             <div class="section1_img_group">
-              <!-- pc 버전 이미지 -->
-              <img class="pc_img" src="images/section1_img_1.png">
-              <img class="pc_img" src="images/section1_img_2.png">
+              <!-- pc 버전,테블릿버전 이미지 -->
+              <img class="pc_img tab_img" src="images/section1_img_1.png"></img>
+              <img class="pc_img tab_img" src="images/section1_img_2.png"></img>
               <!-- 모바일버전 이미지 -->
-              <img class="mo_img" src="images/mo/mo_section1_img_1.png">
-              <img class="mo_img" src="images/mo/mo_section1_img_2.png">
+              <img class="mo_img tab_none_img" src="images/mo/mo_section1_img_1.png"></img>
+              <img class="mo_img tab_none_img" src="images/mo/mo_section1_img_2.png"></img>
             </div>
             <div class="section1_content_container">
               <div class="section1_content_box">
@@ -147,8 +168,10 @@
             <h2 class="section_title">Cognitive Health Solutions</h2>
             <p class="pc_text">최신 뇌과학 연구를 기반으로 설계된 솔루션으로 인지 기능 강화와 뇌 건강 유지를 효과적으로 지원합니다.<br>
               편안하고 부담 없는 방법으로 일상 속 두뇌 케어가 가능합니다.</p>
+              <p class="mo_text tab_text">최신 뇌과학 연구를 기반으로 설계된 솔루션으로 인지 기능 강화와 뇌 건강 유지를 효과적으로 지원합니다.<br>
+                편안하고 부담 없는 방법으로 일상 속 두뇌 케어가 가능합니다.</p>
 
-            <p class="mo_text">최신 뇌과학 연구를 기반으로 설계된<br>솔루션으로 인지 기능 강화와 뇌 건강<br>유지를 효과적으로 지원합니다.<br>
+            <p class="mo_text momo_text">최신 뇌과학 연구를 기반으로 설계된<br>솔루션으로 인지 기능 강화와 뇌 건강<br>유지를 효과적으로 지원합니다.<br>
               편안하고 부담 없는 방법으로 일상 속<br>두뇌 케어가 가능합니다.</p>
           </div>
           <div class="section_content_3box_continer">
@@ -193,7 +216,13 @@
               웨어러블 기반의 비침습적 자극 기술로,<br>
               의료·웰니스·직무 집중 등 다양한 영역에서 활용이 가능합니다.
             </p>
-            <p class="section_sub_title mo_text">
+            <p class="section_sub_title tab_text">
+              Herzion은 일상 속 두뇌 건강 관리 기술을
+              다양한 분야에 적용할 수 있도록 개발되었습니다.<br>
+              웨어러블 기반의 비침습적 자극 기술로,
+              의료·웰니스·직무 집중 등 다양한 영역에서 활용이 가능합니다.
+            </p>
+            <p class="section_sub_title mo_text momo_text">
               헤르지온은 일상 속 두뇌 건강 관리 기술을<br>
               다양한 분야에 적용할 수 있도록 개발<br>
               되었습니다.<br>
@@ -291,7 +320,11 @@
               헤르지온의 저주파 음향진동 기술은 운동 전후 신경계 활성화와 회복 지원에 적용 가능하여,<br>
               스포츠, 피트니스, 재활 등 다양한 분야에서 확장성 있는 솔루션을 제공합니다.
             </p>
-            <p class="mo_text">
+            <p class="pc_text tab_text">운동 수행력 향상과 회복 관리를 위한 뉴로 웰니스 기술<br>
+              헤르지온의 저주파 음향진동 기술은 운동 전후 신경계 활성화와 회복 지원에 적용 가능하여,<br>
+              스포츠, 피트니스, 재활 등 다양한 분야에서 확장성 있는 솔루션을 제공합니다.
+            </p>
+            <p class="mo_text momo_text">
               운동 수행력 향상과 회복 관리를 위한<br>
               뉴로 웰니스 기술.<br>
               헤르지온의 저주파 음향진동 기술은 운동<br>
@@ -337,7 +370,12 @@
               데이터 기반의 정밀 분석과<br>
               실시간 모니터링을 통해 두뇌 상태를 평가하고, 최적의 자극 솔루션을 제공합니다.
             </p>
-            <p class="mo_text">
+            <p class="pc_text tab_text">
+              개인 맞춤형 뇌 건강 관리를 위한 디지털 헬스 기술 기반 플랫폼
+              데이터 기반의 정밀 분석과<br>
+              실시간 모니터링을 통해 두뇌 상태를 평가하고, 최적의 자극 솔루션을 제공합니다.
+            </p>
+            <p class="mo_text momo_text">
               개인 맞춤형 뇌 건강 관리를 위한 디지털<br>
               헬스 기술 기반 플랫폼 데이터 기반의 정밀<br>
               분석과 실시간 모니터링을 통해 두뇌<br>
@@ -417,7 +455,9 @@
             <h2 class="section_title">B2B Solutions</h2>
             <p class="pc_text">기관별 목적과 환경에 최적화된 맞춤형 뉴로 웰니스 솔루션을 제공합니다.<br>
               헬스케어, 연구, 기업 복지 등 다양한 분야에서 활용 가능한 전문 플랫폼입니다.</p>
-            <p class="mo_text">
+              <p class="pc_text tab_text">기관별 목적과 환경에 최적화된 맞춤형 뉴로 웰니스 솔루션을 제공합니다.<br>
+                헬스케어, 연구, 기업 복지 등 다양한 분야에서 활용 가능한 전문 플랫폼입니다.</p>
+            <p class="mo_text momo_text">
               기관별 목적과 환경에 최적화된 맞춤형<br>
               뉴로 웰니스 솔루션을 제공합니다.<br>
               헬스케어, 연구, 기업 복지 등 다양한<br>
@@ -483,7 +523,11 @@
               국내 의료·웰니스 시장 내 브랜드 입지를 강화하고<br>
               제품 라인업 다각화를 통해 시장 기반을 공고히 합니다.
             </p>
-            <p class="mo_text">
+            <p class="pc_text tab_text">
+              국내 의료·웰니스 시장 내 브랜드 입지를 강화하고<br>
+              제품 라인업 다각화를 통해 시장 기반을 공고히 합니다.
+            </p>
+            <p class="mo_text momo_text">
               국내 의료·웰니스 시장 내 브랜드 입지를<br>
               강화하고 제품 라인업 다각화를 통해 시장<br>
               기반을 공고히 합니다.
@@ -496,7 +540,11 @@
               지리적 접근성과 수요 잠재력이 높은 아시아 국가를<br>
               중심으로 현지화된 마케팅 전략과 파트너십을 확대합니다.
             </p>
-            <p class="mo_text">
+            <p class="pc_text tab_text">
+              지리적 접근성과 수요 잠재력이 높은 아시아 국가를<br>
+              중심으로 현지화된 마케팅 전략과 파트너십을 확대합니다.
+            </p>
+            <p class="mo_text momo_text">
               지리적 접근성과 수요 잠재력이 높은 아시아<br>
               국가를 중심으로 현지화된 마케팅 전략과<br>
               파트너십을 확대합니다.
@@ -509,7 +557,11 @@
               글로벌 인증을 기반으로 선진 시장에 진입하며, 현지 유통망<br>
               구축과 브랜드 신뢰도 확보를 동시에 추진합니다.
             </p>
-            <p class="mo_text">
+            <p class="pc_text tab_text">
+              글로벌 인증을 기반으로 선진 시장에 진입하며, 현지 유통망<br>
+              구축과 브랜드 신뢰도 확보를 동시에 추진합니다.
+            </p>
+            <p class="mo_text momo_text">
               글로벌 인증을 기반으로 선진 시장에 진입하며,<br>
               현지 유통망 구축과 브랜드 신뢰도 확보를<br>
               동시에 추진합니다.
@@ -522,7 +574,11 @@
               기술 혁신성과 임상적 효과를 기반으로 세계 뇌 건강 솔루션<br>
               시장에서 선도 브랜드로 자리 매김합니다.
             </p>
-            <p class="mo_text">
+            <p class="pc_text tab_text">
+              기술 혁신성과 임상적 효과를 기반으로 세계 뇌 건강 솔루션<br>
+              시장에서 선도 브랜드로 자리 매김합니다.
+            </p>
+            <p class="mo_text momo_text">
               기술 혁신성과 임상적 효과를 기반으로 세계<br>
               뇌 건강 솔루션 시장에서 선도 브랜드로<br>
               자리 매김합니다.

@@ -73,27 +73,54 @@
 // 토글 기능
 
 document.addEventListener("DOMContentLoaded", function () {
-  // FAQ 아이템 토글 기능
+  // FAQ 아이템 토글 기능 (한 번에 하나만 열리도록)
   const faqItems = document.querySelectorAll(".faq_item_box");
   const faqAnswers = document.querySelectorAll(".faq_answer_box");
   const toggleArrows = document.querySelectorAll(".toggle_arrow");
-
-  faqItems.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      item.classList.toggle("faq_item_box_toggle");
-      faqAnswers[index].classList.toggle("active");
-      toggleArrows[index].classList.toggle("active");
-    });
-  });
-
-  // 더보기 기능 구현
-  const faqListContainer = document.querySelector(".faq_list_container");
-  const faqArticles = faqListContainer.querySelectorAll(".faq_item_container");
   const moreButton = document.querySelector(".faq_more_btn");
   const ITEMS_PER_PAGE = 6;
   let currentlyShown = ITEMS_PER_PAGE;
 
+  // more 버튼 표시/숨김 처리 함수
+  function updateMoreButtonVisibility() {
+    const faqListContainer = document.querySelector(".faq_list_container");
+    const visibleArticles = faqListContainer.querySelectorAll(
+      ".faq_item_container:not([style*='display: none'])"
+    );
+
+    if (visibleArticles.length <= ITEMS_PER_PAGE) {
+      moreButton.style.display = "none";
+    } else {
+      moreButton.style.display = "block";
+    }
+  }
+
+  faqItems.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      // 모든 항목 닫기
+      faqItems.forEach((el, i) => {
+        if (i !== index) {
+          el.classList.remove("faq_item_box_toggle");
+          faqAnswers[i].classList.remove("active");
+          toggleArrows[i].classList.remove("active");
+        }
+      });
+      // 현재 항목 토글
+      const isActive = item.classList.contains("faq_item_box_toggle");
+      if (isActive) {
+        item.classList.remove("faq_item_box_toggle");
+        faqAnswers[index].classList.remove("active");
+        toggleArrows[index].classList.remove("active");
+      } else {
+        item.classList.add("faq_item_box_toggle");
+        faqAnswers[index].classList.add("active");
+        toggleArrows[index].classList.add("active");
+      }
+    });
+  });
+
   // 초기 상태: 처음 6개만 보이게 설정
+  const faqArticles = document.querySelectorAll(".faq_item_container");
   faqArticles.forEach((article, index) => {
     if (index >= ITEMS_PER_PAGE) {
       article.style.display = "none";
@@ -112,5 +139,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     currentlyShown += ITEMS_PER_PAGE;
+    updateMoreButtonVisibility();
   });
+
+  // 카테고리 변경 이벤트 감지
+  const categorySelect = document.querySelector(
+    "select[name='board_category']"
+  );
+  if (categorySelect) {
+    categorySelect.addEventListener("change", function () {
+      // 카테고리 변경 시 초기화
+      currentlyShown = ITEMS_PER_PAGE;
+      setTimeout(updateMoreButtonVisibility, 500); // Ajax 로딩 시간 고려
+    });
+  }
+
+  // 초기 more 버튼 상태 설정
+  updateMoreButtonVisibility();
 });

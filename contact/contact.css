@@ -125,18 +125,28 @@ main {
   line-height: 24px; /* 100% */
   letter-spacing: -0.48px;
 }
-.submit_btn_location{
+.submit_btn_location {
   right: 160px;
   bottom: 160px;
-
 }
 
 /* 이전버튼 위치 */
-.submit_btn_location_back{
+@media screen and (width: 1920px) {
+  .submit_btn_location_back {
+    position: absolute;
+    width: 68px;
+    right: 890px !important;
+    bottom: 160px;
+    color: #3c3c3c;
+  }
+}
+
+.submit_btn_location_back {
+  position: absolute;
   width: 68px;
   right: 1195px;
   bottom: 160px;
-  color: #3C3C3C;
+  color: #3c3c3c;
 }
 
 .inquiry_contents {
@@ -144,7 +154,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .inquiry_left_container {
@@ -163,7 +172,6 @@ main {
   font-weight: 700;
   line-height: 64px; /* 133.333% */
   letter-spacing: -0.96px;
-  
 }
 
 .inquiry_left_container p {
@@ -181,7 +189,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  padding-right:0px;
+  padding-right: 0px;
 }
 
 .inquiry_btn {
@@ -220,7 +228,7 @@ main {
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
-.mobile_section{
+.mobile_section {
   display: none;
 }
 /* 마지막 두줄 부분 */
@@ -348,7 +356,7 @@ main {
   line-height: 16px; /* 80% */
   letter-spacing: -0.4px;
 }
-.back_btn_mobile{
+.back_btn_mobile {
   display: none;
 }
 
@@ -484,7 +492,7 @@ main {
     line-height: 16px; /* 100% */
     letter-spacing: -0.32px;
   }
-  .mobile_section{
+  .mobile_section {
     display: block;
   }
   .inquiry_btn_mobile {
@@ -652,8 +660,7 @@ main {
   }
 
   .hero {
-    height: 300px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
 
   .hero_content {
@@ -685,7 +692,7 @@ main {
     line-height: 20px; /* 100% */
     letter-spacing: -0.4px;
   }
-  
+
   /* inquiry section 중간 섹션 */
   .inquiry_section {
     padding: 40px 30px;
@@ -713,6 +720,7 @@ main {
   }
 
   .inquiry_left_container {
+    padding-left: 0px;
     gap: 12px;
   }
 
@@ -724,7 +732,6 @@ main {
     line-height: 34px; /* 141.667% */
     letter-spacing: -0.48px;
     display: flex;
-    ju
   }
 
   .inquiry_left_container p {
@@ -762,7 +769,7 @@ main {
     line-height: 16px; /* 100% */
     letter-spacing: -0.32px;
   }
-  .mobile_section{
+  .mobile_section {
     display: block;
   }
   .inquiry_btn_mobile {

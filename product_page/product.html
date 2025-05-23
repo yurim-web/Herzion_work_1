@@ -29,7 +29,7 @@
     <script src="product.js" defer></script>
   </head>
   <body>
-    <!-- 헤더의 시작 -->
+   <!-- 헤더의 시작 -->
     <!-- 모바일 토글 할때 백그라운드 흰색색 -->
     <div class="mobile_menu_background"></div>
     <!-- 헤더 부분 -->
@@ -37,10 +37,10 @@
       <nav>
         <div class="logo">
           <a href="/">
-            <img src="/layout_new/layout_images/logo.svg" alt="HERZION" class="header_logo"></img>
+            <img src="/layout_new/layout_images/mo_header_logo.svg" alt="HERZION" class="header_logo"></img>
             <!-- 모바일 전용 로고 -->
             <img
-              src="/layout_new/layout_images/m_header_logo.svg"
+              src="/layout_new/layout_images/mo_header_logo.svg"
               alt="HERZION"
               class="header_logo_mobile"
             ></img>
@@ -64,10 +64,13 @@
                 </li>
               </ul>
             </div>
+            
           </div>
+          
            <!-- 모바일 메뉴 -->
            <span class="menu_btn_mobile" id="menu_btn_mobile">Menu</span>
            <button class="menu_btn_mobile_close" id="menu_btn_mobile_close">X</button>
+           
            <div class="mobile_menu" id="mobile_menu">
             <div class="mobile_menu_lang">
               <button class="active">KOR</button>
@@ -80,6 +83,7 @@
                 <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
+            
             <ul class="mobile_menu_list">
               <li><a href="/">Home</a></li>
               <li><a href="/product_page/product.html">Product</a></li>
@@ -93,11 +97,26 @@
          <button class="buy_now_btn">
           <a href="https://herzion.com/product/detail.html?product_no=10"><span class="buy_now_btn_text">Buy Now</span></a>
          </button>
+         <!-- 언어 선택 부분! -->
+         <div class="header_lang_select custom-lang-dropdown" id="header_lang_select">
+           <div class="selected-lang" tabindex="0">
+             KOR
+             <img src="/layout_new/layout_images/lang_arrow_icon.svg" alt="화살표" class="select-arrow" ></img>
+           </div>
+           <ul class="lang-options">
+             <li data-value="kor" class="active">KOR</li>
+             <li data-value="eng">ENG</li>
+             <li data-value="jpn">JPN</li>
+           </ul>
+         </div>
+        <!-- 언어 선택 부분! -->
+
         </div>
         </div>
       </nav>
     </header>
     <!-- 헤더 끝 -->
+
 
     <main>
       <!-- 메인 베너 부분 -->
@@ -244,6 +263,98 @@
         </div>
       </section>
 
+
+        <!-- 임상 결과 테블릿 섹션 -->
+        <section class="clinical_results_tab">
+          <div class="card_animation_box_mo">
+          <!-- 첫번째 카드-->
+          <div class="section_box_mo">
+            <h3 class="section_title_mo">Summary of Clinical Findings</h3>
+            <div class="clinical_text_box_mo">
+              <h1>01</h1>
+              <h2>인지 기능 향상에 도움</h2>
+              <h3>알파파 활동의 유의미한 증가 확인</h3>
+              <p>
+                건강한 시니어를 대상으로 8주간 헤르지온을 사용한
+                결과, 뇌파 측정에서 알파파 활동이 유의미하게
+                증가한 것으로 나타났습니다.<br>
+                이러한 변화는 <span class="text_bold">스트레스 완화, 집중력 향상, 전반적인
+                  정신적 명료성 증진에 긍정적인 영향을 줄 수 있음을
+                  시사합니다.</span>
+                </p>
+            </div>
+            <!-- 그래프부분 -->
+           <div class="graph_box_tab">
+            <div class="graph_box">
+              <img src="images/mo/m_card1_grap_1.png" alt=""></img>
+              <p>대조기기와 비교 시 8주 후 뇌파 알파파 변화</p>
+            </div>
+            <div class="graph_box">
+              <img src="images/mo/m_card1_grap_2.png" alt=""></img>
+              <p>헤르지온 사용 전과 사용 8주 후 뇌파 알파파 변화</p>
+            </div>
+           </div>
+          </div>
+
+          <!-- 두번째 카드-->
+          <div class="section_box_mo mo_back_2">
+            <h3 class="section_title_mo">Summary of Clinical Findings</h3>
+            <div class="clinical_text_box_mo ">
+              <h1>02</h1>
+              <h2>주의집중력 향상</h2>
+              <p>
+                CERAD-K 주의력 점수의 유의미한 향상은 집중력,
+                처리 속도, 작업 기억 등 인지 능력의 전반적인 개선을 시사합니다.<br>
+                이러한 변화는 정신적 피로 감소와 함께 일상, 학습,
+                작업 수행에서의 효율성 증가로 이어져, <span classs="text_bold">삶의 질과
+                  웰빙 향상에 긍정적으로 기여할 수 있습니다.</span>
+                </p>
+            </div>
+            <div class="grah_text_box">
+              <h1>CREAD-K란?</h1>
+              <p>
+                CERAD-K 테스트는 치매 진단 및 평가를 위한
+                한국어판 표준화 인지검사 도구로,
+               <b> 치료 전후의 인지
+                기능 변화를 비교하여 치료 효과를 평가하는 데<br>
+                사용되며, 국내 병원 신경과 등 임상 현장에서 널리
+                활용되고 있습니다.</b>
+              </p>
+            </div>
+            <!-- 그래프부분 -->
+            <div class="graph_box_tab"> <div class="graph_box">
+              <img src="images/mo/m_card2_grap_1.png" alt=""></img>
+              <p>대조기기와 비교 시 8주 후 뇌파 알파파 변화</p>
+            </div>
+            <div class="graph_box">
+              <img src="images/mo/m_card2_grap_2.png" alt=""></img>
+              <p>헤르지온 사용 전과 사용 8주 후 뇌파 알파파 변화</p>
+            </div></div>
+          </div>
+          <!-- 세번째 카드-->
+          <div class="section_box_mo mo_back_3">
+            <h3 class="section_title_mo">Summary of Clinical Findings</h3>
+            <div class="clinical_text_box_mo">
+              <h1>03</h1>
+              <h2>우울 척도 개선</h2>
+              <p>
+                CES-D는 미국 국립정신건강연구소(NIMH)에서
+                개발된 우울증 자가진단 검사로, 지역사회 주민을
+                대상으로 한 우울증 역학 연구에 활용되어 왔습니다.<br>
+                건강한 노인을 대상으로 헤르지온 기기를 사용한 결과,
+                CES-D 점수가 약 33% 감소하는 경향을 보여
+                노년층의 정서 안정과 우울감 완화에 긍정적인<br>영향을
+                줄 수 있음을 시사합니다.
+              </p>
+            </div>
+            <!-- 그래프부분 -->
+            <div class="graph_box_3">
+              <img src="images/mo/tab_card3_grap_1.png" class="tab_graph_img3" alt=""></img>
+              <p>대조기기와 비교 시 8주 후 뇌파 알파파 변화</p>
+            </div>
+          </div>
+      </section>
+
       <!-- 임상 결과 모바일섹션 -->
       <section class="clinical_results_mobile">
           <div class="card_animation_box_mo">
@@ -330,7 +441,6 @@
               <p>대조기기와 비교 시 8주 후 뇌파 알파파 변화</p>
             </div>
           </div>
-
       </section>
 
       <!-- Features 섹션 -->
