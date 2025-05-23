@@ -67,7 +67,9 @@
            <!-- 모바일 메뉴 -->
            <span class="menu_btn_mobile" id="menu_btn_mobile">Menu</span>
            <button class="menu_btn_mobile_close" id="menu_btn_mobile_close">X</button>
-           
+
+
+                      
            <div class="mobile_menu" id="mobile_menu">
             <div class="mobile_menu_lang">
               <button class="active">KOR</button>
@@ -113,6 +115,27 @@
       </nav>
     </header>
     <!-- 헤더 끝 -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const openBtn = document.getElementById("menu_btn_mobile");
+        const closeBtn = document.getElementById("menu_btn_mobile_close");
+        const mobileMenu = document.getElementById("mobile_menu");
+      
+        if (openBtn && closeBtn && mobileMenu) {
+          openBtn.addEventListener("click", () => {
+            openBtn.classList.add("hide");         // Menu 숨김 (애니메이션)
+            closeBtn.classList.add("show");        // X 보임 (애니메이션)
+            mobileMenu.classList.add("show");      // 메뉴 열기
+          });
+      
+          closeBtn.addEventListener("click", () => {
+            openBtn.classList.remove("hide");      // Menu 다시 보임
+            closeBtn.classList.remove("show");     // X 숨김
+            mobileMenu.classList.remove("show");   // 메뉴 닫기
+          });
+        }
+      });
+      </script>
 
 
     <main>

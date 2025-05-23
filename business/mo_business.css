@@ -739,6 +739,7 @@
     background-size: cover;
     background-image: url("images/section7_back_img.png");
     padding: 80px 0px 505px 0px;
+    background-position: center;
   }
 
   .global_subtitle {

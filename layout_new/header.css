@@ -34,7 +34,7 @@ nav {
 
 /* 메뉴버튼 모바일 버전 */
 .menu_btn_mobile {
-  display: none;
+  display: block;
   color: #000;
   text-align: right;
   font-family: Poppins;
@@ -43,6 +43,7 @@ nav {
   font-weight: 500;
   line-height: 17px;
   cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 /* buy now 버튼 */
 .buy_now_btn {
@@ -459,4 +460,94 @@ nav {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* 공통 스타일 */
+.menu_btn_mobile,
+.menu_btn_mobile_close {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* 초기 상태 */
+.menu_btn_mobile {
+  display: block;
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.menu_btn_mobile_close {
+  display: none;
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+/* 전환 상태 */
+.menu_btn_mobile.hide {
+  opacity: 0;
+  transform: rotate(90deg);
+  pointer-events: none;
+}
+
+.menu_btn_mobile_close.show {
+  display: block;
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+/* 애니메이션 추가 */
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 메뉴 버튼 모바일 버전 */
+.menu_btn_mobile {
+  display: block;
+  color: #000;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.menu_btn_mobile.hide {
+  animation: slideOut 0.3s forwards; /* 사라질 때 애니메이션 */
+}
+
+.menu_btn_mobile_close {
+  display: none;
+  color: #000;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  cursor: pointer;
+}
+
+.menu_btn_mobile_close.show {
+  display: block;
+  animation: slideIn 0.3s forwards; /* 나타날 때 애니메이션 */
 }

@@ -69,8 +69,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 드롭다운 열기/닫기
   selectedLang.addEventListener("click", function (e) {
-    customDropdown.classList.toggle("open");
-    selectArrow.classList.toggle("rotated");
+    // 드롭다운이 열려있지 않을 때만 열기
+    if (!customDropdown.classList.contains("open")) {
+      customDropdown.classList.add("open");
+      selectArrow.classList.add("rotated");
+
+      // 드롭다운에서 활성화된 언어 제거
+      const activeLang = langOptions.querySelector(".active");
+      if (activeLang) {
+        langItems.forEach((item) => {
+          if (item === activeLang) {
+            item.style.display = "none"; // 활성화된 언어는 숨김
+          } else {
+            item.style.display = ""; // 나머지 언어는 보이게
+          }
+        });
+      }
+    } else {
+      customDropdown.classList.remove("open");
+      selectArrow.classList.remove("rotated");
+    }
   });
 
   // 언어 옵션 클릭 시
