@@ -142,9 +142,9 @@ main {
 }
 
 .submit_btn_location_back {
-  position: absolute;
-  width: 68px;
-  right: 1195px;
+  position: fixed;
+  left: 52.5%;
+  transform: translateX(-50%);
   bottom: 160px;
   color: #3c3c3c;
 }
@@ -382,6 +382,7 @@ main {
   }
 
   .hero {
+    height: 300px;
     margin-bottom: 40px;
   }
 

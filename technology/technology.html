@@ -1,7 +1,7 @@
 <!-- 기술 페이지 -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>technology</title>
@@ -18,758 +18,717 @@
     <link rel="stylesheet" href="mo_technology.css?v=20250523">
     
     <style>
-      .mobile_break,
-      .tab_break,
-      .web_break {
-        display: none;
-      }
+        .mobile_break,
+        .tab_break,
+        .web_break {
+            display: none;
+        }
 
-      /* 모바일 */
-      @media all and (max-width: 767px) {
-        .mobile_break { display: inline; }
-      }
+        /* 모바일 */
+        @media all and (max-width: 767px) {
+            .mobile_break { display: inline; }
+        }
 
-      /* 태블릿 */
-      @media all and (min-width: 768px) and (max-width: 1024px) {
-        .tab_break { display: inline; }
-      }
+        /* 태블릿 */
+        @media all and (min-width: 768px) and (max-width: 1024px) {
+            .tab_break { display: inline; }
+        }
 
-      /* PC(웹) */
-      @media all and (min-width: 1025px) {
-        .web_break { display: inline; }
-      }
+        /* PC(웹) */
+        @media all and (min-width: 1025px) {
+            .web_break { display: inline; }
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <!-- 헤더의 시작 -->
-    <!-- 모바일 토글 할때 백그라운드 흰색색 -->
-    <div class="mobile_menu_background"></div>
-    <!-- 헤더 부분 -->
+    <div class="mobile_menu_background" id="mobile_menu_background"></div>
     <header>
-      <nav>
-        <div class="logo">
-           <a href="/">
-            <img src="/layout_new/layout_images/mo_header_logo.svg" alt="HERZION" class="header_logo"></img>
-            <!-- 모바일 전용 로고 -->
-            <svg class="header_logo_mobile" width="100" height="15" viewBox="0 0 100 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g id="Group 80">
-              <path id="Vector" d="M19.0638 9.1673H26.8662L27.7548 6.27005H19.0638V3.67265H28.3027L29.1953 0.758209H16.1094V11.6425C16.1094 13.2869 17.4608 14.6199 19.1277 14.6199H28.3724L29.265 11.7055H19.0638V9.16539V9.1673Z" fill="black"/>
-              <path id="Vector_2" d="M10.5051 6.23569H2.93702V0.760132H0V14.6085H2.93702V9.13294H10.5051V14.6085H13.4421V0.760132H10.5051V6.23569Z" fill="black"/>
-              <path id="Vector_3" d="M47.9165 0.771576V3.66883H55.26L47.3105 14.5569H60.0189L60.9076 11.6597H53.0471L60.9966 0.771576H47.9165Z" fill="black"/>
-              <path id="Vector_4" d="M45.2964 5.65891C45.3196 4.38694 44.8259 3.1761 43.9063 2.25173C42.9712 1.31208 41.674 0.773499 40.3478 0.773499H31.9395V14.6219L34.8494 14.6123V10.3667V7.46945V3.67266H40.3478C40.8899 3.67266 41.4243 3.89611 41.8095 4.28381C42.1735 4.6505 42.3691 5.12033 42.3594 5.60734C42.34 6.63293 41.4765 7.46945 40.4349 7.46945H35.7419L34.8474 10.3667H40.2413L42.9789 14.6123H46.2896L43.0564 9.59703C44.3748 8.75669 45.2654 7.30711 45.2964 5.66082V5.65891Z" fill="black"/>
-              <path id="Vector_5" d="M63.7715 14.6085H66.7085V10.9263C66.1238 9.96372 65.7772 8.77961 65.7772 7.50001C65.7772 6.22041 66.1238 5.0363 66.7085 4.07373V0.760132H63.7715V14.6104V14.6085ZM65.3145 4.69061V10.3094C64.7298 9.52064 64.3833 8.54852 64.3833 7.50001C64.3833 6.4515 64.7298 5.47938 65.3145 4.69061Z" fill="black"/>
-              <path id="Vector_6" d="M97.0632 0.760132V12.2689L88.3335 0.760132H85.3965V4.08519C85.9773 5.04585 86.32 6.22423 86.32 7.50001C86.32 8.77579 85.9754 9.95417 85.3965 10.9148V14.6085H88.3335V4.63141L95.8997 14.6085H100V0.760132H97.0632ZM86.7788 10.3094V4.69061C87.3635 5.47938 87.7101 6.44959 87.7101 7.50001C87.7101 8.55043 87.3635 9.52064 86.7788 10.3094Z" fill="black"/>
-              <path id="Vector_7" d="M83.4888 5.9874C83.2662 4.9217 82.817 3.9343 82.1878 3.08442C80.8035 1.21658 78.5673 0 76.0466 0C73.5258 0 71.2896 1.21658 69.9073 3.08442C69.2781 3.9343 68.8289 4.91979 68.6062 5.9874V3.08442C67.6866 4.32391 67.1426 5.84989 67.1426 7.5C67.1426 9.15011 67.6866 10.6761 68.6062 11.9156V9.0126C68.8289 10.0783 69.2781 11.0657 69.9073 11.9156C71.2916 13.7834 73.5277 15 76.0466 15C78.5654 15 80.8035 13.7834 82.1878 11.9156C82.817 11.0657 83.2662 10.0802 83.4888 9.0126V11.9156C84.4084 10.6761 84.9525 9.15011 84.9525 7.5C84.9525 5.84989 84.4084 4.32391 83.4888 3.08442V5.9874ZM76.0466 12.1028C73.4735 12.1028 71.3806 10.0382 71.3806 7.5C71.3806 4.9618 73.4735 2.89725 76.0466 2.89725C78.6196 2.89725 80.7125 4.9618 80.7125 7.5C80.7125 10.0382 78.6196 12.1028 76.0466 12.1028Z" fill="black"/>
-              </g>
-              </svg>
-          </a>
-        </div>
-        <div class="nav_right">
-          <div class="menu_wrapper">
-            <button class="menu_btn">Menu</button>
-            <div class="menu_drop">
-              <ul class="menu_drop_list">
-                <li><a href="/" data-text="Home">Home</a></li>
-                <li><a href="/product_page/product.html" data-text="Product">Product</a></li>
-                <li><a href="/technology/technology.html" data-text="Technology">Technology</a></li>
-                <li><a href="/business/business.html" data-text="Business">Business</a></li>
-                <li>
-                  <a href="/support/support.html" data-text="Support">Support</a>
-                </li>
-                <li><a href="/faq/faq.html" data-text="FAQ">FAQ</a></li>
-                <li>
-                  <a href="/contact/contact.html" data-text="Support">Contact</a>
-                </li>
-              </ul>
+        <nav>
+            <div class="logo">
+                <a href="/">
+                    <img src="/layout_new/layout_images/mo_header_logo.svg" alt="HERZION" class="header_logo"></img>
+                    <svg class="header_logo_mobile" width="100" height="15" viewBox="0 0 100 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Group 80">
+                            <path id="Vector" d="M19.0638 9.1673H26.8662L27.7548 6.27005H19.0638V3.67265H28.3027L29.1953 0.758209H16.1094V11.6425C16.1094 13.2869 17.4608 14.6199 19.1277 14.6199H28.3724L29.265 11.7055H19.0638V9.16539V9.1673Z" fill="black"/>
+                            <path id="Vector_2" d="M10.5051 6.23569H2.93702V0.760132H0V14.6085H2.93702V9.13294H10.5051V14.6085H13.4421V0.760132H10.5051V6.23569Z" fill="black"/>
+                            <path id="Vector_3" d="M47.9165 0.771576V3.66883H55.26L47.3105 14.5569H60.0189L60.9076 11.6597H53.0471L60.9966 0.771576H47.9165Z" fill="black"/>
+                            <path id="Vector_4" d="M45.2964 5.65891C45.3196 4.38694 44.8259 3.1761 43.9063 2.25173C42.9712 1.31208 41.674 0.773499 40.3478 0.773499H31.9395V14.6219L34.8494 14.6123V10.3667V7.46945V3.67266H40.3478C40.8899 3.67266 41.4243 3.89611 41.8095 4.28381C42.1735 4.6505 42.3691 5.12033 42.3594 5.60734C42.34 6.63293 41.4765 7.46945 40.4349 7.46945H35.7419L34.8474 10.3667H40.2413L42.9789 14.6123H46.2896L43.0564 9.59703C44.3748 8.75669 45.2654 7.30711 45.2964 5.66082V5.65891Z" fill="black"/>
+                            <path id="Vector_5" d="M63.7715 14.6085H66.7085V10.9263C66.1238 9.96372 65.7772 8.77961 65.7772 7.50001C65.7772 6.22041 66.1238 5.0363 66.7085 4.07373V0.760132H63.7715V14.6104V14.6085ZM65.3145 4.69061V10.3094C64.7298 9.52064 64.3833 8.54852 64.3833 7.50001C64.3833 6.4515 64.7298 5.47938 65.3145 4.69061Z" fill="black"/>
+                            <path id="Vector_6" d="M97.0632 0.760132V12.2689L88.3335 0.760132H85.3965V4.08519C85.9773 5.04585 86.32 6.22423 86.32 7.50001C86.32 8.77579 85.9754 9.95417 85.3965 10.9148V14.6085H88.3335V4.63141L95.8997 14.6085H100V0.760132H97.0632ZM86.7788 10.3094V4.69061C87.3635 5.47938 87.7101 6.44959 87.7101 7.50001C87.7101 8.55043 87.3635 9.52064 86.7788 10.3094Z" fill="black"/>
+                            <path id="Vector_7" d="M83.4888 5.9874C83.2662 4.9217 82.817 3.9343 82.1878 3.08442C80.8035 1.21658 78.5673 0 76.0466 0C73.5258 0 71.2896 1.21658 69.9073 3.08442C69.2781 3.9343 68.8289 4.91979 68.6062 5.9874V3.08442C67.6866 4.32391 67.1426 5.84989 67.1426 7.5C67.1426 9.15011 67.6866 10.6761 68.6062 11.9156V9.0126C68.8289 10.0783 69.2781 11.0657 69.9073 11.9156C71.2916 13.7834 73.5277 15 76.0466 15C78.5654 15 80.8035 13.7834 82.1878 11.9156C82.817 11.0657 83.2662 10.0802 83.4888 9.0126V11.9156C84.4084 10.6761 84.9525 9.15011 84.9525 7.5C84.9525 5.84989 84.4084 4.32391 83.4888 3.08442V5.9874ZM76.0466 12.1028C73.4735 12.1028 71.3806 10.0382 71.3806 7.5C71.3806 4.9618 73.4735 2.89725 76.0466 2.89725C78.6196 2.89725 80.7125 4.9618 80.7125 7.5C80.7125 10.0382 78.6196 12.1028 76.0466 12.1028Z" fill="black"/>
+                        </g>
+                    </svg>
+                </a>
             </div>
-            
-          </div>
-          
-           <!-- 모바일 메뉴 -->
-           <span class="menu_btn_mobile" id="menu_btn_mobile">Menu</span>
-           <button class="menu_btn_mobile_close" id="menu_btn_mobile_close">X</button>
-           
-           <div class="mobile_menu" id="mobile_menu">
-            <div class="mobile_menu_lang">
-              <button class="active" >KOR</button>
-              <button>ENG</button>
-              <button>JPN</button>
-            </div>
-            <div class="mobile_menu_shop">
-              <a href="">Shop now</a>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            
-            <ul class="mobile_menu_list">
-              <li><a href="/">Home</a></li>
-              <li><a href="/product_page/product.html">Product</a></li>
-              <li><a href="/technology/technology.html">Technology</a></li>
-              <li><a href="/business/business.html">Business</a></li>
-              <li><a href="/support/support.html">Support</a></li>
-              <li><a href="/faq/faq.html">FAQ</a></li>
-              <li><a href="/contact/contact.html">Contact</a></li>
-            </ul>
-          </div>
-         <button class="buy_now_btn">
-          <a href="https://herzion.com/product/detail.html?product_no=10"><span class="buy_now_btn_text">Buy Now</span></a>
-         </button>
-         <!-- 언어 선택 부분! -->
-         <div class="header_lang_select custom-lang-dropdown" id="header_lang_select">
-           <div class="selected-lang" tabindex="0">
-             KOR
-             <img src="/layout_new/layout_images/lang_arrow_icon.svg" alt="화살표" class="select-arrow" ></img>
-           </div>
-           <ul class="lang-options">
-             <li data-value="kor" class="active">KOR</li>
-             <li data-value="eng">ENG</li>
-             <li data-value="jpn">JPN</li>
-           </ul>
-         </div>
-        <!-- 언어 선택 부분! -->
+            <div class="nav_right">
+                <div class="menu_wrapper">
+                    <button class="menu_btn">Menu</button>
+                    <div class="menu_drop">
+                        <ul class="menu_drop_list">
+                            <li><a href="/" data-text="Home">Home</a></li>
+                            <li><a href="/product_page/product.html" data-text="Product">Product</a></li>
+                            <li><a href="/technology/technology.html" data-text="Technology">Technology</a></li>
+                            <li><a href="/business/business.html" data-text="Business">Business</a></li>
+                            <li><a href="/support/support.html" data-text="Support">Support</a></li>
+                            <li><a href="/faq/faq.html" data-text="FAQ">FAQ</a></li>
+                            <li><a href="/contact/contact.html" data-text="Support">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="javascript:;" id="menu_btn" class="mobile_menu_btn">
+                    <span class="menu_text">Menu</span>
+                </a>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const menuBtn = document.getElementById("menu_btn");
+                        const mobileMenu = document.getElementById("mobile_menu");
+                        const menuBackground = document.getElementById("mobile_menu_background");
 
-        </div>
-        </div>
-      </nav>
+                        menuBtn.addEventListener("click", function () {
+                            const isOpen = menuBtn.classList.toggle("open");
+
+                            if (isOpen) {
+                                mobileMenu.style.display = "block"; // 메뉴 열기
+                                menuBackground.style.display = "block"; // 백그라운드 보이기
+                            } else {
+                                mobileMenu.style.display = "none"; // 메뉴 닫기
+                                menuBackground.style.display = "none"; // 백그라운드 숨김
+                            }
+                        });
+                    });
+                </script>
+                <div class="mobile_menu" id="mobile_menu">
+                    <div class="mobile_menu_lang">
+                        <button class="active">KOR</button>
+                        <button>ENG</button>
+                        <button>JPN</button>
+                    </div>
+                    <div class="mobile_menu_shop">
+                        <a href="">Shop now</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <ul class="mobile_menu_list">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/product_page/product.html">Product</a></li>
+                        <li><a href="/technology/technology.html">Technology</a></li>
+                        <li><a href="/business/business.html">Business</a></li>
+                        <li><a href="/support/support.html">Support</a></li>
+                        <li><a href="/faq/faq.html">FAQ</a></li>
+                        <li><a href="/contact/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <button class="buy_now_btn">
+                    <a href="https://herzion.com/product/detail.html?product_no=10"><span class="buy_now_btn_text">Buy Now</span></a>
+                </button>
+                <div class="header_lang_select custom-lang-dropdown" id="header_lang_select">
+                    <div class="selected-lang" tabindex="0">
+                        KOR
+                        <img src="/layout_new/layout_images/lang_arrow_icon.svg" alt="화살표" class="select-arrow"></img>
+                    </div>
+                    <ul class="lang-options">
+                        <li data-value="kor" class="active">KOR</li>
+                        <li data-value="eng">ENG</li>
+                        <li data-value="jpn">JPN</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
     <!-- 헤더 끝 -->
 
-
     <main>
-      <!-- 메인 베너 부분 -->
-      <section class="banner_section">
-          <div class="hero">
-            <div class="hero_content">
-              <h1>Technology</h1>
-              <p>기술</p>
+        <!-- 메인 베너 부분 -->
+        <section class="banner_section">
+            <div class="hero">
+                <div class="hero_content">
+                    <h1>Technology</h1>
+                    <p>기술</p>
+                </div>
             </div>
-          </div>
-      </section>
-     
-      <!-- How It Was Developed 섹션 -->
-      <section class="tech_intro_section">
-        <div class="container">
-          <h2 class="section_title">How It Was Developed</h2>
-          <h2 class="section_title_mo">Development Background</h2>
-          <div class="tech_intro_content">
-            <div class="tech_intro_text">
-              헤르지온은 독자적인 원천 기술을 기반으로, 최신 트렌드와 요구에 부합하도록 고도화된 저주파 음향진동 디바이스입니다.</br>
-              <span class="tech_intro_text_blue_web">40Hz 저주파 진동 자극이 신경세포 분화와 손상된 신경조직의 회복에 영향을 줄 수 있다는 과학적 가능성에서 출발해, 헤르지온은 비침습적 두뇌 자극 기술을 기반으로 개발되었습니다.</br></span>
-              
-              일상 속에서 활용할 수 있는 저주파 음향진동 디바이스로, 인지 건강과 정서적 안정 관리에 도움을 주기 위한 방향으로 설계되었습니다.
-            </p>
-          </div>
-          <div class="tech_intro_text_mo">
-            헤르지온은 독자적인 원천 기술을<br>
-            기반으로, 최신 트렌드와 요구에<br>
-            부합하도록 고도화된 저주파 음향진동<br>
-            디바이스입니다.<br>
-            <span class="tech_intro_text_blue_mo">40Hz 저주파 진동 자극이 신경세포 분화와<br>손상된 신경조직의 회복에 영향을 줄 수 <br>
-              있다는 과학적 가능성에서 출발해,<br>
-              헤르지온은 비침습적 두뇌 자극 기술을<br>
-              기반으로 개발되었습니다.<br></span>
-            일상 속에서 활용할 수 있는 저주파<br>
-            음향진동 디바이스로, 인지 건강과 정서적<br>
-            안정 관리에 도움을 주기 위한 방향으로<br>
-            설계되었습니다.
-            
+        </section>
 
-          </div>
-        </div>
-        <div class="section1_img_container">
-         
-          <img class="section1_img" src="images/section1.png" alt="헤르지온 기술 소개 이미지">
-          
-        </div>
-       
-      </section>
-      <!-- 추가된 섹션(이미지 섹션) -->
-      <section class="section2_img_section">
-        <div class="container img_section_container">
-          <!-- 윗부분 이미지 박스  -->
-          <div class="top_img_box">
-            <img src="images/section_2_top.svg" alt="">
-          </div>
-            <!-- 아래부분  -->
-            <div class="bottom_container">
-              <!-- 왼쪽 컨텐츠 박스 -->
-              <div class="bottom_contents_box">
-                <div class="botoom_content">
-                  <!-- 이미지부분 -->
-                  <div class="section2_img_box left_1"></div>
-                  <!-- 글부분 -->
-                   <p class="bottom_content_text">
-                    <span class="title_bold">저주파 기반의 음향진동 자극<br></span>
-                    낮은 주파수의 물리적 진동을 활용한 뇌 자극 기술
-                   </p>
+        <!-- How It Was Developed 섹션 -->
+        <section class="tech_intro_section">
+            <div class="container">
+                <h2 class="section_title">How It Was Developed</h2>
+                <h2 class="section_title_mo">Development Background</h2>
+                <div class="tech_intro_content">
+                    <div class="tech_intro_text">
+                        헤르지온은 독자적인 원천 기술을 기반으로, 최신 트렌드와 요구에 부합하도록 고도화된 저주파 음향진동 디바이스입니다.</br>
+                        <span class="tech_intro_text_blue_web">40Hz 저주파 진동 자극이 신경세포 분화와 손상된 신경조직의 회복에 영향을 줄 수 있다는 과학적 가능성에서 출발해, 헤르지온은 비침습적 두뇌 자극 기술을 기반으로 개발되었습니다.</br></span>
+                        일상 속에서 활용할 수 있는 저주파 음향진동 디바이스로, 인지 건강과 정서적 안정 관리에 도움을 주기 위한 방향으로 설계되었습니다.
+                    </div>
+                    <div class="tech_intro_text_mo">
+                        헤르지온은 독자적인 원천 기술을<br>
+                        기반으로, 최신 트렌드와 요구에<br>
+                        부합하도록 고도화된 저주파 음향진동<br>
+                        디바이스입니다.<br>
+                        <span class="tech_intro_text_blue_mo">40Hz 저주파 진동 자극이 신경세포 분화와<br>손상된 신경조직의 회복에 영향을 줄 수 <br>
+                        있다는 과학적 가능성에서 출발해,<br>
+                        헤르지온은 비침습적 두뇌 자극 기술을<br>
+                        기반으로 개발되었습니다.<br></span>
+                        일상 속에서 활용할 수 있는 저주파<br>
+                        음향진동 디바이스로, 인지 건강과 정서적<br>
+                        안정 관리에 도움을 주기 위한 방향으로<br>
+                        설계되었습니다.
+                    </div>
                 </div>
-                <div class="botoom_content">
-                  <!-- 이미지부분 -->
-                  <div class="section2_img_box left_2"></div>
-                  <!-- 글부분 -->
-                   <p class="bottom_content_text">
-                    <span class="title_bold">경두개 방식의 물리 진동 전달<br></span>
-                    진동 에너지가 두개골을 통과하여 직접적으로 신경 조직에 전달
-                   </p>
+                <div class="section1_img_container">
+                    <img class="section1_img" src="images/section1.png" alt="헤르지온 기술 소개 이미지">
                 </div>
-                <div class="botoom_content" style="border-bottom: none;">
-                  <!-- 이미지부분 -->
-                  <div class="section2_img_box left_3"></div>
-                  <!-- 글부분 -->
-                   <p class="bottom_content_text">
-                    <span class="title_bold">저주파 기반의 음향진동 자극<br></span>
-                    피부나 조직을 절개하거나 삽입하지 않고 외부에서 안전하게 적용
-                   </p>
-                </div>
-              </div>
-              <h1 class="bottom_content_text_middle">                
-                <span class="title_bold">비침습적 방식<br></span>
-                Transcranial Vibroacoustic<br>
-                Stimulation<br>
-              </h1>
-
-              <!-- 오른쪽 컨텐츠 박스 -->
-              <div class="bottom_contents_box">
-                <div class="botoom_content">
-                  <!-- 이미지부분 -->
-                  <div class="section2_img_box right_1"></div>
-                  <!-- 글부분 -->
-                   <p class="bottom_content_text">
-                    <span class="title_bold">다중감각 기반 뇌 신경 조직 자극<br></span>
-                    공명 현상과 청각 · 촉각 등 감각 통합 메커니즘을 통해 뇌를 활성화
-                   </p>
-                </div>
-                <div class="botoom_content">
-                  <!-- 이미지부분 -->
-                  <div class="section2_img_box right_2"></div>
-                  <!-- 글부분 -->
-                   <p class="bottom_content_text">
-                    <span class="title_bold">뇌 신경 조절 및 감각 정보 처리 향상<br></span>
-                    특정 주파수의 음향 진동이 신경 회로를 조절하고 감각 간 상호작용을 촉진
-                   </p>
-                </div>
-                <div class="botoom_content" style="border-bottom: none;">
-                  <!-- 이미지부분 -->
-                  <div class="section2_img_box right_3"></div>
-                  <!-- 글부분 -->
-                   <p class="bottom_content_text">
-                    <span class="title_bold">감지 가능한 미세 음향진동 또는 공명 자극<br></span>
-                    사용자에게 부드럽고 안정적인 감각으로 인식될 수 있는 수준의 자극
-                   </p>
-                </div>
-              </div>
             </div>
-        </div>
-        
-      </section>
-      <!-- 추가된 섹션 표 부분 -->
-       <section class="graph_section">
-        <div class="container">
-          <h1 class="graph_section_title">tVAS vs Traditional Non-Invasive<br>
-            Brain Stimulation (NIBS) Techniques</h1>
-            <img src="images/graph.svg" class="graph_img" alt="">
-        </div>
-    
-       </section>
+        </section>
 
-
-      <!-- Core Technology 섹션 -->
-      <section class="tech_features_section">
-        <div class="container">
-          <h2 class="section_title">Core Technology</h2>
-          <h2 class="section_title_mo">Technology</h2>
-          <h3 class="section_subtitle_mo">Herzion</h3>
-          <div class="tech_features_grid ">
-            <!-- 첫번째 이미지 카드 -->
-            <div class="tech_feature_image_card">
-              <img class="tech_feature_image_card_img1" src="images/section3_1.png" alt="특별한 음향진동 이펙트 이미지">
-            </div>
-            <div class="tech_feature_content_card">
-              <p class="tech_feature_subtitle">Safer for the body · All-brain vibration</p>
-              <h3 class="tech_feature_title web_text_three">
-                특별한 <span class="mobile_break">음향진동 이펙트</span><span class="webtab_break">음향진동 이펙트</span>
-              </h3>
-              <!-- 테블릿버전 글씨-->
-              <h3 class="tech_feature_title tab_text">
-                특별한 음향진동 이펙트
-              </h3>
-              <!-- 모바일 전용 -->
-              <h3 class="tech_feature_title mo_text">
-                특별한 <br>음향진동 이펙트
-              </h3>
-              <p class="tech_feature_text">
-                헤르지온은 전기, 빛, 소음 등의 강한 자극을 이용하는 기존 방식과 달리,</br>
-                <span class="tech_feature_text_blue">음향 공명을 활용해 넓고 깊이 있는 진동을 부드럽게 전달합니다.</br></span>
-                안전한 저주파 음향진동 기술로 신체에 부담을 주지 않아,</br>
-                착용 중에도 업무나 일상 활동이 자유롭게 가능합니다.
-              </p>
-              <!-- 테블릿버전 글씨-->
-              <p class="tect_feature_text_mo tab_text">
-                전기, 빛, 소음 등의 강한 자극을 이용하는 기존 방식과 달리,<span class="tech_feature_text_blue">음향 공명을 활용해 넓고
-                  깊이 있는 진동을 부드럽게 전달합니다.</br></span>
-                안전한 저주파 음향진동 기술로 신체에
-                부담을 주지 않아, 착용 중에도 업무나 일상
-                활동이 자유롭게 가능합니다.
-              </p>
-              <!-- 모바일버전 글씨 -->
-              <p class="tect_feature_text_mo mo_text">
-                전기, 빛, 소음 등의 강한 자극을 이용하는<br>
-                기존 방식과 달리, <span class="tech_feature_text_blue">음향 공명을 활용해 넓고<br>
-                  깊이 있는 진동을 부드럽게 전달합니다.</br></span>
-                안전한 저주파 음향진동 기술로 신체에<br>
-                부담을 주지 않아, 착용 중에도 업무나 일상<br>
-                활동이 자유롭게 가능합니다.
-              </p>
-            </div>
-
-            <!-- 두번째 이미지 카드 -->
-            <div class="tech_feature_image_card">
-              <img class="tech_feature_image_card_img2" src="images/section3_2.png" alt="초소형 음향 진동 모듈 이미지" style="object-fit:cover;">
-            </div>
-            <div class="tech_feature_content_card">
-              <p class="tech_feature_subtitle">Multi channel stimulation on the brain </p>
-              <h3 class="tech_feature_title web_text_three">초소형 음향 진동 모듈 탑재</h3>
-              <!-- 테블릿버전 글자 -->
-               <h3 class="tech_feature_title tab_text">초소형 음향 진동 모듈 탑재</h3>
-               <!-- 모바일 전용 -->
-               <h3 class="tech_feature_title mo_text">초소형 음향 진동<br>모듈 탑재</h3>
-
-              <p class="tech_feature_text">
-                헤르지온은 초소형 음향 진동 모듈을 적용해,</br>
-                <span class="tech_feature_text_blue">전두엽과 측두엽 부위에 직접적으로 자극을 전달합니다.</br></span>
-                정밀한 다채널 자극 기술을 통해 뇌 기능 활성화를 돕습니다.
-              </p>
-              <!-- 테블릿버전 글씨-->
-              <p class="tect_feature_text_mo tab_text">
-                헤르지온은 초소형 음향 진동 모듈을 적용해,
-                <span class="tech_feature_text_blue">
-                  전두엽과 측두엽 부위에 직접적으로 자극을
-                  전달합니다.<br></span> 정밀한 다채널 자극 기술을 통해
-                뇌 기능 활성화를 돕습니다.
-              </p>
-              <!-- 모바일버전 글씨 -->
-              <p class="tect_feature_text_mo mo_text">
-                헤르지온은 초소형 음향 진동 모듈을 적용해,<br>
-                <span class="tech_feature_text_blue">
-                  전두엽과 측두엽 부위에 직접적으로 자극을<br>
-                  전달합니다.</span> 정밀한 다채널 자극 기술을 통해<br>
-                뇌 기능 활성화를 돕습니다.
-              </p>
-            </div>
-
-            <!-- 세번째 이미지 카드 -->
-            <div class="tech_feature_image_card">
-              <img class="tech_feature_image_card_img3" src="images/section3_3.png" alt="저주파 음향진동 자극 이미지">
-            </div>
-            <div class="tech_feature_content_card">
-              <h3 class="tech_feature_title web_text_three">
-                저주파 음향진동
-                <span>자극을 위한<br>최적화된 성능</span>
-              </h3>
-              <!-- 모바일 전용 -->
-              <h3 class="tech_feature_title tab_text">
-                저주파 음향진동
-                자극을 위한 최적화된 성능
-              </h3>
-              <!-- 모바일 전용 -->
-              <h3 class="tech_feature_title mo_text">
-                저주파 음향진동<br>
-                자극을 위한<br>최적화된 성능
-              </h3>
-              <p class="tech_feature_text">
-                헤르지온은 20Hz에서 120Hz에 이르는 저주파 대역에서 정밀하고 안정적인</br>
-                음향 진동을 구현하도록 설계되어, 
-                <span class="tech_feature_text_blue">두뇌 자극에 최적화된 자극 강도와 주파수</br>
-                  응답 특성을 제공합니다.</span>
-              </p>
-              <!-- 테블릿버전 글씨-->
-                <p class="tect_feature_text_mo tab_text">
-                헤르지온은 20Hz에서 120Hz에 이르는
-                저주파 대역에서 정밀하고 안정적인 음향
-                진동을 구현하도록 설계되어, <span class="tech_feature_text_blue">두뇌 자극에
-                  최적화된 자극<br>강도와 주파수 응답 특성을
-                  제공합니다.</span>
-              </p>
-              <!-- 모바일버전 글씨 -->
-              <p class="tect_feature_text_mo mo_text">
-                헤르지온은 20Hz에서 120Hz에 이르는<br>
-                저주파 대역에서 정밀하고 안정적인 음향<br>
-                진동을 구현하도록 설계되어, <span class="tech_feature_text_blue">두뇌 자극에<br>
-                  최적화된 자극 강도와 주파수 응답 특성을<br>
-                  제공합니다.</span>
-              </p>
-            </div>
-
-            <!-- 네번째 이미지 카드 -->
-            <div class="tech_feature_image_card">
-              <img class="tech_feature_image_card_img4"  src="images/section3_4.png" alt="저주파 음향진동 자극 이미지">
-            </div>
-            <div class="tech_feature_content_card">
-              <h3 class="tech_feature_title web_four">
-                다양한 자극감을 제공하는<br>진동 패턴 최적화 기술
-              </h3>
-              <!-- 테블릿버전 글씨-->
-              <h3 class="tech_feature_title mobile_four tab_text">
-                다양한 자극감을 제공하는 진동 패턴 최적화 기술
-              </h3>
-              <!-- 모바일 전용 -->
-              <h3 class="tech_feature_title mobile_four mo_text">
-                다양한 자극감을<br>제공하는 진동 패턴<br>최적화 기술
-              </h3>
-              <p class="tech_feature_text">
-                헤르지온은 <span class="tech_feature_text_blue">진동의 강도, 리듬, 주파수를 정밀하게 조절해 사용자마다 다르게</br>
-                  체감되는 다양한 자극감을 구현합니다.</br></span>
-                개인의 컨디션이나 목적에 따라 맞춤형 뇌 자극이 가능하도록 설계됐습니다.  
-              </p> 
-              <!-- 테블릿버전 글씨-->
-              <p class="tect_feature_text_mo tab_text">
-                헤르지온은 <span class="tech_feature_text_blue">진동의 강도, 리듬, 주파수를
-                  정밀하게 조절해 사용자마다 다르게
-                  체감되는 다양한 자극감을 구현합니다.<br></span>
-                개인의 컨디션이나 목적에 따라 맞춤형 뇌
-                자극이 가능하도록 설계됐습니다.
-              </p>
-              <!-- 모바일버전 글씨 -->
-              <p class="tect_feature_text_mo mo_text">
-                헤르지온은 <span class="tech_feature_text_blue">진동의 강도, 리듬, 주파수를<br>
-                  정밀하게 조절해 사용자마다 다르게<br>
-                  체감되는 다양한 자극감을 구현합니다.<br></span>
-                개인의 컨디션이나 목적에 따라 맞춤형 뇌<br>
-                자극이 가능하도록 설계됐습니다.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Scientific Basis 섹션 -->
-      <section class="scientific_basis_section">
-        <div class="container">
-          <h2 class="section_title">Scientific Basis</h2>          
-            <div class="scientific_basis_scroll">
-            <div class="swiper researchSwiper">
-              <div class="swiper-wrapper">
-                <!-- 카드  -->
-                <div class="swiper-slide">
-                  <div class="research_card">
-                    <div class="research_card_image_rounded card_hover_effect">
-                      <img src="" alt="연구 이미지 1">
-                      <button class="view_btn">View</button>
-                    </div>
-                    <div class="research_card_content">
-                      <h3>Integrating a Speech-based Prescreening Tool in Central Recruitment Strategies for...</h3>
-                      <p class="research_date">2024. 05</p>
-                    </div>
-                  </div>
+        <!-- 추가된 섹션(이미지 섹션) -->
+        <section class="section2_img_section">
+            <div class="container img_section_container">
+                <div class="top_img_box">
+                    <img src="images/section_2_top.svg" alt="">
                 </div>
-                <!-- 카드 2 -->
-                <div class="swiper-slide">
-                  <div class="research_card">
-                    <div class="research_card_image card_hover_effect">
-                      <img src="" alt="연구 이미지 2">
-                        <button class="view_btn">View</button>
-                    </div>
-                    <div class="research_card_content">
-                      <h3>Integrating a Speech-based Prescreening Tool in Central Recruitment Strategies for...</h3>
-                      <p class="research_date">2024. 05</p>
-                    </div>
-                  </div>
+                <div class="top_img_box_mo">
+                    <img src="images/mo/mo_section_2_top.svg" alt="">
                 </div>
-                <!-- 카드 3 -->
-                <div class="swiper-slide">
-                  <div class="research_card">
-                    <div class="research_card_image_rounded card_hover_effect">
-                      <img src="" alt="연구 이미지 3">
-                        <button class="view_btn">View</button>
+                <div class="bottom_container">
+                    <div class="bottom_contents_box">
+                        <div class="botoom_content">
+                            <div class="section2_img_box left_1"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">저주파 기반의 음향진동 자극<br></span>
+                                낮은 주파수의 물리적 진동을 활용한 뇌 자극 기술
+                            </p>
+                        </div>
+                        <div class="botoom_content">
+                            <div class="section2_img_box left_2"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">경두개 방식의 물리 진동 전달<br></span>
+                                진동 에너지가 두개골을 통과하여 직접적으로 신경 조직에 전달
+                            </p>
+                        </div>
+                        <div class="botoom_content" style="border-bottom: none;">
+                            <div class="section2_img_box left_3"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">저주파 기반의 음향진동 자극<br></span>
+                                피부나 조직을 절개하거나 삽입하지 않고 외부에서 안전하게 적용
+                            </p>
+                        </div>
                     </div>
-                    <div class="research_card_content">
-                      <h3>Integrating a Speech-based Prescreening Tool in Central Recruitment Strategies for...</h3>
-                      <p class="research_date">2024. 05</p>
+                    <h1 class="bottom_content_text_middle">                
+                        <span class="title_bold">비침습적 방식<br></span>
+                        Transcranial Vibroacoustic<br>
+                        Stimulation<br>
+                    </h1>
+                    <div class="bottom_contents_box">
+                        <div class="botoom_content">
+                            <div class="section2_img_box right_1"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">다중감각 기반 뇌 신경 조직 자극<br></span>
+                                공명 현상과 청각 · 촉각 등 감각 통합 메커니즘을 통해 뇌를 활성화
+                            </p>
+                        </div>
+                        <div class="botoom_content">
+                            <div class="section2_img_box right_2"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">뇌 신경 조절 및 감각 정보 처리 향상<br></span>
+                                특정 주파수의 음향 진동이 신경 회로를 조절하고 감각 간 상호작용을 촉진
+                            </p>
+                        </div>
+                        <div class="botoom_content" style="border-bottom: none;">
+                            <div class="section2_img_box right_3"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">감지 가능한 미세 음향진동 또는 공명 자극<br></span>
+                                사용자에게 부드럽고 안정적인 감각으로 인식될 수 있는 수준의 자극
+                            </p>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <!-- 카드 4 -->
-                <div class="swiper-slide">
-                  <div class="research_card">
-                    <div class="research_card_image card_hover_effect">
-                      <img src="" alt="연구 이미지 4">
-                        <button class="view_btn">View</button>
+                <div class="section2_mid_img"></div>
+                <!-- 모바일 버전 -->
+                <div class="bottom_container_mo">
+                    <p class="mo_bottom_text">
+                        <span class="title_bold">경두개 음향진동 자극 (tVAS)<br></span>
+                        Transcranial Vibroacoustic<br>
+                        Stimulation<br>
+                    </p>
+                    <div class="bottom_content_mo">
+                        <div class="bottom_content_mo_box">
+                            <div class="section2_img_box_mo m_img_1"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">저주파 기반의 음향진동 자극<br></span>
+                                낮은 주파수의 물리적 진동을 활용한 뇌 자극 기술
+                            </p>
+                        </div>
+                        <div class="bottom_content_mo_box">
+                            <div class="section2_img_box_mo m_img_2"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">경두개 방식의 물리 진동 전달<br></span>
+                                진동 에너지가 두개골을 통과하여 직접적으로<br>
+                                신경 조직에 전달
+                            </p>
+                        </div>
+                        <div class="bottom_content_mo_box">
+                            <div class="section2_img_box_mo m_img_3"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">비침습적 방식<br></span>
+                                피부나 조직을 절개하거나 삽입하지 않고 외부에서 안전하게 적용
+                            </p>
+                        </div>
+                        <div class="bottom_content_mo_box">
+                            <div class="section2_img_box_mo m_img_4"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">다중감각 기반 뇌 신경 조직 자극<br></span>
+                                공명 현상과 청각 · 촉각 등 감각 통합 메커니즘을 통해 뇌를 활성화
+                            </p>
+                        </div>
+                        <div class="bottom_content_mo_box">
+                            <div class="section2_img_box_mo m_img_5"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">뇌 신경 조절 및 감각 정보 처리 향상<br></span>
+                                특정 주파수의 음향 진동이 신경 회로를 조절하고<br>
+                                감각 간 상호작용을 촉진
+                            </p>
+                        </div>
+                        <div class="bottom_content_mo_box" style="border-bottom: none;">
+                            <div class="section2_img_box_mo m_img_6"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">감지 가능한 미세 음향진동 또는 공명 자극<br></span>
+                                사용자에게 부드럽고 안정적인 감각으로 인식될 수 있는 수준의 자극
+                            </p>
+                        </div>
                     </div>
-                    <div class="research_card_content">
-                      <h3>Integrating a Speech-based Prescreening Tool in Central Recruitment Strategies for...</h3>
-                      <p class="research_date">2024. 05</p>
-                    </div>
-                  </div>
                 </div>
-                <!-- 카드 5 -->
-                <div class="swiper-slide">
-                  <div class="research_card">
-                    <div class="research_card_image card_hover_effect">
-                      <img src="" alt="연구 이미지 5">
-                        <button class="view_btn">View</button>
-                    </div>
-                    <div class="research_card_content">
-                      <h3>Integrating a Speech-based Prescreening Tool in Central Recruitment Strategies for...</h3>
-                      <p class="research_date">2024. 05</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-              <div class="custom-progressbar">
-                <div class="custom-progressbar-bar"></div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section> 
+        </section>
 
-      <!-- Scientific Basis 섹션 모바일버전 -->
-      <section class="thesis_mobile_section">
-        <div class="container">
-          <h2 class="section_title_mo">Thesis</h2>
-          <div class="swiper mobileThesisSwiper">
-            <div class="swiper-wrapper">
-              <!-- 첫 번째 슬라이드 -->
-              <div class="swiper-slide">
-                <div class="thesis_mobile_card_container">
-                  <div class="thesis_mobile_card">
-                    <div class="thesis_mobile_card_image">
-                      <img src="" alt="">
-                    </div>
-                    <div class="thesis_mobile_card_content">
-                      <h3>Integrating a Speech based Prescreening Tool in Central Recruitment Strategies for...</h3>
-                      <div class="card_botteom">
-                        <p class="thesis_mobile_date">2024. 03</p>
-                        <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="thesis_mobile_card">
-                    <div class="thesis_mobile_card_image">
-                      <img src="" alt="">
-                    </div>
-                    <div class="thesis_mobile_card_content">
-                      <h3>Integrating a Speech based Prescreening Tool in Central</h3>
-                      <div class="card_botteom">
-                        <p class="thesis_mobile_date">2024. 03</p>
-                        <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="thesis_mobile_card">
-                    <div class="thesis_mobile_card_image">
-                      <img src="" alt="">
-                    </div>
-                    <div class="thesis_mobile_card_content">
-                      <h3>Integrating a Speech based Prescreening Tool in Central Recruitment Strategies for...</h3>
-                      <div class="card_botteom">
-                        <p class="thesis_mobile_date">2024. 03</p>
-                        <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="thesis_mobile_card">
-                    <div class="thesis_mobile_card_image">
-                      <img src="" alt="">
-                    </div>
-                    <div class="thesis_mobile_card_content">
-                      <h3>Integrating a Speech based Prescreening Tool in Central</h3>
-                      <div class="card_botteom">
-                        <p class="thesis_mobile_date">2024. 03</p>
-                        <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 두 번째 슬라이드 -->
-              <div class="swiper-slide">
-                <div class="thesis_mobile_card_container">
-                  <div class="thesis_mobile_card">
-                    <div class="thesis_mobile_card_image">
-                      <img src="" alt="">
-                    </div>
-                    <div class="thesis_mobile_card_content">
-                      <h3>Integrating a Speech based Prescreening Tool in Central Recruitment Strategies for...</h3>
-                      <div class="card_botteom">
-                        <p class="thesis_mobile_date">2024. 03</p>
-                        <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="thesis_mobile_card">
-                    <div class="thesis_mobile_card_image">
-                      <img src="" alt="">
-                    </div>
-                    <div class="thesis_mobile_card_content">
-                      <h3>Integrating a Speech based Prescreening Tool in Central</h3>
-                      <div class="card_botteom">
-                        <p class="thesis_mobile_date">2024. 03</p>
-                        <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="thesis_mobile_card">
-                    <div class="thesis_mobile_card_image">
-                      <img src="" alt="">
-                    </div>
-                    <div class="thesis_mobile_card_content">
-                      <h3>Integrating a Speech based Prescreening Tool in Central Recruitment Strategies for...</h3>
-                      <div class="card_botteom">
-                        <p class="thesis_mobile_date">2024. 03</p>
-                        <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="thesis_mobile_card">
-                    <div class="thesis_mobile_card_image">
-                      <img src="" alt="">
-                    </div>
-                    <div class="thesis_mobile_card_content">
-                      <h3>Integrating a Speech based Prescreening Tool in Central</h3>
-                      <div class="card_botteom">
-                        <p class="thesis_mobile_date">2024. 03</p>
-                        <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 세 번째 슬라이드 -->
-              <div class="swiper-slide">
-                <div class="thesis_mobile_card_container">
-                  <div class="thesis_mobile_card">
-                    <div class="thesis_mobile_card_image">
-                      <img src="" alt="">
-                    </div>
-                    <div class="thesis_mobile_card_content">
-                      <h3>Integrating a Speech based Prescreening Tool in Central Recruitment Strategies for...</h3>
-                      <div class="card_botteom">
-                        <p class="thesis_mobile_date">2024. 03</p>
-                        <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="thesis_mobile_card">
-                    <div class="thesis_mobile_card_image">
-                      <img src="" alt="">
-                    </div>
-                    <div class="thesis_mobile_card_content">
-                      <h3>Integrating a Speech based Prescreening Tool in Central</h3>
-                      <div class="card_botteom">
-                        <p class="thesis_mobile_date">2024. 03</p>
-                        <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="thesis_mobile_card">
-                    <div class="thesis_mobile_card_image">
-                      <img src="" alt="">
-                    </div>
-                    <div class="thesis_mobile_card_content">
-                      <h3>Integrating a Speech based Prescreening Tool in Central Recruitment Strategies for...</h3>
-                      <div class="card_botteom">
-                        <p class="thesis_mobile_date">2024. 03</p>
-                        <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="thesis_mobile_card">
-                    <div class="thesis_mobile_card_image">
-                      <img src="" alt="">
-                    </div>
-                    <div class="thesis_mobile_card_content">
-                      <h3>Integrating a Speech based Prescreening Tool in Central</h3>
-                      <div class="card_botteom">
-                        <p class="thesis_mobile_date">2024. 03</p>
-                        <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <!-- 추가된 섹션 표 부분 -->
+        <section class="graph_section">
+            <div class="container">
+                <h1 class="graph_section_title">tVAS vs Traditional Non-Invasive<br>
+                Brain Stimulation (NIBS) Techniques</h1>
+                <img src="images/graph.svg" class="graph_img" alt="">
+                <img src="images/mo/m_graph.svg" class="graph_img_mo" alt="">
             </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
+        </section>
+
+        <!-- Core Technology 섹션 -->
+        <section class="tech_features_section">
+            <div class="container">
+                <h2 class="section_title">Core Technology</h2>
+                <h2 class="section_title_mo">Technology</h2>
+                <h3 class="section_subtitle_mo">Herzion</h3>
+                <div class="tech_features_grid ">
+                    <div class="tech_feature_image_card">
+                        <img class="tech_feature_image_card_img1" src="images/section3_1.png" alt="특별한 음향진동 이펙트 이미지">
+                    </div>
+                    <div class="tech_feature_content_card">
+                        <p class="tech_feature_subtitle">Safer for the body · All-brain vibration</p>
+                        <h3 class="tech_feature_title web_text_three">
+                            특별한 <span class="mobile_break">음향진동 이펙트</span><span class="webtab_break">음향진동 이펙트</span>
+                        </h3>
+                        <h3 class="tech_feature_title tab_text">특별한 음향진동 이펙트</h3>
+                        <h3 class="tech_feature_title mo_text">특별한 <br>음향진동 이펙트</h3>
+                        <p class="tech_feature_text">
+                            헤르지온은 전기, 빛, 소음 등의 강한 자극을 이용하는 기존 방식과 달리,</br>
+                            <span class="tech_feature_text_blue">음향 공명을 활용해 넓고 깊이 있는 진동을 부드럽게 전달합니다.</br></span>
+                            안전한 저주파 음향진동 기술로 신체에 부담을 주지 않아,</br>
+                            착용 중에도 업무나 일상 활동이 자유롭게 가능합니다.
+                        </p>
+                        <p class="tect_feature_text_mo tab_text">
+                            전기, 빛, 소음 등의 강한 자극을 이용하는 기존 방식과 달리,<span class="tech_feature_text_blue">음향 공명을 활용해 넓고 깊이 있는 진동을 부드럽게 전달합니다.</br></span>
+                            안전한 저주파 음향진동 기술로 신체에 부담을 주지 않아, 착용 중에도 업무나 일상 활동이 자유롭게 가능합니다.
+                        </p>
+                        <p class="tect_feature_text_mo mo_text">
+                            전기, 빛, 소음 등의 강한 자극을 이용하는<br>
+                            기존 방식과 달리, <span class="tech_feature_text_blue">음향 공명을 활용해 넓고<br>
+                            깊이 있는 진동을 부드럽게 전달합니다.</br></span>
+                            안전한 저주파 음향진동 기술로 신체에<br>
+                            부담을 주지 않아, 착용 중에도 업무나 일상<br>
+                            활동이 자유롭게 가능합니다.
+                        </p>
+                    </div>
+
+                    <div class="tech_feature_image_card">
+                        <img class="tech_feature_image_card_img2" src="images/section3_2.png" alt="초소형 음향 진동 모듈 이미지" style="object-fit:cover;">
+                    </div>
+                    <div class="tech_feature_content_card">
+                        <p class="tech_feature_subtitle">Multi channel stimulation on the brain </p>
+                        <h3 class="tech_feature_title web_text_three">초소형 음향 진동 모듈 탑재</h3>
+                        <h3 class="tech_feature_title tab_text">초소형 음향 진동 모듈 탑재</h3>
+                        <h3 class="tech_feature_title mo_text">초소형 음향 진동<br>모듈 탑재</h3>
+                        <p class="tech_feature_text">
+                            헤르지온은 초소형 음향 진동 모듈을 적용해,</br>
+                            <span class="tech_feature_text_blue">전두엽과 측두엽 부위에 직접적으로 자극을 전달합니다.</br></span>
+                            정밀한 다채널 자극 기술을 통해 뇌 기능 활성화를 돕습니다.
+                        </p>
+                        <p class="tect_feature_text_mo tab_text">
+                            헤르지온은 초소형 음향 진동 모듈을 적용해,
+                            <span class="tech_feature_text_blue">전두엽과 측두엽 부위에 직접적으로 자극을 전달합니다.</span> 정밀한 다채널 자극 기술을 통해 뇌 기능 활성화를 돕습니다.
+                        </p>
+                        <p class="tect_feature_text_mo mo_text">
+                            헤르지온은 초소형 음향 진동 모듈을 적용해,<br>
+                            <span class="tech_feature_text_blue">전두엽과 측두엽 부위에 직접적으로 자극을 전달합니다.</span> 정밀한 다채널 자극 기술을 통해<br>
+                            뇌 기능 활성화를 돕습니다.
+                        </p>
+                    </div>
+
+                    <div class="tech_feature_image_card">
+                        <img class="tech_feature_image_card_img3" src="images/section3_3.png" alt="저주파 음향진동 자극 이미지">
+                    </div>
+                    <div class="tech_feature_content_card">
+                        <h3 class="tech_feature_title web_text_three">
+                            저주파 음향진동
+                            <span>자극을 위한<br>최적화된 성능</span>
+                        </h3>
+                        <h3 class="tech_feature_title tab_text">저주파 음향진동 자극을 위한 최적화된 성능</h3>
+                        <h3 class="tech_feature_title mo_text">저주파 음향진동<br>자극을 위한<br>최적화된 성능</h3>
+                        <p class="tech_feature_text">
+                            헤르지온은 20Hz에서 120Hz에 이르는 저주파 대역에서 정밀하고 안정적인</br>
+                            음향 진동을 구현하도록 설계되어, 
+                            <span class="tech_feature_text_blue">두뇌 자극에 최적화된 자극 강도와 주파수</br>
+                            응답 특성을 제공합니다.</span>
+                        </p>
+                        <p class="tect_feature_text_mo tab_text">
+                            헤르지온은 20Hz에서 120Hz에 이르는 저주파 대역에서 정밀하고 안정적인 음향
+                            진동을 구현하도록 설계되어, <span class="tech_feature_text_blue">두뇌 자극에 최적화된 자극<br>강도와 주파수 응답 특성을 제공합니다.</span>
+                        </p>
+                        <p class="tect_feature_text_mo mo_text">
+                            헤르지온은 20Hz에서 120Hz에 이르는<br>
+                            저주파 대역에서 정밀하고 안정적인 음향<br>
+                            진동을 구현하도록 설계되어, <span class="tech_feature_text_blue">두뇌 자극에<br>
+                            최적화된 자극 강도와 주파수 응답 특성을<br>
+                            제공합니다.</span>
+                        </p>
+                    </div>
+
+                    <div class="tech_feature_image_card">
+                        <img class="tech_feature_image_card_img4" src="images/section3_4.png" alt="저주파 음향진동 자극 이미지">
+                    </div>
+                    <div class="tech_feature_content_card">
+                        <h3 class="tech_feature_title web_four">
+                            다양한 자극감을 제공하는<br>진동 패턴 최적화 기술
+                        </h3>
+                        <h3 class="tech_feature_title mobile_four tab_text">다양한 자극감을 제공하는 진동 패턴 최적화 기술</h3>
+                        <h3 class="tech_feature_title mobile_four mo_text">다양한 자극감을<br>제공하는 진동 패턴<br>최적화 기술</h3>
+                        <p class="tech_feature_text">
+                            헤르지온은 <span class="tech_feature_text_blue">진동의 강도, 리듬, 주파수를 정밀하게 조절해 사용자마다 다르게</br>
+                            체감되는 다양한 자극감을 구현합니다.</br></span>
+                            개인의 컨디션이나 목적에 따라 맞춤형 뇌 자극이 가능하도록 설계됐습니다.  
+                        </p> 
+                        <p class="tect_feature_text_mo tab_text">
+                            헤르지온은 <span class="tech_feature_text_blue">진동의 강도, 리듬, 주파수를 정밀하게 조절해 사용자마다 다르게 체감되는 다양한 자극감을 구현합니다.<br></span>
+                            개인의 컨디션이나 목적에 따라 맞춤형 뇌 자극이 가능하도록 설계됐습니다.
+                        </p>
+                        <p class="tect_feature_text_mo mo_text">
+                            헤르지온은 <span class="tech_feature_text_blue">진동의 강도, 리듬, 주파수를<br>정밀하게 조절해 사용자마다 다르게<br>체감되는 다양한 자극감을 구현합니다.<br></span>
+                            개인의 컨디션이나 목적에 따라 맞춤형 뇌<br>자극이 가능하도록 설계됐습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scientific Basis 섹션 -->
+        <section class="scientific_basis_section">
+            <div class="container">
+                <h2 class="section_title">Scientific Basis</h2>          
+                <div class="scientific_basis_scroll">
+                    <div class="swiper researchSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="research_card">
+                                    <div class="research_card_image_rounded card_hover_effect">
+                                        <img src="" alt="연구 이미지 1">
+                                        <button class="view_btn">View</button>
+                                    </div>
+                                    <div class="research_card_content">
+                                        <h3>Integrating a Speech-based Prescreening Tool in Central Recruitment Strategies for...</h3>
+                                        <p class="research_date">2024. 05</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="research_card">
+                                    <div class="research_card_image card_hover_effect">
+                                        <img src="" alt="연구 이미지 2">
+                                        <button class="view_btn">View</button>
+                                    </div>
+                                    <div class="research_card_content">
+                                        <h3>Integrating a Speech-based Prescreening Tool in Central Recruitment Strategies for...</h3>
+                                        <p class="research_date">2024. 05</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="research_card">
+                                    <div class="research_card_image_rounded card_hover_effect">
+                                        <img src="" alt="연구 이미지 3">
+                                        <button class="view_btn">View</button>
+                                    </div>
+                                    <div class="research_card_content">
+                                        <h3>Integrating a Speech-based Prescreening Tool in Central Recruitment Strategies for...</h3>
+                                        <p class="research_date">2024. 05</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="research_card">
+                                    <div class="research_card_image card_hover_effect">
+                                        <img src="" alt="연구 이미지 4">
+                                        <button class="view_btn">View</button>
+                                    </div>
+                                    <div class="research_card_content">
+                                        <h3>Integrating a Speech-based Prescreening Tool in Central Recruitment Strategies for...</h3>
+                                        <p class="research_date">2024. 05</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="research_card">
+                                    <div class="research_card_image card_hover_effect">
+                                        <img src="" alt="연구 이미지 5">
+                                        <button class="view_btn">View</button>
+                                    </div>
+                                    <div class="research_card_content">
+                                        <h3>Integrating a Speech-based Prescreening Tool in Central Recruitment Strategies for...</h3>
+                                        <p class="research_date">2024. 05</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="custom-progressbar">
+                            <div class="custom-progressbar-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <!-- Scientific Basis 섹션 모바일버전 -->
+        <section class="thesis_mobile_section">
+            <div class="container">
+                <h2 class="section_title_mo">Thesis</h2>
+                <div class="swiper mobileThesisSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="thesis_mobile_card_container">
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Integrating a Speech based Prescreening Tool in Central Recruitment Strategies for...</h3>
+                                        <div class="card_botteom">
+                                            <p class="thesis_mobile_date">2024. 03</p>
+                                            <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Integrating a Speech based Prescreening Tool in Central</h3>
+                                        <div class="card_botteom">
+                                            <p class="thesis_mobile_date">2024. 03</p>
+                                            <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Integrating a Speech based Prescreening Tool in Central Recruitment Strategies for...</h3>
+                                        <div class="card_botteom">
+                                            <p class="thesis_mobile_date">2024. 03</p>
+                                            <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Integrating a Speech based Prescreening Tool in Central</h3>
+                                        <div class="card_botteom">
+                                            <p class="thesis_mobile_date">2024. 03</p>
+                                            <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thesis_mobile_card_container">
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Integrating a Speech based Prescreening Tool in Central Recruitment Strategies for...</h3>
+                                        <div class="card_botteom">
+                                            <p class="thesis_mobile_date">2024. 03</p>
+                                            <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Integrating a Speech based Prescreening Tool in Central</h3>
+                                        <div class="card_botteom">
+                                            <p class="thesis_mobile_date">2024. 03</p>
+                                            <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Integrating a Speech based Prescreening Tool in Central Recruitment Strategies for...</h3>
+                                        <div class="card_botteom">
+                                            <p class="thesis_mobile_date">2024. 03</p>
+                                            <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Integrating a Speech based Prescreening Tool in Central</h3>
+                                        <div class="card_botteom">
+                                            <p class="thesis_mobile_date">2024. 03</p>
+                                            <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thesis_mobile_card_container">
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Integrating a Speech based Prescreening Tool in Central Recruitment Strategies for...</h3>
+                                        <div class="card_botteom">
+                                            <p class="thesis_mobile_date">2024. 03</p>
+                                            <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Integrating a Speech based Prescreening Tool in Central</h3>
+                                        <div class="card_botteom">
+                                            <p class="thesis_mobile_date">2024. 03</p>
+                                            <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Integrating a Speech based Prescreening Tool in Central Recruitment Strategies for...</h3>
+                                        <div class="card_botteom">
+                                            <p class="thesis_mobile_date">2024. 03</p>
+                                            <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Integrating a Speech based Prescreening Tool in Central</h3>
+                                        <div class="card_botteom">
+                                            <p class="thesis_mobile_date">2024. 03</p>
+                                            <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
     </main>
 
-
-
-<!-- 푸터부분 -->
-<footer>
-  <div class="footer_top_content">
-    <div class="footer_left">
-      <img src="images/footer_logo.svg" alt="HERZION" class="footer_logo"></img>
-      <div class="contact_info">
-        <div class="contact_info_left">
-          <div class="info_group">
-            <p class="label">Tel</p>
-            <span>02-2637-0009</span>
-          </div>
-          <div class="info_group">
-            <p class="label">E-mail</p>
-            <span>help@herzion.com</span>
-          </div>
+    <!-- 푸터부분 -->
+    <footer>
+        <div class="footer_top_content">
+            <div class="footer_left">
+                <img src="images/footer_logo.svg" alt="HERZION" class="footer_logo"></img>
+                <div class="contact_info">
+                    <div class="contact_info_left">
+                        <div class="info_group">
+                            <p class="label">Tel</p>
+                            <span>02-2637-0009</span>
+                        </div>
+                        <div class="info_group">
+                            <p class="label">E-mail</p>
+                            <span>help@herzion.com</span>
+                        </div>
+                    </div>
+                    <div class="contact_info_right">
+                        <div class="info_group">
+                            <p class="label">Address</p>
+                            <span>경기도 성남시 분당구 동판교로 56, (주)아리바이오</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_right">
+                <ul class="footer_links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/product_page/product.html">Product</a></li>
+                    <li><a href="/technology/technology.html">Technology</a></li>
+                    <li><a href="/business/business.html">Business</a></li>
+                    <li><a href="/support/support.html">Support</a></li>
+                    <li><a href="/faq/faq.html">FAQ</a></li>
+                    <li><a href="/contact/contact.html">Contact</a></li>
+                </ul>
+                <div class="app_download_box">
+                    <a href="https://apps.apple.com/br/app/%ED%97%A4%EB%A5%B4%EC%A7%80%EC%98%A8/id6463604810" target="_blank" class="store_btn">
+                        <img src="images/apple_logo.svg" alt=""></img><span>App Store</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.aribio.app.herzion&hl=ko" target="_blank" class="store_btn">
+                        <img src="images/google_logo.svg" alt=""></img><span>Google Play</span>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="contact_info_right">
-          <div class="info_group">
-            <p class="label">Address</p>
-            <span>경기도 성남시 분당구 동판교로 56, (주)아리바이오</span>
-          </div>
+        <div class="footer_bottom">
+            <p>ⓒ 2024 by Aribio. All Rights Reserved.</p>
+            <img src="images/footer_logo.svg" alt="HERZION" class="footer_logo_bottom"></img>
         </div>
-      </div>
-    </div>
-    <div class="footer_right">
-      <ul class="footer_links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/product_page/product.html">Product</a></li>
-        <li><a href="/technology/technology.html">Technology</a></li>
-        <li><a href="/business/business.html">Business</a></li>
-        <li><a href="/support/support.html">Support</a></li>
-        <li><a href="/faq/faq.html">FAQ</a></li>
-        <li><a href="/contact/contact.html">Contact</a></li>
-      </ul>
-      <div class="app_download_box">
-        <a href="https://apps.apple.com/br/app/%ED%97%A4%EB%A5%B4%EC%A7%80%EC%98%A8/id6463604810" target="_blank" class="store_btn">
-          <img src="images/apple_logo.svg" alt="" ></img><span>App Store</span>
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.aribio.app.herzion&hl=ko" target="_blank" class="store_btn">
-          <img src="images/google_logo.svg" alt="" ></img><span
-            >Google Play</span
-          >
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="footer_bottom">
-    <p>ⓒ 2024 by Aribio. All Rights Reserved.</p>
-    <img
-      src="images/footer_logo.svg"
-      alt="HERZION"
-      class="footer_logo_bottom"
-    ></img>
-  </div>
-</footer>
+    </footer>
 
     <!-- 상단이동하는 버튼 -->
     <button class="top_btn" id="top_btn">
-      <img src="images/top_btn.svg" alt="상단 이동 버튼" />
-      <span>Top</span>
+        <img src="images/top_btn.svg" alt="상단 이동 버튼" />
+        <span>Top</span>
     </button>
-  </body>
+</body>
 </html>

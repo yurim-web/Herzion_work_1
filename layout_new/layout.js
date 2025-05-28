@@ -1,13 +1,36 @@
-// 스크롤 이벤트에 따른 헤더 스타일 변경
-const headerLangSelect = document.getElementById("header_lang_select");
+// ✅ 스크롤 이벤트에 따른 헤더 스타일 변경
+// const headerLangSelect = document.getElementById("header_lang_select");
+// const header = document.querySelector("header");
+
+// if (header && headerLangSelect) {
+//   window.addEventListener("scroll", () => {
+//     if (window.scrollY > 50) {
+//       // 헤더 배경 변경
+//       header.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+
+//       // 언어 선택 자연스럽게 숨김
+//       headerLangSelect.style.opacity = "0";
+//       headerLangSelect.style.visibility = "hidden";
+//     } else {
+//       // 헤더 배경 초기화
+//       header.style.backgroundColor = "";
+
+//       // 언어 선택 다시 표시
+//       headerLangSelect.style.opacity = "1";
+//       headerLangSelect.style.visibility = "visible";
+//     }
+//   });
+// }
+
 const header = document.querySelector("header");
-if (header && headerLangSelect) {
+
+if (header) {
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
-      headerLangSelect.style.display = "none";
+      header.classList.add("header--scrolled"); // 숨김 상태 클래스 추가
       header.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
     } else {
-      headerLangSelect.style.display = "";
+      header.classList.remove("header--scrolled"); // 복구
       header.style.backgroundColor = "";
     }
   });
@@ -41,23 +64,23 @@ const menuCloseBtn = document.getElementById("menu_btn_mobile_close");
 const mobileMenu = document.getElementById("mobile_menu");
 const menuBackground = document.querySelector(".mobile_menu_background");
 
-menuBtn.addEventListener("click", () => {
-  console.log("메뉴 토글 클릭됨");
-  mobileMenu.classList.add("active");
-  menuBackground.classList.add("active");
-  menuBtn.style.display = "none";
-  menuCloseBtn.style.display = "block";
-  document.body.style.overflow = "hidden"; // 스크롤 방지
-});
+// menuBtn.addEventListener("click", () => {
+//   console.log("메뉴 토글 클릭됨");
+//   mobileMenu.classList.add("active");
+//   menuBackground.classList.add("active");
+//   menuBtn.style.display = "none";
+//   menuCloseBtn.style.display = "block";
+//   document.body.style.overflow = "hidden"; // 스크롤 방지
+// });
 
-menuCloseBtn.addEventListener("click", () => {
-  console.log("메뉴 닫기 클릭됨");
-  mobileMenu.classList.remove("active");
-  menuBackground.classList.remove("active");
-  menuBtn.style.display = "block";
-  menuCloseBtn.style.display = "none";
-  document.body.style.overflow = ""; // 스크롤 복구
-});
+// menuCloseBtn.addEventListener("click", () => {
+//   console.log("메뉴 닫기 클릭됨");
+//   mobileMenu.classList.remove("active");
+//   menuBackground.classList.remove("active");
+//   menuBtn.style.display = "block";
+//   menuCloseBtn.style.display = "none";
+//   document.body.style.overflow = ""; // 스크롤 복구
+// });
 
 // 언어 선택 기능
 document.addEventListener("DOMContentLoaded", function () {
@@ -88,6 +111,10 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       customDropdown.classList.remove("open");
       selectArrow.classList.remove("rotated");
+      // 모든 언어 옵션 다시 보이게
+      langItems.forEach((item) => {
+        item.style.display = "";
+      });
     }
   });
 
@@ -115,3 +142,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// 모바엘메뉴버튼 관련 코드 js
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const openBtn = document.getElementById("menu_btn_mobile");
+//   const closeBtn = document.getElementById("menu_btn_mobile_close");
+//   const mobileMenu = document.getElementById("mobile_menu");
+
+//   if (openBtn && closeBtn && mobileMenu) {
+//     openBtn.addEventListener("click", () => {
+//       openBtn.classList.add("hide"); // Menu 숨김 (애니메이션)
+//       closeBtn.classList.add("show"); // X 보임 (애니메이션)
+//       mobileMenu.classList.add("show"); // 메뉴 열기
+//     });
+
+//     closeBtn.addEventListener("click", () => {
+//       openBtn.classList.remove("hide"); // Menu 다시 보임
+//       closeBtn.classList.remove("show"); // X 숨김
+//       mobileMenu.classList.remove("show"); // 메뉴 닫기
+//     });
+//   }
+// });

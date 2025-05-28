@@ -463,6 +463,9 @@ main {
 }
 
 /* 아래부분    */
+.bottom_container_mo {
+  display: none;
+}
 .bottom_container {
   width: 100%;
   display: flex;
@@ -555,4 +558,10 @@ main {
 }
 .graph_img {
   width: 100%;
+}
+.graph_img_mo {
+  display: none;
+}
+.section2_mid_img {
+  display: none;
 }
