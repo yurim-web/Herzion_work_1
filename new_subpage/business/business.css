@@ -1,0 +1,495 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+  line-height: 1.5;
+  color: #3c3c3c;
+  background-color: #f7f7f7;
+}
+
+/* Main Content */
+main {
+  width: 100%;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+.container,
+.banner_section,
+.hero,
+main,
+section {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+/* hero section */
+.banner_section {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 110px 80px 50px 80px;
+}
+
+.hero {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 400px;
+  background-image: url("images/business_banner.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.hero_content {
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #fff;
+}
+
+.hero h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 72px; /* 100% */
+}
+
+.hero p {
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+
+/* Business 섹션 공통 스타일 */
+.container {
+  padding: 0px 80px;
+  margin: 0 auto;
+}
+.section_title {
+  color: #3c3c3c;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 149.985%; /* 35.996px */
+  margin-bottom: 44px;
+}
+/* 컨텐츠 부분 3개 박스 있는 부분  */
+.section_content_3box_continer {
+  margin-top: 150px;
+  display: flex;
+  gap: 40px;
+}
+/* 컨텐츠 박스 */
+.section_content_3box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 이미지부분 */
+.section_content_img_3box {
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+.section_content_3box > h3 {
+  color: #000;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 100% */
+  letter-spacing: -0.64px;
+}
+.section_content_3box > p {
+  width: 472px;
+  color: #3c3c3c;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px; /* 170% */
+  letter-spacing: -0.4px;
+}
+.pc_img {
+  display: block;
+}
+.mo_img {
+  display: none;
+}
+
+/* Vibroacoustic 섹션  스타일 */
+.vibroacoustic_section {
+  background-color: #f7f7f7;
+  padding: 148px 0px 120px 0px;
+}
+/* 서브타이틀 */
+.section_sub_title {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 150% */
+  letter-spacing: -0.48px;
+}
+/* 이미지박스 */
+.section1_img_group {
+  display: flex;
+  gap: 400px;
+  justify-content: center;
+}
+/* 컨텐츠 박스 밑에 글 4개 부분 */
+.section1_content_container {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+}
+/* 컨텐츠 박스 밑에 글 4개 부분 */
+.section1_content_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 40px;
+  border-top: 1px solid #cdcdcd;
+}
+
+.section1_content_box > h3 {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px; /* 100% */
+  letter-spacing: -0.72px;
+}
+.section1_content_box > p {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 100% */
+  letter-spacing: -0.48px;
+}
+
+/* Cognitive Health Solutions 섹션 */
+.cognitive_health_section {
+  background-color: #ffffff;
+  padding: 148px 0px 150px 0px;
+}
+/* 제목 부분 */
+.section2_title_box {
+  display: flex;
+  justify-content: space-between;
+}
+.section2_title_box > p {
+  color: #3c3c3c;
+  text-align: right;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 150% */
+  letter-spacing: -0.48px;
+}
+
+/* 컨텐츠 부분 (이미지랑 글자 있는 부분) */
+.section2_content_img_1 {
+  background-image: url("images/section2_img_1.png");
+}
+.section2_content_img_2 {
+  background-image: url("images/section2_img_2.png");
+}
+.section2_content_img_3 {
+  background-image: url("images/section2_img_3.png");
+}
+
+/* Lifestyle Wellness 섹션 */
+.lifestyle_wellness_section {
+  background-color: #f7f7f7;
+  padding: 148px 0px 140px 0px;
+}
+.section3_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 131px;
+}
+
+.section3_container_left > p {
+  width: 557px;
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 150% */
+  letter-spacing: -0.48px;
+}
+/* 섹션 오른쪽 부분  */
+.section3_container_right {
+  display: flex;
+  gap: 72px;
+}
+.content_left_box {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+.content_right_box {
+  margin-top: 266px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+/* 이미지막스 */
+.section3_img_box {
+  padding: 56px 42px;
+  width: 500px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 12px;
+
+  font-family: Pretendard;
+  font-style: normal;
+}
+
+.section3_img_box > h1 {
+  color: #3c3c3c;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px; /* 100% */
+  letter-spacing: -0.48px;
+}
+.section3_img_box > h2 {
+  color: #3c3c3c;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 36px; /* 100% */
+  letter-spacing: -0.72px;
+}
+.section3_img_box > p {
+  color: #3c3c3c;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 38px; /* 158.333% */
+  letter-spacing: -0.48px;
+  width: 312px;
+}
+.section3_img_box > img {
+  margin-top: 40px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+.section3_icon_4 {
+  width: 72px;
+}
+
+/* sports_fitness_section 섹션 */
+.sports_fitness_section {
+  background-color: #ffffff;
+  padding: 148px 0px 150px 0px;
+}
+
+/* 컨텐츠 부분 (이미지랑 글자 있는 부분) */
+.section4_content_img_1 {
+  background-image: url("images/section4_img_1.png");
+}
+.section4_content_img_2 {
+  background-image: url("images/section4_img_2.png");
+}
+.section4_content_img_3 {
+  background-image: url("images/section4_img_3.png");
+}
+
+/* Digital Health Platform 섹션 */
+.digital_health_section {
+  background-color: #f7f7f7;
+  padding: 148px 0px 120px 0px;
+}
+
+.health_content_container {
+  margin-top: 124px;
+  display: flex;
+  gap: 40px;
+}
+.health_img_box {
+  width: 100%;
+  height: 616px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.helath_img_text_box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  /* 글자 스타일 */
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-style: normal;
+}
+.helath_img_text_box > h1 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 42px; /* 131.25% */
+  letter-spacing: -0.64px;
+}
+.helath_img_text_box > p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+  letter-spacing: -0.36px;
+}
+/* 컨텐츠 부분 (이미지랑 글자 있는 부분) */
+.health_img_1 {
+  background-image: url("images/section5_img_1.png");
+}
+.health_img_2 {
+  background-image: url("images/section5_img_2.png");
+}
+.health_img_3 {
+  background-image: url("images/section5_img_3.png");
+}
+.health_img_4 {
+  background-image: url("images/section5_img_4.png");
+}
+
+/* B2B Solutions 섹션 */
+.b2b_solutions_section {
+  background-color: #ffffff;
+  padding: 148px 0px 150px 0px;
+}
+
+/* 컨텐츠 부분 (이미지랑 글자 있는 부분) */
+.section6_content_img_1 {
+  background-image: url("images/section6_img_1.png");
+}
+.section6_content_img_2 {
+  background-image: url("images/section6_img_2.png");
+}
+.section6_content_img_3 {
+  background-image: url("images/section6_img_3.png");
+}
+
+/* Global Market Expansion Strategy 섹션 */
+.global_market_expansion_section {
+  background-image: url("images/section7_back_img.png");
+  padding: 148px 0px 562px 0px;
+}
+.global_subtitle {
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 150% */
+  letter-spacing: -0.48px;
+}
+
+/* Global Market Expansion Strategy 서브 섹션 */
+.global_market_expansion_sub_section {
+  background: linear-gradient(90deg, #23295b 0%, #000 100%);
+  padding: 104px 0px;
+}
+.global_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* gap: 152px; */
+}
+.global_text_4box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* 글자 css */
+  color: #fff;
+  font-style: normal;
+  font-family: Pretendard;
+}
+
+.global_text_4box > h1 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px; /* 155.556% */
+}
+.global_text_4box > h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 36px; /* 112.5% */
+  letter-spacing: -0.64px;
+}
+
+.global_text_4box > p {
+  width: 410px;
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+  letter-spacing: -0.36px;
+}

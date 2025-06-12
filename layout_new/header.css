@@ -35,7 +35,7 @@ nav {
   margin: 0 auto;
 }
 .menu_wrapper {
-  padding: 22px 0px 22px 50px;
+  padding: 22px 0px 22px 0px;
 }
 
 .header_logo {
@@ -48,6 +48,7 @@ nav {
 }
 
 .nav_right {
+  /* width: 337px; */
   display: flex;
   gap: 0px;
   align-items: center;
@@ -160,7 +161,7 @@ nav {
 }
 .menu_drop_list li {
   color: #707070;
-  text-align: right;
+  text-align: left;
   font-family: Poppins;
   font-size: 24px;
   font-style: normal;
@@ -344,7 +345,7 @@ nav {
   font-size: 14px;
   font-weight: 600;
   color: #414141 !important;
-  padding: 8px 0px 0px 0px;
+  padding: 1.5px 0px 0px 40px;
   cursor: pointer;
   background: transparent;
 }

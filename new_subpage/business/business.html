@@ -1,0 +1,669 @@
+<!--  사업 분야 페이지  -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Business</title>
+    <link rel="stylesheet" href="business.css" />
+    <!-- 반응형 스타일 -->
+    <link rel="stylesheet" href="mo_business.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css"
+      rel="stylesheet"
+    />
+    <!-- header css -->
+    <link rel="stylesheet" href="../layout_new/header.css" />
+    <!-- footer css -->
+    <link rel="stylesheet" href="../layout_new/footer.css" />
+    <!-- layout js -->
+    <script src="../layout_new/layout.js" defer></script>
+    <script src="business.js" defer></script>
+  </head>
+
+  <body>
+   <!-- 헤더의 시작 -->
+    <div class="mobile_menu_background" id="mobile_menu_background"></div>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">
+                    <img src="/layout_new/layout_images/mo_header_logo.svg" alt="HERZION" class="header_logo"></img>
+                    <svg class="header_logo_mobile" width="100" height="15" viewBox="0 0 100 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Group 80">
+                            <path id="Vector" d="M19.0638 9.1673H26.8662L27.7548 6.27005H19.0638V3.67265H28.3027L29.1953 0.758209H16.1094V11.6425C16.1094 13.2869 17.4608 14.6199 19.1277 14.6199H28.3724L29.265 11.7055H19.0638V9.16539V9.1673Z" fill="black"/>
+                            <path id="Vector_2" d="M10.5051 6.23569H2.93702V0.760132H0V14.6085H2.93702V9.13294H10.5051V14.6085H13.4421V0.760132H10.5051V6.23569Z" fill="black"/>
+                            <path id="Vector_3" d="M47.9165 0.771576V3.66883H55.26L47.3105 14.5569H60.0189L60.9076 11.6597H53.0471L60.9966 0.771576H47.9165Z" fill="black"/>
+                            <path id="Vector_4" d="M45.2964 5.65891C45.3196 4.38694 44.8259 3.1761 43.9063 2.25173C42.9712 1.31208 41.674 0.773499 40.3478 0.773499H31.9395V14.6219L34.8494 14.6123V10.3667V7.46945V3.67266H40.3478C40.8899 3.67266 41.4243 3.89611 41.8095 4.28381C42.1735 4.6505 42.3691 5.12033 42.3594 5.60734C42.34 6.63293 41.4765 7.46945 40.4349 7.46945H35.7419L34.8474 10.3667H40.2413L42.9789 14.6123H46.2896L43.0564 9.59703C44.3748 8.75669 45.2654 7.30711 45.2964 5.66082V5.65891Z" fill="black"/>
+                            <path id="Vector_5" d="M63.7715 14.6085H66.7085V10.9263C66.1238 9.96372 65.7772 8.77961 65.7772 7.50001C65.7772 6.22041 66.1238 5.0363 66.7085 4.07373V0.760132H63.7715V14.6104V14.6085ZM65.3145 4.69061V10.3094C64.7298 9.52064 64.3833 8.54852 64.3833 7.50001C64.3833 6.4515 64.7298 5.47938 65.3145 4.69061Z" fill="black"/>
+                            <path id="Vector_6" d="M97.0632 0.760132V12.2689L88.3335 0.760132H85.3965V4.08519C85.9773 5.04585 86.32 6.22423 86.32 7.50001C86.32 8.77579 85.9754 9.95417 85.3965 10.9148V14.6085H88.3335V4.63141L95.8997 14.6085H100V0.760132H97.0632ZM86.7788 10.3094V4.69061C87.3635 5.47938 87.7101 6.44959 87.7101 7.50001C87.7101 8.55043 87.3635 9.52064 86.7788 10.3094Z" fill="black"/>
+                            <path id="Vector_7" d="M83.4888 5.9874C83.2662 4.9217 82.817 3.9343 82.1878 3.08442C80.8035 1.21658 78.5673 0 76.0466 0C73.5258 0 71.2896 1.21658 69.9073 3.08442C69.2781 3.9343 68.8289 4.91979 68.6062 5.9874V3.08442C67.6866 4.32391 67.1426 5.84989 67.1426 7.5C67.1426 9.15011 67.6866 10.6761 68.6062 11.9156V9.0126C68.8289 10.0783 69.2781 11.0657 69.9073 11.9156C71.2916 13.7834 73.5277 15 76.0466 15C78.5654 15 80.8035 13.7834 82.1878 11.9156C82.817 11.0657 83.2662 10.0802 83.4888 9.0126V11.9156C84.4084 10.6761 84.9525 9.15011 84.9525 7.5C84.9525 5.84989 84.4084 4.32391 83.4888 3.08442V5.9874ZM76.0466 12.1028C73.4735 12.1028 71.3806 10.0382 71.3806 7.5C71.3806 4.9618 73.4735 2.89725 76.0466 2.89725C78.6196 2.89725 80.7125 4.9618 80.7125 7.5C80.7125 10.0382 78.6196 12.1028 76.0466 12.1028Z" fill="black"/>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="nav_right">
+                <div class="menu_wrapper">
+                    <button class="menu_btn">Menu</button>
+                    <div class="menu_drop">
+                        <ul class="menu_drop_list">
+                            <li><a href="/" data-text="Home">Home</a></li>
+                            <li><a href="/product_page/product.html" data-text="Product">Product</a></li>
+                            <li><a href="/technology/technology.html" data-text="Technology">Technology</a></li>
+                            <li><a href="/business/business.html" data-text="Business">Business</a></li>
+                            <li><a href="/support/support.html" data-text="Support">Support</a></li>
+                            <li><a href="/faq/faq.html" data-text="FAQ">FAQ</a></li>
+                            <li><a href="/contact/contact.html" data-text="Support">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="javascript:;" id="menu_btn" class="mobile_menu_btn">
+                    <span class="menu_text">Menu</span>
+                </a>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const menuBtn = document.getElementById("menu_btn");
+                        const mobileMenu = document.getElementById("mobile_menu");
+                        const menuBackground = document.getElementById("mobile_menu_background");
+
+                        menuBtn.addEventListener("click", function () {
+                            const isOpen = menuBtn.classList.toggle("open");
+
+                            if (isOpen) {
+                                mobileMenu.style.display = "block"; // 메뉴 열기
+                                menuBackground.style.display = "block"; // 백그라운드 보이기
+                            } else {
+                                mobileMenu.style.display = "none"; // 메뉴 닫기
+                                menuBackground.style.display = "none"; // 백그라운드 숨김
+                            }
+                        });
+                    });
+                </script>
+                <div class="mobile_menu" id="mobile_menu">
+                    <div class="mobile_menu_lang">
+                        <button class="active">KOR</button>
+                        <button>ENG</button>
+                        <button>JPN</button>
+                    </div>
+                    <div class="mobile_menu_shop">
+                        <a href="">Shop now</a>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <ul class="mobile_menu_list">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/product_page/product.html">Product</a></li>
+                        <li><a href="/technology/technology.html">Technology</a></li>
+                        <li><a href="/business/business.html">Business</a></li>
+                        <li><a href="/support/support.html">Support</a></li>
+                        <li><a href="/faq/faq.html">FAQ</a></li>
+                        <li><a href="/contact/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <button class="buy_now_btn">
+                    <a href="https://herzion.com/product/detail.html?product_no=10"><span class="buy_now_btn_text">Buy Now</span></a>
+                </button>
+                <div class="header_lang_select custom-lang-dropdown" id="header_lang_select">
+                    <div class="selected-lang" tabindex="0">
+                        KOR
+                        <img src="/layout_new/layout_images/lang_arrow_icon.svg" alt="화살표" class="select-arrow"></img>
+                    </div>
+                    <ul class="lang-options">
+                        <li data-value="kor" class="active">KOR</li>
+                        <li data-value="eng">ENG</li>
+                        <li data-value="jpn">JPN</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- 헤더 끝 -->
+    <script>
+
+      </script>
+
+
+    <main>
+      <!-- 메인 베너 부분 -->
+      <section class="banner_section">
+        <div class="hero">
+          <div class="hero_content">
+            <h1>Business</h1>
+            <p>사업 분야</p>
+          </div>
+        </div>
+      </section>
+      <!-- Vibroacoustic Technology Innovation 섹션 -->
+      <section class="vibroacoustic_section">
+        <article class="container">
+            <h2 class="section_title">Vibroacoustic Technology Innovation</h2>
+            <p class="section_sub_title pc_text">진동과 음향을 결합한 혁신 기술을 통해 뇌 기능을 활성화하고,<br>비침습적이고 안전한 방식으로 뇌 건강을 손쉽게 관리할 수 있습니다.</p>
+            <p class="section_sub_title mo_text  tab_text">진동과 음향을 결합한 혁신 기술을 통해 뇌 기능을 활성화하고,<br>비침습적이고 안전한 방식으로 뇌 건강을 손쉽게 관리할 수 있습니다.</p>
+            <p class="section_sub_title mo_text momo_text">진동과 음향을 결합한 혁신 기술을 통해<br>뇌 기능을 활성화하고,<br>비침습적이고 안전한 방식으로 뇌 건강을<br>손쉽게 관리할 수 있습니다.</p>
+            <div class="section1_img_group">
+              <!-- pc 버전,테블릿버전 이미지 -->
+              <img class="pc_img tab_img" src="images/section1_img_1.png"></img>
+              <img class="pc_img tab_img" src="images/section1_img_2.png"></img>
+              <!-- 모바일버전 이미지 -->
+              <img class="mo_img tab_none_img" src="images/mo/mo_section1_img_1.png"></img>
+              <img class="mo_img tab_none_img" src="images/mo/mo_section1_img_2.png"></img>
+            </div>
+            <div class="section1_content_container">
+              <div class="section1_content_box">
+                <h3>신경 건강 최적화</h3>
+                <p>신경 기능 향상을 위한 뇌과학 기반 케어</p>
+              </div>
+              <div class="section1_content_box">
+                <h3>과학적 검증 시스템</h3>
+                <p>실험과 데이터를 중심된 기술 신뢰성</p>
+              </div>
+              <div class="section1_content_box">
+                <h3>맞춤형 진동·음향 자극</h3>
+                <p>감각의 깊이를 조절하는 섬세한 자극 설계</p>
+              </div>
+              <div class="section1_content_box">
+                <h3>첨단 기술 응용</h3>
+                <p>과학·헬스·디자인의 정교한 결합</p>
+              </div>
+            </div>
+        </article>
+      </section>
+
+      <!-- Cognitive Health Solutions 섹션 -->
+      <section class="cognitive_health_section">
+        <article class="container">
+          <div class="section2_title_box">
+            <h2 class="section_title">Cognitive Health Solutions</h2>
+            <p class="pc_text">최신 뇌과학 연구를 기반으로 설계된 솔루션으로 인지 기능 강화와 뇌 건강 유지를 효과적으로 지원합니다.<br>
+              편안하고 부담 없는 방법으로 일상 속 두뇌 케어가 가능합니다.</p>
+              <p class="mo_text tab_text">최신 뇌과학 연구를 기반으로 설계된 솔루션으로 인지 기능 강화와 뇌 건강 유지를 효과적으로 지원합니다.<br>
+                편안하고 부담 없는 방법으로 일상 속 두뇌 케어가 가능합니다.</p>
+
+            <p class="mo_text momo_text">최신 뇌과학 연구를 기반으로 설계된<br>솔루션으로 인지 기능 강화와 뇌 건강<br>유지를 효과적으로 지원합니다.<br>
+              편안하고 부담 없는 방법으로 일상 속<br>두뇌 케어가 가능합니다.</p>
+          </div>
+          <div class="section_content_3box_continer">
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section2_content_img_1"></div>
+              <h3>웨어러블 디바이스</h3>
+              <p class="pc_text">일상생활에서 손쉽게 착용 가능한 웨어러블 형태로,
+                지속적이고 편리한 인지 기능 관리가 가능합니다.</p>
+              <p class="mo_text">일상생활에서 손쉽게 착용 가능한<br>웨어러블 형태로,
+                지속적이고 편리한<br>인지 기능 관리가 가능합니다.</p>
+            </div>
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section2_content_img_2"></div>
+              <h3>비침습적 기술</h3>
+              <p class="pc_text">
+                약물이나 수술 없이,
+                자연스럽고 안전하게 뇌 기능을
+                활성화할 수 있는 비침습적 솔루션을 제공합니다.
+              </p>
+              <p class="mo_text">약물이나 수술 없이, 자연스럽고 안전하게<br>뇌 기능을 활성화할 수 있는<br>비침습적 솔루션을 제공합니다.</p>
+            </div>
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section2_content_img_3"></div>
+              <h3>맞춤형 프로그램</h3>
+              <p class="pc_text">개인의 인지 상태와 필요에 따라
+                최적화된 자극 패턴을 제공하여 체감 효과를 높입니다.
+              </p>
+              <p class="mo_text">개인의 인지 상태와 필요에 따라 최적화된<br>자극 패턴을 제공하여 체감 효과를 높입니다.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Lifestyle Wellness 섹션 -->
+      <section class="lifestyle_wellness_section">
+        <article class="container section3_container">
+          <div class="section3_container_left">
+            <h2 class="section_title">Lifestyle Wellness</h2>
+            <p class="section_sub_title pc_text">
+              Herzion은 일상 속 두뇌 건강 관리 기술을<br>
+              다양한 분야에 적용할 수 있도록 개발되었습니다.<br>
+              웨어러블 기반의 비침습적 자극 기술로,<br>
+              의료·웰니스·직무 집중 등 다양한 영역에서 활용이 가능합니다.
+            </p>
+            <p class="section_sub_title tab_text">
+              Herzion은 일상 속 두뇌 건강 관리 기술을
+              다양한 분야에 적용할 수 있도록 개발되었습니다.<br>
+              웨어러블 기반의 비침습적 자극 기술로,
+              의료·웰니스·직무 집중 등 다양한 영역에서 활용이 가능합니다.
+            </p>
+            <p class="section_sub_title mo_text momo_text">
+              헤르지온은 일상 속 두뇌 건강 관리 기술을<br>
+              다양한 분야에 적용할 수 있도록 개발<br>
+              되었습니다.<br>
+              웨어러블 기반의 비침습적 자극 기술로,<br>
+              의료·웰니스·직무 집중 등 다양한 영역에서<br>
+              활용이 가능합니다.
+            </p>
+          </div>
+          <!-- pc 전용 -->
+           <div class="pc_text">
+            <div class="section3_container_right ">
+              <div class="content_left_box">
+                <div class="section3_img_box">
+                  <h1>01</h1>
+                  <h2>일상 웰니스 케어</h2>
+                  <p>고령자·중장년층 대상의<br>
+                    인지 관리 서비스 및 웰니스 상품화</p>
+                  <img src="images/section3_icon_1.svg" alt=""></img>
+                </div>
+                <div class="section3_img_box">
+                  <h1>03</h1>
+                  <h2>수면 리듬 관리</h2>
+                  <p>수면 질 개선을 위한<br>
+                    저주파 자극 기술·수면가전,<br>
+                    헬스케어 서비스 연계</p>
+                  <img src="images/section3_icon_3.svg" alt=""></img>
+                </div>
+              </div>
+              <div class="content_right_box">
+                <div class="section3_img_box">
+                  <h1>02</h1>
+                  <h2>정서 및 스트레스 관리</h2>
+                  <p>감정 조절, 휴식 기반<br>
+                    멘탈케어 솔루션·명상 콘텐츠 연계 가능</p>
+                  <img src="images/section3_icon_2.svg" alt=""></img>
+                </div>
+                <div class="section3_img_box">
+                  <h1>04</h1>
+                  <h2>집중력 기반 직무 지원</h2>
+                  <p>재택근무, 교육, 창의직군 등을 위한<br>
+                    두뇌 활성화 솔루션<br>
+                    B2B 서비스 확장</p>
+                  <img style="width: 72px;" src="images/section3_icon_4.svg" alt=""></img>
+                </div>
+              </div>
+            </div>
+           </div>
+
+
+          <!-- 모바일전용 -->
+          <div class="mo_text">
+            <div class="section3_container_right">
+              <div class="section3_img_box">
+                <h1>01</h1>
+                <h2>일상 웰니스 케어</h2>
+                <p>고령자·중장년층 대상의<br>
+                  인지 관리 서비스 및 웰니스 상품화</p>
+                <img src="images/section3_icon_1.svg" alt=""></img>
+              </div>
+              <div class="section3_img_box">
+                <h1>02</h1>
+                <h2>정서 및 스트레스 관리</h2>
+                <p>감정 조절, 휴식 기반<br>
+                  멘탈케어 솔루션·명상 콘텐츠 연계 가능</p>
+                <img src="images/section3_icon_2.svg" alt=""></img>
+              </div>
+              <div class="section3_img_box">
+                <h1>03</h1>
+                <h2>수면 리듬 관리</h2>
+                <p>수면 질 개선을 위한<br>
+                  저주파 자극 기술·수면가전,<br>
+                  헬스케어 서비스 연계</p>
+                <img src="images/section3_icon_3.svg" alt=""></img>
+              </div>
+              <div class="section3_img_box">
+                <h1>04</h1>
+                <h2>집중력 기반 직무 지원</h2>
+                <p>재택근무, 교육, 창의직군 등을 위한<br>
+                  두뇌 활성화 솔루션<br>
+                  B2B 서비스 확장</p>
+                <img class="section3_icon_4" src="images/section3_icon_4.svg" alt=""></img>
+              </div>
+          </div>
+        </div>
+
+        </article>
+      </section>
+
+      <!-- Sports & Fitness Solutions 섹션 -->
+      <section class="sports_fitness_section">
+        <article class="container">
+          <div class="section2_title_box">
+            <h2 class="section_title">Sports & Fitness Solutions</h2>
+            <p class="pc_text">운동 수행력 향상과 회복 관리를 위한 뉴로 웰니스 기술<br>
+              헤르지온의 저주파 음향진동 기술은 운동 전후 신경계 활성화와 회복 지원에 적용 가능하여,<br>
+              스포츠, 피트니스, 재활 등 다양한 분야에서 확장성 있는 솔루션을 제공합니다.
+            </p>
+            <p class="pc_text tab_text">운동 수행력 향상과 회복 관리를 위한 뉴로 웰니스 기술<br>
+              헤르지온의 저주파 음향진동 기술은 운동 전후 신경계 활성화와 회복 지원에 적용 가능하여,<br>
+              스포츠, 피트니스, 재활 등 다양한 분야에서 확장성 있는 솔루션을 제공합니다.
+            </p>
+            <p class="mo_text momo_text">
+              운동 수행력 향상과 회복 관리를 위한<br>
+              뉴로 웰니스 기술.<br>
+              헤르지온의 저주파 음향진동 기술은 운동<br>
+              전후 신경계 활성화와 회복 지원에 적용<br>
+              가능하여 스포츠, 피트니스, 재활 등 다양한<br>
+              분야에서 확장성있는 솔루션을 제공합니다.
+            </p>
+          </div>
+          <div class="section_content_3box_continer">
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section4_content_img_1"></div>
+              <h3>운동 준비 단계</h3>
+              <p class="pc_text">신경계 자극을 통해 근육 반응성과 집중력을 높여<br>
+                운동 전 최적의 컨디션 유도</p>
+              <p class="mo_text">신경계 자극을 통해 근육 반응성과<br>집중력을 높여
+                운동 전 최적의 컨디션 유도</p>
+            </div>
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section4_content_img_2"></div>
+              <h3>비침습적 기술</h3>
+              <p>인지 집중 및 반응 속도 개선을 통한<br>
+                수행력 향상
+              </p>
+            </div>
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section4_content_img_3"></div>
+              <h3>효율적 회복</h3>
+              <p>자극 기반 회복 관리로<br>
+                피로 회복 및 부상 방지에 도움                
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Digital Health Platform 섹션 -->
+      <section class="digital_health_section">
+        <article class="container">
+          <div class="section2_title_box">
+            <h2 class="section_title">Digital Health Platform</h2>
+            <p class="pc_text">
+              개인 맞춤형 뇌 건강 관리를 위한 디지털 헬스 기술 기반 플랫폼
+              데이터 기반의 정밀 분석과<br>
+              실시간 모니터링을 통해 두뇌 상태를 평가하고, 최적의 자극 솔루션을 제공합니다.
+            </p>
+            <p class="pc_text tab_text">
+              개인 맞춤형 뇌 건강 관리를 위한 디지털 헬스 기술 기반 플랫폼
+              데이터 기반의 정밀 분석과<br>
+              실시간 모니터링을 통해 두뇌 상태를 평가하고, 최적의 자극 솔루션을 제공합니다.
+            </p>
+            <p class="mo_text momo_text">
+              개인 맞춤형 뇌 건강 관리를 위한 디지털<br>
+              헬스 기술 기반 플랫폼 데이터 기반의 정밀<br>
+              분석과 실시간 모니터링을 통해 두뇌<br>
+              상태를 평가하고, 최적의 자극 솔루션을<br>
+              제공합니다.
+            </p>
+          </div>
+          <div class="health_content_container">
+            <div class="health_img_box health_img_1">
+              <div class="helath_img_text_box">
+                <h1>데이터 기반<br>분석 기술</h1>
+                <p class="pc_text">
+                  뇌파 및 생체 데이터를 수집·분석하여<br>
+                  정량적 인지 상태 평가 및<br>
+                  경향 예측이 가능합니다.
+                </p>
+                <p class="mo_text">
+                뇌파 및 생체 데이터를 수집·분석하여<br>
+                정량적 인지 상태 평가 및<br>
+                경향 예측이 가능합니다.
+                </p>
+              </div> 
+            </div>
+            <div class="health_img_box health_img_2">
+              <div class="helath_img_text_box">
+                <h1>실시간 반응<br>추적 모듈</h1>
+              <p class="pc_text">
+                사용자의 생체 반응 변화를<br>
+                지속적으로 모니터링하여<br>
+                자극 효과와 변화 흐름을 정밀하게 추적합니다.
+              </p>
+              <p class="mo_text">
+                사용자의 생체 반응 변화를 지속적으로<br>
+                모니터링하여 자극 효과와<br>
+                변화 흐름을 정밀하게 추적합니다.
+              </p>
+              </div>
+            </div>
+            <div class="health_img_box health_img_3">
+              <div class="helath_img_text_box">
+                <h1>통합 건강 관리<br>인터페이스</h1>
+              <p class="pc_text">
+                두뇌뿐만 아니라 수면, 스트레스, 정서적 밸런스 등<br>
+                전반적인 건강 정보를 통합적으로<br>
+                관리할 수 있는 확장형 플랫폼입니다.
+              </p>
+              <p class="mo_text">
+                두뇌뿐만 아니라 수면, 스트레스, 정서적<br>
+                밸런스 등 전반적인 건강 정보를 통합적으로<br>
+                관리할 수 있는 확장형 플랫폼입니다.
+              </p>
+              </div>
+            </div>
+            <div class="health_img_box health_img_4">
+              <div class="helath_img_text_box">
+                <h1>개인화된<br>자극 추천 알고리즘</h1>
+              <p class="pc_text">
+                AI 기반 분석 결과를 토대로,<br>
+                사용자 상태에 적합한 자극 콘텐츠 및<br>
+                패턴을 제안합니다.
+              </p>
+              <p class="mo_text">
+                AI 기반 분석 결과를 토대로,<br>
+                사용자 상태에 적합한 자극 콘텐츠 및<br>
+                패턴을 제안합니다.
+              </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- B2B Solutions 섹션 -->
+      <section class="b2b_solutions_section">
+        <article class="container">
+          <div class="section2_title_box">
+            <h2 class="section_title">B2B Solutions</h2>
+            <p class="pc_text">기관별 목적과 환경에 최적화된 맞춤형 뉴로 웰니스 솔루션을 제공합니다.<br>
+              헬스케어, 연구, 기업 복지 등 다양한 분야에서 활용 가능한 전문 플랫폼입니다.</p>
+              <p class="pc_text tab_text">기관별 목적과 환경에 최적화된 맞춤형 뉴로 웰니스 솔루션을 제공합니다.<br>
+                헬스케어, 연구, 기업 복지 등 다양한 분야에서 활용 가능한 전문 플랫폼입니다.</p>
+            <p class="mo_text momo_text">
+              기관별 목적과 환경에 최적화된 맞춤형<br>
+              뉴로 웰니스 솔루션을 제공합니다.<br>
+              헬스케어, 연구, 기업 복지 등 다양한<br>
+              분야에서 활용 가능한 전문 플랫폼입니다.
+            </p>
+          </div>
+          <div class="section_content_3box_continer">
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section6_content_img_1"></div>
+              <h3>의료기관 협력</h3>
+              <p class="pc_text">병원 및 클리닉에 특화된 신경 건강 솔루션을 통해<br>
+                인지 기능 관리, 재활, 치료 보조 등에 활용할 수 있습니다.</p>
+              <p class="mo_text">
+                병원 및 클리닉에 특화된 신경 건강 솔루션을<br>
+                통해 인지 기능 관리, 재활, 치료 보조 등에<br>
+                활용할 수 있습니다.
+              </p>
+            </div>
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section6_content_img_2"></div>
+              <h3>연구기관 지원</h3>
+              <p class="pc_text">뇌과학 및 바이오 신경 연구를 위한<br>
+                정밀 자극 장비 및 데이터 기반 분석 도구를 제공합니다.
+              </p>
+              <p class="mo_text">
+                뇌과학 및 바이오 신경 연구를 위한<br>
+                정밀 자극 장비 및 데이터 기반 분석 도구를<br>
+                제공합니다.
+              </p>
+            </div>
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section6_content_img_3"></div>
+              <h3>기업 웰니스 프로그램</h3>
+              <p class="pc_text">직원의 스트레스 관리와 집중력 유지를 위한 맞춤형 브레인케어<br>
+                프로그램을 기획하여 조직 생산성과 업무 몰입도를 높입니다.
+              </p>
+              <p class="mo_text">
+                직원의 스트레스 관리와 집중력 유지를 위한<br>
+                맞춤형 브레인케어 프로그램을 기획하여<br>
+                조직 생산성과 업무 몰입도를 높입니다.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Global Market Expansion Strategy 섹션 -->
+      <section class="global_market_expansion_section">
+        <article class="container">
+          <h2 class="section_title" style="color: #ffffff;">Global Market Expansion Strategy</h2>
+          <p class="global_subtitle">글로벌 의료 및 웰니스 시장을 타깃으로,<br>
+            현지화 전략과 인증 기반의 확장 로드맵을 추진합니다.</p>
+        </article>
+      </section>
+
+     <!-- Global Market Expansion Strategy 서브 섹션 -->
+      <section class="global_market_expansion_sub_section">
+        <article class="container global_container">
+          <div class="global_text_4box">
+            <h1>01</h1>
+            <h2>국내 시장 안정화</h2>
+            <p class="pc_text">
+              국내 의료·웰니스 시장 내 브랜드 입지를 강화하고<br>
+              제품 라인업 다각화를 통해 시장 기반을 공고히 합니다.
+            </p>
+            <p class="pc_text tab_text">
+              국내 의료·웰니스 시장 내 브랜드 입지를 강화하고<br>
+              제품 라인업 다각화를 통해 시장 기반을 공고히 합니다.
+            </p>
+            <p class="mo_text momo_text">
+              국내 의료·웰니스 시장 내 브랜드 입지를<br>
+              강화하고 제품 라인업 다각화를 통해 시장<br>
+              기반을 공고히 합니다.
+            </p>
+          </div>
+          <div class="global_text_4box">
+            <h1>02</h1>
+            <h2>아시아 시장 진출</h2>
+            <p class="pc_text">
+              지리적 접근성과 수요 잠재력이 높은 아시아 국가를<br>
+              중심으로 현지화된 마케팅 전략과 파트너십을 확대합니다.
+            </p>
+            <p class="pc_text tab_text">
+              지리적 접근성과 수요 잠재력이 높은 아시아 국가를<br>
+              중심으로 현지화된 마케팅 전략과 파트너십을 확대합니다.
+            </p>
+            <p class="mo_text momo_text">
+              지리적 접근성과 수요 잠재력이 높은 아시아<br>
+              국가를 중심으로 현지화된 마케팅 전략과<br>
+              파트너십을 확대합니다.
+            </p>
+          </div>
+          <div class="global_text_4box">
+            <h1>03</h1>
+            <h2>북미 · 유럽 시장 개척</h2>
+            <p class="pc_text">
+              글로벌 인증을 기반으로 선진 시장에 진입하며, 현지 유통망<br>
+              구축과 브랜드 신뢰도 확보를 동시에 추진합니다.
+            </p>
+            <p class="pc_text tab_text">
+              글로벌 인증을 기반으로 선진 시장에 진입하며, 현지 유통망<br>
+              구축과 브랜드 신뢰도 확보를 동시에 추진합니다.
+            </p>
+            <p class="mo_text momo_text">
+              글로벌 인증을 기반으로 선진 시장에 진입하며,<br>
+              현지 유통망 구축과 브랜드 신뢰도 확보를<br>
+              동시에 추진합니다.
+            </p>
+          </div>
+          <div class="global_text_4box">
+            <h1>04</h1>
+            <h2>글로벌 브랜드 확립</h2>
+            <p class="pc_text">
+              기술 혁신성과 임상적 효과를 기반으로 세계 뇌 건강 솔루션<br>
+              시장에서 선도 브랜드로 자리 매김합니다.
+            </p>
+            <p class="pc_text tab_text">
+              기술 혁신성과 임상적 효과를 기반으로 세계 뇌 건강 솔루션<br>
+              시장에서 선도 브랜드로 자리 매김합니다.
+            </p>
+            <p class="mo_text momo_text">
+              기술 혁신성과 임상적 효과를 기반으로 세계<br>
+              뇌 건강 솔루션 시장에서 선도 브랜드로<br>
+              자리 매김합니다.
+            </p>
+          </div>
+
+        </article>
+      </section>
+
+    
+    </main>
+
+<!-- 푸터부분 -->
+<footer>
+  <div class="footer_top_content">
+    <div class="footer_left">
+      <img src="images/footer_logo.svg" alt="HERZION" class="footer_logo"></img>
+      <div class="contact_info">
+        <div class="contact_info_left">
+          <div class="info_group">
+            <p class="label">Tel</p>
+            <span>02-2637-0009</span>
+          </div>
+          <div class="info_group">
+            <p class="label">E-mail</p>
+            <span>help@herzion.com</span>
+          </div>
+        </div>
+        <div class="contact_info_right">
+          <div class="info_group">
+            <p class="label">Address</p>
+            <span>경기도 성남시 분당구 동판교로 56, (주)아리바이오</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_right">
+      <ul class="footer_links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/product_page/product.html">Product</a></li>
+        <li><a href="/technology/technology.html">Technology</a></li>
+        <li><a href="/business/business.html">Business</a></li>
+        <li><a href="/support/support.html">Support</a></li>
+        <li><a href="/faq/faq.html">FAQ</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+      </ul>
+      <div class="app_download_box">
+        <a href="https://apps.apple.com/br/app/%ED%97%A4%EB%A5%B4%EC%A7%80%EC%98%A8/id6463604810" target="_blank" class="store_btn">
+          <img src="images/apple_logo.svg" alt="" ></img><span>App Store</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.aribio.app.herzion&hl=ko" target="_blank" class="store_btn">
+          <img src="images/google_logo.svg" alt="" ></img><span
+            >Google Play</span
+          >
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer_bottom">
+    <p>ⓒ 2024 by Aribio. All Rights Reserved.</p>
+    <img
+      src="images/footer_logo.svg"
+      alt="HERZION"
+      class="footer_logo_bottom"
+    ></img>
+  </div>
+</footer>
+
+    <!-- 상단이동하는 버튼 -->
+    <button class="top_btn" id="top_btn">
+      <img src="images/top_btn.svg" alt="상단 이동 버튼" ></img>
+      <span>Top</span>
+    </button>
+  </body>
+</html>

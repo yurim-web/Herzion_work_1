@@ -1,0 +1,1063 @@
+/* 임상 결과 모바일 섹션 */
+.clinical_results_mobile {
+  display: none;
+  width: 100%;
+}
+.clinical_results_tab {
+  display: none;
+}
+.card_animation_box_mo {
+  background-color: #ffffff;
+  width: 100%;
+  height: auto;
+}
+.section_box_mo {
+  width: 100%;
+  height: auto;
+  background-image: url("images/mo/m_card_back_1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+.mo_back_2 {
+  background-image: url("images/mo/m_card_back_2.png");
+  height: auto;
+  z-index: 8000;
+}
+.mo_back_3 {
+  background-image: url("images/mo/m_card_back_3.png");
+  height: auto;
+}
+.section_title_mo {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  width: 100%;
+  display: block;
+}
+
+.section_box_mo_img_2 {
+  background-image: url("images/mo/m_card_back_2.png");
+  top: 1167px; /* 첫 번째 카드 높이만큼 아래에 위치 */
+}
+
+.section_box_mo_img_3 {
+  background-image: url("images/mo/m_card_back_3.png");
+  top: 1167px; /* 첫 번째 카드 높이만큼 아래에 위치 */
+}
+
+.section_box_mo img {
+  width: 326px;
+  flex-shrink: 0;
+}
+.clinical_text_box_mo {
+  color: #ffffff;
+  align-self: flex-start;
+  font-family: Pretendard;
+  font-style: normal;
+  margin-left: 12px;
+}
+.clinical_text_box_mo h1 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 100% */
+  letter-spacing: -0.4px;
+  margin-bottom: 32px;
+}
+.clinical_text_box_mo h2 {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 100% */
+  letter-spacing: -0.72px;
+  margin-bottom: 24px;
+}
+
+.clinical_text_box_mo h3 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.4px;
+  margin-bottom: 16px;
+}
+.clinical_text_box_mo p {
+  width: 326px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.32px;
+}
+/* 그래프쪽 */
+.grah_text_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #fff;
+  font-family: Pretendard;
+  font-style: normal;
+  font-size: 16px;
+  margin-left: 12px;
+}
+
+.grah_text_box h1 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px; /* 100% */
+  letter-spacing: -0.32px;
+}
+.grah_text_box p {
+  color: #c3c3c3;
+  font-weight: 500;
+  line-height: 28px; /* 175% */
+  letter-spacing: -0.32px;
+}
+.grah_text_box b {
+  font-weight: 700;
+  color: #fff;
+}
+
+.graph_box {
+  margin-left: 12px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.graph_box p {
+  /* 그래프 밑 글자 스타일 */
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 112.5% */
+  letter-spacing: -0.32px;
+}
+.graph_box_3 p {
+  /* 그래프 밑 글자 스타일 */
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 112.5% */
+  letter-spacing: -0.32px;
+}
+
+/* 모바일 전용 feature section */
+.feature_section_mo {
+  display: none;
+  width: 100%;
+  background: #fff;
+  padding: 0px 0px 0px 0px;
+}
+
+.feature_grid_mo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 모바일 환경 스타일 */
+.feature_card_mo {
+  background: #f7f7f7;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  /* height: auto; */
+  padding: 40px;
+  margin: 8px 12px 0px 12px;
+}
+
+.feature_icon_mo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.feature_text_mo {
+  width: 100%;
+  font-size: 16px;
+  line-height: 26px; /* 162.5% */
+  letter-spacing: -0.32px;
+  text-align: center;
+}
+
+.feature_text_mo b {
+  color: #23295b;
+  font-weight: 700;
+}
+/* 모바일 전용 Thesis 섹션 */
+.use_mobile_section {
+  display: none;
+  padding: 80px 0px 100px 20px;
+  background-color: #f7f7f7;
+}
+
+/* 모바일 스와이퍼 스타일 */
+.mobileThesisSwiper {
+  width: 100%;
+  height: auto;
+  padding-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mobileThesisSwiper .swiper-wrapper {
+  display: flex;
+}
+
+.mobileThesisSwiper .swiper-slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.mobileThesisSwiper .swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.mobileThesisSwiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #1a1a1a;
+  background: transparent;
+  opacity: 1;
+  margin: 0 !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.mobileThesisSwiper .swiper-pagination-bullet-active {
+  width: 65px;
+  border-radius: 16px;
+  background: #1a1a1a;
+}
+.use_mobile_card_container {
+  width: 100%;
+  padding: 0;
+}
+
+/* 앱 다운로드 섹션 모바일스타일*/
+.app_download_mo {
+  display: none;
+  padding: 80px 20px;
+  background-image: url("images/mo/mo_last_section_back.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.app_download_container_mo {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*  앱 다운로드 왼쪽 컨테이너 */
+.app_download_left_container_mo {
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.app_download_mo h2 {
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; /* 133.333% */
+  letter-spacing: -0.72px;
+}
+
+.app_download_mo p {
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 175% */
+  letter-spacing: -0.32px;
+}
+
+.download_button_box_mo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 3px;
+}
+
+.store_btn_mo {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #3c3c3c;
+  border-radius: 8px;
+  /* 버튼 속 글자 스타일 */
+  text-decoration: none;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.store_btn_mo > img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+}
+
+.apple_btn_mo {
+  width: 151px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.google_btn_mo {
+  width: 168px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+/* 앱 다운로드 스와이퍼 스타일 */
+.appDownloadSwiper {
+  width: 100%;
+  height: auto;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.appDownloadSwiper .swiper-wrapper {
+  display: flex;
+}
+
+.appDownloadSwiper .swiper-slide {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.appDownloadSwiper .swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.appDownloadSwiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  background: transparent;
+  opacity: 1;
+  margin: 0 !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.appDownloadSwiper .swiper-pagination-bullet-active {
+  width: 65px;
+  border-radius: 16px;
+  background: #fff;
+}
+
+/* 앱다운로드 오른쪽 컨테이너 */
+.app_download_right_container_mo {
+  margin-top: 84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.phone_text_box_mo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  /* 글씨 스타일 */
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  text-align: center;
+  width: 100%;
+}
+.phone_text_box_mo p {
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 160% */
+  letter-spacing: -0.4px;
+}
+/********************* Mobile ******************************************/
+@media all and (max-width: 767px) {
+  /* Main Content */
+  /* hero section */
+  .banner_section {
+    padding: 80px 20px 40px 20px;
+  }
+
+  .hero {
+    background-image: url("images/mo/mo_product_banner.png");
+    height: 300px;
+    margin-bottom: 0px;
+  }
+
+  .hero_content {
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero h1 {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 100% */
+  }
+
+  .hero p {
+    color: #fff;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
+    letter-spacing: -0.4px;
+  }
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0;
+    overflow: hidden;
+  }
+  .feature_container {
+    padding: 80px 20px;
+  }
+  .section_title {
+    margin-bottom: 32px;
+    font-size: 20px;
+    line-height: 20px; /* 100% */
+  }
+
+  /* 제품 소개 섹션 */
+  .product_intro {
+    padding: 0;
+    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .product_intro .container {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .product_intro h2 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 30px; /* 146.667% */
+    letter-spacing: -0.6px;
+  }
+  /* 모바일 버전에서는 애니메이션 없이 텍스트 흰색 */
+  .product_intro .text-fill {
+    display: block;
+    position: relative;
+    background: linear-gradient(
+      to right,
+      #ffffff 0%,
+      #ffffff 50%,
+      #ffffff 50%,
+      #ffffff 100%
+    );
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
+
+  /* 비디오 섹션 */
+  .main_video_section {
+    width: 100%;
+    height: 219px;
+  }
+  .main_video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .main_video_section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .feature_section {
+    display: none;
+  }
+  .feature_section_mo {
+    display: block;
+  }
+
+  /* 사용 시나리오 섹션 */
+  .use_cases {
+    padding: 80px 0px 32px 0px;
+  }
+
+  .use_case_container {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 70px;
+    padding-top: 0px;
+  }
+
+  .use_cases h2 {
+    margin-left: 12px;
+    font-size: 36px;
+    line-height: 48px; /* 133.333% */
+    letter-spacing: -0.72px;
+  }
+
+  .use_case_items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .use_case_item {
+    width: 100%;
+    padding: 24px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: space-between;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .use_case_item h3 {
+    font-size: 20px;
+    line-height: 20px; /* 100% */
+    letter-spacing: -0.4px;
+    margin-left: 0px;
+  }
+
+  .use_case_item p {
+    font-size: 18px;
+    line-height: 18px; /* 100% */
+    letter-spacing: -0.36px;
+  }
+
+  /* 수동재생 영상 섹션 */
+  .sub_video_section {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0px 100px 0px;
+  }
+  .video_box {
+    width: 100%;
+    height: 216px;
+    flex-shrink: 0;
+    aspect-ratio: 1400/779;
+  }
+
+  .video_box iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* 임상 결과 섹션 */
+  .clinical_results {
+    display: none;
+  }
+  .clinical_results_mobile {
+    display: block;
+  }
+
+  /* feature section */
+  .feature_section_mo {
+    display: block;
+  }
+  .feature_section {
+    display: none;
+  }
+
+  /* By Use Case 섹션  */
+  .use_section {
+    display: none;
+  }
+  .use_mobile_section {
+    display: block;
+    overflow: hidden;
+  }
+  .use_card_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .use_card {
+    margin-top: 68px;
+    width: 326px;
+    height: 500px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    padding: 28px;
+    background-image: url("images/mo/mo_use_card1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    font-style: normal;
+    position: relative;
+  }
+  .card_img_1 {
+    background-image: url("images/mo/mo_use_card1.png");
+  }
+  .card_img_2 {
+    background-image: url("images/mo/mo_use_card2.png");
+  }
+  .card_img_3 {
+    background-image: url("images/mo/mo_use_card3.png");
+  }
+
+  .use_card_text_box {
+    position: absolute;
+    left: 28px;
+    bottom: 28px;
+  }
+
+  .use_card_text_box h1 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .use_card_text_box p {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.32px;
+  }
+
+  /* 앱 다운로드 섹션 */
+  .app_download {
+    display: none;
+  }
+  .app_download_mo {
+    display: block;
+  }
+
+  nav {
+    width: 100% !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 20px;
+    margin: 0;
+    max-width: 100%;
+    box-sizing: border-box !important;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  main {
+    overflow-x: hidden;
+  }
+  .clinical_results_tab {
+    display: none;
+  }
+  .clinical_results_mobile {
+    display: block;
+  }
+}
+
+/********************* Tablet ***************************************************************/
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  /* Main Content */
+
+  /* hero section */
+  .banner_section {
+    padding: 100px 60px 50px 60px;
+  }
+
+  .hero {
+    margin-bottom: 0px;
+  }
+
+  .hero_content {
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hero h1 {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 100% */
+  }
+
+  .hero p {
+    color: #fff;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
+    letter-spacing: -0.4px;
+  }
+  .container {
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .feature_container {
+    padding: 100px 40px;
+  }
+
+  .section_title {
+    margin-bottom: 32px;
+    font-size: 20px;
+    line-height: 20px; /* 100% */
+  }
+
+  /* 제품 소개 섹션 */
+  .product_intro {
+    padding: 0;
+    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .product_intro .container {
+    padding: 0 60px;
+    width: 100%;
+  }
+
+  .product_intro h2 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 48px; /* 146.667% */
+    letter-spacing: -0.6px;
+  }
+  /* 모바일 버전에서는 애니메이션 없이 텍스트 흰색 */
+  .product_intro .text-fill {
+    display: block;
+    position: relative;
+    background: linear-gradient(
+      to right,
+      #ffffff 0%,
+      #ffffff 50%,
+      #ffffff 50%,
+      #ffffff 100%
+    );
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
+
+  /* 비디오 섹션 */
+  .main_video_section {
+    width: 100%;
+    height: 350px;
+  }
+  .main_video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .main_video_section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .feature_section {
+    display: none;
+  }
+  .feature_section_mo {
+    display: block;
+  }
+
+  /* clinicl 섹션 */
+
+  .section_box_mo {
+    margin-top: 0px;
+    padding: 80px 40px;
+  }
+
+  .section_box_mo img {
+    /* width: 400px; */
+    flex-shrink: 0;
+  }
+  .tab_graph_img3 {
+    width: 100% !important;
+  }
+
+  .clinical_text_box_mo {
+    margin-left: 0px;
+  }
+  .clinical_text_box_mo p {
+    width: 100%;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.32px;
+  }
+
+  .graph_box_tab {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    gap: 16px;
+  }
+  .graph_box {
+    width: 400px;
+    margin-left: 0px;
+  }
+  .graph_box_3 {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    width: 100%;
+  }
+
+  /* 모바일 전용 feature section */
+
+  /* 모바일 환경 스타일 */
+  .feature_card_mo {
+    padding: 50px;
+    margin: 8px 12px 0px 12px;
+  }
+
+  .feature_text_mo {
+    font-size: 18px;
+    line-height: 29px; /* 162.5% */
+  }
+
+  /* 사용 시나리오 섹션 */
+  .use_cases {
+    padding: 80px 0px 32px 0px;
+  }
+
+  .use_case_container {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 70px;
+    padding-top: 0px;
+  }
+
+  .use_cases h2 {
+    margin-left: 12px;
+    font-size: 45px;
+    line-height: 60px; /* 133.333% */
+    letter-spacing: -0.72px;
+  }
+
+  .use_case_items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .use_case_item {
+    width: 100%;
+    padding: 28px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    justify-content: space-between;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .use_case_item h3 {
+    font-size: 25px;
+    line-height: 20px; /* 100% */
+    letter-spacing: -0.4px;
+    margin-left: 0px;
+  }
+
+  .use_case_item p {
+    font-size: 20px;
+    line-height: 18px; /* 100% */
+    letter-spacing: -0.36px;
+  }
+
+  /* 수동재생 영상 섹션 */
+  .sub_video_section {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0px 100px 0px;
+  }
+  .video_box {
+    width: 100%;
+    height: 340px;
+    flex-shrink: 0;
+    aspect-ratio: 1400/779;
+  }
+
+  .video_box iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* 임상 결과 섹션 */
+  .clinical_results {
+    display: none;
+  }
+  .clinical_results_mobile {
+    display: block;
+  }
+
+  /* feature section */
+  .feature_section_mo {
+    display: block;
+  }
+  .feature_section {
+    display: none;
+  }
+
+  /* By Use Case 섹션  */
+  .use_section {
+    display: none;
+  }
+  .use_mobile_section {
+    padding: 80px 40px;
+    display: block;
+  }
+  .use_card_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .use_card {
+    margin-top: 48px;
+    width: 526px;
+    height: 600px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .card_img_1 {
+    background-image: url("images/use_card1.png");
+  }
+  .card_img_2 {
+    background-image: url("images/use_card2.png");
+  }
+  .card_img_3 {
+    background-image: url("images/use_card3.png");
+  }
+
+  .use_card_text_box {
+    position: absolute;
+    left: 45px;
+    top: 45px;
+  }
+
+  .use_card_text_box h1 {
+    font-size: 30px;
+    line-height: 24px;
+  }
+
+  .use_card_text_box p {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.32px;
+  }
+
+  /* 앱 다운로드 섹션 */
+  .app_download {
+    display: none;
+  }
+  .app_download_mo {
+    display: block;
+    padding: 80px 40px;
+  }
+  .clinical_results_tab {
+    display: block;
+  }
+  .clinical_results_mobile {
+    display: none;
+  }
+}

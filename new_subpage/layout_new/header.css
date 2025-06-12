@@ -1,0 +1,627 @@
+/* Header 스타일일 */
+/* 메뉴 버튼 모바일 버전 */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: background-color 0.5s ease; /* 배경색 변경 시 부드럽게 */
+}
+/* 언어 선택 영역에 부드러운 페이드 효과 */
+.header_lang_select {
+  opacity: 1;
+  width: auto;
+  max-width: 150px; /* 대략적인 초기 너비 지정 */
+  transition: opacity 0.5s ease, max-width 0.5s ease;
+  white-space: nowrap;
+}
+/* 스크롤 내렸을 때 숨김 처리 */
+.header--scrolled .header_lang_select {
+  opacity: 0;
+  max-width: 0;
+  margin-right: 0;
+  pointer-events: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 60px;
+  margin: 0 auto;
+}
+.menu_wrapper {
+  padding: 22px 0px 22px 0px;
+}
+
+.header_logo {
+  width: 150px;
+  cursor: pointer;
+}
+
+.header_logo_mobile {
+  display: none;
+}
+
+.nav_right {
+  /* width: 337px; */
+  display: flex;
+  gap: 0px;
+  align-items: center;
+}
+
+/* 메뉴버튼 모바일 버전 */
+.menu_btn_mobile {
+  display: none; /* 웹 사이즈에서는 숨김 */
+  color: #000;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* buy now 버튼 */
+.buy_now_btn {
+  width: 152px;
+  height: 56px;
+  background-color: transparent;
+  border-radius: 34px !important;
+  border: 2px solid #000;
+  color: #000;
+  /* text-align: right; */
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
+  /* padding: 18px 28px; */
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  margin: 22px 0px;
+}
+
+.buy_now_btn:hover {
+  background-color: #000;
+  border: 2px solid #000;
+  color: #ffffff;
+  font-weight: 600;
+}
+/* 메뉴버튼 pc 버전 */
+.menu_btn {
+  margin-right: 40px;
+  color: #000;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.menu_btn:hover {
+  font-weight: 600;
+}
+
+.menu_wrapper:hover .menu_btn {
+  font-weight: 600;
+}
+.menu_wrapper:hover .menu_drop {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+}
+.nav_right {
+  position: relative;
+}
+
+/* 메뉴 드롭다운 */
+.menu_drop {
+  position: absolute;
+  top: 100%;
+  /* right: 60px; */
+  /* width: 280px; */
+  border-radius: 20px;
+  background: #3c3c3c;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-4px, 70px);
+  transition: opacity 0.2s ease-out, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.2s ease-out;
+}
+.nav_right .menu_drop {
+  width: 100%; /* 부모(nav_right) 기준 */
+  right: 0; /* 부모 내부에서 오른쪽 정렬 */
+  top: 100px;
+}
+
+.menu_drop.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+}
+
+.menu_drop_list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 56px;
+  list-style: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.menu_drop_list li {
+  color: #707070;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 100% */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.menu_drop_list li:hover {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.menu_drop_list li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu_drop_list.hide {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* 모바일 메뉴 */
+/* 모바일 메뉴 스타일 */
+
+.mobile_menu_background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 1000;
+}
+
+.mobile_menu_background.active {
+  display: block;
+}
+
+.mobile_menu {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3c3c3c;
+  border-radius: 18px;
+  padding: 56px;
+  min-width: 220px;
+  width: calc(100% - 50px);
+  z-index: 1001;
+}
+
+.mobile_menu.active {
+  display: block;
+}
+
+.menu_btn_mobile_close {
+  display: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #3c3c3c;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile_menu_lang {
+  display: flex;
+  gap: 28px;
+  padding-bottom: 48px;
+}
+
+.mobile_menu_lang button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #707070;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mobile_menu_lang button.active {
+  color: #ffffff;
+}
+
+.mobile_menu_shop {
+  border-top: 1px solid #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 32px;
+}
+
+.mobile_menu_shop a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 100% */
+}
+
+.mobile_menu_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile_menu_list li {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 100% */
+  margin-bottom: 32px;
+}
+
+.mobile_menu_list li:last-child {
+  margin-bottom: 0;
+}
+
+.mobile_menu_list a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+}
+/* 언어 선택 부분 */
+/* 커스텀 언어 드롭다운 */
+.custom-lang-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.selected-lang {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+  transition: all 0.3s;
+  margin-left: 40px;
+}
+.select-arrow {
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.3s;
+  transform-origin: 50% 50%;
+  margin-left: 4px;
+  flex-shrink: 0;
+  align-self: center;
+}
+.lang-options {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: rgba(255, 255, 255, 0); /* 완전 투명 */
+  z-index: 100;
+}
+.lang-options li {
+  font-size: 14px;
+  font-weight: 600;
+  color: #414141 !important;
+  padding: 1.5px 0px 0px 40px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.custom-lang-dropdown.open .lang-options {
+  display: block !important;
+}
+
+/* 화살표 회전 애니메이션 */
+.select-arrow {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  transition: transform 0.3s;
+  transform-origin: 50% 50%;
+}
+.select-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.lang-options.open {
+  display: block;
+}
+
+/********************* Mobile ******************************************/
+@media all and (max-width: 767px) {
+  /* Header Styles */
+  header {
+    height: 80px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    margin: 0 auto;
+  }
+  .menu_wrapper {
+    padding: 0px 0px !important;
+  }
+  /* 웹용 로고 */
+  .header_logo {
+    display: none;
+  }
+  /* 모바일전용로고고 */
+  .header_logo_mobile {
+    display: block;
+    width: 99.998px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  .nav_right {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  .menu_btn_mobile {
+    display: block; /* 모바일 사이즈에서는 보이도록 설정 */
+  }
+  .menu_btn_mobile_close {
+    display: none;
+  }
+  .buy_now_btn {
+    display: none;
+  }
+  .menu_btn {
+    display: none;
+  }
+  .menu_drop {
+    display: none;
+  }
+  .mobile_menu {
+    top: calc(100% + 6px);
+    padding: 30px;
+  }
+  .mobile_menu_lang {
+    padding-bottom: 32px;
+  }
+  .header_lang_select {
+    display: none;
+  }
+}
+
+/********************* Tablet ***************************************************************/
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  /* Header Styles */
+  .menu_btn_mobile {
+    display: none; /* 테블릿 사이즈에서도 숨김 */
+    color: #000;
+    text-align: right;
+    font-family: Poppins;
+    font-size: 20px !important;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+
+  nav {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 40px;
+    margin: 0 auto;
+  }
+  /* 웹용 로고 */
+  .header_logo {
+    display: none;
+  }
+  /* 테블릿 */
+  .header_logo_mobile {
+    width: 151.257px;
+    height: 23px;
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .nav_right {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  .menu_btn_mobile {
+    display: block;
+    font-size: 20px;
+  }
+  .menu_btn_mobile_close {
+    font-size: 30px;
+    display: none;
+  }
+  .buy_now_btn {
+    display: block;
+  }
+  .menu_btn {
+    display: none;
+  }
+  .menu_drop {
+    display: none;
+  }
+  .mobile_menu {
+    display: none;
+    margin: 0px 30px;
+    width: calc(100% - 60px);
+  }
+  .mobile_menu.active {
+    width: 92%;
+    display: block;
+  }
+  .mobile_menu {
+    top: calc(100% + 0px);
+    /* margin: 0px 40px; */
+    width: calc(100% - 80px);
+    margin: 0px 0px;
+    z-index: 1002;
+  }
+  .header_lang_select {
+    display: none;
+  }
+  .mobile_menu_shop {
+    display: none;
+  }
+  .menu_text {
+    font-size: 20px !important;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 공통 스타일 */
+.menu_btn_mobile,
+.menu_btn_mobile_close {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* 초기 상태 */
+.menu_btn_mobile {
+  display: block;
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.menu_btn_mobile_close {
+  display: none;
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+/* 전환 상태 */
+.menu_btn_mobile.hide {
+  opacity: 0;
+  transform: rotate(90deg);
+  pointer-events: none;
+}
+
+.menu_btn_mobile_close.show {
+  display: block;
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+/* 모바일에서 애니메이션 때문에 적용한 것  */
+/* Menu 버튼 */
+#menu_btn {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* 텍스트 애니메이션 */
+#menu_btn .menu_text {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  display: inline-block;
+}
+
+/* X 아이콘 막대기 (before, after) */
+#menu_btn::before,
+#menu_btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* 활성화 시 (X 모양) */
+#menu_btn.open::before {
+  transform: translateY(-50%) rotate(45deg);
+  opacity: 1;
+  visibility: visible;
+}
+
+#menu_btn.open::after {
+  transform: translateY(-50%) rotate(-45deg);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 텍스트 밀리면서 사라짐 */
+#menu_btn.open .menu_text {
+  transform: translateX(20px);
+  opacity: 0;
+}
+/* 기본 상태: 안보이게 */
+#menu_btn {
+  display: none;
+}
+.menu_text {
+  color: #3c3c3c;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 100% */
+}
+
+/* 모바일일 때만 보임 (1024px 이하 기준) */
+@media screen and (max-width: 1024px) {
+  #menu_btn {
+    display: inline-block;
+  }
+}

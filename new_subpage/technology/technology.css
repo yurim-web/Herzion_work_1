@@ -1,0 +1,567 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+  line-height: 1.5;
+  color: #3c3c3c;
+  background-color: #f7f7f7;
+}
+
+/* Main Content */
+main {
+  width: 100%;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 80px;
+  width: 100%;
+}
+
+/* hero section */
+.banner_section {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 110px 80px 50px 80px;
+}
+
+.hero {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 400px;
+  background-image: url("images/tech_banner.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.hero_content {
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #fff;
+}
+
+.hero h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 72px; /* 100% */
+}
+
+.hero p {
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+
+/* How It Was Developed 섹션 */
+.tech_intro_section {
+  padding: 148px 0px 120px 0px;
+  background-color: #f7f7f7;
+}
+
+.section_title {
+  color: #3c3c3c;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 149.985%; /* 35.996px */
+  margin-bottom: 44px;
+}
+.section_title_mo {
+  display: none;
+  color: #3c3c3c;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
+  margin-bottom: 40px;
+}
+
+/* 모바일에만 있는 부제목 */
+.section_subtitle_mo {
+  display: none;
+  color: #3c3c3c;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 100% */
+  margin-bottom: 24px;
+}
+
+.tech_intro_content {
+  width: 100%;
+  margin-left: 40px;
+}
+
+.tech_intro_text {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px; /* 158.333% */
+  letter-spacing: -0.48px;
+}
+.tech_intro_text_blue_web {
+  color: #23295b;
+
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: -0.48px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+.tech_intro_text_blue_mo {
+  color: #23295b;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.4px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+/* 모바일 text 따로 있음 */
+.tech_intro_text_mo {
+  display: none;
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 180% */
+  letter-spacing: -0.4px;
+}
+
+.section1_img {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 72px;
+}
+
+/* Core Technology 섹션 */
+.tech_features_section {
+  padding: 148px 0px 120px 0px;
+  background-color: #f7f7f7;
+}
+
+.tech_features_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  width: 100%;
+}
+
+/* 이미지부분 */
+.tech_feature_image_card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech_feature_image_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 글있는 부분 */
+.tech_feature_content_card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0px 72px;
+}
+
+.tech_feature_subtitle {
+  color: #3c3c3c;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+}
+
+.tech_feature_title {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 61px;
+  letter-spacing: -0.96px;
+  margin-bottom: 16px;
+}
+
+.web_four {
+  display: block;
+}
+
+.mobile_four {
+  display: none;
+}
+
+.tech_feature_text {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: -0.48px;
+}
+.tect_feature_text_mo {
+  display: none;
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 175% */
+  letter-spacing: -0.32px;
+}
+
+.tech_feature_text_blue {
+  color: #23295b;
+  font-weight: 700;
+}
+
+/* Scientific Basis 섹션 */
+.scientific_basis_section {
+  padding: 120px 0;
+  background-color: #ffffff;
+}
+
+.scientific_basis_scroll {
+  margin-top: 76px;
+  padding: 0;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.researchSwiper {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.researchSwiper .swiper-slide {
+  width: auto;
+  box-sizing: border-box;
+}
+
+.research_card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.research_card_image_rounded {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 100px;
+  background-color: #23295b;
+}
+.card_hover_effect:hover {
+  opacity: 0.8;
+}
+
+.research_card_image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background-color: #23295b;
+}
+
+.research_card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.view_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.research_card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.research_card_content h3 {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.research_date {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.32px;
+}
+
+/* Swiper Pagination 스타일 */
+.scientific_basis_section .swiper-horizontal > .swiper-pagination-progressbar,
+.scientific_basis_section
+  .swiper-pagination-progressbar.swiper-pagination-horizontal {
+  width: 100%;
+  height: 4px;
+  background: #e8e8e8 !important;
+  top: auto !important;
+  bottom: 0;
+  height: 8px;
+  border-radius: 30px;
+}
+
+.scientific_basis_section
+  .swiper-pagination-progressbar
+  .swiper-pagination-progressbar-fill {
+  background: #23295b !important;
+  height: 8px;
+  border-radius: 30px;
+}
+
+.web_break {
+  display: block;
+}
+
+/* 카드에 호버 시 버튼 보이기 */
+.card_hover_effect:hover .view_btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 커스텀 프로그래스 바 */
+.custom-progressbar {
+  width: 100%;
+  height: 8px;
+  background: #e8e8e8;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.custom-progressbar-bar {
+  width: 20%; /* JS에서 동적으로 변경 */
+  height: 100%;
+  background: #23295b;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+  transition: left 0.3s;
+}
+
+/* 추가된 섹션 (두번째에 있는 이미지 섹션) */
+.section2_img_section {
+  padding: 148px 0px 120px 0px;
+  height: 1492px;
+  background-image: url("images/section2_back_img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.top_img_box {
+  width: 100%;
+  height: 320px;
+  border-radius: 24px;
+  border: 1px solid #a1a3b7;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img_section_container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* 아래부분    */
+.bottom_container_mo {
+  display: none;
+}
+.bottom_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom_contents_box {
+  width: 617px;
+  height: 864px;
+  border-radius: 24px;
+  border: 1px dashed #a1a3b7;
+
+  display: flex;
+  flex-direction: column;
+}
+.botoom_content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 56px 58px;
+  border-bottom: 1px dashed #a1a3b7;
+}
+
+/* 이미지 부분 */
+.section2_img_box {
+  width: 100px;
+  height: 100px;
+}
+.left_1 {
+  background-image: url("images/section2_left_1.svg");
+}
+.left_2 {
+  background-image: url("images/section2_left_2.svg");
+}
+.left_3 {
+  background-image: url("images/section2_left_3.svg");
+}
+.right_1 {
+  background-image: url("images/section2_right_1.svg");
+}
+.right_2 {
+  background-image: url("images/section2_right_2.svg");
+}
+.right_3 {
+  background-image: url("images/section2_right_3.svg");
+}
+
+/* 글자부분 */
+.bottom_content_text {
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+  letter-spacing: -0.36px;
+}
+
+.title_bold {
+  font-weight: 700;
+}
+
+.bottom_content_text_middle {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: -0.48px;
+  text-align: center;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 85px;
+}
+
+/* 새로 추가된 섹션 표 부분 */
+.graph_section {
+  padding: 148px 0px 120px 0px;
+  background-color: #ffffff;
+}
+.graph_section_title {
+  color: #3c3c3c;
+  font-family: Poppins;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 80px;
+}
+.graph_img {
+  width: 100%;
+}
+.graph_img_mo {
+  display: none;
+}
+.section2_mid_img {
+  display: none;
+}

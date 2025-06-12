@@ -1,0 +1,208 @@
+/* Header 스타일일 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 60px;
+  margin: 0 auto;
+}
+
+.header_logo {
+  height: 24px;
+}
+
+.header_logo_mobile {
+  display: none;
+}
+
+.nav_right {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.menu_btn_mobile {
+  display: none;
+  color: #3c3c3c;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 100% */
+  cursor: pointer;
+}
+
+.buy_now_btn {
+  background-color: transparent;
+  border-radius: 34px !important;
+  border: 2px solid #b0b0b0;
+  color: #b0b0b0;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
+  padding: 18px 28px;
+  cursor: pointer;
+}
+.menu_btn {
+  color: #b0b0b0;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+/* 메뉴 드롭다운 */
+.menu_drop {
+  position: absolute;
+  top: 100%;
+  right: 60px;
+  width: 334px;
+  border-radius: 20px;
+  background: #3c3c3c;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-4px, 70px);
+  transition: opacity 0.2s ease-out, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.2s ease-out;
+  pointer-events: none;
+}
+
+.nav_right:hover .menu_drop {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+  pointer-events: auto;
+}
+
+.menu_drop.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+  pointer-events: auto;
+}
+
+.menu_drop_list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 56px 0px 56px 56px;
+  list-style: none;
+}
+.menu_drop_list li {
+  color: #707070;
+  text-align: left;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 100% */
+}
+.menu_drop_list li:active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.menu_drop_list li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/********************* Mobile ******************************************/
+@media all and (max-width: 767px) {
+  /* Header Styles */
+  header {
+    height: 80px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 30px;
+    margin: 0 auto;
+  }
+  /* 웹용 로고 */
+  .header_logo {
+    display: none;
+  }
+  /* 모바일전용로고고 */
+  .header_logo_mobile {
+    display: block;
+    width: 99.998px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  .nav_right {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  .menu_btn_mobile {
+    display: block;
+  }
+  .buy_now_btn {
+    display: none;
+  }
+  .menu_btn {
+    display: none;
+  }
+}
+
+/********************* Tablet ***************************************************************/
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  /* Header Styles */
+
+  nav {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 60px;
+    margin: 0 auto;
+  }
+  /* 웹용 로고 */
+  .header_logo {
+    display: none;
+  }
+  /* 테블릿 */
+  .header_logo_mobile {
+    width: 151.257px;
+    height: 23px;
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .nav_right {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  .menu_btn_mobile {
+    display: none;
+  }
+  .buy_now_btn {
+    border: 2px solid #3c3c3c;
+    color: #3c3c3c;
+  }
+  .menu_btn {
+    color: #3c3c3c;
+  }
+}
