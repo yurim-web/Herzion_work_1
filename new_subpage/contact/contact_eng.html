@@ -1,17 +1,17 @@
-<!-- 문의 페이지 -->
+<!-- 문의 페이지-영문 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>contact</title>
-    <link rel="stylesheet" href="/contact/contact.css" />
+    <title>contact-eng</title>
+    <link rel="stylesheet" href="contact_eng.css" />
     <link rel="stylesheet" href="../layout_new/header.css" />
     <link rel="stylesheet" href="../layout_new/footer.css" />
     <script src="../layout_new/layout.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="contact.js" defer></script>
+    <script src="contact_eng.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css" rel="stylesheet" />
 
@@ -44,12 +44,12 @@
                     <div class="menu_drop">
                         <ul class="menu_drop_list">
                             <li><a href="/" data-text="Home">Home</a></li>
-                            <li><a href="/product_page/product.html" data-text="Product">Product</a></li>
-                            <li><a href="/technology/technology.html" data-text="Technology">Technology</a></li>
-                            <li><a href="/business/business.html" data-text="Business">Business</a></li>
-                            <li><a href="/support/support.html" data-text="Support">Support</a></li>
-                            <li><a href="/faq/faq.html" data-text="FAQ">FAQ</a></li>
-                            <li><a href="/contact/contact.html" data-text="Support">Contact</a></li>
+                            <li><a href="/new_subpage/product_page/product_eng.html" data-text="Product">Product</a></li>
+                            <li><a href="/new_subpage/technology/technology_eng.html" data-text="Technology">Technology</a></li>
+                            <li><a href="/new_subpage/business/business_eng.html" data-text="Business">Business</a></li>
+                            <li><a href="/new_subpage/support/support_eng.html" data-text="Support">Support</a></li>
+                            <li><a href="/new_subpage/faq/faq_eng.html" data-text="FAQ">FAQ</a></li>
+                            <li><a href="/new_subpage/contact/contact_eng.html" data-text="Support">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -76,12 +76,13 @@
                     });
                 </script>
                 <div class="mobile_menu" id="mobile_menu">
+         <!-- 현재 영문 페이지 버튼 -->
                     <div class="mobile_menu_lang">
-                      <!-- 현재 한국어 페이지 버튼 -->
-                        <a href="/new_subpage/contact/contact.html"> <button class="active">KOR</button></a>
-                        <a href="/new_subpage/contact/contact_eng.html"> <button>ENG</button></a>
+                        <a href="/new_subpage/contact/contact.html"> <button >KOR</button></a>
+                        <a href="/new_subpage/contact/contact_eng.html"> <button class="active">ENG</button></a>
                         <a href="/new_subpage/contact/contact_jpn.html"> <button>JPN</button></a>
                     </div>
+                    
                     <div class="mobile_menu_shop">
                         <a href="">Shop now</a>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -90,12 +91,12 @@
                     </div>
                     <ul class="mobile_menu_list">
                         <li><a href="/">Home</a></li>
-                        <li><a href="/product_page/product.html">Product</a></li>
-                        <li><a href="/technology/technology.html">Technology</a></li>
-                        <li><a href="/business/business.html">Business</a></li>
-                        <li><a href="/support/support.html">Support</a></li>
-                        <li><a href="/faq/faq.html">FAQ</a></li>
-                        <li><a href="/contact/contact.html">Contact</a></li>
+                        <li><a href="/new_subpage/product_page/product_eng.html">Product</a></li>
+                        <li><a href="/new_subpage/technology/technology_eng.html">Technology</a></li>
+                        <li><a href="/new_subpage/business/business_eng.html">Business</a></li>
+                        <li><a href="/new_subpage/support/support_eng.html">Support</a></li>
+                        <li><a href="/new_subpage/faq/faq_eng.html">FAQ</a></li>
+                        <li><a href="/new_subpage/contact/contact_eng.html">Contact</a></li>
                     </ul>
                 </div>
                 <button class="buy_now_btn">
@@ -103,12 +104,12 @@
                 </button>
                 <div class="header_lang_select custom-lang-dropdown" id="header_lang_select">
                     <div class="selected-lang" tabindex="0">
-                        KOR
+                        ENG
                         <img src="/layout_new/layout_images/lang_arrow_icon.svg" alt="화살표" class="select-arrow"></img>
                     </div>
                     <ul class="lang-options">
-                       <a href="/new_subpage/contact/contact.html"> <li data-value="kor" class="active">KOR</li></a>
-                       <a href="/new_subpage/contact/contact_eng.html"> <li data-value="eng">ENG</li></a>
+                       <a href="/new_subpage/contact/contact.html"> <li data-value="kor" >KOR</li></a>
+                       <a href="/new_subpage/contact/contact_eng.html"> <li data-value="eng" class="active">ENG</li></a>
                        <a href="/new_subpage/contact/contact_jpn.html"> <li data-value="jpn">JPN</li></a>
                     </ul>
                 </div>
@@ -136,29 +137,29 @@
               <div class="inquiry_box">
                 <div class="inquiry_contents">
                   <div class="inquiry_left_container">
-                    <h1>안녕하세요.<br />어떤 문의가 필요하신가요?</h1>
-                    <p>＊ 중복 선택 가능</p>
+                    <h1>Hello.<br />What kind of inquiry do you have?</h1>
+                    <p>* Multiple selections allowed</p>
                   </div>
                   <div class="inquiry_right_container">
                     <button class="inquiry_btn" id="inquiry_btn_1">
-                      대량 구매 문의
+                      Bulk Purchase Inquiry
                     </button>
                     <button class="inquiry_btn" id="inquiry_btn_2">
-                      협력 문의
+                      Partnership Inquiry
                     </button>
                     <button class="inquiry_btn" id="inquiry_btn_3">
-                      전시 문의
+                      Exhibition Inquiry
                     </button>
                     <button class="inquiry_btn" id="inquiry_btn_4">
-                      기타 문의
+                      Other Inquiry
                     </button>
                   </div>
                 </div>
               <!-- 제출 버튼 -->
-              <button class="submit_btn" id="first_submit_btn">다음 →</button>
+              <button class="submit_btn" id="first_submit_btn">Next →</button>
                 <!-- 모바일 전용 버튼  -->
                 <button class="inquiry_btn inquiry_btn_mobile" id="inquiry_btn_mobile">
-                  다음
+                  Next
                 </button>
               </div>
             </section>
@@ -169,48 +170,48 @@
               <div class="inquiry_box inquiry_box_desktop">
                 <div class="inquiry_contents">
                   <div class="inquiry_left_container">
-                    <h1>문의를 원하시는 분의<br/>정보를 남겨주세요.</h1>
+                    <h1>Please leave your<br/>information for the inquiry.</h1>
                   </div>
                   <div class="information_right_container">
                     <!-- 회사 정보 부분 -->
                     <div class="infomation_box">
-                      <h3>회사 정보</h3>
+                      <h3>Company Information</h3>
                       <div class="information_btn_box">
                         <button class="information_btn">
-                          회사/기업명<span class="red_color">*</span>
+                          Company Name<span class="red_color">*</span>
                         </button>
                         <button class="information_btn">
-                          이메일<span class="red_color">*</span>
+                          Email<span class="red_color">*</span>
                         </button>
                         <input
                           class="information_btn information_input"
-                          placeholder="회사/기업명을 입력해 주세요."
+                          placeholder="Please enter your company name."
                         ></ingput><input
                           class="information_btn information_input"
-                          placeholder="이메일을 입력해 주세요."
+                          placeholder="Please enter your email address."
                         ></input>
                       </div>
                     </div>
                     <!-- 담당자 정보 부분 -->
                     <div class="infomation_box">
-                      <h3>담당자 정보</h3>
+                      <h3>Contact Person Information</h3>
                       <div class="information_btn_box">
                         <button class="information_btn">
-                          이름<span class="red_color">*</span>
+                         Name<span class="red_color">*</span>
                         </button>
                         <button class="information_btn">
-                          연락처<span class="red_color">*</span>
+                          Phone Number<span class="red_color">*</span>
                         </button>
-                        <input class="information_btn information_input" placeholder="이름을 입력해 주세요."></input>
-                        <input class="information_btn information_input" placeholder="연락처를 입력해 주세요."></input>
+                        <input class="information_btn information_input" placeholder="Please enter your name."></input>
+                        <input class="information_btn information_input" placeholder="Please enter your phone number."></input>
                       </div>
                     </div>
                     <!-- 문의 정보 부분 -->
                     <div class="infomation_box">
-                      <h3>담당자 정보</h3>
+                      <h3>Contact Person Information</h3>
                       <div class="information_btn_box last_btn_box">
-                        <button class="information_btn">문의 내용</button>
-                        <input class="information_btn information_input " placeholder="문의 내용을 작성해 주세요."></input>
+                        <button class="information_btn">Inquiry Content</button>
+                        <input class="information_btn information_input " placeholder="Please write your inquiry."></input>
                       </div>
                     </div>
                   </div>
@@ -221,24 +222,24 @@
               <div class="inquiry_box mobile_section">
                 <div class="inquiry_contents">
                   <div class="inquiry_left_container">
-                    <h1>문의를 원하시는 분의<br />정보를 남겨주세요.</h1>
-                    <p style="color: #ff3a3a">＊ 전체 항목 필수 입력</p>
+                    <h1>Please leave your information for the inquiry.</h1>
+                    <p style="color: #ff3a3a">＊ All fields are required</p>
                   </div>
                   <div class="inquiry_right_container">
-                    <input class="inquiry_btn input_mobile" placeholder="회사/기업명"/><input class="inquiry_btn input_mobile"style="color: #3c3c3c" placeholder="이메일"/><input class="inquiry_btn input_mobile" style="color: #3c3c3c"placeholder="이름"/><input class="inquiry_btn input_mobile" style="color: #3c3c3c" placeholder="연락처"/><textarea class="inquiry_btn input_mobile_long" placeholder="문의 내용" rows="4"></textarea>
+                    <input class="inquiry_btn input_mobile" placeholder="Company Name"/><input class="inquiry_btn input_mobile"style="color: #3c3c3c" placeholder="Email"/><input class="inquiry_btn input_mobile" style="color: #3c3c3c"placeholder="Name"/><input class="inquiry_btn input_mobile" style="color: #3c3c3c" placeholder="Phone Number"/><textarea class="inquiry_btn input_mobile_long" placeholder="Inquiry Content" rows="4"></textarea>
                   </div>
                 </div>
                 <button
                   class="inquiry_btn inquiry_btn_mobile"
                   id="next_btn_mobile"
                 >
-                  다음
+                  Next
                 </button>
               </div>
               <!-- 제출 버튼 -->
-              <button class="submit_btn submit_btn_location" id="second_submit_btn">제출 →</button>
+              <button class="submit_btn submit_btn_location" id="second_submit_btn">Submit →</button>
                <!-- 이전 버튼 -->
-              <button class="submit_btn submit_btn_location_back" id="second_back_btn">← 이전</button>
+              <button class="submit_btn submit_btn_location_back" id="second_back_btn">← Previous</button>
             </section>
           </div>
           <!-- 세 번째 슬라이드 -->
@@ -248,11 +249,11 @@
                 <div class="inquiry_contents">
                   <div class="inquiry_center_container">
                     <h1>
-                      문의주셔서 감사합니다!<br />확인 후 연락드리겠습니다.
+                      Thank you for reaching out!<br />We’ll review your inquiry and get back to you shortly.
                     </h1>
-                    <button class="back_btn" id="back_btn">돌아가기 →</button>
+                    <button class="back_btn" id="back_btn">Go Back →</button>
                     <button class="back_btn_mobile" id="back_btn_mobile">
-                      돌아가기
+                      Go Back
                     </button>
                   </div>
                 </div>
@@ -282,7 +283,7 @@
         <div class="contact_info_right">
           <div class="info_group">
             <p class="label">Address</p>
-            <span>경기도 성남시 분당구 동판교로 56, (주)아리바이오</span>
+            <span>AriBio Co., Ltd. 56 Dongpangyo-ro, Bundang-gu, Seongnam-si, Gyeonggi-do</span>
           </div>
         </div>
       </div>
@@ -290,12 +291,12 @@
     <div class="footer_right">
       <ul class="footer_links">
         <li><a href="/">Home</a></li>
-        <li><a href="/product_page/product.html">Product</a></li>
-        <li><a href="/technology/technology.html">Technology</a></li>
-        <li><a href="/business/business.html">Business</a></li>
-        <li><a href="/support/support.html">Support</a></li>
-        <li><a href="/faq/faq.html">FAQ</a></li>
-        <li><a href="/contact/contact.html">Contact</a></li>
+        <li><a href="/new_subpage/product_page/product_eng.html">Product</a></li>
+        <li><a href="/new_subpage/technology/technology_eng.html">Technology</a></li>
+        <li><a href="/new_subpage/business/business_eng.html">Business</a></li>
+        <li><a href="/new_subpage/support/support_eng.html">Support</a></li>
+        <li><a href="/new_subpage/faq/faq_eng.html">FAQ</a></li>
+        <li><a href="/new_subpage/contact/contact_eng.html">Contact</a></li>
       </ul>
       <div class="app_download_box">
         <a href="https://apps.apple.com/br/app/%ED%97%A4%EB%A5%B4%EC%A7%80%EC%98%A8/id6463604810" target="_blank" class="store_btn">

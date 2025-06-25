@@ -1,0 +1,793 @@
+.pc_text {
+  display: block;
+}
+.mo_text {
+  display: none;
+}
+.tab_text {
+  display: none;
+}
+
+/********************* Mobile ******************************************/
+@media all and (max-width: 768px) {
+  .pc_text {
+    display: none;
+  }
+  .mo_text {
+    display: block;
+  }
+  .tab_text {
+    display: none;
+  }
+
+  /* hero section */
+  .banner_section {
+    padding: 80px 20px 40px 20px;
+  }
+
+  .hero {
+    background-image: url("images/mo/mo_business_banner.png");
+    height: 300px;
+    margin-bottom: 0px;
+  }
+
+  .hero_content {
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero h1 {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 100% */
+  }
+
+  .hero p {
+    color: #fff;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
+    letter-spacing: -0.4px;
+  }
+
+  /* Business 섹션 공통 스타일 */
+  .container {
+    padding: 0px 20px;
+  }
+  .section_title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px; /* 140% */
+    margin-bottom: 40px;
+  }
+  /* 컨텐츠 부분 3개 박스 있는 부분  */
+  .section_content_3box_continer {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+  /* 컨텐츠 박스 */
+  .section_content_3box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  /* 이미지부분 */
+  .section_content_img_3box {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+
+  .section_content_3box > h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px; /* 100% */
+    letter-spacing: -0.48px;
+  }
+  .section_content_3box > p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: -0.36px;
+    width: 326px;
+  }
+  .pc_img {
+    display: none;
+  }
+  .mo_img {
+    display: block;
+  }
+
+  /* Vibroacoustic 섹션  스타일 */
+  .vibroacoustic_section {
+    padding: 74px 0px 50px 0px;
+  }
+
+  /* 서브타이틀 */
+  .section_sub_title {
+    margin-left: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px; /* 180% */
+    letter-spacing: -0.4px;
+
+    margin-bottom: 40px;
+  }
+
+  /* 이미지박스 */
+  .section1_img_group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+  }
+  /* 컨텐츠 박스 밑에 글 4개 부분 */
+  .section1_content_container {
+    padding: 0px 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  /* 컨텐츠 박스 밑에 글 4개 부분 */
+  .section1_content_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 1px solid #cdcdcd;
+  }
+
+  .section1_content_box > h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px; /* 100% */
+    letter-spacing: -0.48px;
+  }
+  .section1_content_box > p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px; /* 100% */
+    letter-spacing: -0.36px;
+  }
+
+  /* Cognitive Health Solutions 섹션 */
+  .cognitive_health_section {
+    padding: 80px 0px 80px 0px;
+  }
+  /* 제목 부분 */
+  .section2_title_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .section2_title_box > p {
+    width: 90%;
+    margin-left: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px; /* 180% */
+    letter-spacing: -0.4px;
+    text-align: left;
+  }
+
+  /* 컨텐츠 부분 (이미지랑 글자 있는 부분) */
+  .section2_content_img_1 {
+    background-image: url("images/mo/mo_section2_img_1.png");
+  }
+  .section2_content_img_2 {
+    background-image: url("images/mo/mo_section2_img_2.png");
+  }
+  .section2_content_img_3 {
+    background-image: url("images/mo/mo_section2_img_3.png");
+  }
+
+  /* Lifestyle Wellness 섹션 */
+  .lifestyle_wellness_section {
+    padding: 80px 0px 80px 0px;
+  }
+
+  .section3_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0px;
+  }
+
+  .section3_container_left > p {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px; /* 180% */
+    letter-spacing: -0.4px;
+  }
+  /* 섹션 오른쪽 부분  */
+  .section3_container_right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* 이미지박스 */
+  .section3_img_box {
+    padding: 40px;
+    width: 100%;
+    gap: 12px;
+    border-radius: 12px;
+  }
+
+  .section3_img_box > h2 {
+    font-size: 24px;
+    line-height: 34px; /* 100% */
+    letter-spacing: -0.48px;
+    margin-top: 4px;
+  }
+  .section3_img_box > p {
+    width: 100%;
+    font-size: 20px;
+    line-height: 32px; /* 160% */
+    letter-spacing: -0.4px;
+  }
+  .section3_img_box > img {
+    margin-top: 12px;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+  }
+  .section3_icon_4 {
+    width: 50.12px;
+    height: 56px;
+  }
+
+  /* sports_fitness_section 섹션 */
+  .sports_fitness_section {
+    padding: 80px 0px 80px 0px;
+  }
+
+  /* 컨텐츠 부분 (이미지랑 글자 있는 부분) */
+  .section4_content_img_1 {
+    background-image: url("images/mo/mo_section4_img_1.png");
+  }
+  .section4_content_img_2 {
+    background-image: url("images/mo/mo_section4_img_2.png");
+  }
+  .section4_content_img_3 {
+    background-image: url("images/mo/mo_section4_img_3.png");
+  }
+
+  /* Digital Health Platform 섹션 */
+  .digital_health_section {
+    padding: 80px 0px 80px 0px;
+  }
+
+  .health_content_container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .health_img_box {
+    padding: 20px;
+    width: 100%;
+    height: 400px;
+  }
+
+  .helath_img_text_box {
+    gap: 16px;
+  }
+  .helath_img_text_box > h1 {
+    font-size: 24px;
+    line-height: 34px; /* 141.667% */
+    letter-spacing: -0.48px;
+  }
+  .helath_img_text_box > p {
+    width: 100%;
+    font-size: 18px;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: -0.36px;
+  }
+  /* 컨텐츠 부분 (이미지랑 글자 있는 부분) */
+  .health_img_1 {
+    background-image: url("images/mo/mo_section5_img_1.png");
+  }
+  .health_img_2 {
+    background-image: url("images/mo/mo_section5_img_2.png");
+  }
+  .health_img_3 {
+    background-image: url("images/mo/mo_section5_img_3.png");
+  }
+  .health_img_4 {
+    background-image: url("images/mo/mo_section5_img_4.png");
+  }
+
+  /* B2B Solutions 섹션 */
+  .b2b_solutions_section {
+    padding: 80px 0px 80px 0px;
+  }
+
+  /* 컨텐츠 부분 (이미지랑 글자 있는 부분) */
+  .section6_content_img_1 {
+    background-image: url("images/mo/mo_section6_img_1.png");
+  }
+  .section6_content_img_2 {
+    background-image: url("images/mo/mo_section6_img_2.png");
+  }
+  .section6_content_img_3 {
+    background-image: url("images/mo/mo_section6_img_3.png");
+  }
+
+  /* Global Market Expansion Strategy 섹션 */
+  .global_market_expansion_section {
+    background-image: url("images/mo/mo_section7_back_img.png");
+    padding: 80px 0px 505px 0px;
+  }
+
+  .global_subtitle {
+    margin-left: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px; /* 180% */
+    letter-spacing: -0.4px;
+  }
+
+  /* Global Market Expansion Strategy 서브 섹션 */
+  .global_market_expansion_sub_section {
+    background: linear-gradient(180deg, #23295b 0%, #000 100%);
+    padding: 56px 0px;
+  }
+  .global_container {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    margin: 0px 12px;
+  }
+
+  .global_text_4box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .global_text_4box > h1 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px; /* 100% */
+    letter-spacing: -0.36px;
+  }
+
+  .global_text_4box > h2 {
+    font-size: 24px;
+    line-height: 31px; /* 100% */
+    letter-spacing: -0.48px;
+  }
+
+  .global_text_4box > p {
+    width: 90%;
+    margin-top: 0px;
+    font-size: 18px;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: -0.36px;
+  }
+}
+
+/********************* Tablet ***************************************************************/
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .pc_text {
+    display: none;
+  }
+
+  .mo_text {
+    display: block;
+  }
+  /* 테블릿 따로 모바일 따로 있을때 */
+  .momo_text {
+    display: none;
+  }
+  .tab_text {
+    display: block;
+  }
+
+  /* hero section */
+  .banner_section {
+    padding: 100px 60px 50px 60px;
+  }
+
+  .hero {
+    margin-bottom: 0px;
+  }
+
+  .hero_content {
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hero h1 {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 100% */
+  }
+
+  .hero p {
+    color: #fff;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
+    letter-spacing: -0.4px;
+  }
+  /* Business 섹션 공통 스타일 */
+  .container {
+    /* 테블릿 전용 */
+    padding: 0px 40px;
+  }
+  .section_title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px; /* 140% */
+    margin-bottom: 40px;
+  }
+  /* 컨텐츠 부분 3개 박스 있는 부분  */
+  .section_content_3box_continer {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+  /* 컨텐츠 박스 */
+  .section_content_3box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  /* 이미지부분 */
+  .section_content_img_3box {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+
+  .section_content_3box > h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px; /* 100% */
+    letter-spacing: -0.48px;
+  }
+  .section_content_3box > p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: -0.36px;
+    width: 400px;
+  }
+  .pc_img {
+    display: none;
+  }
+  .mo_img {
+    display: block;
+  }
+
+  /* Vibroacoustic 섹션  스타일 */
+  .vibroacoustic_section {
+    padding: 74px 0px 70px 0px;
+  }
+
+  /* 서브타이틀 */
+  .section_sub_title {
+    margin-left: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px; /* 180% */
+    letter-spacing: -0.4px;
+
+    margin-bottom: 40px;
+  }
+
+  /* 이미지박스 */
+  .tab_img {
+    width: 50%;
+    display: block;
+  }
+  .tab_none_img {
+    display: none;
+  }
+  .section1_img_group {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+  }
+  /* 컨텐츠 박스 밑에 글 4개 부분 */
+  .section1_content_container {
+    padding: 0px 0px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 70px;
+  }
+
+  /* 컨텐츠 박스 밑에 글 4개 부분 */
+  .section1_content_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 40px;
+    margin-bottom: 16px;
+
+    border-top: 1px solid #cdcdcd;
+  }
+
+  .section1_content_box > h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px; /* 100% */
+    letter-spacing: -0.48px;
+  }
+  .section1_content_box > p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px; /* 100% */
+    letter-spacing: -0.36px;
+  }
+
+  /* Cognitive Health Solutions 섹션 */
+  .cognitive_health_section {
+    padding: 80px 0px 80px 0px;
+  }
+  /* 제목 부분 */
+  .section2_title_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .section2_title_box > p {
+    margin-left: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px; /* 180% */
+    letter-spacing: -0.4px;
+    text-align: left;
+  }
+
+  /* 컨텐츠 부분 (이미지랑 글자 있는 부분) */
+  .section2_content_img_1 {
+    background-image: url("images/mo/mo_section2_img_1.png");
+  }
+  .section2_content_img_2 {
+    background-image: url("images/mo/mo_section2_img_2.png");
+  }
+  .section2_content_img_3 {
+    background-image: url("images/mo/mo_section2_img_3.png");
+  }
+
+  /* Lifestyle Wellness 섹션 */
+  .lifestyle_wellness_section {
+    padding: 80px 0px 80px 0px;
+  }
+
+  .section3_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0px;
+  }
+
+  .section3_container_left > p {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px; /* 180% */
+    letter-spacing: -0.4px;
+  }
+  /* 섹션 오른쪽 부분  */
+  .section3_container_right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  /* 이미지박스 */
+  .section3_img_box {
+    padding: 40px;
+    width: 100%;
+    gap: 12px;
+    border-radius: 12px;
+  }
+
+  .section3_img_box > h2 {
+    font-size: 24px;
+    line-height: 27px; /* 100% */
+    letter-spacing: -0.48px;
+    margin-top: 4px;
+  }
+  .section3_img_box > p {
+    width: 100%;
+    font-size: 19px;
+    line-height: 32px; /* 160% */
+    letter-spacing: -0.4px;
+  }
+  .section3_img_box > img {
+    margin-top: 12px;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+  }
+  .section3_icon_4 {
+    width: 50.12px;
+    height: 56px;
+  }
+
+  /* sports_fitness_section 섹션 */
+  .sports_fitness_section {
+    padding: 80px 0px 80px 0px;
+  }
+
+  /* 컨텐츠 부분 (이미지랑 글자 있는 부분) */
+  .section4_content_img_1 {
+    background-image: url("images/mo/mo_section4_img_1.png");
+  }
+  .section4_content_img_2 {
+    background-image: url("images/mo/mo_section4_img_2.png");
+  }
+  .section4_content_img_3 {
+    background-image: url("images/mo/mo_section4_img_3.png");
+  }
+
+  /* Digital Health Platform 섹션 */
+  .digital_health_section {
+    padding: 80px 0px 80px 0px;
+  }
+
+  .health_content_container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .health_img_box {
+    padding: 20px;
+    width: 100%;
+    height: 400px;
+  }
+
+  .helath_img_text_box {
+    gap: 16px;
+  }
+  .helath_img_text_box > h1 {
+    font-size: 24px;
+    line-height: 34px; /* 141.667% */
+    letter-spacing: -0.48px;
+  }
+  .helath_img_text_box > p {
+    width: 100%;
+    font-size: 18px;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: -0.36px;
+  }
+  /* 컨텐츠 부분 (이미지랑 글자 있는 부분) */
+  .health_img_1 {
+    background-image: url("images/mo/mo_section5_img_1.png");
+  }
+  .health_img_2 {
+    background-image: url("images/mo/mo_section5_img_2.png");
+  }
+  .health_img_3 {
+    background-image: url("images/mo/mo_section5_img_3.png");
+  }
+  .health_img_4 {
+    background-image: url("images/mo/mo_section5_img_4.png");
+  }
+
+  /* B2B Solutions 섹션 */
+  .b2b_solutions_section {
+    padding: 80px 0px 80px 0px;
+  }
+
+  /* 컨텐츠 부분 (이미지랑 글자 있는 부분) */
+  .section6_content_img_1 {
+    background-image: url("images/mo/mo_section6_img_1.png");
+  }
+  .section6_content_img_2 {
+    background-image: url("images/mo/mo_section6_img_2.png");
+  }
+  .section6_content_img_3 {
+    background-image: url("images/mo/mo_section6_img_3.png");
+  }
+
+  /* Global Market Expansion Strategy 섹션 */
+  .global_market_expansion_section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/section7_back_img.png");
+    padding: 80px 0px 505px 0px;
+    background-position: center;
+  }
+
+  .global_subtitle {
+    margin-left: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px; /* 180% */
+    letter-spacing: -0.4px;
+  }
+
+  /* Global Market Expansion Strategy 서브 섹션 */
+  .global_market_expansion_sub_section {
+    background: linear-gradient(180deg, #23295b 0%, #000 100%);
+    padding: 56px 0px;
+  }
+  .global_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 0px 0px;
+  }
+
+  .global_text_4box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .global_text_4box > h1 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px; /* 100% */
+    letter-spacing: -0.36px;
+  }
+
+  .global_text_4box > h2 {
+    font-size: 24px;
+    line-height: 32px; /* 100% */
+    letter-spacing: -0.48px;
+  }
+
+  .global_text_4box > p {
+    width: 100%;
+    margin-top: 0px;
+    font-size: 18px;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: -0.36px;
+  }
+}

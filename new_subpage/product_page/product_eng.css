@@ -350,7 +350,7 @@ main {
 .clinical_text_box h2 {
   font-size: 48px;
   font-weight: 700;
-  line-height: 48px; /* 100% */
+  line-height: 62px; /* 100% */
   letter-spacing: -0.96px;
   margin-bottom: 24px;
 }
@@ -490,15 +490,15 @@ main {
   margin-left: 40px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 48px;
 }
 .app_download h2 {
   color: #fff;
   font-family: Pretendard;
-  font-size: 56px;
+  font-size: 52px;
   font-style: normal;
   font-weight: 700;
-  line-height: 80px; /* 142.857% */
+  line-height: 70px; /* 142.857% */
   letter-spacing: -1.12px;
 }
 

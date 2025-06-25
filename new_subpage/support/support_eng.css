@@ -1,0 +1,511 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+  line-height: 1.5;
+  color: #3c3c3c;
+  background-color: #f7f7f7;
+}
+
+/* Main Content */
+main {
+  width: 100%;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* hero section */
+.banner_section {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 110px 80px 50px 80px;
+}
+
+.hero {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 400px;
+  background-image: url("images/support_banner.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.hero_content {
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #fff;
+}
+
+.hero h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 72px; /* 100% */
+}
+
+.hero p {
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+
+/* Use Guide */
+.use_guide_wrap {
+  padding: 148px 80px 120px 80px;
+}
+
+.use_guide_wrap h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #3c3c3c;
+  margin-bottom: 44px;
+}
+
+.guide_content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.guide_card {
+  background: #ffffff;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  min-height: 844px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card_content {
+  padding: 100px 120px;
+  flex: 1;
+}
+
+.card_category {
+  color: #3c3c3c;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 100% */
+  letter-spacing: -0.48px;
+  margin-bottom: 24px;
+}
+
+.guide_card h3 {
+  color: #3c3c3c;
+  font-family: "Pretendard", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px; /* 133.333% */
+  letter-spacing: -0.96px;
+  margin-bottom: 40px;
+  margin-top: 15px;
+}
+.btn_box {
+  display: flex;
+  gap: 40px;
+}
+.btn_text {
+  font-family: "Pretendard", sans-serif;
+  color: #3c3c3c;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 100% */
+  letter-spacing: -0.48px;
+}
+
+.watch_btn,
+.download_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 24px;
+  letter-spacing: -2%;
+  font-weight: 500;
+  line-height: 24px;
+  color: #3c3c3c;
+  text-decoration: none;
+}
+
+.card_img {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.top_btn img {
+  animation: bounce 0.8s infinite;
+}
+
+/********************* Mobile ******************************************/
+@media all and (max-width: 767px) {
+  /* Main Content */
+  /* hero section */
+  .banner_section {
+    padding: 80px 20px 40px 20px;
+  }
+
+  .hero {
+    margin-bottom: 0px;
+    height: 300px;
+    background-image: url("images/mo/m_support_banner.png");
+  }
+
+  .hero_content {
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero h1 {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 100% */
+  }
+
+  .hero p {
+    color: #fff;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
+    letter-spacing: -0.4px;
+  }
+
+  /* 모바일에서 이미지 변경 */
+  .card_img img {
+    content: url("images/mo/m_menu_img_1.png");
+  }
+
+  .guide_card:nth-child(2) .card_img img {
+    content: url("images/mo/m_menu_img_2.png");
+  }
+
+  .guide_card:nth-child(3) .card_img img {
+    content: url("images/mo/m_menu_img_3.png");
+  }
+
+  .guide_card:nth-child(4) .card_img img {
+    content: url("images/mo/m_menu_img_4.png");
+  }
+
+  /* Use Guide */
+  .use_guide_wrap {
+    padding: 80px 20px;
+  }
+
+  .use_guide_wrap h2 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 100% */
+    margin-bottom: 40px;
+  }
+  /* 그리드 없애고  */
+  .guide_content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .guide_card {
+    border-radius: 16px;
+    min-height: 608px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card_content {
+    padding: 60px 40px;
+    flex: 1;
+  }
+
+  .card_category {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 100% */
+    letter-spacing: -0.36px;
+    margin-bottom: 0px;
+  }
+
+  .guide_card h3 {
+    margin-top: 24px;
+    font-size: 24px;
+    line-height: 38px; /* 135.714% */
+    letter-spacing: -0.84px;
+    margin-bottom: 24px;
+  }
+
+  .btn_box {
+    display: flex;
+    gap: 20px;
+  }
+  .btn_arrow {
+    width: 36px;
+    height: 36px;
+  }
+  .btn_text {
+    font-size: 18px;
+    line-height: 20px; /* 100% */
+    letter-spacing: -0.36px;
+  }
+
+  .watch_btn,
+  .download_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 24px;
+    letter-spacing: -2%;
+    font-weight: 500;
+    line-height: 24px;
+    color: #3c3c3c;
+  }
+
+  .card_img {
+    width: 100%;
+    height: 314px;
+    overflow: hidden;
+  }
+
+  .card_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+
+  .top_btn {
+    display: none;
+  }
+}
+
+/********************* Tablet ***************************************************************/
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  /* Main Content */
+
+  /* hero section */
+  .banner_section {
+    padding: 120px 60px 50px 60px;
+  }
+
+  .hero {
+    margin-bottom: 30px;
+  }
+
+  .hero_content {
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hero h1 {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 100% */
+  }
+
+  .hero p {
+    color: #fff;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
+    letter-spacing: -0.4px;
+  }
+  /* Use Guide */
+  .use_guide_wrap {
+    padding: 100px 60px;
+  }
+
+  .use_guide_wrap h2 {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 100% */
+    margin-bottom: 50px;
+  }
+  /* 그리드 없애고  */
+  .guide_content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .guide_card {
+    border-radius: 16px;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card_content {
+    padding: 70px 55px;
+    flex: 1;
+  }
+
+  .card_category {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 100% */
+    letter-spacing: -0.36px;
+    margin-bottom: 0px;
+  }
+
+  .guide_card h3 {
+    margin-top: 24px;
+    font-size: 35px;
+    line-height: 48px;
+    letter-spacing: -0.84px;
+    margin-bottom: 30px;
+  }
+
+  .btn_box {
+    display: flex;
+    gap: 25px;
+  }
+  .btn_arrow {
+    width: 40px;
+    height: 40px;
+  }
+  .btn_text {
+    font-size: 22px;
+    line-height: 18px; /* 100% */
+    letter-spacing: -0.36px;
+  }
+
+  .watch_btn,
+  .download_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 24px;
+    letter-spacing: -2%;
+    font-weight: 500;
+    line-height: 24px;
+    color: #3c3c3c;
+  }
+
+  .card_img {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+
+  .top_btn {
+    display: none;
+  }
+  /* 모바일에서 이미지 변경 */
+  .card_img img {
+    content: url("images/menu_img_1.png");
+  }
+
+  .guide_card:nth-child(2) .card_img img {
+    content: url("images/menu_img_2.png");
+  }
+
+  .guide_card:nth-child(3) .card_img img {
+    content: url("images/menu_img_3.png");
+  }
+
+  .guide_card:nth-child(4) .card_img img {
+    content: url("images/menu_img_4.png");
+  }
+}

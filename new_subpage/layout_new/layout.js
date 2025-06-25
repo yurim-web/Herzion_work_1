@@ -120,18 +120,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 언어 옵션 클릭 시
   langItems.forEach((item) => {
-    item.addEventListener("click", function (e) {
-      // 모든 옵션에서 active 제거
-      langItems.forEach((i) => i.classList.remove("active"));
-      // 선택한 옵션에 active 추가
-      item.classList.add("active");
-      // 선택한 언어로 텍스트 변경
-      selectedLang.childNodes[0].nodeValue = item.textContent + " ";
-      // 드롭다운 닫기 (arrow는 그대로)
-      customDropdown.classList.remove("open");
-      selectArrow.classList.remove("rotated");
-      e.stopPropagation(); // 드롭다운 외부 클릭 이벤트 방지
-    });
+    const link = item.querySelector("a");
+    if (link) {
+      link.addEventListener("click", function (e) {
+        // 페이지 이동은 기본 동작으로 두고,
+        // 드롭다운만 닫기
+        customDropdown.classList.remove("open");
+        selectArrow.classList.remove("rotated");
+        // active 클래스 관리(선택적으로)
+        langItems.forEach((i) => i.classList.remove("active"));
+        item.classList.add("active");
+      });
+    }
   });
 
   // 드롭다운 외부 클릭 시 닫기
